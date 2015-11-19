@@ -1,0 +1,34 @@
+\BOOKMARK [1][-]{section.1}{AtMega 2560 – prosessor’s main features}{}% 1
+\BOOKMARK [1][-]{section.2}{Block diagram of the processor}{}% 2
+\BOOKMARK [1][-]{section.3}{Registers}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{General Purpose Register File}{section.3}% 4
+\BOOKMARK [2][-]{subsection.3.2}{XMCRA – External Memory Control Register }{section.3}% 5
+\BOOKMARK [2][-]{subsection.3.3}{Status registers}{section.3}% 6
+\BOOKMARK [2][-]{subsection.3.4}{Stack pointers}{section.3}% 7
+\BOOKMARK [1][-]{section.4}{Instruction set}{}% 8
+\BOOKMARK [1][-]{section.5}{Setting the system clock}{}% 9
+\BOOKMARK [2][-]{subsection.5.1}{Clock Sources}{section.5}% 10
+\BOOKMARK [1][-]{section.6}{Power management}{}% 11
+\BOOKMARK [2][-]{subsection.6.1}{Clock Sources}{section.6}% 12
+\BOOKMARK [2][-]{subsection.6.2}{Idle Mode}{section.6}% 13
+\BOOKMARK [2][-]{subsection.6.3}{ADC Noise Reduction}{section.6}% 14
+\BOOKMARK [2][-]{subsection.6.4}{Power-down Mode}{section.6}% 15
+\BOOKMARK [2][-]{subsection.6.5}{Power-Save Mode}{section.6}% 16
+\BOOKMARK [2][-]{subsection.6.6}{Standby Mode}{section.6}% 17
+\BOOKMARK [2][-]{subsection.6.7}{Extended Standby Mode}{section.6}% 18
+\BOOKMARK [1][-]{section.7}{Resetting the system}{}% 19
+\BOOKMARK [1][-]{section.8}{Memory System}{}% 20
+\BOOKMARK [1][-]{section.9}{Control Circuit}{}% 21
+\BOOKMARK [2][-]{subsection.9.1}{SPI}{section.9}% 22
+\BOOKMARK [2][-]{subsection.9.2}{USART}{section.9}% 23
+\BOOKMARK [2][-]{subsection.9.3}{ADC}{section.9}% 24
+\BOOKMARK [2][-]{subsection.9.4}{Oscillator Circuits}{section.9}% 25
+\BOOKMARK [2][-]{subsection.9.5}{JTAG}{section.9}% 26
+\BOOKMARK [2][-]{subsection.9.6}{ISP}{section.9}% 27
+\BOOKMARK [2][-]{subsection.9.7}{I/O pins}{section.9}% 28
+\BOOKMARK [1][-]{section.10}{AtMega 2560 pins}{}% 29
+\BOOKMARK [2][-]{subsection.10.1}{Clock Sources}{section.10}% 30
+\BOOKMARK [2][-]{subsection.10.2}{PORTD}{section.10}% 31
+\BOOKMARK [2][-]{subsection.10.3}{PORTE}{section.10}% 32
+\BOOKMARK [2][-]{subsection.10.4}{PORTF}{section.10}% 33
+\BOOKMARK [2][-]{subsection.10.5}{PORTK}{section.10}% 34

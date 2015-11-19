@@ -1,0 +1,14 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}General information about MMI}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}MMI Software Structure}{2}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Digital Radio Communications Tester CMD57}{2}{subsection.1.2}
+\contentsline {section}{\numberline {2}Calibrating Of the Cables Attenuators}{3}{section.2}
+\contentsline {section}{\numberline {3}Powering Up the Base Station}{4}{section.3}
+\contentsline {section}{\numberline {4}Base Station and MMI Software}{4}{section.4}
+\contentsline {section}{\numberline {5}TRX Loop Test}{4}{section.5}
+\contentsline {subsection}{\numberline {5.1}MMI: Test/ TRX Loop Test}{6}{subsection.5.1}
+\contentsline {section}{\numberline {6}Test Pattern Transmission}{6}{section.6}
+\contentsline {paragraph}{MMI:}{6}{section*.2}
+\contentsline {paragraph}{CMD: Module test}{6}{section*.3}
+\contentsline {section}{\numberline {7}Air Interface Loop Tests}{8}{section.7}
+\contentsline {section}{\numberline {8}BER (Bit Error Rate) Test}{8}{section.8}

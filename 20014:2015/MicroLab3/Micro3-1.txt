@@ -1,0 +1,45 @@
+#define SetBit( port, bit) { port = port &~( 1 << bit); }
+#define ResetBit( port, bit) { port = port|( 1 << bit); }
+#include <asf.h>
+#include <util/delay.h>
+
+void buttonsOnOff(int i);
+
+int main (void)
+{
+	int i;
+		board_init();
+		DDRA = 0x00; 
+		PORTB = 0xff;
+		DDRB = 0xff; 	
+
+	while(1)
+	{		
+	
+			
+	for(i=0;i<8;i++)
+		buttonsOnOff(i);
+
+	
+	for(i=7;i>=0;i--)
+		buttonsOnOff(i);	
+	
+}
+
+}
+void buttonsOnOff(int i){	
+	int j,stopLoop=1;
+		
+		SetBit(PORTB,i);
+	for(j=0;j<50;j++){		
+		stopLoop=PINA!=0xff?-stopLoop:stopLoop;
+		while(PINA!=0xff);
+		while(stopLoop<0){
+			stopLoop=PINA!=0xff?-stopLoop:stopLoop;
+			while(PINA!=0xff);
+		}
+		_delay_ms(10);	
+		}
+	ResetBit(PORTB,i);	
+}
+

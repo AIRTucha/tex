@@ -1,0 +1,56 @@
+\documentclass[english]{article}
+
+\usepackage{babel}
+\usepackage{graphicx}
+\usepackage{times}
+\usepackage{pifont}
+\usepackage[margin=0.8in]{geometry}
+\usepackage{eurosym}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+
+%HEADER
+%**************************************************************************************
+\pagestyle{fancy}
+\fancyhf{}
+%**************************************************************************************
+\lhead{SpaceMonitor}
+\rhead{\today}		 	 
+%**************************************************************************************
+
+\date{}
+\setlength\parindent{0pt}
+
+\begin{document}
+
+\begin{center}
+\begin{large}
+SpaceMonitor
+\end{large}\\
+Abstract\\
+by 
+Gaetan Martin,
+Florian Henriet,
+Alexey Tukalo
+\end{center}
+
+%MAIN CONTENT ******************************************************************************************************************
+\textbf{Introduction }\\
+The main idea of the project was to build the system with multiple transmission of data via network. The concept of IoT\footnote{Internet of things - physical objects connected via network with other devices or server. In most cases they are used to perform measurements or control under some infrastructure.} fits for this purpose well.\\\\
+We decided to create system for storage space monitoring. The system contains: 
+\begin{enumerate}
+\item \textbf{Microcontroller}\\
+We chose Intel Galileo\footnote{Microcontroller board based on a 32-bit Intel Pentium-class system on a chip} as microcontroller for this project, because it compatible with usual Arduino\footnote{An open-source electronics platform for anyone making interactive projects} framework, but much more powerful than traditional Arduinos. It has build-in Ethernet port and the fact makes the data transmission to the server easier for us. We connected 3-pin Ultrasonic sensor to the board via analog port. The sensor allows the devices measure the amount of space available on a shelf, if the volume is changed the Galileo will send the information to the server. The data is transmitted with help of MQTT\footnote{Message Queue Telemetry Transport - asynchronous light weight data transmission protocol for IoT} as JSON object with tree parameters: size of free shelf, current space and name of the shelf.
+\item \textbf{Server}\\
+We store our server inside IBM BlueMix\footnote{Cloud platform that helps developers rapidly build, manage and run web and mobile applications.}.The logic is implemented via Node-RED
+\footnote{Node-RED is a tool for wiring together hardware devices, APIs and online services in new and interesting ways.}. The data is received by IBM IoT App In node, adds data and time to the data and after that the JSON object is placed inside MongoDB\footnote{Databased stores the data as set of JSON objects.}. The data can be requested by webpage form the server throughout HTTP GET request, the server sends an array of JSON object form the database as response.
+\item \textbf{Webpage}\\
+The webpage uses RESTfull API provided by our server to receive data. AJAX\footnote{Web development techniques used on the client-side to create asynchronous Web applications.} is implemented with help of D3.js\footnote{JavaScript library made for custom data visualisation with SVG inside webpage}. The received array is preprocessed inside callback function. The preprocessing is performed to separate values from different shelves. SVG image basically consists from several independent shapes and together with smart system of event handling implemented via chain syntax it makes D3.js very powerful tool for really interactive visualisation of data. The information about storage space is represented in 5 different graphs. The first tow of them are donut charts, bar chart and plot.
+The layout of the page is made in according with the concept of fluid interface, so it is able to change position of the legend for different screen sizes.
+\end{enumerate}
+
+\end{document}

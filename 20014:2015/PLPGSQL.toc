@@ -1,0 +1,10 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Logg table, function and triggers for it}{2}
+\contentsline {subsection}{\numberline {1.1}Logg table}{2}
+\contentsline {subsection}{\numberline {1.2}Function badStudents()}{3}
+\contentsline {subsection}{\numberline {1.3}edited()}{3}
+\contentsline {section}{\numberline {2}Archived column and function for it}{4}
+\contentsline {subsection}{\numberline {2.1}Archived column}{4}
+\contentsline {subsection}{\numberline {2.2}Function archived()}{4}
+\contentsline {section}{\numberline {3}Timestamp and User columns}{5}
+\contentsline {section}{\numberline {4}Student protection}{6}

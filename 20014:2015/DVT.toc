@@ -1,0 +1,9 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Tasks}{2}{section.1}
+\contentsline {section}{\numberline {2}Basic Definition}{2}{section.2}
+\contentsline {section}{\numberline {3}The modulation of DVB-T and DVB-C}{3}{section.3}
+\contentsline {section}{\numberline {4}Multimedia Home Platform (MHP)}{3}{section.4}
+\contentsline {section}{\numberline {5}High- Definition Television (HD- TV)}{3}{section.5}
+\contentsline {section}{\numberline {6}Laboratory work}{4}{section.6}
+\contentsline {section}{\numberline {7}BER measurement mode selection}{5}{section.7}
+\contentsline {section}{\numberline {8}Measuring the channel of DVB- T signal strength in Spectrum Analyzer mode}{7}{section.8}

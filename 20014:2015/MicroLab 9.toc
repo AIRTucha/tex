@@ -1,0 +1,11 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}AtMega 2560 memories}{2}{section.1}
+\contentsline {section}{\numberline {2}Flash memory}{2}{section.2}
+\contentsline {section}{\numberline {3}Eeprom memory}{2}{section.3}
+\contentsline {section}{\numberline {4}External memories}{2}{section.4}
+\contentsline {section}{\numberline {5}RAM memory}{2}{section.5}
+\contentsline {section}{\numberline {6}Constantsin the code area}{2}{section.6}
+\contentsline {section}{\numberline {7}Programming tasks}{2}{section.7}
+\contentsline {subsection}{\numberline {7.1}The first task}{2}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}The second task}{2}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}The third task}{2}{subsection.7.3}

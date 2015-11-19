@@ -1,0 +1,19 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}AD - converter}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}List of Features•}{2}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}The main ATmega2560 features}{2}{subsection.1.2}
+\contentsline {paragraph}{A 10-bit successive approximation ADC.}{2}{section*.2}
+\contentsline {paragraph}{A successive-approximation ADC}{2}{section*.3}
+\contentsline {paragraph}{16 Multiplexed Single Ended Input Channels.}{2}{section*.4}
+\contentsline {paragraph}{Four Differential Input Channels with Optional Gain of 10x and 200x.}{3}{section*.5}
+\contentsline {paragraph}{Selectable 2.56V or 1.1V ADC Reference Voltage.}{3}{section*.6}
+\contentsline {paragraph}{Interrupt on ADC Conversion Complete.}{3}{section*.7}
+\contentsline {section}{\numberline {2}Controlling the conversion frequency}{4}{section.2}
+\contentsline {section}{\numberline {3}Changing the input voltage}{6}{section.3}
+\contentsline {section}{\numberline {4}The scaling of the result}{6}{section.4}
+\contentsline {section}{\numberline {5}Programming the circuit}{7}{section.5}
+\contentsline {section}{\numberline {6}Programming tasks}{9}{section.6}
+\contentsline {subsection}{\numberline {6.1}The first task}{9}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}The second task}{10}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}The third task}{13}{subsection.6.3}
+\contentsline {subsection}{\numberline {6.4}The fourth task}{15}{subsection.6.4}

@@ -1,0 +1,12 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Utilizing the serial communication}{2}{section.1}
+\contentsline {section}{\numberline {2}The features of USART circuit}{2}{section.2}
+\contentsline {section}{\numberline {3}Programming the transmission speed}{2}{section.3}
+\contentsline {section}{\numberline {4}Programming the other serial parameters}{3}{section.4}
+\contentsline {subsection}{\numberline {4.1}Stop bit}{4}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Number of data bits}{4}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Parity settings}{4}{subsection.4.3}
+\contentsline {section}{\numberline {5}The inspection of the data transmission}{5}{section.5}
+\contentsline {section}{\numberline {6}Programming Tasks}{6}{section.6}
+\contentsline {subsection}{\numberline {6.1}The tasks from first to third}{6}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}The fourth task}{9}{subsection.6.2}

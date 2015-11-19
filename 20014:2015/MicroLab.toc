@@ -1,0 +1,13 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}The purpose of the STK600 card.}{2}{section.1}
+\contentsline {section}{\numberline {2}The main features}{2}{section.2}
+\contentsline {section}{\numberline {3}Connecting a processor to STK600}{2}{section.3}
+\contentsline {section}{\numberline {4}The price of the development kit}{2}{section.4}
+\contentsline {section}{\numberline {5}The parts of the card}{2}{section.5}
+\contentsline {section}{\numberline {6}The power supply}{2}{section.6}
+\contentsline {section}{\numberline {7}Cenecting IO devices}{3}{section.7}
+\contentsline {section}{\numberline {8}The clock setting of the processor}{3}{section.8}
+\contentsline {section}{\numberline {9}Programming the card}{3}{section.9}
+\contentsline {section}{\numberline {10}ISP - programming}{3}{section.10}
+\contentsline {section}{\numberline {11}Default settings}{3}{section.11}
+\contentsline {section}{\numberline {12}Appendix}{4}{section.12}

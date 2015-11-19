@@ -1,0 +1,327 @@
+\documentclass[english]{article}
+
+\usepackage{babel}
+\usepackage{graphicx}
+\usepackage{times}
+\usepackage{pifont}
+\usepackage[margin=1in]{geometry}
+\usepackage{eurosym}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+\usepackage{listings}
+\usepackage{color}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+
+%HEADER
+%**************************************************************************************
+\pagestyle{fancy}
+\fancyhf{}
+%**************************************************************************************
+\lhead{Timers as counters}		 	 
+\rhead{Basics of Microprocessor technology} 
+\lfoot{EFA12SF}
+\cfoot{\thepage}
+\rfoot{Nikolay Arsenov\\Alexey Tukalo}
+%**************************************************************************************
+
+\date{}
+\setlength\parindent{0pt}
+
+\begin{document}
+
+\title{\vspace{2in}Timers as counters\\
+\small for Basics of Microprocessor technology\\
+\vspace{0.5in}\includegraphics{savonia.jpg}}
+
+\nopagebreak
+\maketitle
+
+
+\vspace{3in}
+
+\author{
+\begin{flushright}
+Nikolay Arsenov, Alexey Tukalo,\\
+EFA12SF,\\
+Information Technology,\\
+Savonia University of Applied Sciences
+\end{flushright}
+}
+
+\date{\today}
+\thispagestyle{empty}
+
+\newpage
+\setcounter{page}{1}
+\setcounter{tocdepth}{2}
+\tableofcontents
+
+\newpage
+
+%MAIN CONTENT ******************************************************************************************************************
+
+\section{The main features of counter circuits}
+There are two types of counters in ATmega boards.
+\subsection{8-bit Timer/Counter}
+\begin{itemize}
+\item Two Independent Output Compare Units
+\item Double Buffered Output Compare Registers
+\item Clear Timer on Compare Match (Auto Reload)
+\item Glitch Free, Phase Correct Pulse Width Modulator (PWM)
+\item Variable PWM Period
+\item Frequency Generator
+\item Three Independent Interrupt Sources (TOV0, OCF0A, and OCF0
+\end{itemize}
+
+8-bit Timer/Counter module is used for accurate event management and wave generation. It has two independent Output Compare Units, and with Phase Correct Pulse Width Modulator support.
+\subsection{16-bit Timer/Counter}
+\begin{itemize}
+\item True 16-bit Design (that is, allows 16-bit PWM)
+\item Three independent Output Compare Units
+\item Double Buffered Output Compare Registers
+\item One Input Capture Unit
+\item Input Capture Noise Canceler
+\item Clear Timer on Compare Match (Auto Reload)
+\item Glitch-free, Phase Correct Pulse Width Modulator (PWM)
+\item Variable PWM Period
+\item Frequency Generator
+\item External Event Counter
+\item Twenty independent interrupt sources (TOV1, OCF1A, OCF1B, OCF1C, ICF1, TOV3, OCF3A, OCF3B, OCF3C, ICF3, TOV4, OCF4A, OCF4B, OCF4C, ICF4, TOV5, OCF5A, OCF5B, OCF5C and ICF5)
+\end{itemize}
+16-bit Timer/Counter module is used for very accurate event management, signal timing measurement and wave generation.
+\subsection{Difference}
+The main difference is that 16-bit counter is much more accurate, but the precision is not always required that's why 8-bit counter is also used widely. For example it is better to use 16-bit timer to measure time and 8-bit is better for some event which have to be repeated after same period of time, but the period of time should not be as accurate as watch.
+\section{The operating principle}
+Timers work by incrementing a counter variable, also known as a counter register. The counter register can count to a certain value, depending on its size. The timer increments this counter one step at a time until it reaches its maximum value, at which point the counter overflows, and resets back to zero. The timer normally sets a flag bit to let you know an overflow has occurred. You can check this flag manually, or you can also have the timer trigger an interrupt as soon as the flag is set. Like any other interrupt, you can specify an Interrupt Service Routine (ISR) to run code of your choice when the timer overflows. The ISR will reset the overflow flag behind the scenes, so using interrupts is usually your best option for simplicity and speed.\\\\
+In order to increment the counter value at regular intervals, the timer must have access to a clock source.  The clock source generates a consistent repeating signal.  Every time the timer detects this signal, it increases its counter by one.
+\subsection{8-bit Timer/Counter}
+\subsubsection{Registers}
+There are four Registers: TCNT0, OCR0, TCCR0, ASSR
+\begin{itemize}
+\item TCNT0(timer/counter register):
+	\begin{itemize}
+	\item the 8-bit counter itself
+	\item holds the present value of count
+	\end{itemize}
+
+\item OCR0(output compare register):
+	\begin{itemize}
+	\item this register is always compared against TCNT0
+	\item The double buffered Output Compare Registers (OCR0A and OCR0B)
+	\end{itemize}
+\item TCCR0(timer/counter 0 control register):
+	\begin{itemize}
+	\item determines the mode of operation
+	\end{itemize}
+
+\end{itemize}
+
+%119p1
+\subsubsection{Output Compare Unite}
+The 8-bit comparator continuously compares TCNT0 with the Output Compare Registers (OCR0A and OCR0B). Whenever TCNT0 equals OCR0A or OCR0B, the comparator signals a match. A match will set the Output Compare Flag (OCF0A or OCF0B) at the next timer clock cycle. If the corresponding interrupt is enabled, the Output Compare Flag generates an Output Compare interrupt. The Output Compare Flag is automatically cleared when the interrupt is executed. Alternatively, the flag can be cleared by software by writing a logical one to its I/O bit location. The Waveform Generator uses the match signal to generate an output according to operating mode set by the WGM02:0 bits and Compare Output mode (COM0x1:0) bits. The max and bottom signals are used by the Waveform Generator for handling the special cases of the extreme values in some modes of operation.\\\\
+%121p1
+The OCR0x Registers are double buffered when using any of the Pulse Width Modulation (PWM) modes. For the normal and Clear Timer on Compare (CTC) modes of operation, the double buffering is disabled. The double buffering synchronizes the update of the OCR0x Compare Registers to either top or bottom of the counting sequence. The synchronization prevents the occurrence of odd-length, non-symmetrical PWM pulses, thereby making the output glitch-free.\\\\ The OCR0x Register access may seem
+complex, but this is not case. When the double buffering is enabled, the CPU has access to the OCR0x Buffer Register, and if double buffering is disabled the CPU will access the OCR0x directly.
+\subsubsection{Modes of Operation}
+The mode of operation, that is, the behavior of the Timer/Counter and the Output Compare pins, is defined by the combination of the Waveform Generation mode (WGM02:0) and Compare Output mode (COM0x1:0) bits. The Compare Output mode bits do not affect the counting sequence, while the Waveform Generation mode bits do. The COM0x1:0 bits control whether the PWM output generated should be inverted or not (inverted or non-inverted PWM). For non-PWM modes the COM0x1:0 bits control whether the output should be set, cleared, or toggled at a Compare Match. 
+\paragraph{Normal Mode} is the simplest mode of operation is the Normal mode (WGM02:0 = 0). In this mode the counting direction is always up (incrementing), and no counter clear is performed. The counter simply overruns when it passes its maximum 8-bit value (TOP = 0xFF) and then restarts from the bottom (0x00). In normal operation the Timer/Counter Overflow Flag (TOV0) will be set in the same timer clock cycle as the TCNT0 becomes zero. The TOV0 Flag in this case behaves like a ninth
+bit, except that it is only set, not cleared. However, combined with the timer overflow interrupt
+that automatically clears the TOV0 Flag, the timer resolution can be increased by software.
+There are no special cases to consider in the Normal mode, a new counter value can be written
+anytime. \\\\
+The Output Compare Unit can be used to generate interrupts at some given time. Using the Output Compare to generate waveforms in Normal mode is not recommended, since this will
+occupy too much of the CPU time.	
+\paragraph{Clear Timer on Compare Match (CTC) Mode,} the OCR0A Register is used to manipulate the counter resolution. In CTC mode the counter is cleared to zero when the counter value (TCNT0) matches the OCR0A. The OCR0A defines the top value for the counter, hence also its resolution. This mode allows greater control of the Compare Match output frequency. It also simplifies the operation of counting external events.\\\\
+The counter value (TCNT0) increases until a Compare Match occurs between TCNT0 and OCR0A, and then counter (TCNT0) is cleared.\\\\
+%124p1
+An interrupt can be generated each time the counter value reaches the TOP value by using the
+OCF0A Flag. If the interrupt is enabled, the interrupt handler routine can be used for updating
+the TOP value. However, changing TOP to a value close to BOTTOM when the counter is running with none or a low prescaler value must be done with care since the CTC mode does not have the double buffering feature. If the new value written to OCR0A is lower than the current value of TCNT0, the counter will miss the Compare Match. The counter will then have to count to its maximum value (0xFF) and wrap around starting at 0x00 before the Compare Match can occur.\\\\
+For generating a waveform output in CTC mode, the OC0A output can be set to toggle its logical level on each Compare Match by setting the Compare Output mode bits to toggle mode (COM0A1:0 = 1). The OC0A value will not be visible on the port pin unless the data direction for the pin is set to output. The waveform generated will have a maximum frequency of $f_{OC0}=F_{CLK\_I/O}/2$ when OCR0A is set to zero (0x00). The waveform frequency is defined by the following equation:
+$$
+f_{OCnx}=\frac{f_{clk\_I/O}}{2N(1+OCRnx)}
+$$
+The N variable represents the prescale factor (1, 8, 64, 256, or 1024).\\\\
+As for the Normal mode of operation, the TOV0 Flag is set in the same timer clock cycle that the
+counter counts from MAX to 0x00.
+\paragraph{The fast Pulse Width Modulation}  or fast PWM mode (WGM02:0 = 3 or 7) provides a high frequency PWM waveform generation option. The fast PWM differs from the other PWM option by its single-slope operation. The counter counts from BOTTOM to TOP then restarts from BOTTOM. TOP is defined as 0xFF when WGM2:0 = 3, and OCR0A when WGM2:0 = 7. In non-inverting Compare Output mode, the Output Compare (OC0x) is cleared on the Compare Match between TCNT0 and OCR0x, and set at BOTTOM. In inverting Compare Output mode, the output is set on Compare Match and cleared at BOTTOM. Due to the single-slope operation, the operating frequency of the fast PWM mode can be twice as high as the phase correct PWM mode that use dual-slope operation. This high frequency makes the fast PWM mode well suited for power regulation, rectification, and DAC applications. High frequency allows physically small sized external components (coils, capacitors), and therefore reduces total system cost.\\\\
+In fast PWM mode, the counter is incremented until the counter value matches the TOP value. The counter is then cleared at the following timer clock cycle. The TCNT0 value is in the timing diagram shown as a histogram for illustrating the single-slope operation. The diagram includes non-inverted and inverted PWM outputs. The small horizontal line marks on the TCNT0 slopes represent Compare Matches between OCR0x and TCNT0.\\\\
+%125p1
+The Timer/Counter Overflow Flag (TOV0) is set each time the counter reaches TOP. If the inter-
+rupt is enabled, the interrupt handler routine can be used for updating the compare value.
+In fast PWM mode, the compare unit allows generation of PWM waveforms on the OC0x pins.
+Setting the COM0x1:0 bits to two will produce a non-inverted PWM and an inverted PWM output
+can be generated by setting the COM0x1:0 to three: Setting the COM0A1:0 bits to one allows
+the OC0A pin to toggle on Compare Matches if the WGM02 bit is set. This option is not available
+for the OC0B pin. The actual OC0x value will only be visible on the port pin if the data direction for the port pin is set as output. The PWM waveform is generated by setting (or clearing) the OC0x Register at the Compare Match between OCR0x and TCNT0, and clearing (or setting) the OC0x Register
+at the timer clock cycle the counter is cleared (changes from TOP to BOTTOM).\\\\
+The PWM frequency for the output can be calculated by the following equation:
+$$
+f_{OCnxPWM}=\frac{f_{clk_I/O}}{256N}
+$$
+The N variable represents the prescale factor (1, 8, 64, 256, or 1024).\\\\
+The extreme values for the OCR0A Register represents special cases when generating a PWM waveform output in the fast PWM mode. If the OCR0A is set equal to BOTTOM, the output will be a narrow spike for each MAX+1 timer clock cycle. Setting the OCR0A equal to MAX will result in a constantly high or low output (depending on the polarity of the output set by the COM0A1:0 bits).\\\\
+A frequency (with 50\% duty cycle) waveform output in fast PWM mode can be achieved by setting OC0x to toggle its logical level on each Compare Match (COM0x1:0 = 1). The waveform
+generated will have a maximum frequency of $f_{OC0}=f_{clk_I/O}/2$ when OCR0A is set to zero. This
+feature is similar to the OC0A toggle in CTC mode, except the double buffer feature of the Out-
+put Compare unit is enabled in the fast PWM mode.
+\paragraph{Phase Correct PWM Mode}(WGM02:0 = 1 or 5) provides a high resolution phase correct PWM waveform generation option. The phase correct PWM mode is based on a dual-slope operation. The counter counts repeatedly from BOTTOM to TOP and then from TOP to BOTTOM. TOP is defined as 0xFF when WGM2:0 = 1, and OCR0A when WGM2:0 = 5. In non-inverting Compare Output mode, the Output Compare (OC0x) is cleared on the Compare Match between TCNT0 and OCR0x while upcounting, and set on the Compare Match while down-counting. In inverting Output Compare mode, the operation is inverted. The dual-slope operation has lower maximum operation frequency than single slope operation. However, due to the symmetric feature of the dual-slope PWM modes, these modes are preferred for motor control
+applications.\\\\
+In phase correct PWM mode the counter is incremented until the counter value matches TOP. When the counter reaches TOP, it changes the count direction. The TCNT0 value will be equal to TOP for one timer clock cycle. The TCNT0 value is in the timing diagram shown as a histogram for illustrating
+the dual-slope operation. The diagram includes non-inverted and inverted PWM outputs. The small horizontal line marks on the TCNT0 slopes represent Compare Matches between OCR0x and TCNT0.
+%126p
+The Timer/Counter Overflow Flag (TOV0) is set each time the counter reaches BOTTOM. The Interrupt Flag can be used to generate an interrupt each time the counter reaches the BOTTOM value.\\\\
+In phase correct PWM mode, the compare unit allows generation of PWM waveforms on the OC0x pins. Setting the COM0x1:0 bits to two will produce a non-inverted PWM. An inverted PWM output can be generated by setting the COM0x1:0 to three: Setting the COM0A0 bits to one allows the OC0A pin to toggle on Compare Matches if the WGM02 bit is set. This option is not available for the OC0B pin. The actual OC0x value will only be visible on the port pin if the data direction for the port pin is set as output. The PWM waveform is generated by clearing (or setting) the OC0x Register at the Compare Match between OCR0x and TCNT0 when the counter increments, and setting (or clearing) the OC0x Register at Compare Match between OCR0x and TCNT0 when the counter decrements. The PWM frequency for the output when using phase correct PWM can be calculated by the following equation:
+$$
+f_{OCnxPCPWM}=\frac{f_{clk_I/O}}{510N}
+$$
+The N variable represents the prescale factor (1, 8, 64, 256, or 1024.\\\\
+The extreme values for the OCR0A Register represent special cases when generating a PWM waveform output in the phase correct PWM mode. If the OCR0A is set equal to BOTTOM, the output will be continuously low and if set equal to MAX the output will be continuously high for non-inverted PWM mode. For inverted PWM the output will have the opposite logic values.\\\\
+At the very start of period 2 OCnx has a transition from high to low even though there is no Compare Match. The point of this transition is to guarantee symmetry around BOTTOM. There are two cases that give a transition without Compare Match.
+\begin{itemize}
+\item OCR0A changes its value from MAX, When the OCR0A value is MAX the OCn pin value is the same as the result of a down-counting Compare Match. To ensure symmetry around BOTTOM the OCn value at MAX must correspond to the result of an up-counting Compare Match.
+\item  The timer starts counting from a value higher than the one in OCR0A, and for that reason
+misses the Compare Match and hence the OCn change that would have happened on the way up.
+\end{itemize}
+\subsection{16-bit Timer/Counter}
+\subsubsection{Registers}
+The Timer/Counter (TCNTn), Output Compare Registers (OCRnA/B/C), and Input Capture Register (ICRn) are all 16-bit registers. Special procedures must be followed when accessing the 16-bit registers. The Timer/Counter Control Registers (TCCRnA/B/C) are 8-bit registers and have no CPU access restrictions. Interrupt requests (short en as Int.Req.) signals are all visible in the Timer Interrupt Flag Register (TIFRn). All interrupts are individually masked with the Timer Interrupt Mask Register (TIMSKn). TIFRn and TIMSKn are not shown in the figure since these registers are shared by other timer units.\\\\
+The Timer/Counter can be clocked internally, via the prescaler, or by an external clock source on
+the Tn pin. The Clock Select logic block controls which clock source and edge the Timer/Counter
+uses to increment (or decrement) its value. The Timer/Counter is inactive when no clock source
+is selected. The output from the clock select logic is referred to as the timer clock ($clk_{Tn}$).\\\\
+The double buffered Output Compare Registers (OCRnA/B/C) are compared with the
+Timer/Counter value at all time. The result of the compare can be used by the Waveform Generator to generate a PWM or variable frequency output on the Output Compare pin (OCnA/B/C).\\\\
+The compare match event will also set the Compare Match Flag (OCFnA/B/C) which can be used to generate an Output Compare interrupt request.\\\\
+The Input Capture Register can capture the Timer/Counter value at a given external (edge triggered) event on either the Input Capture pin (ICPn) or on the Analog Comparator pins. The Input Capture unit includes a digital filtering unit (Noise Canceler) for reducing the chance of capturing noise spikes.\\\\
+The TOP value, or maximum Timer/Counter value, can in some modes of operation be defined
+by either the OCRnA Register, the ICRn Register, or by a set of fixed values. When using OCRnA as TOP value in a PWM mode, the OCRnA Register can not be used for generating a PWM output. However, the TOP value will in this case be double buffered allowing the TOP value to be changed in run time. If a fixed TOP value is required, the ICRn Register can be used as an alternative, freeing the OCRnA to be used as PWM output.\\\\
+The following definitions are used extensively throughout the document:\\\\
+%138p1
+\subsubsection{Output Compare Units}
+The 16-bit comparator continuously compares TCNTn with the Output Compare Register (OCRnx). If TCNT equals OCRnx the comparator signals a match. A match will set the Output Compare Flag (OCFnx) at the next timer clock cycle. If enabled (OCIEnx = 1), the Output Compare Flag generates an Output Compare interrupt. The OCFnx Flag is automatically cleared when the interrupt is executed. Alternatively the OCFnx Flag can be cleared by software by writing a logical one to its I/O bit location. The Waveform Generator uses the match signal to generate an output according to operating mode set by the Waveform Generation mode (WGMn3:0) bits and Compare Output mode (COMnx1:0) bits. The TOP and BOTTOM signals are used by the Waveform Generator for handling the special cases of the extreme values in
+some modes of operation. \\\\
+A special feature of Output Compare unit A allows it to define the Timer/Counter TOP value (that
+is, counter resolution). In addition to the counter resolution, the TOP value defines the period
+time for waveforms generated by the Waveform Generator.\\\\
+The small “n” in the register and bit names indicates the device number (n = n for Timer/Counter n), and the “x” indicates Output Compare unit (A/B/C). The elements of the block diagram that are not directly a part of the Output Compare unit are gray shaded.\\\\
+%145p
+The OCRnx Register is double buffered when using any of the twelve Pulse Width Modulation (PWM) modes. For the Normal and Clear Timer on Compare (CTC) modes of operation, the double buffering is disabled. The double buffering synchronizes the update of the OCRnx Compare Register to either TOP or BOTTOM of the counting sequence. The synchronization prevents the occurrence of odd-length, non-symmetrical PWM pulses, thereby making the output glitch-free.\\\\
+The OCRnx Register access may seem complex, but this is not case. When the double buffering
+is enabled, the CPU has access to the OCRnx Buffer Register, and if double buffering is disabled the CPU will access the OCRnx directly. The content of the OCR1x (Buffer or Compare) Register is only changed by a write operation (the Timer/Counter does not update this register automatically as the TCNT1 and ICR1 Register). Therefore OCR1x is not read via the high byte temporary register (TEMP). However, it is a good practice to read the low byte first as when accessing other 16-bit registers.
+Writing the OCRnx Registers must be done via the TEMP Register since the compare of all 16 bits is done continuously. The high byte (OCRnxH) has to be written first. When the high byte I/O location is written by the CPU, the TEMP Register will be updated by the value written. Then when the low by
+te (OCRnxL) is written to the lower eight bits, the high byte will be copied into the upper 8-bits
+of either the OCRnx buffer or OCRnx Compare Register in the same system clock cycle.
+\subsubsection{Modes of Operation}
+The mode of operation, that is, the behavior of the Timer/Counter and the Output Compare pins,
+is defined by the combination of the Waveform Generation mode (WGMn3:0) and Compare Output mode (COMnx1:0) bits. The Compare Output mode bits do not affect the counting sequence, while the Waveform Generation mode bits do. The COMnx1:0 bits control whether the PWM output generated should be inverted or not (inverted or non-inverted PWM). For non-PWM modes the COMnx1:0 bits control whether the output should be set, cleared or toggle at a compare match. 
+%148
+\paragraph{Normal Mode} is the simplest mode of operation is the Normal mode (WGMn3:0 = 0). In this mode the counting direction is always up (incrementing), and no counter clear is performed. The counter simply overruns when it passes its maximum 16-bit value (MAX = 0xFFFF) and then restarts from the BOTTOM (0x0000). In normal operation the Timer/Counter Overflow Flag (TOVn) will be set in
+the same timer clock cycle as the TCNTn becomes zero. The TOVn Flag in this case behaves like a 17th bit, except that it is only set, not cleared. However, combined with the timer overflow interrupt that automatically clears the TOVn Flag, the timer resolution can be increased by software. There are no special cases to consider in the Normal mode, a new counter value can be written anytime.\\\\
+The Input Capture unit is easy to use in Normal mode. However, observe that the maximum interval between the external events must not exceed the resolution of the counter. If the interval between events are too long, the timer overflow interrupt or the prescaler must be used to extend the resolution for the capture unit.\\\\
+The Output Compare units can be used to generate interrupts at some given time. Using the Output Compare to generate waveforms in Normal mode is not recommended, since this will occupy too much of the CPU time.
+\paragraph{In Clear Timer on Compare Match (CTC) Mode}  or CTC mode (WGMn3:0 = 4 or 12), the OCRnA or ICRn Register are used to manipulate the counter resolution. In CTC mode the counter is cleared to zero when the counter value (TCNTn) matches either the OCRnA (WGMn3:0 = 4) or the ICRn (WGMn3:0 =
+12). The OCRnA or ICRn define the top value for the counter, hence also its resolution. This mode allows greater control of the compare match output frequency. It also simplifies the operation of counting external events. The counter value (TCNTn) increases until a compare match occurs with either OCRnA or ICRn, and then counter (TCNTn) is cleared.\\\\
+%149
+An interrupt can be generated at each time the counter value reaches the TOP value by either using the OCFnA or ICFn Flag according to the register used to define the TOP value. If the interrupt is enabled, the interrupt handler routine can be used for updating the TOP value. However, changing the TOP to a value close to BOTTOM when the counter is running with none or a low prescaler value must be done with care since the CTC mode does not have the double buff ering feature. If the new value written to OCRnA or ICRn is lower than the current value of TCNTn, the counter will miss the compare match. The counter will then have to count to its maximum value (0xFFFF) and wrap around starting at 0x0000 before the compare match can occur. In many cases this feature is not desirable. An alternative will then be to use the fast PWM mode using OCRnA for defining TOP (WGMn3:0 = 15)since the OCRnAthen will be double buffered.\\\\
+For generating a waveform output in CTC mode, the OCnA output can be set to toggle its logical
+level on each compare match by setting the Compare Output mode bits to toggle mode (COMnA1:0 = 1). The OCnA value will not be visible on the port pin unless the data direction for the pin is set to output (DDR\_OCnA = 1). The waveform generated will have a maximum frequency of $f_{OCnA}=f_{clk_I/o}/2$ when OCRnA is set to zero (0x0000). The waveform frequency is defined by the following equation:
+$$
+f_{OCnA}=\frac{f_{clk_I/O}}{2N(1+OCRnA)}
+$$
+The N variable represents the prescaler factor (1, 8, 64, 256, or 1024).\\\\
+As for the Normal mode of operation, the TOVn Flag is set in the same timer clock cycle that the
+counter counts from MAX to 0x0000.
+\paragraph{The fast Pulse Width Modulation}or fast PWM mode (WGMn3:0 = 5, 6, 7, 14, or 15) provides a high frequency PWM waveform generation option. The fast PWM differs from the other PWM options by its single-slope operation. The counter counts from BOTTOM to TOP then restarts from BOTTOM. In non-inverting Compare Output mode, the Output Compare (OCnx) is cleared on the compare match between TCNTn and OCRnx, and set at BOTTOM. In inverting Compare Output mode output is set on compare match and cleared at BOTTOM. Due to the single-slope operation, the operating frequency of the fast PWM mode can be twice as high as the phase correct and phase and frequency correct PWM modes that use dual-slope operation. This high frequency makes the fast PWM mode well suited for power regulation, rectification, and DAC applications. High frequency allows physically small sized external components (coils, capacitors), hence reduces total system cost.\\\\
+The PWM resolution for fast PWM can be fixed to 8-bit, 9-bit, or 10-bit, or defined by either ICRn
+or OCRnA. The minimum resolution allowed is 2-bit (ICRn or OCRnA set to 0x0003), and the maximum resolution is 16-bit (ICRn or OCRnA set to MAX). The PWM resolution in bits can be calculated by using the following equation:
+$$
+R_{FPWM}=\frac{\log(TOP+1}{\log(2)}
+$$
+In fast PWM mode the counter is incremented until the counter value matches either one of the
+fixed values 0x00FF, 0x01FF, or 0x03FF (WGMn3:0 = 5, 6, or 7), the value in ICRn (WGMn3:0 = 14), or the value in OCRnA (WGMn3:0 = 15). The counter is then cleared at the following timer clock cycle. The figure shows fast PWM mode when OCRnA or ICRn is used to define TOP. The TCNTn value is in the timing diagram shown as a histogram for illustrating the single-slope operation. The diagram includes non-inverted and inverted PWM outputs. The small horizontal line marks on the TCNTn slopes represent compare matches between OCRnx and TCNTn. The OCnx Interrupt Flag will be set when a compare match occurs.\\\\
+%151p1
+The Timer/Counter Overflow Flag (TOVn) is set each time the counter reaches TOP. In addition
+the OCnA or ICFn Flag is set at the same timer clock cycle as TOVn is set when either OCRnA or ICRn is used for defining the TOP value. If one of the interrupts are enabled, the interrupt handler routine can be used for updating the TOP and compare values.\\\\
+When changing the TOP value the program must ensure that the new TOP value is higher or
+equal to the value of all of the Compare Registers. If the TOP value is lower than any of the
+Compare Registers, a compare match will never occur between the TCNTn and the OCRnx. Note that when using fixed TOP values the unused bits are masked to zero when any of the OCRnx Registers are written.\\\\
+The procedure for updating ICRn differs from updating OCRnA when used for defining the TOP value. The ICRn Register is not double buffered. This means that if ICRn is changed to a low value when the counter is running with none or a low prescaler value, there is a risk that the new ICRn value written is lower than the current value of TCNTn. The result will then be that the counter will miss the compare match at the TOP value. The counter will then have to count to the MAX value (0xFFFF) and wrap around starting at 0x0000 before the compare match can occur. The OCRnA Register however, is double buffered. This feature allows the OCRnA I/O location to be written anytime. When the OCRnA I/O location is written the value written will be put into the OCRnA Buffer Register. The OCRnA Compare Register will then be updated with the value in the Buffer Register at the next timer clock cycle the TCNTn matches TOP. The update is done at the same timer clock cycle as the TCNTn is cleared and the TOVn Flag is set.\\\\
+Using the ICRn Register for defining TOP works well when using fixed TOP values. By using ICRn, the OCRnA Register is free to be used for generating a PWM output on OCnA. However, if the base PWM frequency is actively changed (by changing the TOP value), using the OCRnA as TOP is clearly a better choice due to its double buffer feature.\\\\
+In fast PWM mode, the compare units allow generation of PWM waveforms on the OCnx pins. Setting the COMnx1:0 bits to two will produce a non-inverted PWM and an inverted PWM output can be generated by setting the COMnx1:0 to three. The actual OCnx value will only be visible on the port pin if the data direction for the port pin is set as output (DDR\_OCnx). The PWM waveform is generated by setting (or clearing) the OCnx Register at the compare match between OCRnx and TCNTn, and clearing (or setting) the OCnx Register at the timer clock cycle the counter is cleared (changes from TOP to BOTTOM).\\\\
+The PWM frequency for the output can be calculated by the following equation:
+$$
+f_{OCnxPWM}=\frac{f_{clk_I/O}}{N(1+TOP)}
+$$
+The N variable represents the prescaler divider (1, 8, 64, 256, or 1024).\\\\ 
+The extreme values for the OCRnx Register represents special cases when generating a PWM waveform output in the fast PWM mode. If the OCRnx is set equal to BOTTOM (0x0000) the output will be a narrow spike for each TOP+1 timer clock cycle. Setting the OCRnx equal to TOP will result in a const
+ant high or low output (depending on the polarity of the output set by the COMnx1:0 bits). A frequency (with 50\% duty cycle) waveform output in fast PWM mode can be achieved by setting OCnA to toggle its logical level on each compare match (COMnA1:0 = 1). This applies only if OCR1A is used to define the TOP value (WGM13:0 = 15). The wave form generated will havea maximum frequency of $f_{OCnA}=f_{clk_I/O}/2$ when OCRnA is set to zero (0x0000). This feature is similar to the OCnA toggle in CTC mode, except the double buffer feature of the Output Compare unit is enabled in the fast PWM mode.
+\paragraph{The phase correct Pulse Width Modulation} Modulation or phase correct PWM mode (WGMn3:0 = 1, 2, 3, 10, or 11) provides a high resolution phase correct PWM waveform generation option. The
+phase correct PWM mode is, like the phase and frequency correct PWM mode, based on a dual-slope operation. The counter counts repeatedly from BOTTOM (0x0000) to TOP and then from TOP to BOTTOM. In non-inverting Compare Output mode, the Output Compare (OCnx) is cleared on the compare match between TCNTn and OCRnx while upcounting, and set on the compare match while downcounting. In inverting Output Compare mode, the operation is inverted. The dual-slope operation has lower maximum operation frequency than single slope operation. However, due to the symmetric feature of the dual-slope PWM modes, these modes are preferred for motor control applications.\\\\
+The PWM resolution for the phase correct PWM mode can be fixed to 8-, 9-, or 10-bit, or defined by either ICRn or OCRnA. The minimum resolution allowed is 2-bit (ICRn or OCRnA set to 0x0003), and the maximum resolution is 16-bit (ICRn or OCRnA set to MAX). The PWM resolution in bits can be calculated by using the following equation:
+$$
+R_{PCPWM}=\frac{\log(TOP+1)}{\log(2)}
+$$
+In phase correct PWM mode the counter is incremented until the counter value matches either
+one of the fixed values 0x00FF, 0x01FF, or 0x03FF (WGMn3:0 = 1, 2, or 3), the value in ICRn (WGMn3:0 = 10), or the value in OCRnA (WGMn3:0 = 11). The counter has then reached the TOP and changes the count direction. The TCNTn value will be equal to TOP for one timer clock cycle. The figure shows phase correct PWM mode when OCRnA or ICRn is used to define TOP. The TCNTn value is in the timing diagram shown as a histogram for illustrating the dual-slope operation. The diagram includes non-inverted and inverted PWM outputs. The small horizontal line marks on the TCNTn slopes represent compare matches between OCRnx and TCNTn. The OCnx Interrupt Flag will be set when a compare match occurs.
+%153
+The Timer/Counter Overflow Flag (TOVn) is set each time the counter reaches BOTTOM. When either OCRnA or ICRn is used for defining the TOP value, the OCnA or ICFn Flag is set accordingly at the same timer clock cycle as the OCRnx Registers are updated with the double buffer value (at TOP). The Interrupt Flags can be used to generate an interrupt each time the counter reaches the TOP or BOTTOM value.\\\\
+When changing the TOP value the program must ensure that the new TOP value is higher or equal to the value of all of the Compare Registers. If the TOP value is lower than any of the Compare Registers, a compare match will never occur between the TCNTn and the OCRnx. Note that when using fixed TOP values, the unused bits are masked to zero when any of the OCRnx Registers are written. The reason for this can be found in the time of update of the OCRnx Register. Since the OCRnx update occurs at TOP, the PWM period starts and ends at TOP. This implies that the length of the falling slope is determined by the previous TOP value, while the length of the rising slope is determined by the new TOP value. When these two values differ the two slopes of the period will differ in length. The difference in length gives the unsymmetrical result on the output.\\\\
+It is recommended to use the phase and frequency correct mode instead of the phase correct mode when changing the TOP value while the Timer/Counter is running. When using a static TOP value there are practically no differences between the two modes of operation.\\\\
+In phase correct PWM mode, the compare units allow generation of PWM waveforms on the OCnx pins. Setting the COMnx1:0 bits to two will produce a non-inverted PWM and an inverted PWM output can be generated by setting the COMnx1:0 to three. The actual OCnx value will only be visible on the port pin if the data direction for the port pin is set as output (DDR\_OCnx). The PWM waveform is generated by setting (or clearing) the OCnx Register at the compare match between OCRnx and TCNTn when the counter increments, and clearing (or setting) the OCnx Register at compare match between OCRnx and TCNTn when the counter decrements. The PWM frequency for the output when using phase correct PWM can be calculated by the following equation:
+$$
+f_{OCnxPCPWM}=\frac{f_{clk_I/O}}{2N \cdot TOP}
+$$
+The
+N
+variable represents the prescaler divider (1, 8, 64, 256, or 1024).\\\\
+The extreme values for the OCRnx Register represent special cases when generating a PWM waveform output in the phase correct PWM mode. If the OCRnx is set equal to BOTTOM the output will be continuously low and if set equal to TOP the output will be continuously high for non-inverted PWM mode. For inverted PWM the output will have the opposite logic values. If OCR1A is used to define the TOP value (WGM13:0 = 11) and COM1A1:0 = 1, the OC1A output will toggle with a 50\% duty cycle.
+\paragraph{The phase and frequency correct Pulse Width Modulation,}or phase and frequency correct PWM mode (WGMn3:0 = 8 or 9) provides a high resolution phase and frequency correct PWM wave-form generation option. The phase and frequency correct PWM mode is, like the phase correct PWM mode, based on a dual-slope operation. The counter counts repeatedly from BOTTOM (0x0000) to TOP and then from TOP to BOTTOM. In non-inverting Compare Output mode, the Output Compare (OCnx) is cleared on the compare match between TCNTn and OCRnx while up-counting, and set on the compare match while downcounting. In inverting Compare Output mode, the operation is inverted. The dual-slope operation gives a lower maximum operation frequency compared to the single-slope operation. However, due to the symmetric feature of thedual-slope PWM modes, these modes are preferred for motor control applications.\\\\
+The main difference between the phase correct, and the phase and frequency correct PWM mode is the time the OCRnx Register is updated by the OCRnx Buffer Register.
+The PWM resolution for the phase and frequency correct PWM mode can be defined by either ICRn or OCRnA. The minimum resolution allowed is 2-bit (ICRn or OCRnA set to 0x0003), and the maximum resolution is 16-bit (ICRn or OCRnA set to MAX). The PWM resolution in bits can be calculated using the following equation: 
+$$
+f_{PFCPWM}=\frac{\log(TOP+1)}{\log(2)}
+$$
+In phase and frequency correct PWM mode the counter is incremented until the counter value
+matches either the value in ICRn (WGMn3:0 = 8), or the value in OCRnA (WGMn3:0 = 9). The counter has then reached the TOP and changes the count direction. The TCNTn value will be equal to TOP for one timer clock cycle. The figure shows phase and frequency correct PWM mode when OCRnA or ICRn is used to define TOP. The TCNTn value is in the timing diagram shown as a histogram for illustrating the dual-slope operation. The diagram includes non-inverted and inverted PWM outputs. The small horizontal line marks on the TCNTn slopes represent compare matches between OCRnx and TCNTn. The OCnx Interrupt Flag will be set when a compare match occurs.
+%155
+The Timer/Counter Overflow Flag (TOVn) is set at the same timer clock cycle as the OCRnx Registers are updated with the double buffer value (at BOTTOM). When either OCRnA or ICRn is used for defining the TOP value, the OCnA or ICFn Flag set when TCNTn has reached TOP. The Interrupt Flags can then be used to generate an interrupt each time the counter reaches theTOP or BOTTOM value.\\\\
+When changing the TOP value the program must ensure that the new TOP value is higher or equal to the value of all of the Compare Registers. If the TOP value is lower than any of the Compare Registers, a compare match will never occur between the TCNTn and the OCRnx.\\\\
+Since the OCRnx Registers are updated at BOTTOM, the length of the rising and the falling slopes will always be equal. This gives symmetrical output pulses and is therefore
+frequency correct.\\\\
+Using the ICRn Register for defining TOP works well when using fixed TOP values. By using ICRn, the OCRnA Register is free to be used for generating a PWM output on OCnA. However, if the base PWM frequency is actively changed by changing the TOP value, using the OCRnA as TOP is clearly a better choice due to its double buffer feature.\\\\
+In phase and frequency correct PWM mode, the compare units allow generation of PWM wave-forms on the OCnx pins. Setting the COMnx1:0 bits to two will produce a non-inverted PWM and an inverted PWM output can be generated by setting the COMnx1:0 to three. The actual OCnx value will only be visible
+on the port pin if the data direction for the port pin is set as output (DDR\_OCnx). The PWM waveform is generated by setting (or clearing) the OCnx Register at the compare match between OCRnx and TCNTn when the counter increments, and clearing (or setting) the OCnx Register at compare match between OCRnx and TCNTn when the counter decrements. The PWM frequency for the output when using phase and frequency correct PWM can be calculated by the following equation:
+$$
+f_{OCnxPFCPWM}=\frac{F_{clk_I/O}}{2N \cdot TOP}
+$$
+The N variable represents the prescaler divider (1, 8, 64, 256, or 1024).\\\\
+The extreme values for the OCRnx Register represents special cases when generating a PWM waveform output in the phase correct PWM mode. If the OCRnx is set equal to BOTTOM the output will be continuously low and if set equal to TOP the output will be set to high for non-inverted PWM mode. For inverted PWM the output will have the opposite logic values. If OCR1A is used to define the TOP value (WGM13:0 = 9) and COM1A1:0 =1, the OC1A output will toggle with a 50\% duty cycle.
+\section{The measurement accuracy and frequencies}
+\section{Real time clock}
+
+\section{Measuring the speed of a program loop}
+
+\section{Measuring the signal frequency}
+
+\section{Measuring the length of a pulse}
+
+\section{Programming Tasks}
+
+\subsection{The first task}
+
+\subsection{The second task}
+
+\subsection{The third task}
+
+\subsection{The fourth task}
+
+\subsection{The firth task}
+
+\subsection{The sixth task}
+
+
+\end{document}

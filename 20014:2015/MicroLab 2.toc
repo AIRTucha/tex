@@ -1,0 +1,17 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}The purpose of the STK600 card.}{2}{section.1}
+\contentsline {section}{\numberline {2}The main features}{2}{section.2}
+\contentsline {section}{\numberline {3}Connecting a processor to STK600}{2}{section.3}
+\contentsline {subsection}{\numberline {3.1}PC software}{4}{subsection.3.1}
+\contentsline {section}{\numberline {4}The price of the development kit}{4}{section.4}
+\contentsline {section}{\numberline {5}The parts of the card}{5}{section.5}
+\contentsline {section}{\numberline {6}The power supply}{6}{section.6}
+\contentsline {section}{\numberline {7}Cenecting IO devices}{7}{section.7}
+\contentsline {section}{\numberline {8}The clock setting of the processor}{8}{section.8}
+\contentsline {subsection}{\numberline {8.1}Programmable clock generator}{8}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Crystal Oscillator}{8}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}XTAL1 Pin Tri-stated}{8}{subsection.8.3}
+\contentsline {subsection}{\numberline {8.4}Real Time Clock}{8}{subsection.8.4}
+\contentsline {section}{\numberline {9}Programming the card}{8}{section.9}
+\contentsline {section}{\numberline {10}ISP - programming}{9}{section.10}
+\contentsline {section}{\numberline {11}Default settings}{9}{section.11}

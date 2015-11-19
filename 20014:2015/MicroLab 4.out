@@ -1,0 +1,11 @@
+\BOOKMARK [1][-]{section.1}{Utilizing the serial communication}{}% 1
+\BOOKMARK [1][-]{section.2}{The features of USART circuit}{}% 2
+\BOOKMARK [1][-]{section.3}{Programming the transmission speed}{}% 3
+\BOOKMARK [1][-]{section.4}{Programming the other serial parameters}{}% 4
+\BOOKMARK [2][-]{subsection.4.1}{Stop bit}{section.4}% 5
+\BOOKMARK [2][-]{subsection.4.2}{Number of data bits}{section.4}% 6
+\BOOKMARK [2][-]{subsection.4.3}{Parity settings}{section.4}% 7
+\BOOKMARK [1][-]{section.5}{The inspection of the data transmission}{}% 8
+\BOOKMARK [1][-]{section.6}{Programming Tasks}{}% 9
+\BOOKMARK [2][-]{subsection.6.1}{The tasks from first to third}{section.6}% 10
+\BOOKMARK [2][-]{subsection.6.2}{The fourth task}{section.6}% 11

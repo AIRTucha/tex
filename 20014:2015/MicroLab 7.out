@@ -1,0 +1,10 @@
+\BOOKMARK [1][-]{section.1}{The interrupt sources}{}% 1
+\BOOKMARK [1][-]{section.2}{Handling of the interrupts}{}% 2
+\BOOKMARK [1][-]{section.3}{Programming the external interrupts}{}% 3
+\BOOKMARK [1][-]{section.4}{Programming the internal interrupts}{}% 4
+\BOOKMARK [1][-]{section.5}{The tasks of the interrupt handle}{}% 5
+\BOOKMARK [1][-]{section.6}{Programming tasks}{}% 6
+\BOOKMARK [2][-]{subsection.6.1}{The first task}{section.6}% 7
+\BOOKMARK [2][-]{subsection.6.2}{The second task}{section.6}% 8
+\BOOKMARK [2][-]{subsection.6.3}{The third task}{section.6}% 9
+\BOOKMARK [2][-]{subsection.6.4}{The fourth task}{section.6}% 10

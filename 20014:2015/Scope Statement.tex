@@ -1,0 +1,124 @@
+\documentclass[english]{article}
+
+\usepackage{babel}
+\usepackage{graphicx}
+\usepackage{times}
+\usepackage{pifont}
+\usepackage[margin=1in]{geometry}
+\usepackage{eurosym}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+\usepackage{framed}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+
+%HEADER
+%**************************************************************************************
+\pagestyle{fancy}
+\fancyhf{}
+%**************************************************************************************
+\lhead{Space Monitor}		 	 
+\rhead{Scope statement} 
+\lfoot{Computer Service Management}
+\cfoot{\thepage}
+\rfoot{Alexey Tukalo}
+%**************************************************************************************
+
+\date{}
+\setlength\parindent{0pt}
+\title{Scope Statement (Version 1.0)}
+\begin{document}
+\maketitle
+
+
+%MAIN CONTENT ******************************************************************************************************************
+\begin{framed}
+\textbf{Project Title:  Space monitor } \\
+\textbf{Date: \today}
+\textbf{Prepared by: April 27, 2015 }
+\end{framed}
+\begin{framed}
+  \textbf{Project Justification:} \\
+  The aim is to develop project with complex network architecture, the project should contain microcontroller which communicates with server over internet and the webpage which demonstrate the sensors work in visual way. The project have to follow philosophy of internet of things.
+  \end{framed}
+  \begin{framed}
+   \textbf{Product Characteristics and Requirements:}
+\begin{enumerate}
+  \item The microcontroller have to:
+  \begin{enumerate}
+  \item transmit data over internet to the server
+  \item read data from Ultrosonic sensor 
+	\end{enumerate}
+  \item The server have to:
+    \begin{enumerate}
+  \item received data from microcontroller
+  \item keep data in the database
+  \item provide RESTfull API for webpage
+  \item be based on IBM BlueMix
+	\end{enumerate}
+  \item The webpage have to:
+    \begin{enumerate}
+  \item be implement fluid-design 
+  \item contain:
+  \begin{enumerate}
+  \item legend
+  \item two donut chart
+  \item bar chart
+  \item plot
+	\end{enumerate}
+  \item receive data from RESTfull API
+	\end{enumerate}
+\end{enumerate}
+  \end{framed}
+  \begin{framed}
+  \textbf{Summary of Project Deliverables}\\
+  
+ \textbf{Project management-related deliverables: }the following documentation and any other documents required to manage the project.
+ \begin{enumerate}
+  \item  Scope statement
+  \item WBS
+  \item Network diagram and critical path
+  \item Risk register and probability impact matrix
+  \item Communication plan
+  \item Cost baseline
+  \item Team contract
+  \item Project completion report
+	\end{enumerate}
+
+
+ \textbf{Product-related deliverables:}
+  \begin{enumerate}
+  \item A project meeting the agreed specification
+  \item A design document detailing the project architecture
+  \item All software code
+  \item Final presentation
+	\end{enumerate}
+
+
+\textbf{Non Project Deliverables}
+  \begin{enumerate}
+  \item No guarantee of increased revenue for the project
+  \item The ongoing site maintenance following the completion of the project
+  \item The website hosting and hosting contract
+  \item The website launch
+	\end{enumerate}
+  \end{framed}
+  \begin{framed}
+  \textbf{Project Success Criteria:} \\
+   \begin{enumerate}
+  \item The project will be completion within 3 months.
+  \item All HTML and CSS to validate to W3C standards.
+  \item The project will be fully functional
+  \item The product will follow Product Characteristics and Requirements
+	\end{enumerate}
+  \end{framed}
+  \begin{framed}
+\textbf{Assumptions:} \\
+ The project team will consist of a Sponsor(University) and Project Manager/Programmer(Alexey Tukalo) and Programmers(Gaëtan M., Florian Henriet).
+\end{framed}
+
+
+
+\end{document}

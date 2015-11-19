@@ -1,0 +1,118 @@
+\documentclass[english]{article}
+
+\usepackage{babel}
+\usepackage{graphicx}
+\usepackage{times}
+\usepackage{pifont}
+\usepackage[margin=1in]{geometry}
+\usepackage{eurosym}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+%\usapackage{float}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+
+%HEADER
+%**************************************************************************************
+\pagestyle{fancy}
+\fancyhf{}
+%**************************************************************************************
+\lhead{Amplitude modulation}		 	 
+\rhead{Laboratory Work in Telecommunications} 
+\lfoot{EFA12SF}
+\cfoot{\thepage}
+\rfoot{Dmitry Boronin\\ Nikolay Arsenov\\ Alexey Tukalo}
+%**************************************************************************************
+
+\date{}
+\setlength\parindent{0pt}
+
+\begin{document}
+
+\title{\vspace{2in}Amplitude modulation\\
+\small for Laboratory Work in Telecommunications\\
+\vspace{0.5in}\includegraphics{savonia.jpg}}
+
+\nopagebreak
+\maketitle
+
+
+\vspace{3in}
+
+\author{
+\begin{flushright}
+Dmitry Boronin, Nikolay Arsenov, Alexey Tukalo,\\
+EFA12SF,\\
+Information Technology,\\
+Savonia University of Applied Sciences
+\end{flushright}
+}
+
+\date{\today}
+\thispagestyle{empty}
+
+\newpage
+\setcounter{page}{1}
+\setcounter{tocdepth}{2}
+\tableofcontents
+
+\newpage
+
+%MAIN CONTENT ******************************************************************************************************************
+\section{Introduction}
+In the modulation process, the baseband voice, video, or digital signal modifies
+another, higher-frequency signal called the carrier, which is usually a sine wave.
+A sine wave carrier can be modified by the intelligence signal through amplitude modulation, frequency modulation, or phase modulation. The focus of this lab work is amplitude modulation (AM).
+\subsection{Concept}
+As the name suggests, in AM, the information signal varies the amplitude of the carrier
+sine wave. The instantaneous value of the carrier amplitude changes in accordance with
+the amplitude and frequency variations of the modulating signal. The carrier
+frequency remains constant during the modulation process, but its amplitude varies in
+accordance with the modulating signal. An increase in the amplitude of the modulating
+signal causes the amplitude of the carrier to increase. Both the positive and the negative
+peaks of the carrier wave vary with the modulating signal. An increase or a decrease in
+the amplitude of the modulating signal causes a corresponding increase or decrease in both
+the positive and the negative peaks of the carrier amplitude.\\\\
+An imaginary line connecting the positive peaks and negative peaks of the carrier
+waveform (the dashed line in Fig. 3-1) gives the exact shape of the modulating
+information signal. This imaginary line on the carrier waveform is known as the
+envelope.\\\\
+Using trigonometric functions, we can express the sine wave carrier with the simple
+expression
+$$
+\upsilon_c=V_c \sin(2\pi f_ct)
+$$
+In this expression, $\upsilon_c$ represents the instantaneous value of the carrier sine wave voltage
+at some specific time in the cycle; $V_c$ represents the peak value of the constant unmodulated carrier sine wave as measured between zero and the maximum amplitude of either
+the positive-going or the negative-going alternations; $f_c$ is the frequency of the
+carrier sine wave; and t is a particular point in time during the carrier cycle.\\\\
+A sine wave modulating signal can be expressed with a similar formula
+$$
+\upsilon_m=V_m \sin(2 \pi f_m t)
+$$
+where $\upsilon_m$ = instantaneous value of information signal,
+	$V_m$	  = peak amplitude of information signal,
+	$f_m$ = frequency of modulating signal.
+\subsection{History}
+Although AM was used in a few crude experiments in multiplex telegraph and telephone transmission in the late 1800s, the practical development of amplitude modulation is synonymous with the development between 1900 and 1920 of "radiotelephone" transmission, that is, the effort to send sound (audio) by radio waves. The first radio transmitters, called spark gap transmitters, transmitted information by wireless telegraphy, using different length pulses of carrier wave to spell out text messages in Morse code. They couldn't transmit audio because the carrier consisted of strings of damped waves, pulses of radio waves that declined to zero, that sounded like a buzz in receivers. In effect they were already amplitude modulated.
+
+\section{Materials}
+During the laboratory work we used:
+\begin{itemize}
+\item Oscilloscope
+\item Spectrum Analyser  
+\item Different cables
+\item Amplitude Modulation Transmitter Kit 
+\item Amplitude Modulation Receiver Kit 
+\end{itemize}
+\section{Process of work}
+\subsection{Process of measurement}
+\subsection{Result}
+
+\section{Conclusion}
+
+
+
+\end{document}

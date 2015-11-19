@@ -1,0 +1,36 @@
+//main
+
+#define F_CPU 16000000
+ 
+#include <asf.h>
+#include <util/delay.h>
+#include <math.h>
+
+int main (void)
+{
+	unsigned char bCounter=0;
+		board_init();
+			
+		while(1)
+			if(PINA!=0xff) // a key is pressed
+			{
+				bCounter++; // increase counter
+				while(PINA!=0xff); // wait until released
+				PORTB=~bCounter;
+			}
+	   	   
+	return 0;
+}
+
+
+
+//board_init
+
+void board_init(void)
+{
+		DDRA = 0x00;  // input
+		PORTA = 0xff; // pull up to 5V resistor to switch
+
+		DDRB = 0xff;  // output for leds
+		PORTB = 0xff; // turn off
+}

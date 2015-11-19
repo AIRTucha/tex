@@ -1,0 +1,100 @@
+\documentclass[english]{article}
+
+\usepackage{babel}
+\usepackage{graphicx}
+\usepackage{times}
+\usepackage{pifont}
+\usepackage[landscape,margin=2cm]{geometry}
+\usepackage{eurosym}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+
+\title{Risk Register for Sample website}
+\date{}
+\setlength\parindent{0pt}
+
+\begin{document}
+
+\maketitle
+
+
+%MAIN CONTENT ******************************************************************************************************************
+
+\begin{tabular}{|p{0.5cm}|p{2.5cm}|p{4cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{6cm}|}
+  \hline  
+No & Risk & Description & Rank & Affected Areas & Probability & Impact & Owner & Potential Responses \\
+  \hline  
+1 &
+Loss of funding &
+Loss of funding for hardware & 
+Medium & 
+Scope, Schedule & 
+Low & 
+Low & 
+U & 
+Use hardware already available at University \\
+  \hline  
+  2 &
+Teammate illness &
+Teammate is sick and not able to work  & 
+Medium & 
+Schedule & 
+Medium & 
+Medium & 
+T & 
+Reallocate tasks of the sick teammate between other developers \\
+  \hline  
+    3 &
+Hardware problems &
+Hardware problems during development & 
+High & 
+Scope, Schedule, Cost & 
+High & 
+Low & 
+T & 
+Troubleshoot the device, repair or buy new\\
+  \hline  
+      4 &
+BlueMix failure &
+BlueMix Cloud is unavailable for some reason  & 
+High & 
+Scope, Quality, Schedule, Cost & 
+Low & 
+High & 
+B & 
+Move server to other cloud or build own server\\
+  \hline 
+ 5 &
+Aliens attack &
+Civilisation from far space captured control under the Earth & 
+High & 
+Scope, Quality, Schedule, Cost & 
+Low & 
+High & 
+A & 
+Join partisan detachments resistance, stop developing, the product is useless in case of Galactic war \\
+  \hline 
+  
+\end{tabular}
+
+\begin{tabular}{ l l}
+\\
+Prepared by: Alexey Tukalo & Date: \today \\
+
+\end{tabular}\\\\
+Owners:\\
+\begin{tabular}{l l l}
+U & University & Project sponsor\\
+T & Team & Project team\\
+B & IBM BlueMix & Supplier\\
+A & Aliens & Aliens from far space\\
+\end{tabular}
+
+
+
+
+\end{document}

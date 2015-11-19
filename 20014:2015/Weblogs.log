@@ -1,0 +1,1172 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.30)  7 MAY 2015 14:49
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**Weblogs.tex
+(./Weblogs.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 78 languages loaded.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2014/03/24 3.9k The Babel package
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2012/08/20 v3.3p English support from the babel system
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2014/03/24 3.9k Babel common definitions
+\babel@savecnt=\count87
+\U@D=\dimen103
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen104
+\Gin@req@width=\dimen105
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/pifont.sty
+Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
+LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Try loading font information for U+psy on input line 64.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count89
+\Gm@cntv=\count90
+\c@Gm@tempcnt=\count91
+\Gm@bindingoffset=\dimen106
+\Gm@wd@mp=\dimen107
+\Gm@odd@mp=\dimen108
+\Gm@even@mp=\dimen109
+\Gm@layoutwidth=\dimen110
+\Gm@layoutheight=\dimen111
+\Gm@layouthoffset=\dimen112
+\Gm@layoutvoffset=\dimen113
+\Gm@dimlist=\toks15
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/eurosym/eurosym.sty
+Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
+\@eurobox=\box26
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip43
+\f@ncyO@elh=\skip44
+\f@ncyO@erh=\skip45
+\f@ncyO@olh=\skip46
+\f@ncyO@orh=\skip47
+\f@ncyO@elf=\skip48
+\f@ncyO@erf=\skip49
+\f@ncyO@olf=\skip50
+\f@ncyO@orf=\skip51
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+)
+\@linkdim=\dimen114
+\Hy@linkcounter=\count92
+\Hy@pagecounter=\count93
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count94
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4688.
+\c@Hy@tempcnt=\count95
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen115
+\Fld@menulength=\count96
+\Field@Width=\dimen116
+\Fld@charsize=\dimen117
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring OFF on input line 6315.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
+\Hy@abspage=\count97
+\c@Item=\count98
+\c@Hfootnote=\count99
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+\Fld@listcount=\count100
+\c@bookmark@seq@number=\count101
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip52
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2013/08/25 v0.4v Insert pages of external PDF documents (AM)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count102
+\calc@Bcount=\count103
+\calc@Adimen=\dimen118
+\calc@Bdimen=\dimen119
+\calc@Askip=\skip53
+\calc@Bskip=\skip54
+LaTeX Info: Redefining \setlength on input line 75.
+LaTeX Info: Redefining \addtolength on input line 76.
+\calc@Ccount=\count104
+\calc@Cskip=\skip55
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2013/10/06 v2.0d eso-pic (RN)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2013/08/25 v0.4v Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box27
+\AM@toc@title=\toks16
+\c@AM@survey=\count105
+\AM@templatesizebox=\box28
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count106
+\float@exts=\toks17
+\float@box=\box29
+\@float@everytoks=\toks18
+\@floatcapt=\box30
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count107
+\lst@gtempboxa=\box31
+\lst@token=\toks19
+\lst@length=\count108
+\lst@currlwidth=\dimen120
+\lst@column=\count109
+\lst@pos=\count110
+\lst@lostspace=\dimen121
+\lst@width=\dimen122
+\lst@newlines=\count111
+\lst@lineno=\count112
+\lst@maxwidth=\dimen123
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2014/03/04 1.5c (Carsten Heinz)
+\c@lstnumber=\count113
+\lst@skipnumbers=\count114
+\lst@framebox=\box32
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2014/03/04 1.5c listings configuration
+))
+Package: listings 2014/03/04 1.5c (Carsten Heinz)
+
+(./Weblogs.aux)
+\openout1 = `Weblogs.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 35.
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+) (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count115
+\scratchdimen=\dimen124
+\scratchbox=\box33
+\nofMPsegments=\count116
+\nofMParguments=\count117
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count118
+\MPscratchDim=\dimen125
+\MPnumerator=\count119
+\makeMPintoPDFobject=\count120
+\everyMPtoPDFconversion=\toks21
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\AtBeginShipoutBox=\box34
+Package hyperref Info: Link coloring OFF on input line 35.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count121
+)
+LaTeX Info: Redefining \ref on input line 35.
+LaTeX Info: Redefining \pageref on input line 35.
+LaTeX Info: Redefining \nameref on input line 35.
+
+(./Weblogs.out) (./Weblogs.out)
+\@outlinefile=\write3
+\openout3 = `Weblogs.out'.
+
+\c@lstlisting=\count122
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 43.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 43.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 43.
+
+
+LaTeX Warning: No \author given.
+
+[1
+
+{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 60.
+
+(./Weblogs.toc
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 3.
+)
+\tf@toc=\write4
+\openout4 = `Weblogs.toc'.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.62 \newpage
+              [1]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 70.
+
+<Weblogs/Jul/NumberOfNumberRequestsPerRecourse.pdf, id=139, 505.89pt x 505.89pt
+>
+File: Weblogs/Jul/NumberOfNumberRequestsPerRecourse.pdf Graphic file (type pdf)
+
+ <use Weblogs/Jul/NumberOfNumberRequestsPerRecourse.pdf>
+Package pdftex.def Info: Weblogs/Jul/NumberOfNumberRequestsPerRecourse.pdf used
+ on input line 118.
+(pdftex.def)             Requested size: 480.59276pt x 480.59276pt.
+ [2pdfTeX warning (ext4): destination with the same identifier (name{table.1}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.120 \end{figure}
+                  pdfTeX warning (ext4): destination with the same identifier (
+name{table.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.120 \end{figure}
+                  ]
+<Weblogs/Aug/NumberOfNumberRequestsPerRecourse.pdf, id=162, 505.89pt x 505.89pt
+>
+File: Weblogs/Aug/NumberOfNumberRequestsPerRecourse.pdf Graphic file (type pdf)
+
+ <use Weblogs/Aug/NumberOfNumberRequestsPerRecourse.pdf>
+Package pdftex.def Info: Weblogs/Aug/NumberOfNumberRequestsPerRecourse.pdf used
+ on input line 123.
+(pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
+ [3pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.125 \end{figure}
+                   <./Weblogs/Jul/NumberOfNumberRequestsPerRecourse.pdf>]
+[4pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.170 \end{table}
+                  <./Weblogs/Aug/NumberOfNumberRequestsPerRecourse.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 173--176
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 173--176
+
+ []
+
+<Weblogs/Jul/NumberOfRequestsPerDay.pdf, id=193, 505.89pt x 505.89pt>
+File: Weblogs/Jul/NumberOfRequestsPerDay.pdf Graphic file (type pdf)
+
+<use Weblogs/Jul/NumberOfRequestsPerDay.pdf>
+Package pdftex.def Info: Weblogs/Jul/NumberOfRequestsPerDay.pdf used on input l
+ine 179.
+(pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
+ [5pdfTeX warning (ext4): destination with the same identifier (name{table.3}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.182 T
+       he smallest number of requests per day is 31180 in July and 26970 in ...
+] <Weblogs/Aug/NumberOfRequestsPerDay.pdf, id=202, 505.89pt x 505.89pt>
+File: Weblogs/Aug/NumberOfRequestsPerDay.pdf Graphic file (type pdf)
+
+<use Weblogs/Aug/NumberOfRequestsPerDay.pdf>
+Package pdftex.def Info: Weblogs/Aug/NumberOfRequestsPerDay.pdf used on input l
+ine 184.
+(pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
+ [6pdfTeX warning (ext4): destination with the same identifier (name{figure.3})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.187 
+       <./Weblogs/Jul/NumberOfRequestsPerDay.pdf>]
+<Weblogs/Jul/MostPopularRequestOfDayAmounts.pdf, id=217, 505.89pt x 505.89pt>
+File: Weblogs/Jul/MostPopularRequestOfDayAmounts.pdf Graphic file (type pdf)
+
+<use Weblogs/Jul/MostPopularRequestOfDayAmounts.pdf>
+Package pdftex.def Info: Weblogs/Jul/MostPopularRequestOfDayAmounts.pdf used on
+ input line 194.
+(pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
+
+<Weblogs/Aug/MostPopularRequestOfDayAmounts.pdf, id=218, 505.89pt x 505.89pt>
+File: Weblogs/Aug/MostPopularRequestOfDayAmounts.pdf Graphic file (type pdf)
+
+<use Weblogs/Aug/MostPopularRequestOfDayAmounts.pdf>
+Package pdftex.def Info: Weblogs/Aug/MostPopularRequestOfDayAmounts.pdf used on
+ input line 198.
+(pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
+ [7pdfTeX warning (ext4): destination with the same identifier (name{figure.4})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.200 \end{figure}
+                   <./Weblogs/Aug/NumberOfRequestsPerDay.pdf>] [8pdfTeX warning
+ (ext4): destination with the same identifier (name{figure.5}) has been already
+ used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.201 
+       <./Weblogs/Jul/MostPopularRequestOfDayAmounts.pdf>]
+<Weblogs/Jul/NumberOfHostsPerDay.pdf, id=246, 505.89pt x 505.89pt>
+File: Weblogs/Jul/NumberOfHostsPerDay.pdf Graphic file (type pdf)
+
+<use Weblogs/Jul/NumberOfHostsPerDay.pdf>
+Package pdftex.def Info: Weblogs/Jul/NumberOfHostsPerDay.pdf used on input line
+ 207.
+(pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
+ [9pdfTeX warning (ext4): destination with the same identifier (name{figure.6})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.210 T
+       he biggest number of users per day were 5253 in July and 7772 in Augu...
+ <./Weblogs/Aug/MostPopularRequestOfDayAmounts.pdf>]
+<Weblogs/Aug/NumberOfHostsPerDay.pdf, id=260, 505.89pt x 505.89pt>
+File: Weblogs/Aug/NumberOfHostsPerDay.pdf Graphic file (type pdf)
+
+<use Weblogs/Aug/NumberOfHostsPerDay.pdf>
+Package pdftex.def Info: Weblogs/Aug/NumberOfHostsPerDay.pdf used on input line
+ 212.
+(pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
+ [10pdfTeX warning (ext4): destination with the same identifier (name{figure.7}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.215 
+       <./Weblogs/Jul/NumberOfHostsPerDay.pdf>] [11pdfTeX warning (ext4): desti
+nation with the same identifier (name{figure.8}) has been already used, duplica
+te ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.260 
+       <./Weblogs/Aug/NumberOfHostsPerDay.pdf>]
+<Weblogs/Jul/NumberOfRequestsPerhost.pdf, id=287, 505.89pt x 505.89pt>
+File: Weblogs/Jul/NumberOfRequestsPerhost.pdf Graphic file (type pdf)
+
+<use Weblogs/Jul/NumberOfRequestsPerhost.pdf>
+Package pdftex.def Info: Weblogs/Jul/NumberOfRequestsPerhost.pdf used on input 
+line 262.
+(pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
+
+<Weblogs/Aug/NumberOfRequestsPerhost.pdf, id=288, 505.89pt x 505.89pt>
+File: Weblogs/Aug/NumberOfRequestsPerhost.pdf Graphic file (type pdf)
+
+<use Weblogs/Aug/NumberOfRequestsPerhost.pdf>
+Package pdftex.def Info: Weblogs/Aug/NumberOfRequestsPerhost.pdf used on input 
+line 266.
+(pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
+ [12pdfTeX warning (ext4): destination with the same identifier (name{table.4})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.268 \end{figure}
+                  ] [13pdfTeX warning (ext4): destination with the same identif
+ier (name{figure.9}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.269 \subsubsection
+                    {Most active hosts} <./Weblogs/Jul/NumberOfRequestsPerhost.
+pdf>]
+<Weblogs/Jul/MostActiveHostPerDayAmounts.pdf, id=308, 505.89pt x 505.89pt>
+File: Weblogs/Jul/MostActiveHostPerDayAmounts.pdf Graphic file (type pdf)
+
+<use Weblogs/Jul/MostActiveHostPerDayAmounts.pdf>
+Package pdftex.def Info: Weblogs/Jul/MostActiveHostPerDayAmounts.pdf used on in
+put line 272.
+(pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
+
+<Weblogs/Aug/MostActiveHostPerDayAmounts.pdf, id=309, 505.89pt x 505.89pt>
+File: Weblogs/Aug/MostActiveHostPerDayAmounts.pdf Graphic file (type pdf)
+
+<use Weblogs/Aug/MostActiveHostPerDayAmounts.pdf>
+Package pdftex.def Info: Weblogs/Aug/MostActiveHostPerDayAmounts.pdf used on in
+put line 276.
+(pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
+ [14pdfTeX warning (ext4): destination with the same identifier (name{figure.10
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.278 \end{figure}
+                   <./Weblogs/Aug/NumberOfRequestsPerhost.pdf>] [15pdfTeX warni
+ng (ext4): destination with the same identifier (name{figure.11}) has been alre
+ady used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.279 \subsection
+                 {Data} <./Weblogs/Jul/MostActiveHostPerDayAmounts.pdf>]
+<Weblogs/Jul/DataPerHost.pdf, id=342, 505.89pt x 505.89pt>
+File: Weblogs/Jul/DataPerHost.pdf Graphic file (type pdf)
+
+<use Weblogs/Jul/DataPerHost.pdf>
+Package pdftex.def Info: Weblogs/Jul/DataPerHost.pdf used on input line 282.
+(pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
+ [16pdfTeX warning (ext4): destination with the same identifier (name{figure.12
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.284 \end{figure}
+                   <./Weblogs/Aug/MostActiveHostPerDayAmounts.pdf>]
+<Weblogs/Aug/DataPerHost.pdf, id=359, 505.89pt x 505.89pt>
+File: Weblogs/Aug/DataPerHost.pdf Graphic file (type pdf)
+
+<use Weblogs/Aug/DataPerHost.pdf>
+Package pdftex.def Info: Weblogs/Aug/DataPerHost.pdf used on input line 288.
+(pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
+ [17pdfTeX warning (ext4): destination with the same identifier (name{figure.13
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.290 \end{figure}
+                   <./Weblogs/Jul/DataPerHost.pdf>]
+<Weblogs/Jul/DataPerDay.pdf, id=378, 505.89pt x 505.89pt>
+File: Weblogs/Jul/DataPerDay.pdf Graphic file (type pdf)
+
+<use Weblogs/Jul/DataPerDay.pdf>
+Package pdftex.def Info: Weblogs/Jul/DataPerDay.pdf used on input line 293.
+(pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
+
+<Weblogs/Aug/DataPerDay.pdf, id=379, 505.89pt x 505.89pt>
+File: Weblogs/Aug/DataPerDay.pdf Graphic file (type pdf)
+
+<use Weblogs/Aug/DataPerDay.pdf>
+Package pdftex.def Info: Weblogs/Aug/DataPerDay.pdf used on input line 297.
+(pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
+ [18pdfTeX warning (ext4): destination with the same identifier (name{figure.14
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.299 \end{figure}
+                   <./Weblogs/Aug/DataPerHost.pdf>] [19pdfTeX warning (ext4): d
+estination with the same identifier (name{figure.15}) has been already used, du
+plicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.300 
+       <./Weblogs/Jul/DataPerDay.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 302--304
+
+ []
+
+[20pdfTeX warning (ext4): destination with the same identifier (name{figure.16}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.306 
+       <./Weblogs/Aug/DataPerDay.pdf>]
+<Weblogs/LiniarReg.pdf, id=424, 505.89pt x 505.89pt>
+File: Weblogs/LiniarReg.pdf Graphic file (type pdf)
+
+<use Weblogs/LiniarReg.pdf>
+Package pdftex.def Info: Weblogs/LiniarReg.pdf used on input line 308.
+(pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 312--314
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 312--314
+
+ []
+
+[21pdfTeX warning (ext4): destination with the same identifier (name{figure.17}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.314 
+       <./Weblogs/LiniarReg.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 315--329
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 331--347
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 331--347
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 331--347
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 349--365
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 349--365
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 349--365
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 349--365
+
+ []
+
+[22pdfTeX warning (ext4): destination with the same identifier (name{table.5}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.366 \subsection
+                 {Multiple Linear regression}pdfTeX warning (ext4): destination
+ with the same identifier (name{table.6}) has been already used, duplicate igno
+red
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.366 \subsection
+                 {Multiple Linear regression}]
+Underfull \hbox (badness 10000) in paragraph at lines 367--370
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 367--370
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--382
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 379--382
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 384--386
+
+ []
+
+[23pdfTeX warning (ext4): destination with the same identifier (name{table.7}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.386 \begin{lstlisting}
+                        ]
+LaTeX Font Info:    Try loading font information for OML+ptm on input line 387.
+
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omlptm.fd
+File: omlptm.fd 
+)
+LaTeX Font Info:    Font shape `OML/ptm/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 387.
+
+Overfull \hbox (34.2501pt too wide) in paragraph at lines 394--395
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 412--414
+
+ []
+
+<Weblogs/ClusteringOutput1.pdf, id=461, 505.89pt x 505.89pt>
+File: Weblogs/ClusteringOutput1.pdf Graphic file (type pdf)
+
+<use Weblogs/ClusteringOutput1.pdf>
+Package pdftex.def Info: Weblogs/ClusteringOutput1.pdf used on input line 428.
+(pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 423--431
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 423--431
+
+ []
+
+[24]
+Underfull \hbox (badness 10000) in paragraph at lines 432--434
+
+ []
+
+<Weblogs/ClusteringOutput2.pdf, id=497, 505.89pt x 505.89pt>
+File: Weblogs/ClusteringOutput2.pdf Graphic file (type pdf)
+
+<use Weblogs/ClusteringOutput2.pdf>
+Package pdftex.def Info: Weblogs/ClusteringOutput2.pdf used on input line 441.
+(pdftex.def)             Requested size: 505.88875pt x 505.88875pt.
+ [25pdfTeX warning (ext4): destination with the same identifier (name{table.8})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.468 dev.
+          off()] [26pdfTeX warning (ext4): destination with the same identifier
+ (name{figure.18}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.468 dev.
+          off() <./Weblogs/ClusteringOutput1.pdf>] [27pdfTeX warning (ext4): de
+stination with the same identifier (name{figure.19}) has been already used, dup
+licate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.468 dev.
+          off() <./Weblogs/ClusteringOutput2.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 471--473
+
+ []
+
+[28]
+Missing character: There is no Â in font ptmr7t!
+Missing character: There is no · in font ptmr7t!
+
+Underfull \hbox (badness 10000) in paragraph at lines 483--494
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 483--494
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 483--494
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 483--494
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 483--494
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 483--494
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 483--494
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 483--494
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 483--494
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 483--494
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 483--494
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 483--494
+
+ []
+
+[29]
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 497.
+
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 497.
+
+Overfull \hbox (22.24998pt too wide) in paragraph at lines 499--500
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (604.2559pt too wide) in paragraph at lines 500--501
+[][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (34.2501pt too wide) in paragraph at lines 548--549
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[30]
+Overfull \hbox (40.25017pt too wide) in paragraph at lines 557--558
+[][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (34.2501pt too wide) in paragraph at lines 567--568
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (10.24986pt too wide) in paragraph at lines 574--575
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (34.2501pt too wide) in paragraph at lines 592--593
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+[31]
+Overfull \hbox (34.2501pt too wide) in paragraph at lines 609--610
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (16.24992pt too wide) in paragraph at lines 616--617
+[][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (136.25114pt too wide) in paragraph at lines 618--619
+[][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (34.2501pt too wide) in paragraph at lines 635--636
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (4.2498pt too wide) in paragraph at lines 636--637
+[][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (34.2501pt too wide) in paragraph at lines 650--651
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (346.25328pt too wide) in paragraph at lines 651--652
+[][][][][][][][][][][] 
+ []
+
+[32]
+Overfull \hbox (4.2498pt too wide) in paragraph at lines 660--661
+[][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (34.2501pt too wide) in paragraph at lines 670--671
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (16.24992pt too wide) in paragraph at lines 678--679
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (52.25029pt too wide) in paragraph at lines 679--680
+[][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (10.24986pt too wide) in paragraph at lines 681--682
+[][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (34.2501pt too wide) in paragraph at lines 691--692
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (4.2498pt too wide) in paragraph at lines 692--693
+[][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (16.24992pt too wide) in paragraph at lines 699--700
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (52.25029pt too wide) in paragraph at lines 700--701
+[][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (64.25041pt too wide) in paragraph at lines 701--702
+[][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (34.2501pt too wide) in paragraph at lines 711--712
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[33]
+Overfull \hbox (16.24992pt too wide) in paragraph at lines 719--720
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (34.2501pt too wide) in paragraph at lines 720--721
+[][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (10.24986pt too wide) in paragraph at lines 722--723
+[][][][][][][][][][][][][][][] 
+ []
+
+[34]
+Overfull \hbox (22.24998pt too wide) in paragraph at lines 783--784
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (10.24986pt too wide) in paragraph at lines 789--790
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (16.24992pt too wide) in paragraph at lines 792--793
+[][][][][][][][][][][][][][][][][][][][][][][]
+ []
+
+[35]
+Overfull \hbox (22.24998pt too wide) in paragraph at lines 830--831
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (10.24986pt too wide) in paragraph at lines 838--839
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (64.25041pt too wide) in paragraph at lines 842--843
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 854.
+[36]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 854.
+ (./Weblogs.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 854.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 854.
+Package rerunfilecheck Info: File `Weblogs.out' has not changed.
+(rerunfilecheck)             Checksum: 9F97255D53444BC7C80C66B00C4A605B;1377.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 854.
+ ) 
+Here is how much of TeX's memory you used:
+ 9201 strings out of 493117
+ 136718 string characters out of 6135432
+ 265741 words of memory out of 5000000
+ 11998 multiletter control sequences out of 15000+600000
+ 22468 words of font info for 45 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 37i,12n,43p,766b,1623s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
+xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texl
+ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texliv
+e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
+/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texm
+f-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on Weblogs.pdf (37 pages, 1565664 bytes).
+PDF statistics:
+ 1085 PDF objects out of 1200 (max. 8388607)
+ 992 compressed objects within 10 object streams
+ 534 named destinations out of 1000 (max. 500000)
+ 280 words of extra memory for PDF output out of 10000 (max. 10000000)
+

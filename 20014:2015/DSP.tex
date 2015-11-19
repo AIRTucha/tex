@@ -1,0 +1,80 @@
+\documentclass[english]{article}
+
+\usepackage{babel}
+\usepackage{graphicx}
+\usepackage{times}
+\usepackage{pifont}
+\usepackage[margin=1in]{geometry}
+\usepackage{mathtools}
+\date{}
+\begin{document}
+
+
+
+
+\begin{flushright}
+Alexey Tukalo\\
+Information Technology,\\
+Savonia University of Applied Sciences,\\
+Kuopio,\\
+Finland,\\
+EFA12SF\\
+\end{flushright}
+
+
+\date{\today}
+
+
+
+\section{}
+
+$
+\begin{rcases}
+ H(s)=\frac{ V_o(s)}{V_i (s)}\\
+  V_o(s)=\frac{R}{R+\frac{1}{SC}}V_i (s)
+\rightarrow \frac{ V_o(s)}{V_i (s)}=\frac{R}{R+\frac{1}{SC}} \quad
+\end{rcases}
+\rightarrow	H(s)=\frac{R}{R+\frac{1}{SC}} \rightarrow
+$\\\\\\\\
+$
+\rightarrow H(j \Omega)=\frac{R}{R+\frac{1}{j \Omega C}}=\frac{R(R-\frac{1}{j \Omega C})}{R^2+\frac{1}{ (\Omega C)^2}}=\frac{R^2-\frac{R}{j \Omega C}}{R^2+\frac{1}{ (\Omega C)^2}} \rightarrow H(j \Omega)=\frac{R^2-\frac{R}{j \Omega C}}{R^2+\frac{1}{ (\Omega C)^2}}
+$\\\\\\\\
+$
+|H(j \Omega)|=\sqrt{\left(\frac{R^2}{R^2+\frac{1}{(\Omega C)^2}}\right)^2+\left(\frac{\frac{R}{\Omega C}}{R^2+\frac{1}{(\Omega C)^2}}\right)^2} =\sqrt{\frac{R^4+\frac{R^2}{(\Omega C)^2}}{R^2+\frac{1}{(\Omega C)^2}}}=\sqrt{\frac{(\Omega C)^2 R^4+R^2}{(\Omega C)^2} \cdot \frac{(\Omega C)^2}{(R \Omega C)^2+1}}=R
+$\\\\\\\\
+$
+\angle H(j \Omega)=arctg \left( \frac{R^2}{R^2+\frac{1}{(\Omega C)^2}} \cdot \frac{R^2+\frac{1}{(\Omega C)^2}}{\frac{R}{\Omega C}}  \right)= arctg \left( R^2 \cdot \frac{\Omega C}{R}  \right)=arctg(R \Omega C)
+$
+
+\section{}
+$$
+\begin{rcases}
+\omega=\Omega T\\
+\Omega=2 \pi f \\
+T=\frac{1}{F_s}
+\end{rcases}
+\omega=\frac{2 \pi f}{F_s}
+$$
+In our case $F_s=1kHz \rightarrow \omega=\frac{2 \pi f}{1kHz}=\frac{\pi f}{500Hz}$\\
+a) $f=250Hz \rightarrow \omega=\frac{\pi \cdot 250Hz}{500Hz}=\frac{\pi}{2}$\\
+a) $f=500Hz \rightarrow \omega=\frac{\pi \cdot 500Hz}{500Hz}=\pi$\\
+a) $f=1kHz \rightarrow \omega=\frac{\pi \cdot 1kHz}{500Hz}=2 \pi$\\
+
+\section{}
+$
+\begin{rcases}
+ H(s)=\frac{ V_o(s)}{V_i (s)}\\
+  V_o(s)=\frac{1/SC}{R} V_i(s)
+\rightarrow \frac{ V_o(s)}{V_i (s)}=\frac{1}{CRS} \quad
+\end{rcases}
+\rightarrow	H(s)=\frac{1}{CRS}  \rightarrow
+$\\\\\\\\
+$
+\rightarrow H(j \Omega)=\frac{1}{CRS} =- \frac{j \Omega CR}{(\Omega CR)^2} \rightarrow H(j \Omega)=
+- \frac{j \Omega CR}{(\Omega CR)^2}$\\\\\\\\
+$
+| H(j \Omega)|=\frac{\Omega CR}{(\Omega CR)^2}=\frac{1}{\Omega CR} \rightarrow H(j \Omega)=
+\frac{1}{\Omega CR} $\\\\\
+The real part is 0 $\rightarrow \angle H(j \Omega)=90^o$
+
+\end{document}

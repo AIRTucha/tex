@@ -1,0 +1,11 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}CTC mode}{2}{section.1}
+\contentsline {section}{\numberline {2}PWM modes}{2}{section.2}
+\contentsline {subsection}{\numberline {2.1}Fast PWM mode}{2}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Phase correct PWM mode}{2}{subsection.2.2}
+\contentsline {section}{\numberline {3}Controlling the frequency of pulses}{2}{section.3}
+\contentsline {section}{\numberline {4}8/16 - bit timers}{2}{section.4}
+\contentsline {section}{\numberline {5}Controlling leds and DC motors}{2}{section.5}
+\contentsline {section}{\numberline {6}Programming tasks}{2}{section.6}
+\contentsline {subsection}{\numberline {6.1}The first task}{2}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}The second task}{2}{subsection.6.2}

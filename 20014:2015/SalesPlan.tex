@@ -1,0 +1,147 @@
+\documentclass[english]{article}
+
+\usepackage{babel}
+\usepackage{graphicx}
+\usepackage{times}
+\usepackage{pifont}
+\usepackage[margin=1in]{geometry}
+\usepackage{eurosym}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{float}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+
+%HEADER
+%**************************************************************************************
+\pagestyle{fancy}
+\fancyhf{}
+%**************************************************************************************
+\lhead{Sales and Marketing Plan}		 	 
+\rhead{Introduction to Business Processes} 
+\lfoot{EFA12SF}
+\cfoot{\thepage}
+\rfoot{Alexey Tukalo}
+%**************************************************************************************
+
+\date{}
+\setlength\parindent{0pt}
+
+\begin{document}
+
+\title{\vspace{2in}Sales and Marketing Plan\\
+\small for Introduction to Business Processes\\
+\vspace{0.5in}\includegraphics{savonia.jpg}}
+
+\nopagebreak
+\maketitle
+
+
+\vspace{3in}
+
+\author{
+\begin{flushright}
+Alexey Tukalo,\\
+EFA12SF,\\
+Information Technology,\\
+Savonia University of Applied Sciences
+\end{flushright}
+}
+
+\date{\today}
+\thispagestyle{empty}
+
+\newpage
+\setcounter{page}{1}
+\setcounter{tocdepth}{2}
+
+%MAIN CONTENT ******************************************************************************************************************
+
+\section{Target}
+
+In an according with Finnish residence permit requirements for a students, I need to have a bank account with  \euro 6750  deposit or income more than \euro 750 in a month. Let me use it as our main aim for the year. I have to reach the amount of money which is considered as suitable for student's life by Finnish Government.\\
+
+
+I think it is able to attract 2500 users by Android application till the end of the year and it would produce \euro600 of revenue in a month finally. If we supposing that the revenue would rise linearly, then the every month income should rise for \euro50 and at the end of the year I would have \euro3900 totally. But the monthly income is still less than my aim, that's why I am going to publish the iOS version of my application at July. In according with statistics there are two times less users than in Google Play, that's why the growth would be around \euro $50/2=25$ and it would increase up to 150\euro/month to the end of the year, so I would finally get \euro4425 for whole year.
+\begin{figure}[H]
+\caption{Income growth by month}
+\centerline{
+\begin{tikzpicture}
+\begin{axis}[
+ylabel=\euro1,
+xlabel=month ] 
+\addplot coordinates {
+( 0, 0 )
+(6,300)
+( 12, 750 )};
+\end{axis}
+\end{tikzpicture}
+}
+\end{figure}
+
+The tax would be around (less) 10\% and in this case our income must be equal to $income \cdot 0.9=3825$.
+\section{Plane}
+\subsection{Products}
+
+My company has only one application which has two main sources of an income:
+\begin{enumerate}
+
+  \item Adds which would be provided by services like iAd or AdSense and it would be our main source of income.
+
+We can try to estimate the size of audience if we will sum the number of users of the most popular applications for running because in according with the part 2.1 of my Business Model Canvas, the users of the apps are our the main focus group.
+Three of the most popular applications for running is downloaded by over than 500 000 of people. Usually a runner does from two to five trainings a week, but the most typical value is three, it is still less than mean of the series of numbers, and I will use it for my calculations. From this fact we can calculate that an user would open our app at least 12 days a month. The runner has to open the application before training and close it after, as result we has 24 view of ads during the month by one person. Average income from a one demonstration of ads is around 0.01 \euro . From here we can derive the table 1. below.	
+
+\begin{table}[H]
+ \begin{center}
+  \caption{Income in dependence to percent of total audience }
+    \begin{tabular}{ c c c }    
+    	\hline
+  	  Percent of auditory & Correspondent amount of auditory & Income per month  \\ \hline
+  	   0.1\% & 500 & 120 \euro \\  
+  	   0.5\% & 2500 & 600 \euro \\  
+		1\% & 5000 & 1 200 \euro \\    
+ 	   5\% & 25000 & 6 000 \euro \\
+ 	   10\% & 50000 & 12 000 \euro \\
+  	  \hline
+    \end{tabular}
+ \end{center}
+\end{table}
+
+  \item It is also possible to get some profit from an in app purchase which turns off the ads and plays role of some kind of thanks-donate, but we can not estimate it in any way, that's why I am not going to take it in an account now. 
+
+\end{enumerate}
+
+\subsection{Steps}
+
+I am going to publish my application in January. I am not going to use any kind of advertisement, because my main aim is reduction of any costs. The easiest and cheapest ways to rise the popularity  is SMM(Social Media Management). SMM involves using of different(in most cases free) media resource to attract users. I need to
+\begin{enumerate}
+\item create Twitter account
+\item create community on Facebook
+\item create Instagram, post the screen-shot tutorial inside
+\item establish contact with resources (blogs) which make review for mobile apps
+\end{enumerate}
+
+At summer I would have enough time to start the development of the iOS version, I decided to use PhoneGap framework which helps me to port the app quicker, it supports vector graphics and fluid  UI design, that also helps me to make my application suitable for wide range of screen sizes, that's why  the development period would be only one month and I would publish it in July.\\
+
+After that I would need to repeat the 4th step for iOS version of my app.
+
+
+\subsection{Feedback}
+The users feedback would be organised in a several ways:
+\begin{enumerate}
+\item Google Play and AppStore have built-in private and public (comments) feedback tools 
+\item Reviews
+\item Support e-mail
+\end{enumerate}
+It would provide me very complex information, allows me to understand my customers better and the understanding helps me to make future development more efficient.
+\section{Reasons}
+At the end of the year I would be able to compare my plan and real results, to get a lot of useful data. The information helps me to make my new plan more accurate and my future development would be based on it, for example it would be easier for me to estimate promising of Windows Phone port of the application, it is very important question, because I would have to make a redesign of whole interface to make it more familiar with Windows style. It also helps me to estimate profit of  other application which I would try to develop in a future. 
+
+
+
+
+\end{document}

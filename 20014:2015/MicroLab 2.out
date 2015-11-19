@@ -1,0 +1,16 @@
+\BOOKMARK [1][-]{section.1}{The purpose of the STK600 card.}{}% 1
+\BOOKMARK [1][-]{section.2}{The main features}{}% 2
+\BOOKMARK [1][-]{section.3}{Connecting a processor to STK600}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{PC software}{section.3}% 4
+\BOOKMARK [1][-]{section.4}{The price of the development kit}{}% 5
+\BOOKMARK [1][-]{section.5}{The parts of the card}{}% 6
+\BOOKMARK [1][-]{section.6}{The power supply}{}% 7
+\BOOKMARK [1][-]{section.7}{Cenecting IO devices}{}% 8
+\BOOKMARK [1][-]{section.8}{The clock setting of the processor}{}% 9
+\BOOKMARK [2][-]{subsection.8.1}{Programmable clock generator}{section.8}% 10
+\BOOKMARK [2][-]{subsection.8.2}{Crystal Oscillator}{section.8}% 11
+\BOOKMARK [2][-]{subsection.8.3}{XTAL1 Pin Tri-stated}{section.8}% 12
+\BOOKMARK [2][-]{subsection.8.4}{Real Time Clock}{section.8}% 13
+\BOOKMARK [1][-]{section.9}{Programming the card}{}% 14
+\BOOKMARK [1][-]{section.10}{ISP - programming}{}% 15
+\BOOKMARK [1][-]{section.11}{Default settings}{}% 16

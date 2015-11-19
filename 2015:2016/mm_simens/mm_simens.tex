@@ -1,0 +1,72 @@
+\documentclass[english]{article}
+
+\usepackage{babel}
+\usepackage{graphicx}
+\usepackage{times}
+\usepackage{pifont}
+\usepackage[margin=1in]{geometry}
+\usepackage{eurosym}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+
+%HEADER
+%**************************************************************************************
+\pagestyle{fancy}
+\fancyhf{}
+%**************************************************************************************
+\lhead{Microsensors and Mechanics}		 	 
+\rhead{OPC client for sensor data} 
+\lfoot{EFA12SF}
+\rfoot{Alexey Tukalo}
+%**************************************************************************************
+
+\date{}
+\setlength\parindent{0pt}
+
+\begin{document}
+
+Sir, I am very sorry for the delay, I found the deadline only today and only by accident, because the assignments not are placed in Moodle in chronological order of the deadlines. So I check the deadlines of tasks which are upper and they are far away, so I did not even expect that I skipped this one which is on the bottom of page.
+\section{What is OPC?}
+
+The OPC standard is a series of specifications developed by industry vendors, end-users and software developers. These specifications define the interface between Clients and Servers, as well as Servers and Servers, including access to real-time data, monitoring of alarms and events, access to historical data and other applications.[1]\\\\
+
+The sensors can transmit the data to OPS via protocols like: Web Socket, Web Service and HTTP. Web Service have the best support from tools available for Java and .NET.[2]
+
+\section{Toolkits}
+
+There is various number of open-source and commercial toolkits for different platforms. The commune commercial APIs support C, C++, Java and .NET and the open-source solution are exist for C, C++, Java, JavaScript(node) and Python.[3]\\
+
+For example:
+\begin{enumerate}
+\item  C++ OpenSource OPC UA Application Server and an OPC UA Web Server
+\item Number of SDK which combines JAVA or C\# code with encapsulation of open-source framework for ANSI C 
+\end{enumerate}
+
+It is very important to be sure that the SDK is certified by OPC Foundation.
+
+
+\section{Data-management}
+
+It is possible to use any data management tools and databases available for this platform, so developer can keep the OPC data in any type of SQL or even NoSQL databases like:
+For example:
+\begin{enumerate}
+\item MS SQL Server
+\item MySQL
+\item PostgreSQL
+\item MongoDB (NoSQL)
+\end{enumerate}
+
+\section{References}
+\begin{enumerate}
+\item $opcfoundation.org/about/what-is-opc/ $ (03.11.15)
+\item $en.wikipedia.org/wiki/Open_Platform_Communications  $ (03.11.15)
+\item $en.wikipedia.org/wiki/OPC_Unified_Architecture$ (03.11.15)
+\end{enumerate}
+
+
+
+\end{document}

@@ -1,0 +1,10 @@
+\BOOKMARK [1][-]{section.1}{CTC mode}{}% 1
+\BOOKMARK [1][-]{section.2}{PWM modes}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Fast PWM mode}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Phase correct PWM mode}{section.2}% 4
+\BOOKMARK [1][-]{section.3}{Controlling the frequency of pulses}{}% 5
+\BOOKMARK [1][-]{section.4}{8/16 - bit timers}{}% 6
+\BOOKMARK [1][-]{section.5}{Controlling leds and DC motors}{}% 7
+\BOOKMARK [1][-]{section.6}{Programming tasks}{}% 8
+\BOOKMARK [2][-]{subsection.6.1}{The first task}{section.6}% 9
+\BOOKMARK [2][-]{subsection.6.2}{The second task}{section.6}% 10

@@ -1,0 +1,17 @@
+\select@language {english}
+\contentsline {section}{\numberline {1}Siemens}{2}{section.1}
+\contentsline {section}{\numberline {2}Simatic}{2}{section.2}
+\contentsline {subsection}{\numberline {2.1}Software}{2}{subsection.2.1}
+\contentsline {subsubsection}{\numberline {2.1.1}SCADA}{2}{subsubsection.2.1.1}
+\contentsline {paragraph}{Benefits}{3}{section*.2}
+\contentsline {subsubsection}{\numberline {2.1.2}Simatic Step 7}{3}{subsubsection.2.1.2}
+\contentsline {paragraph}{STEP 7}{3}{section*.3}
+\contentsline {subsection}{\numberline {2.2}Hardware}{4}{subsection.2.2}
+\contentsline {subsubsection}{\numberline {2.2.1}Industrial PC}{4}{subsubsection.2.2.1}
+\contentsline {subsubsection}{\numberline {2.2.2}PLC}{4}{subsubsection.2.2.2}
+\contentsline {paragraph}{Simantic S7-200}{4}{section*.4}
+\contentsline {paragraph}{Simantic S7-300}{5}{figure.3}
+\contentsline {paragraph}{Simantic S7-400}{5}{section*.6}
+\contentsline {paragraph}{Simantic S7-1200 and S7-1500}{5}{section*.7}
+\contentsline {subsection}{\numberline {2.3}Features}{5}{subsection.2.3}
+\contentsline {section}{\numberline {3}References}{6}{section.3}

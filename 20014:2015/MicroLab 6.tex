@@ -1,0 +1,90 @@
+\documentclass[english]{article}
+
+\usepackage{babel}
+\usepackage{graphicx}
+\usepackage{times}
+\usepackage{pifont}
+\usepackage[margin=1in]{geometry}
+\usepackage{eurosym}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+
+%HEADER
+%**************************************************************************************
+\pagestyle{fancy}
+\fancyhf{}
+%**************************************************************************************
+\lhead{Timers as Pulse Producers}		 	 
+\rhead{Basics of Microprocessor technology} 
+\lfoot{EFA12SF}
+\cfoot{\thepage}
+\rfoot{Nikolay Arsenov\\Alexey Tukalo}
+%**************************************************************************************
+
+\date{}
+\setlength\parindent{0pt}
+
+\begin{document}
+
+\title{\vspace{2in}Timers as Pulse Producers\\
+\small for Basics of Microprocessor technology\\
+\vspace{0.5in}\includegraphics{savonia.jpg}}
+
+\nopagebreak
+\maketitle
+
+
+\vspace{3in}
+
+\author{
+\begin{flushright}
+Nikolay Arsenov,Alexey Tukalo,\\
+EFA12SF,\\
+Information Technology,\\
+Savonia University of Applied Sciences
+\end{flushright}
+}
+
+\date{\today}
+\thispagestyle{empty}
+
+\newpage
+\setcounter{page}{1}
+\setcounter{tocdepth}{2}
+\tableofcontents
+
+\newpage
+
+\section{CTC mode}
+
+\section{PWM modes}
+\subsection{Fast PWM mode}
+\subsection{Phase correct PWM mode}
+
+\section{Controlling the frequency of pulses}
+
+\section{8/16 - bit timers}
+
+\section{Controlling leds and DC motors}
+
+\section{Programming tasks}
+
+\subsection{The first task}
+\lstinputlisting[caption=L6\_1.c]{MicroLab6/L6_1.c}
+
+The accuracy is limited by resolution of the timer.\\\\
+\subsection{The second task}
+
+\lstinputlisting[caption=L6\_2.c]{MicroLab6/L6_2.c}
+It is possible to see the pulses with frequency less than 24 Hz.
+\end{document}

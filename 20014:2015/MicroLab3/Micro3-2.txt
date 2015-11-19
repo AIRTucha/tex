@@ -1,0 +1,58 @@
+#define SetBit( port, bit) { port = port &~( 1 << bit); }
+#define ResetBit( port, bit) { port = port|( 1 << bit); }
+#include <asf.h>
+#include <util/delay.h>
+
+void AnotherWay(int i, int j);
+void oneWay(int i, int j)
+{
+	int k;
+	for(i=j;i<8;i++)
+	{
+		SetBit(PORTB,i);
+		for(k=0;k<300;k++){
+			if(PINA!=0xff){
+				ResetBit(PORTB,i);
+				while(PINA!=0xff);
+				j=i;
+				AnotherWay(i,j);
+			}
+			_delay_ms(10);
+		}
+		ResetBit(PORTB,i);
+	}
+	oneWay(0,0);
+}
+
+void AnotherWay(int i, int j)
+{
+	int k;
+	if(j<0)
+	j=8;
+	for(i=j-1;i>=0;i--)
+	{
+		SetBit(PORTB,i);
+		for(k=0;k<300;k++){			
+			if(PINA!=0xff){
+				ResetBit(PORTB,i);
+				while(PINA!=0xff);
+				j=i;
+				oneWay(i,j);	
+			}
+			_delay_ms(10);
+		}
+		ResetBit(PORTB,i);
+	}
+	AnotherWay(8,8);
+}
+
+int main (void)
+{
+	int j=0,i=j;
+		board_init();
+		DDRA = 0x00; 
+		PORTB = 0xff;
+		DDRB = 0xff; 	
+		oneWay(i,j);	
+}
+

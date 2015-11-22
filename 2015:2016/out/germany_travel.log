@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.30)  19 NOV 2015 10:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.30)  21 NOV 2015 19:34
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -296,15 +296,15 @@ e
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
-* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* h-part:(L,W,R)=(75.88371pt, 462.52757pt, 75.88371pt)
+* v-part:(T,H,B)=(75.88371pt, 643.20256pt, 75.88371pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=469.75502pt
-* \textheight=650.43001pt
-* \oddsidemargin=0.0pt
-* \evensidemargin=0.0pt
-* \topmargin=-37.0pt
+* \textwidth=462.52757pt
+* \textheight=643.20256pt
+* \oddsidemargin=3.61372pt
+* \evensidemargin=3.61372pt
+* \topmargin=-33.38628pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=10.0pt
@@ -342,7 +342,7 @@ LaTeX Info: Redefining \nameref on input line 31.
 \openout3 = `germany_travel.out'.
 
 
-<savonia.jpg, id=20, 139.722pt x 37.5804pt>
+<savonia.jpg, id=64, 139.722pt x 37.5804pt>
 File: savonia.jpg Graphic file (type jpg)
  <use savonia.jpg>
 Package pdftex.def Info: savonia.jpg used on input line 39.
@@ -367,9 +367,9 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 3.
+(Font)              <7> on input line 4.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 3.
+(Font)              <5> on input line 4.
 )
 \tf@toc=\write4
 \openout4 = `germany_travel.toc'.
@@ -381,35 +381,275 @@ been already used, duplicate ignored
 l.60 \newpage
               [1]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 67.
- [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 76.
- [3]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 76.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 80.
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--85
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 86--87
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--93
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 94--95
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
+
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 98--99
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 108--109
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--111
+
+ []
+
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+
+Underfull \hbox (badness 10000) in paragraph at lines 116--117
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 118--119
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 122--123
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 128--129
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--149
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 150--151
+
+ []
+
+[4]
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+ <Germany_travel/zkm.jpg, id=114, 727.71875pt x 481.8pt>
+File: Germany_travel/zkm.jpg Graphic file (type jpg)
+
+<use Germany_travel/zkm.jpg>
+Package pdftex.def Info: Germany_travel/zkm.jpg used on input line 170.
+(pdftex.def)             Requested size: 363.85847pt x 240.8994pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--176
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 177--178
+
+ []
+
+<Germany_travel/karlsruhe.jpg, id=116, 319.1925pt x 481.8pt>
+File: Germany_travel/karlsruhe.jpg Graphic file (type jpg)
+
+<use Germany_travel/karlsruhe.jpg>
+Package pdftex.def Info: Germany_travel/karlsruhe.jpg used on input line 182.
+(pdftex.def)             Requested size: 159.59586pt x 240.8994pt.
+
+<Germany_travel/iaa1.jpg, id=118, 727.71875pt x 481.8pt>
+File: Germany_travel/iaa1.jpg Graphic file (type jpg)
+
+<use Germany_travel/iaa1.jpg>
+Package pdftex.def Info: Germany_travel/iaa1.jpg used on input line 189.
+(pdftex.def)             Requested size: 240.14792pt x 158.99448pt.
+
+<Germany_travel/iaa2.jpg, id=119, 727.71875pt x 481.8pt>
+File: Germany_travel/iaa2.jpg Graphic file (type jpg)
+
+<use Germany_travel/iaa2.jpg>
+Package pdftex.def Info: Germany_travel/iaa2.jpg used on input line 189.
+(pdftex.def)             Requested size: 240.14792pt x 158.99448pt.
+
+Overfull \hbox (17.76826pt too wide) in paragraph at lines 189--190
+[][][] 
+ []
+
+[5 <./Germany_travel/zkm.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 193--194
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 195--196
+
+ []
+
+[6 <./Germany_travel/karlsruhe.jpg> <./Germany_travel/iaa1.jpg> <./Germany_trav
+el/iaa2.jpg>] <Germany_travel/fk1.jpg, id=138, 727.71875pt x 481.8pt>
+File: Germany_travel/fk1.jpg Graphic file (type jpg)
+
+<use Germany_travel/fk1.jpg>
+Package pdftex.def Info: Germany_travel/fk1.jpg used on input line 198.
+(pdftex.def)             Requested size: 240.14792pt x 158.99448pt.
+
+<Germany_travel/fk2.jpg, id=139, 727.71875pt x 481.8pt>
+File: Germany_travel/fk2.jpg Graphic file (type jpg)
+
+<use Germany_travel/fk2.jpg>
+Package pdftex.def Info: Germany_travel/fk2.jpg used on input line 198.
+(pdftex.def)             Requested size: 240.14792pt x 158.99448pt.
+
+Overfull \hbox (17.76826pt too wide) in paragraph at lines 198--199
+[][][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--199
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 202--203
+
+ []
+
+<Germany_travel/fk3.jpg, id=140, 727.71875pt x 481.8pt>
+File: Germany_travel/fk3.jpg Graphic file (type jpg)
+
+<use Germany_travel/fk3.jpg>
+Package pdftex.def Info: Germany_travel/fk3.jpg used on input line 207.
+(pdftex.def)             Requested size: 240.14792pt x 158.99448pt.
+
+<Germany_travel/fk4.jpg, id=141, 727.71875pt x 481.8pt>
+File: Germany_travel/fk4.jpg Graphic file (type jpg)
+
+<use Germany_travel/fk4.jpg>
+Package pdftex.def Info: Germany_travel/fk4.jpg used on input line 207.
+(pdftex.def)             Requested size: 240.14792pt x 158.99448pt.
+
+Overfull \hbox (17.76826pt too wide) in paragraph at lines 207--208
+[][][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 207--208
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 212--213
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 214--215
+
+ []
+
+[7 <./Germany_travel/fk1.jpg> <./Germany_travel/fk2.jpg> <./Germany_travel/fk3.
+jpg> <./Germany_travel/fk4.jpg>]
+<Germany_travel/baden.jpg, id=151, 727.71875pt x 481.8pt>
+File: Germany_travel/baden.jpg Graphic file (type jpg)
+
+<use Germany_travel/baden.jpg>
+Package pdftex.def Info: Germany_travel/baden.jpg used on input line 217.
+(pdftex.def)             Requested size: 363.85847pt x 240.8994pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--227
+
+ []
+
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no ¼ in font ptmr7t!
+
+Underfull \hbox (badness 10000) in paragraph at lines 232--233
+
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 241.
+[8 <./Germany_travel/baden.jpg>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 241.
 
 (/Users/alexey/Documents/tex/2015:2016/out/germany_travel.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 76.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 76.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 241.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 241.
 Package rerunfilecheck Info: File `germany_travel.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 76.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 241.
  ) 
 Here is how much of TeX's memory you used:
- 6176 strings out of 493117
- 91680 string characters out of 6135432
- 184153 words of memory out of 5000000
- 9559 multiletter control sequences out of 15000+600000
- 17713 words of font info for 39 fonts, out of 8000000 for 9000
+ 6282 strings out of 493117
+ 93446 string characters out of 6135432
+ 189333 words of memory out of 5000000
+ 9612 multiletter control sequences out of 15000+600000
+ 22702 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,10n,43p,259b,336s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,11n,43p,817b,340s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/201
-4/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+exlive/2014/texmf-dist/fonts/type1/public/eurosym/feymr10.pfb></usr/local/texli
+ve/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/te
+xmf-dist/fonts/type1/urw/times/utmr8a.pfb>
 Output written on /Users/alexey/Documents/tex/2015:2016/out/germany_travel.pdf 
-(4 pages, 70913 bytes).
+(9 pages, 3379345 bytes).
 PDF statistics:
- 58 PDF objects out of 1000 (max. 8388607)
- 48 compressed objects within 1 object stream
- 9 named destinations out of 1000 (max. 500000)
- 38 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 185 PDF objects out of 1000 (max. 8388607)
+ 159 compressed objects within 2 object streams
+ 48 named destinations out of 1000 (max. 500000)
+ 171 words of extra memory for PDF output out of 10000 (max. 10000000)
 

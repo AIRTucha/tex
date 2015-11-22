@@ -1,0 +1,1004 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.30)  19 NOV 2015 10:35
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**PressureSensors/pressureSensors.tex
+(./PressureSensors/pressureSensors.tex
+LaTeX2e <2014/05/01>
+Babel <3.9k> and hyphenation patterns for 78 languages loaded.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2014/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2014/03/24 3.9k The Babel package
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2012/08/20 v3.3p English support from the babel system
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2014/03/24 3.9k Babel common definitions
+\babel@savecnt=\count87
+\U@D=\dimen103
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count88
+))
+\Gin@req@height=\dimen104
+\Gin@req@width=\dimen105
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/times.sty
+Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/pifont.sty
+Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
+LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/upzd.fd
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Try loading font information for U+psy on input line 64.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/upsy.fd
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
+(/usr/local/texlive/2014/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2010/09/12 v5.6 Page Geometry
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/local/texlive/2014/texmf-dist/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count89
+\Gm@cntv=\count90
+\c@Gm@tempcnt=\count91
+\Gm@bindingoffset=\dimen106
+\Gm@wd@mp=\dimen107
+\Gm@odd@mp=\dimen108
+\Gm@even@mp=\dimen109
+\Gm@layoutwidth=\dimen110
+\Gm@layoutheight=\dimen111
+\Gm@layouthoffset=\dimen112
+\Gm@layoutvoffset=\dimen113
+\Gm@dimlist=\toks15
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/eurosym/eurosym.sty
+Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
+\@eurobox=\box26
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip43
+\f@ncyO@elh=\skip44
+\f@ncyO@erh=\skip45
+\f@ncyO@olh=\skip46
+\f@ncyO@orh=\skip47
+\f@ncyO@elf=\skip48
+\f@ncyO@erf=\skip49
+\f@ncyO@olf=\skip50
+\f@ncyO@orf=\skip51
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+Package: hobsub-hyperref 2012/05/28 v1.13 Bundle oberdiek, subset hyperref (HO)
+
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty
+Package: hobsub-generic 2012/05/28 v1.13 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/05/28 v1.13 Construct package bundles (HO)
+Package hobsub Info: Skipping package `infwarerr' (already loaded).
+Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
+)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2012/05/28 v1.2 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/auxhook.sty
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+)
+\@linkdim=\dimen114
+\Hy@linkcounter=\count92
+\Hy@pagecounter=\count93
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
+)
+\Hy@SavedSpaceFactor=\count94
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4688.
+\c@Hy@tempcnt=\count95
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5041.
+\XeTeXLinkMargin=\dimen115
+\Fld@menulength=\count96
+\Field@Width=\dimen116
+\Fld@charsize=\dimen117
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring OFF on input line 6315.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
+\Hy@abspage=\count97
+\c@Item=\count98
+\c@Hfootnote=\count99
+)
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
+\Fld@listcount=\count100
+\c@bookmark@seq@number=\count101
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip52
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count102
+\float@exts=\toks16
+\float@box=\box27
+\@float@everytoks=\toks17
+\@floatcapt=\box28
+)
+No file pressureSensors.aux.
+\openout1 = `pressureSensors.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 32.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
+)
+(/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count103
+\scratchdimen=\dimen118
+\scratchbox=\box29
+\nofMPsegments=\count104
+\nofMParguments=\count105
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count106
+\MPscratchDim=\dimen119
+\MPnumerator=\count107
+\makeMPintoPDFobject=\count108
+\everyMPtoPDFconversion=\toks19
+) (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+)
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 469.75502pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 650.43001pt, 72.26999pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=469.75502pt
+* \textheight=650.43001pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\AtBeginShipoutBox=\box30
+Package hyperref Info: Link coloring OFF on input line 32.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
+
+(/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
+)
+\c@section@level=\count109
+)
+LaTeX Info: Redefining \ref on input line 32.
+LaTeX Info: Redefining \pageref on input line 32.
+LaTeX Info: Redefining \nameref on input line 32.
+\@outlinefile=\write3
+\openout3 = `pressureSensors.out'.
+
+
+<savonia.jpg, id=4, 139.722pt x 37.5804pt>
+File: savonia.jpg Graphic file (type jpg)
+ <use savonia.jpg>
+Package pdftex.def Info: savonia.jpg used on input line 49.
+(pdftex.def)             Requested size: 139.72165pt x 37.58029pt.
+ [1
+
+{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./savon
+ia.jpg>]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 52.
+\tf@toc=\write4
+\openout4 = `pressureSensors.toc'.
+
+
+[0]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 66.
+
+
+LaTeX Warning: Reference `eq:pressure' on page 1 undefined on input line 66.
+
+
+LaTeX Warning: Citation `types' on page 1 undefined on input line 66.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
+
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 68.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 68.
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--73
+
+ []
+
+
+LaTeX Warning: Citation `mems' on page 1 undefined on input line 74.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 74--75
+
+ []
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 85.
+
+LaTeX Warning: Reference `fig:gauge' on page 1 undefined on input line 89.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 89--90
+
+ []
+
+<PressureSensors/gauge.png, id=17, 229.85875pt x 139.52126pt>
+File: PressureSensors/gauge.png Graphic file (type png)
+
+<use PressureSensors/gauge.png>
+Package pdftex.def Info: PressureSensors/gauge.png used on input line 92.
+(pdftex.def)             Requested size: 229.85817pt x 139.5209pt.
+
+
+LaTeX Warning: Citation `spd' on page 1 undefined on input line 96.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.97 
+      [1pdfTeX warning (ext4): destination with the same identifier (name{figur
+e.1}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.97 
+      <./PressureSensors/gauge.png>]
+
+LaTeX Warning: Reference `fig:gaugePhoto' on page 2 undefined on input line 98.
+
+
+<PressureSensors/gaugePhoto.png, id=34, 187.70125pt x 133.49875pt>
+File: PressureSensors/gaugePhoto.png Graphic file (type png)
+
+<use PressureSensors/gaugePhoto.png>
+Package pdftex.def Info: PressureSensors/gaugePhoto.png used on input line 101.
+
+(pdftex.def)             Requested size: 131.38997pt x 93.44847pt.
+
+
+LaTeX Warning: Reference `fig:abs' on page 2 undefined on input line 107.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 107--108
+
+ []
+
+<PressureSensors/abs.png, id=35, 283.0575pt x 134.5025pt>
+File: PressureSensors/abs.png Graphic file (type png)
+
+<use PressureSensors/abs.png>
+Package pdftex.def Info: PressureSensors/abs.png used on input line 110.
+(pdftex.def)             Requested size: 283.0568pt x 134.50215pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 114--115
+
+ []
+
+
+LaTeX Warning: Citation `spd' on page 2 undefined on input line 116.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 116--117
+
+ []
+
+
+LaTeX Warning: Reference `fig:absPhoto' on page 2 undefined on input line 118.
+
+<PressureSensors/absPhoto.png, id=36, 129.48375pt x 152.57pt>
+File: PressureSensors/absPhoto.png Graphic file (type png)
+
+<use PressureSensors/absPhoto.png>
+Package pdftex.def Info: PressureSensors/absPhoto.png used on input line 121.
+(pdftex.def)             Requested size: 90.63799pt x 106.79826pt.
+ [2pdfTeX warning (ext4): destination with the same identifier (name{figure.2})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.124 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+3}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.124 
+       <./PressureSensors/gaugePhoto.png> <./PressureSensors/abs.png>]
+
+LaTeX Warning: Reference `fig:diff' on page 3 undefined on input line 126.
+
+
+LaTeX Warning: Citation `spd' on page 3 undefined on input line 126.
+
+<PressureSensors/diff.png, id=46, 241.90375pt x 143.53625pt>
+File: PressureSensors/diff.png Graphic file (type png)
+
+<use PressureSensors/diff.png>
+Package pdftex.def Info: PressureSensors/diff.png used on input line 129.
+(pdftex.def)             Requested size: 241.90315pt x 143.53589pt.
+
+
+LaTeX Warning: Reference `fig:diffPhoto' on page 3 undefined on input line 133.
+
+
+<PressureSensors/diffPhoto.png, id=47, 160.6pt x 143.53625pt>
+File: PressureSensors/diffPhoto.png Graphic file (type png)
+
+<use PressureSensors/diffPhoto.png>
+Package pdftex.def Info: PressureSensors/diffPhoto.png used on input line 136.
+(pdftex.def)             Requested size: 112.41922pt x 100.47467pt.
+
+
+LaTeX Warning: Reference `tab:types' on page 3 undefined on input line 143.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--144
+
+ []
+
+
+LaTeX Warning: Citation `types' on page 3 undefined on input line 145.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
+
+ []
+
+
+LaTeX Warning: Citation `piez' on page 3 undefined on input line 147.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 147--148
+
+ []
+
+[3pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.148 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+5}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.148 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+6}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.148 
+       <./PressureSensors/absPhoto.png> <./PressureSensors/diff.png> <./Pressur
+eSensors/diffPhoto.png>]
+
+LaTeX Warning: Citation `optics' on page 4 undefined on input line 149.
+
+
+LaTeX Warning: Citation `ultrasonic' on page 4 undefined on input line 149.
+
+
+LaTeX Warning: Citation `types' on page 4 undefined on input line 153.
+
+
+Overfull \hbox (1.90454pt too wide) in paragraph at lines 154--368
+ [] 
+ []
+
+
+LaTeX Warning: Citation `inf' on page 4 undefined on input line 373.
+
+
+LaTeX Warning: Citation `touch' on page 4 undefined on input line 377.
+
+
+LaTeX Warning: Citation `apple' on page 4 undefined on input line 377.
+
+
+LaTeX Warning: Reference `fig:wacom' on page 4 undefined on input line 377.
+
+
+LaTeX Warning: Citation `wacom' on page 4 undefined on input line 377.
+
+<PressureSensors/wacom.png, id=60, 448.67625pt x 247.92625pt>
+File: PressureSensors/wacom.png Graphic file (type png)
+
+<use PressureSensors/wacom.png>
+Package pdftex.def Info: PressureSensors/wacom.png used on input line 380.
+(pdftex.def)             Requested size: 224.33757pt x 123.96281pt.
+
+
+LaTeX Warning: Citation `wacom' on page 4 undefined on input line 381.
+
+<PressureSensors/ems.png, id=61, 380.42125pt x 221.82875pt>
+File: PressureSensors/ems.png Graphic file (type png)
+
+<use PressureSensors/ems.png>
+Package pdftex.def Info: PressureSensors/ems.png used on input line 387.
+(pdftex.def)             Requested size: 190.21014pt x 110.9141pt.
+
+
+LaTeX Warning: Citation `inf' on page 4 undefined on input line 388.
+
+
+LaTeX Warning: Reference `fig:ems' on page 4 undefined on input line 395.
+
+
+LaTeX Warning: Reference `fig:break' on page 4 undefined on input line 396.
+
+
+LaTeX Warning: Citation `inf' on page 4 undefined on input line 401.
+
+<PressureSensors/break.png, id=62, 646.415pt x 503.8825pt>
+File: PressureSensors/break.png Graphic file (type png)
+
+<use PressureSensors/break.png>
+Package pdftex.def Info: PressureSensors/break.png used on input line 404.
+(pdftex.def)             Requested size: 323.20671pt x 251.94063pt.
+
+
+LaTeX Warning: Citation `inf' on page 4 undefined on input line 405.
+
+[4pdfTeX warning (ext4): destination with the same identifier (name{figure.7}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.406 \end{figure}
+                   <./PressureSensors/wacom.png>] [5pdfTeX warning (ext4): dest
+ination with the same identifier (name{table.1}) has been already used, duplica
+te ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.406 \end{figure}
+                  ]
+
+LaTeX Warning: Reference `fig:ton' on page 6 undefined on input line 410.
+
+
+LaTeX Warning: Citation `app' on page 6 undefined on input line 410.
+
+<PressureSensors/ton.png, id=131, 602.25pt x 506.89375pt>
+File: PressureSensors/ton.png Graphic file (type png)
+
+<use PressureSensors/ton.png>
+Package pdftex.def Info: PressureSensors/ton.png used on input line 413.
+(pdftex.def)             Requested size: 180.67639pt x 152.06929pt.
+
+
+LaTeX Warning: Citation `ton' on page 6 undefined on input line 414.
+
+
+LaTeX Warning: Citation `alt' on page 6 undefined on input line 423.
+
+
+LaTeX Warning: Reference `fig:alt' on page 6 undefined on input line 423.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 423--424
+
+ []
+
+[6pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) 
+has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.424 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+9}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.424 
+       <./PressureSensors/ems.png> <./PressureSensors/break.png>]
+
+LaTeX Warning: Citation `app' on page 7 undefined on input line 425.
+
+<PressureSensors/alt.png, id=143, 656.4525pt x 656.4525pt>
+File: PressureSensors/alt.png Graphic file (type png)
+
+<use PressureSensors/alt.png>
+Package pdftex.def Info: PressureSensors/alt.png used on input line 428.
+(pdftex.def)             Requested size: 196.93727pt x 196.93727pt.
+
+
+LaTeX Warning: Citation `alt' on page 7 undefined on input line 429.
+
+[7pdfTeX warning (ext4): destination with the same identifier (name{figure.10})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.440 \subsection
+                 {Robotics}pdfTeX warning (ext4): destination with the same ide
+ntifier (name{figure.11}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.440 \subsection
+                 {Robotics} <./PressureSensors/ton.png> <./PressureSensors/alt.
+png>]
+
+LaTeX Warning: Citation `app' on page 8 undefined on input line 442.
+
+<PressureSensors/app.png, id=154, 587.19376pt x 245.91875pt>
+File: PressureSensors/app.png Graphic file (type png)
+
+<use PressureSensors/app.png>
+Package pdftex.def Info: PressureSensors/app.png used on input line 445.
+(pdftex.def)             Requested size: 411.03282pt x 172.14194pt.
+
+
+LaTeX Warning: Citation `app' on page 8 undefined on input line 446.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 453--454
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 457--458
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 461--462
+
+ []
+
+[8pdfTeX warning (ext4): destination with the same identifier (name{figure.12})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.464 
+       <./PressureSensors/app.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 467--468
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 469--470
+
+ []
+
+
+LaTeX Warning: Citation `hist' on page 9 undefined on input line 471.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 475--476
+
+ []
+
+
+LaTeX Warning: Reference `fig:fabrik' on page 9 undefined on input line 477.
+
+
+LaTeX Warning: Citation `fabrik' on page 9 undefined on input line 477.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 477--478
+
+ []
+
+<PressureSensors/fabrik.png, id=167, 204.765pt x 266.9975pt>
+File: PressureSensors/fabrik.png Graphic file (type png)
+
+<use PressureSensors/fabrik.png>
+Package pdftex.def Info: PressureSensors/fabrik.png used on input line 480.
+(pdftex.def)             Requested size: 102.38223pt x 133.49841pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 490--491
+
+ []
+
+[9pdfTeX warning (ext4): destination with the same identifier (name{figure.13})
+ has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.491 
+       <./PressureSensors/fabrik.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 492--493
+
+ []
+
+
+LaTeX Warning: Citation `honey' on page 10 undefined on input line 494.
+
+<PressureSensors/honey.png, id=178, 642.4pt x 113.42375pt>
+File: PressureSensors/honey.png Graphic file (type png)
+
+<use PressureSensors/honey.png>
+Package pdftex.def Info: PressureSensors/honey.png used on input line 497.
+(pdftex.def)             Requested size: 321.19922pt x 56.71173pt.
+
+
+LaTeX Warning: Citation `omron' on page 10 undefined on input line 503.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 503--504
+
+ []
+
+<PressureSensors/omron.png, id=179, 143.53625pt x 62.2325pt>
+File: PressureSensors/omron.png Graphic file (type png)
+
+<use PressureSensors/omron.png>
+Package pdftex.def Info: PressureSensors/omron.png used on input line 506.
+(pdftex.def)             Requested size: 143.53589pt x 62.23235pt.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 514.
+
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 514.
+
+Underfull \hbox (badness 10000) in paragraph at lines 528--529
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 530--531
+
+ []
+
+[10pdfTeX warning (ext4): destination with the same identifier (name{figure.14}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.531 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+15}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.531 
+       <./PressureSensors/honey.png> <./PressureSensors/omron.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 543--544
+
+ []
+
+
+LaTeX Warning: Citation `st' on page 11 undefined on input line 545.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 545--546
+
+ []
+
+
+LaTeX Warning: Reference `fig:st' on page 11 undefined on input line 547.
+
+<PressureSensors/st.png, id=190, 254.9525pt x 85.31876pt>
+File: PressureSensors/st.png Graphic file (type png)
+
+<use PressureSensors/st.png>
+Package pdftex.def Info: PressureSensors/st.png used on input line 550.
+(pdftex.def)             Requested size: 127.47592pt x 42.65926pt.
+
+
+LaTeX Warning: Reference `fig:sensor' on page 11 undefined on input line 557.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 557--558
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 559--560
+
+ []
+
+<PressureSensors/sensor.png, id=191, 286.06876pt x 230.8625pt>
+File: PressureSensors/sensor.png Graphic file (type png)
+
+<use PressureSensors/sensor.png>
+Package pdftex.def Info: PressureSensors/sensor.png used on input line 562.
+(pdftex.def)             Requested size: 286.06805pt x 230.86192pt.
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no — in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no — in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no — in font ptmr7t!
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no — in font ptmr7t!
+ [11pdfTeX warning (ext4): destination with the same identifier (name{figure.16
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.574 \end{itemize}
+                    <./PressureSensors/st.png>]
+
+LaTeX Warning: Reference `fig:terminal' on page 12 undefined on input line 582.
+
+
+
+LaTeX Warning: Reference `fig:grapth' on page 12 undefined on input line 582.
+
+
+LaTeX Warning: Citation `ds' on page 12 undefined on input line 582.
+
+<PressureSensors/terminal.png, id=201, 534.99875pt x 192.72pt>
+File: PressureSensors/terminal.png Graphic file (type png)
+
+<use PressureSensors/terminal.png>
+Package pdftex.def Info: PressureSensors/terminal.png used on input line 585.
+(pdftex.def)             Requested size: 267.49872pt x 96.35976pt.
+
+<PressureSensors/grapth.png, id=202, 383.4325pt x 310.15875pt>
+File: PressureSensors/grapth.png Graphic file (type png)
+
+<use PressureSensors/grapth.png>
+Package pdftex.def Info: PressureSensors/grapth.png used on input line 589.
+(pdftex.def)             Requested size: 191.71577pt x 155.079pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 599--600
+
+ []
+
+[12pdfTeX warning (ext4): destination with the same identifier (name{figure.17}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.600 
+      pdfTeX warning (ext4): destination with the same identifier (name{figure.
+18}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.600 
+       <./PressureSensors/sensor.png> <./PressureSensors/terminal.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 614--615
+
+ []
+
+[13pdfTeX warning (ext4): destination with the same identifier (name{figure.19}
+) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.618 \newpage
+               <./PressureSensors/grapth.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 666.
+ [14]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 666.
+
+(/Users/alexey/Documents/tex/2015:2016/out/pressureSensors.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 666.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 666.
+Package rerunfilecheck Info: File `pressureSensors.out' has not changed.
+(rerunfilecheck)             Checksum: <no file>.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 666.
+ ) 
+Here is how much of TeX's memory you used:
+ 6493 strings out of 493117
+ 96067 string characters out of 6135432
+ 200469 words of memory out of 5000000
+ 9729 multiletter control sequences out of 15000+600000
+ 16957 words of font info for 33 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 29i,10n,43p,926b,452s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
+exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
+xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texl
+ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
+ve/2014/texmf-dist/fonts/type1/public/eurosym/feymr10.pfb></usr/local/texlive/2
+014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-
+dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on /Users/alexey/Documents/tex/2015:2016/out/pressureSensors.pdf
+ (16 pages, 1348396 bytes).
+PDF statistics:
+ 297 PDF objects out of 1000 (max. 8388607)
+ 231 compressed objects within 3 object streams
+ 143 named destinations out of 1000 (max. 500000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
+

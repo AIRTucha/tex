@@ -8,6 +8,7 @@
 \usepackage{eurosym}
 \usepackage{fancyhdr}
 \usepackage[hidelinks]{hyperref}
+\usepackage{float}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -83,7 +84,7 @@ I was a part of 3D USCT team. USCT and Big Data together form the Software Metho
 
 Other teammembers are students who are doing internship or writing thesis at the institute.
 
-\subsection{History}
+\section{History}
 
 \subsection{KIT History}
 
@@ -91,7 +92,116 @@ A polytechnical school of Karlsruhe was founded on the 7th of October 1825. In 1
 
 University of Karlsruhe opened the a central computer laboratory and become one of the leading German institutions in computer science, in 1966. As I already noticed, Karlsruhe Research Centre and Karlsruhe Institute of Technology merged toghere at 1 October 2009.
 
-\section{Objectives and duties}
+\subsection{IPE History}
+
+IPE was found as a part of Institute for Neutron Physics and Reactor Technology in 1959. It evolved to the Centre of Data Processing Department Laboratory Automation in 1967-1971. In 1973, the Computing Centre Data Processing and Laboratory for Electronics and Measurement Instrumentation merged in Department for Data Processing and Instrumentation. In 1991, the Department Data Processing and Electronics become independent from the Department for Data Processing and Instrumentation. Since 2001, the organisation is called Institute for Data Processing and Electronics.
+
+\section{Work description}
+\subsection{Project description}
+\begin{figure}
+\centerline{\includegraphics[scale=0.5]{internship_report/images.png}}
+\caption{Examples of reflection, sound speed, attenuation images\label{fig:example}}
+\end{figure}
+I worked in a project called 3D Ultrosound Computer Tomography, shortly USCT. The main goal of the project is development of new image methodology for early breast cancer detection. This type of cancer is one of the most common and dangerous one among women. A breast is not a vital organ, so the most part of patient dies of metastasis, a tumor with size less than 5mm has very low probability of metastasis.  That's why, an early diagnostic of breast cancer significantly increase survival probability of the patient. The USCT team's aim is detection of the tumor with average size small than 5mm. 
+
+The USCT detector is able to produce three different types of images(Pic. \ref{fig:example}):
+
+\begin{enumerate}
+\item Reflection - contains general structure
+\item Sound speed - map of the soundspeed distribution
+\item Attenuation - map of the sound wave's amplitude attenuation
+\end{enumerate}
+
+The sound speed and attenuation images give doctors an opportunity to classify lesions precisely, while the reflection's one allows them define type of the structure. I worked on fusion of this three different images into the single one, because it makes an analising easier.(Figure \ref{fig:nicol}
+\begin{figure}[H]
+\centerline{\includegraphics[scale=0.5]{internship_report/nicol}}
+\caption{Tumor clasification based on sound speed and attenuation\label{fig:nicol}}
+\end{figure}
+\subsection{Position description}
+
+3D USCT volumes are converted into stacks of 2D images along specified standard slicing directions used in radiological workflows. They are presented to radiologist using USCT's customized edition of DICOM Viewer, which is based on the ImageJ Framework and the Tudor DICOM Viewer. The position title is Visualization of multimodal 3D USCT volume images. So, the aim of this internship is to explore new intuitive ways of multimodal data visualization, create the prototype of the methods and implements the visualisations in the customized DICOM Viewer. The software should be extended accordingly to allow interactive access to the visualization, e.g. to allow user specified input for setting thresholds, choosing projection directions etc.\\
+
+I also have had my personal goals related with the intnernship:
+\begin{itemize}
+\item Improve skills on object-oriented programming with Java improve knowledge of MATLAB
+\item Gain experience in digital image processing
+\item Get experience in team work on real-life project
+\item Learn software development workflow
+\end{itemize}
+
+\subsection{Work description}
+\subsubsection{Prototyping}
+
+The most part of my internship I worked on development of new fusion technics for 3D USCT images under supervision of Dr. Hopp. During the first week I made literature research and came up with several idea for realisation of the fusion. After that I made a prototypes for three best of them in MATLAB. The picture \ref{prot} demostrates prototype of HSV Fusion.\\
+
+\begin{figure}[H]
+\centerline{\includegraphics[scale=0.4]{internship_report/pro}}
+\caption{MATLAB prototype for HSV Fusion\label{fig:pro}}
+\end{figure}
+\subsubsection{HSV Fusion}
+
+HSV Fusion was the best solution for fusion of 3D USCT images I founded. The algoright is based on HSV color model. The model devides color of every pixel into three separet components:
+
+\begin{itemize}
+\item Hue - keeps chromatic information (how red, green, blue etc. is the pixel)
+\item Value - keeps grayscale information (how bright is the pixel)
+\item Saturation - keeps an information about saturation of the hue (how the color far away from grayscale)
+\end{itemize}
+
+\begin{figure}[H]
+\centerline{\includegraphics[scale=0.6]{internship_report/hsv}}
+\caption{Components of HSV image from to top: Hue, Value, Saturation.\label{fig:hsv}}
+\end{figure}
+
+The components are shown on the figure \ref{fig:hsv} The color space of the model can be represented as cylinder, where: altitude is tha Value, saturation is radious from center and angel is hue, look at figure \ref{fig:model}.\\
+
+\begin{figure}[H]
+\centerline{\includegraphics[scale=0.6]{internship_report/model}}
+\caption{Model of HSV color space\label{fig:model}}
+\end{figure}
+
+To get the final result of the fusion the algorithm transfer the image from HSV to RGB color model. The visual reslisation of the conversion shown at figure \ref{fig:hsv2rgb}.
+
+\begin{figure}[H]
+\centerline{\includegraphics[scale=0.6]{internship_report/hsv2rgb}}
+\caption{Visuale representation of HSV to RGB convertions\label{fig:hsv2rgb}}
+\end{figure}
+
+\subsubsection{DICOM Viewer realisation}
+
+The prototype was presented to the Software Methods groupe of IPE. The realisation get positive feedback from the team and I started the realisation of the algorithm in DICOM Viewer with ImageJ.\\
+
+The DICOM realisation has a little bit more simple user interface, to make it more understandable for an end user. Sound speed thresholding were added to the final version of fusion, figure \ref{fig:final}.
+
+\begin{figure}[H]
+\centerline{\includegraphics[scale=0.5]{internship_report/final}}
+\caption{DICOM Viewer HSV Fusion Menu \label{fig:final}}
+\end{figure}
+
+\subsubsection{Re-slicing}
+
+As I mentionet before DICOM Viewer keeps three different stacks of images with different slicing directions for an every breast, but any of this three stacks contains enoght information for visualising of all three slicing directions.\\
+
+My task was to implement the reslicing algorithm whihc allows DICOM Viewer recalculate all three slicing directions from any of them. If density a long different axis is not uniform the algorithm also had to be interpolated data.\\
+
+Re-slicing is very useful feature for DICOM Viewer, because it will tow times reduce size of the database and it will give an opportunity to brows different slice directions of MRI images\footnote{Usually, MRI imgaes has only one slicing direction}.\\
+
+\subsubsection{WebGL Visualisation for USCT}
+
+I was volunteer to take part at development of 3D WebGL Visualisation of USCT data and Dr. Hopp allowed me to join the team. Michael Zapf was responseable for development of the project and the last part of my internship I did under his controll.\\
+
+The vialisation is based on Tomoraycaster 2\footnote{JavaScript framework visualisation of 3D data developed in IPE}. I had to modify the framework to make it work well with USCT data and develop graphical user interface for better representation of the  visulisation. Nicolas Tan Jerome is reposible for development and maintaince of the library, so he was assigned as my mentor for the task.\\
+
+
+
+
+
+
+
+
+
+
+
 
 
 

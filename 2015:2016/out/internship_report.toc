@@ -10,6 +10,9 @@
 \contentsline {subsection}{\numberline {3.2}Position description}{4}{subsection.3.2}
 \contentsline {subsection}{\numberline {3.3}Work description}{4}{subsection.3.3}
 \contentsline {subsubsection}{\numberline {3.3.1}Prototyping}{4}{subsubsection.3.3.1}
-\contentsline {subsubsection}{\numberline {3.3.2}HSV Fusion}{5}{subsubsection.3.3.2}
-\contentsline {subsubsection}{\numberline {3.3.3}DICOM Viewer realisation}{6}{subsubsection.3.3.3}
+\contentsline {subsubsection}{\numberline {3.3.2}HSV Fusion}{4}{subsubsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.3}DICOM Viewer realisation}{5}{subsubsection.3.3.3}
 \contentsline {subsubsection}{\numberline {3.3.4}Re-slicing}{6}{subsubsection.3.3.4}
+\contentsline {subsubsection}{\numberline {3.3.5}WebGL Visualisation for USCT}{7}{subsubsection.3.3.5}
+\contentsline {subsection}{\numberline {3.4}Working place communication}{8}{subsection.3.4}
+\contentsline {section}{\numberline {4}Conclusion}{8}{section.4}

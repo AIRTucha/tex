@@ -123,18 +123,20 @@ The sound speed and attenuation images give doctors an opportunity to classify l
 
 I also have had my personal goals related with the intnernship:
 \begin{itemize}
-\item Improve skills on object-oriented programming with Java improve knowledge of MATLAB
+\item Improve skills on object-oriented programming with Java\footnote{Java is one of the main languages studied in my program at Savonia UAS}improve knowledge of MATLAB
 \item Gain experience in digital image processing
 \item Get experience in team work on real-life project
 \item Learn software development workflow
 \end{itemize}
+
+I did not have any expirince in digital image processing befor the internship, but I have had deep undestanding of color theory, visual art and raster graphics and the knowldege helped me a lot.
 
 \subsection{Work description}
 \subsubsection{Prototyping}
 
 The most part of my internship I worked on development of new fusion technics for 3D USCT images under supervision of Dr. Hopp. During the first week I made literature research and came up with several idea for realisation of the fusion. After that I made a prototypes for three best of them in MATLAB. The picture \ref{prot} demostrates prototype of HSV Fusion.\\
 
-\begin{figure}[H]
+\begin{figure}
 \centerline{\includegraphics[scale=0.4]{internship_report/pro}}
 \caption{MATLAB prototype for HSV Fusion\label{fig:pro}}
 \end{figure}
@@ -155,15 +157,10 @@ HSV Fusion was the best solution for fusion of 3D USCT images I founded. The alg
 
 The components are shown on the figure \ref{fig:hsv} The color space of the model can be represented as cylinder, where: altitude is tha Value, saturation is radious from center and angel is hue, look at figure \ref{fig:model}.\\
 
-\begin{figure}[H]
-\centerline{\includegraphics[scale=0.6]{internship_report/model}}
-\caption{Model of HSV color space\label{fig:model}}
-\end{figure}
-
-To get the final result of the fusion the algorithm transfer the image from HSV to RGB color model. The visual reslisation of the conversion shown at figure \ref{fig:hsv2rgb}.
+To get the final result of the fusion the algorithm transfer the image from HSV to RGB color model. The visual representation of the conversion shown at figure \ref{fig:hsv2rgb}.
 
 \begin{figure}[H]
-\centerline{\includegraphics[scale=0.6]{internship_report/hsv2rgb}}
+\centerline{\includegraphics[scale=0.7]{internship_report/hsv2rgb}}
 \caption{Visuale representation of HSV to RGB convertions\label{fig:hsv2rgb}}
 \end{figure}
 
@@ -171,9 +168,10 @@ To get the final result of the fusion the algorithm transfer the image from HSV 
 
 The prototype was presented to the Software Methods groupe of IPE. The realisation get positive feedback from the team and I started the realisation of the algorithm in DICOM Viewer with ImageJ.\\
 
+
 The DICOM realisation has a little bit more simple user interface, to make it more understandable for an end user. Sound speed thresholding were added to the final version of fusion, figure \ref{fig:final}.
 
-\begin{figure}[H]
+\begin{figure}
 \centerline{\includegraphics[scale=0.5]{internship_report/final}}
 \caption{DICOM Viewer HSV Fusion Menu \label{fig:final}}
 \end{figure}
@@ -181,6 +179,11 @@ The DICOM realisation has a little bit more simple user interface, to make it mo
 \subsubsection{Re-slicing}
 
 As I mentionet before DICOM Viewer keeps three different stacks of images with different slicing directions for an every breast, but any of this three stacks contains enoght information for visualising of all three slicing directions.\\
+
+\begin{figure}[H]
+\centerline{\includegraphics[scale=0.7]{internship_report/model}}
+\caption{Model of HSV color space\label{fig:model}}
+\end{figure}
 
 My task was to implement the reslicing algorithm whihc allows DICOM Viewer recalculate all three slicing directions from any of them. If density a long different axis is not uniform the algorithm also had to be interpolated data.\\
 
@@ -190,21 +193,39 @@ Re-slicing is very useful feature for DICOM Viewer, because it will tow times re
 
 I was volunteer to take part at development of 3D WebGL Visualisation of USCT data and Dr. Hopp allowed me to join the team. Michael Zapf was responseable for development of the project and the last part of my internship I did under his controll.\\
 
-The vialisation is based on Tomoraycaster 2\footnote{JavaScript framework visualisation of 3D data developed in IPE}. I had to modify the framework to make it work well with USCT data and develop graphical user interface for better representation of the  visulisation. Nicolas Tan Jerome is reposible for development and maintaince of the library, so he was assigned as my mentor for the task.\\
+The vialisation is based on Tomoraycaster 2\footnote{JavaScript framework visualisation of 3D data developed in IPE}. I had to modify the framework to make it work well with USCT data and develop graphical user interface for better representation of the  visulisation.\\
 
+My work started from deployment of Tomoraycaser 2 example for USCT data, the example was able to show the breast structure from reflectional image. After that I started to make an adoptatoin of the shaders to give them an opportunity to handle multimodal data, basicaly I used very same idea as in Fusion, but I also added severl other features to the realisation. The visulisation was quite slow on weak machines, that's why I also worked on optimasetion of the code.\\
 
+\begin{figure}[H]
+\centerline{\includegraphics[scale=0.4]{internship_report/usct}}
+\caption{Web visualisation for 3D USCT\label{fig:usct}}
+\end{figure}
 
+When I finnish my modifications for Tomoraycaster, I started to write the actuall graphical user interface in according with skeleton of the project provided to reslisation me by Nicolas.\\
 
+Our GUI has very complex animation and designe, so we diceded to draw entier website inside huge dynamice SVG image. I used Snap.SVG library to draw SVG images dynamicly inside the webpage. Tomoraycaster and jQuer UI sliders were added to the SVG image as foring object.\\
 
+Final result of the work is 3D visualisation of the USCT data with ten different modes and eleven sliders with different parametrs, pic. \ref{fig:usct}. The visualisation is avaible on this address http://ipepc57.ipe.kit.edu:10002
 
+\subsection{Working place communication}
 
+During the most part of my internship I work under direct supervision of Dr. Torsten Hopp. I recieved the task from my supervisor, asked him for a help then I have had a probmlem and report about current progress. My worked realated with custamization of DICOM Viewer was organised via SVN version controll system, so I worked in my own branch to prevent any additional bugs in the main repository, Dr. Hopp always was able to get my lattes stable code, to check the code style and report about bugs. Every new feature implemented in DICOM Viewer was checked by Dr. Hopp and fixed by me in according with his feedback.\\
 
+Every Wendsday USCT groupe have a meeting. The meeting starts from discussion about current news realted to the project. After that we have had so called "weekly round", durign the "round" every teammember had to report about his/her progress for last week in fron of USCT team on a meeting, durign the report the everyone was able to request help or advise from other ones or help somebody him/herself. \\
 
+At the last part of my internship I worked in cooperation wit Nicolas Tan, he is an expirince web developer reposible for development and maintaince of Tomoraycaster 2, so he was assigned as my mentor for the task. I was very happy to have an opprotunity to work under his guidence, becuase it was prefect chance to improve knowledge in field of web development.\\
 
+During the development of the visualisation I worked in close cooperation with my mentor. We had had discusions about the key issues of the project and made the key dissions toghter. He checked my code and tought me a lot about using of Git and writing a good code. The requerment for the project was developed and controlled by Michael Zapf. Sometimes three of us had a small meetings to make key desisions. Sometimes Michael visited my working place to check current progress, points to bugs and give some advises. 
 
+\section{Conclusion}
 
+I was very satisfied with the internship because I reached my personal goals and in my point of view the task assigned to me was sorted well. In according with the postion goals during the internship I developed new way of visualizing of multimodal USCT data. While implemetetion of the prototype for the algorithm at MATLAB, I improved my knowledge of MATLAB. After that I geined an expirince in object-oriented programming with Java and digital image processing, during integration of the algorithm with DICOM Viewer and work under development of reslicing. I also learned on practise the software development workflow from idea, to prototype and from prototype to implementation and testing.\\
 
+During the second part of my internship I got an expirince in team work on real-life project, I improved my knowledge of tool for team cooperation such as Git version contol system. I also studied in a practice the web development workflow and web development tools like tools like browserify and sass, improved my system administration skills during deployment of the application. Nicolas' guidence helped me to improve my coding style and made my undestanding of JavaScript much deeper.\\
 
+I am very thankful to KIT for this expirince, because I want to build my career in field of digital image processing, visualisation and computer graphics, the work placement gave me first indastieal expirince in this fields, so it means a lot for my future career prospects.\\
 
+I am very thankful to all the people I met during the internship, to the Software Methods groupe of IPE and espectially to Dr. Hopp, Nicolas Tan and Michael Zapf for the guidence and knowledge provided by them.
 
 \end{document}

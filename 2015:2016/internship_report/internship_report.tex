@@ -9,6 +9,7 @@
 \usepackage{fancyhdr}
 \usepackage[hidelinks]{hyperref}
 \usepackage{float}
+\usepackage{pdfpages}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -31,22 +32,22 @@
 
 \begin{document}
 
-\title{\vspace{2in}INTERNSHIP REPORT\\
+\title{\vspace{2.5in}INTERNSHIP REPORT\\
 \small Savonia University of Applied Sciences\\
-\vspace{0.5in}\includegraphics{savonia.jpg}}
+\vspace{0.3in}\includegraphics{savonia.jpg}}
 
 \nopagebreak
 \maketitle
 
 
-\vspace{3in}
+\vspace{2.7in}
 
 \author{
 \begin{flushleft}
 Student name: Alexey Tukalo,\\
 Student number: 67687,\\
 Group: EFA12SF,\\
-Type: The internship information technologies,\\
+Type: The internship Information Technology,\\
 Duration: 4 months and 1 week or 720 hour (07.07.2015-18.11.2015)\\
 The day of the report: \date{\today}
 \end{flushleft}
@@ -116,7 +117,7 @@ The USCT system is able to produce three different types of images (Pic. \ref{fi
 The sound speed and attenuation images give doctors an opportunity to classify lesions precisely  (Figure \ref{fig:nicol}), while the reflection one allows them to define the structure. An essential part of the image processing is to fuse the three different images into a single one in order to give an intuitive access to the multimodal information at a glance and it was my main task of my internship. 
 
 \begin{figure}[H]
-\centerline{\includegraphics[scale=0.5]{internship_report/nicol}}
+\centerline{\includegraphics[scale=0.4]{internship_report/nicol}}
 \caption{Tumor clasification based on sound speed and attenuation\label{fig:nicol} \cite{nicol}}
 \end{figure}
 \subsection{Position description}
@@ -197,7 +198,7 @@ The vizualisation is based on Tomoraycaster 2\footnote{JavaScript framework for 
 My work started with deployment of an example for Tomoraycaser 2 with USCT data. The example was able to show the breast structure from reflection image. After that I started to make an adoptatoin of the shaders to give them an opportunity to handle multimodal data. This allowed me to integrate the image fusion, but I also added severl other features to the realisation. The visulisation was quite slow on weak machines when I started my developments. That's why I also worked on optimization of the code.\\
 
 \begin{figure}[H]
-\centerline{\includegraphics[scale=0.4]{internship_report/usct}}
+\centerline{\includegraphics[scale=0.35]{internship_report/usct}}
 \caption{Web visualization for 3D USCT\label{fig:usct}}
 \end{figure}
 
@@ -226,7 +227,7 @@ I am very thankful to KIT for this experience, because I want to build my career
 
 I am very thankful to all the people I met during the internship, to the Software Methods group of IPE and especially to Dr. Hopp, Nicolas Tan and Michael Zapf for the mentoring and knowledge provided by them.
 
-\newpage
+
 \begin{thebibliography}{1}
 
    \bibitem{nicol} USCT Presentation by Dr. Nicole Ruiter
@@ -235,5 +236,8 @@ I am very thankful to all the people I met during the internship, to the Softwar
 
 \end{thebibliography}
 
+\section{Appendix}
+\includegraphics[scale=0.75]{internship_report/certificate}
+\includepdf[pages={-}]{internship_report/contract}
 
 \end{document}

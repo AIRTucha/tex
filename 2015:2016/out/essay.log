@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.30)  24 JAN 2016 02:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.30)  18 DEC 2015 23:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**labview/labview.tex
-(./labview/labview.tex
+**essay/essay.tex
+(./essay/essay.tex
 LaTeX2e <2014/05/01>
 Babel <3.9k> and hyphenation patterns for 78 languages loaded.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/article.cls
@@ -238,121 +238,24 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip52
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/float/float.sty
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count102
-\float@exts=\toks16
-\float@box=\box27
-\@float@everytoks=\toks17
-\@floatcapt=\box28
+(/usr/local/texlive/2014/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip53
+\fb@frw=\dimen118
+\fb@frh=\dimen119
+\FrameRule=\dimen120
+\FrameSep=\dimen121
 )
-(/usr/local/texlive/2014/texmf-dist/tex/generic/systeme/systeme.sty
-(/usr/local/texlive/2014/texmf-dist/tex/generic/xstring/xstring.sty
-(/usr/local/texlive/2014/texmf-dist/tex/generic/xstring/xstring.tex
-\@xs@message=\write3
-\integerpart=\count103
-\decimalpart=\count104
+(/usr/local/texlive/2014/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip54
+\enit@outerparindent=\dimen122
+\enit@toks=\toks16
+\enit@inbox=\box27
+\enitdp@description=\count102
 )
-Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
-)
-(/usr/local/texlive/2014/texmf-dist/tex/generic/systeme/systeme.tex
-\SYS@systemecode=\toks18
-\SYS@systempreamble=\toks19
-\SYSeqnum=\count105
-)
-Package: systeme 2013/12/21 v0.3 Mise en forme de systemes d'equations
-)
-(/usr/local/texlive/2014/texmf-dist/tex/latex/mh/mathtools.sty
-Package: mathtools 2014/05/21 v1.14 mathematical typesetting tools
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count106
-\calc@Bcount=\count107
-\calc@Adimen=\dimen118
-\calc@Bdimen=\dimen119
-\calc@Askip=\skip53
-\calc@Bskip=\skip54
-LaTeX Info: Redefining \setlength on input line 75.
-LaTeX Info: Redefining \addtolength on input line 76.
-\calc@Ccount=\count108
-\calc@Cskip=\skip55
-)
-(/usr/local/texlive/2014/texmf-dist/tex/latex/mh/mhsetup.sty
-Package: mhsetup 2010/01/21 v1.2a programming setup (MH)
-)
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2013/01/14 v2.14 AMS math features
-\@mathmargin=\skip56
-
-For additional information on amsmath, use the `?' option.
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amstext.sty
-Package: amstext 2000/06/29 v2.01
-
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsgen.sty
-File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks20
-\ex@=\dimen120
-))
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsbsy.sty
-Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen121
-)
-(/usr/local/texlive/2014/texmf-dist/tex/latex/amsmath/amsopn.sty
-Package: amsopn 1999/12/14 v2.01 operator names
-)
-\inf@bad=\count109
-LaTeX Info: Redefining \frac on input line 210.
-\uproot@=\count110
-\leftroot@=\count111
-LaTeX Info: Redefining \overline on input line 306.
-\classnum@=\count112
-\DOTSCASE@=\count113
-LaTeX Info: Redefining \ldots on input line 378.
-LaTeX Info: Redefining \dots on input line 381.
-LaTeX Info: Redefining \cdots on input line 466.
-\Mathstrutbox@=\box29
-\strutbox@=\box30
-\big@size=\dimen122
-LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
-\macc@depth=\count114
-\c@MaxMatrixCols=\count115
-\dotsspace@=\muskip11
-\c@parentequation=\count116
-\dspbrk@lvl=\count117
-\tag@help=\toks21
-\row@=\count118
-\column@=\count119
-\maxfields@=\count120
-\andhelp@=\toks22
-\eqnshift@=\dimen123
-\alignsep@=\dimen124
-\tagshift@=\dimen125
-\tagwidth@=\dimen126
-\totwidth@=\dimen127
-\lineht@=\dimen128
-\@envbody=\toks23
-\multlinegap=\skip57
-\multlinetaggap=\skip58
-\mathdisplay@stack=\toks24
-LaTeX Info: Redefining \[ on input line 2665.
-LaTeX Info: Redefining \] on input line 2666.
-)
-LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
-LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
-\g_MT_multlinerow_int=\count121
-\l_MT_multwidth_dim=\dimen129
-\origjot=\skip59
-\l_MT_shortvdotswithinadjustabove_dim=\dimen130
-\l_MT_shortvdotswithinadjustbelow_dim=\dimen131
-\l_MT_above_intertext_sep=\dimen132
-\l_MT_below_intertext_sep=\dimen133
-\l_MT_above_shortintertext_sep=\dimen134
-\l_MT_below_shortintertext_sep=\dimen135
-)
-(/Users/alexey/Documents/tex/2015:2016/out/labview.aux)
-\openout1 = `labview.aux'.
+(/Users/alexey/Documents/tex/2015:2016/out/essay.aux)
+\openout1 = `essay.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
 LaTeX Font Info:    ... okay on input line 33.
@@ -375,17 +278,17 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count122
-\scratchdimen=\dimen136
-\scratchbox=\box31
-\nofMPsegments=\count123
-\nofMParguments=\count124
-\everyMPshowfont=\toks25
-\MPscratchCnt=\count125
-\MPscratchDim=\dimen137
-\MPnumerator=\count126
-\makeMPintoPDFobject=\count127
-\everyMPtoPDFconversion=\toks26
+\scratchcounter=\count103
+\scratchdimen=\dimen123
+\scratchbox=\box28
+\nofMPsegments=\count104
+\nofMParguments=\count105
+\everyMPshowfont=\toks17
+\MPscratchCnt=\count106
+\MPscratchDim=\dimen124
+\MPnumerator=\count107
+\makeMPintoPDFobject=\count108
+\everyMPtoPDFconversion=\toks18
 ) (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -435,7 +338,7 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box32
+\AtBeginShipoutBox=\box29
 Package hyperref Info: Link coloring OFF on input line 33.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -443,23 +346,29 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count128
+\c@section@level=\count109
 )
 LaTeX Info: Redefining \ref on input line 33.
 LaTeX Info: Redefining \pageref on input line 33.
 LaTeX Info: Redefining \nameref on input line 33.
 
-(/Users/alexey/Documents/tex/2015:2016/out/labview.out)
-(/Users/alexey/Documents/tex/2015:2016/out/labview.out)
-\@outlinefile=\write4
-\openout4 = `labview.out'.
+(/Users/alexey/Documents/tex/2015:2016/out/essay.out)
+(/Users/alexey/Documents/tex/2015:2016/out/essay.out)
+\@outlinefile=\write3
+\openout3 = `essay.out'.
 
 
-<savonia.jpg, id=52, 139.722pt x 37.5804pt>
+<savonia.jpg, id=48, 139.722pt x 37.5804pt>
 File: savonia.jpg Graphic file (type jpg)
  <use savonia.jpg>
 Package pdftex.def Info: savonia.jpg used on input line 41.
 (pdftex.def)             Requested size: 139.72165pt x 37.58029pt.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 41.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 41.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 41.
 
 
 LaTeX Warning: No \author given.
@@ -470,12 +379,16 @@ LaTeX Warning: No \author given.
 ia.jpg>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 60.
- (/Users/alexey/Documents/tex/2015:2016/out/labview.toc
+ (/Users/alexey/Documents/tex/2015:2016/out/essay.toc
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 4.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 4.
 )
-\tf@toc=\write5
-\openout5 = `labview.toc'.
+\tf@toc=\write4
+\openout4 = `essay.toc'.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
@@ -483,149 +396,499 @@ been already used, duplicate ignored
                    \relax 
 l.62 \newpage
               [1]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 68.
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no “ in font ptmr7t!
- <labview/strait.png, id=77, 467.7475pt x 198.7425pt>
-File: labview/strait.png Graphic file (type png)
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 71.
 
-<use labview/strait.png>
-Package pdftex.def Info: labview/strait.png used on input line 72.
-(pdftex.def)             Requested size: 233.87317pt x 99.371pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 80--81
-
- []
-
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 89.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 89.
- [2pdfTeX warning (ext4): destination with the same identifier (name{figure.1})
- has been already used, duplicate ignored
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 71.
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.95 \item U
-            nknown mass <./labview/strait.png>]
-<labview/circuit.png, id=94, 867.24pt x 487.8225pt>
-File: labview/circuit.png Graphic file (type png)
- <use labview/circuit.png>
-Package pdftex.def Info: labview/circuit.png used on input line 109.
-(pdftex.def)             Requested size: 433.61894pt x 243.91064pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 113--114
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
 
  []
 
-<labview/graph.png, id=96, 675.52374pt x 388.45125pt>
-File: labview/graph.png Graphic file (type png)
- <use labview/graph.png>
-Package pdftex.def Info: labview/graph.png used on input line 122.
-(pdftex.def)             Requested size: 337.76105pt x 194.22514pt.
-
-[3pdfTeX warning (ext4): destination with the same identifier (name{figure.2}) 
-has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.125 
-       <./labview/circuit.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 145--146
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 95.
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 137--138
 
  []
 
-[4pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) 
-has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.169 \end{equation}
-                    pdfTeX warning (ext4): destination with the same identifier
- (name{table.1}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.169 \end{equation}
-                     <./labview/graph.png>]
-<labview/lv.png, id=126, 419.31656pt x 388.45125pt>
-File: labview/lv.png Graphic file (type png)
- <use labview/lv.png>
-Package pdftex.def Info: labview/lv.png used on input line 200.
-(pdftex.def)             Requested size: 314.48663pt x 291.3377pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 206--207
-
- []
-
-[5pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) 
-has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.207 
-       <./labview/lv.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 208--209
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 170--172
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 230--231
+Underfull \hbox (badness 10000) in paragraph at lines 179--180
+
+ []
+
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no « in font ptmr7t!
+
+Underfull \hbox (badness 10000) in paragraph at lines 186--187
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 232--233
+Underfull \hbox (badness 10000) in paragraph at lines 188--189
 
  []
 
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no “ in font ptmr7t!
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 249.
-[6pdfTeX warning (ext4): destination with the same identifier (name{table.2}) h
-as been already used, duplicate ignored
+[4] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 271--272
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.249 \end{document}
-                    ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 249.
- (/Users/alexey/Documents/tex/2015:2016/out/labview.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 249.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 249.
-Package rerunfilecheck Info: File `labview.out' has not changed.
+ []
+
+
+Overfull \hbox (3.68407pt too wide) in paragraph at lines 289--289
+[]\OT1/ptm/m/n/10 No| 
+ []
+
+
+Underfull \hbox (badness 6380) in paragraph at lines 289--289
+[]\OT1/ptm/m/n/10 Affected Ar-
+ []
+
+
+Overfull \hbox (1.77028pt too wide) in paragraph at lines 289--289
+[]\OT1/ptm/m/n/10 Probability| 
+ []
+
+
+Underfull \hbox (badness 2529) in paragraph at lines 289--290
+[]\OT1/ptm/m/n/10 Potential Re-
+ []
+
+
+Underfull \hbox (badness 3364) in paragraph at lines 299--300
+\OT1/ptm/m/n/10 able at Uni-
+ []
+
+
+Underfull \hbox (badness 7133) in paragraph at lines 303--303
+[]\OT1/ptm/m/n/10 Teammate is
+ []
+
+
+Underfull \hbox (badness 2334) in paragraph at lines 303--303
+\OT1/ptm/m/n/10 sick and not
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 309--310
+[]\OT1/ptm/m/n/10 Reallocate
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 309--310
+\OT1/ptm/m/n/10 tasks of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 309--310
+\OT1/ptm/m/n/10 the sick
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 309--310
+\OT1/ptm/m/n/10 team-mate
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 312--312
+[]\OT1/ptm/m/n/10 Hardware
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 313--313
+[]\OT1/ptm/m/n/10 Hardware
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 313--313
+\OT1/ptm/m/n/10 prob-lems
+ []
+
+
+Underfull \hbox (badness 1502) in paragraph at lines 313--313
+\OT1/ptm/m/n/10 dur-ing de-vel-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 319--320
+[]\OT1/ptm/m/n/10 Troubleshoot
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 319--320
+\OT1/ptm/m/n/10 the de-vice,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 324--324
+[]\OT1/ptm/m/n/10 BlueMix
+ []
+
+
+Underfull \hbox (badness 1533) in paragraph at lines 324--324
+\OT1/ptm/m/n/10 Cloud is un-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 324--324
+\OT1/ptm/m/n/10 avail-able for
+ []
+
+
+Underfull \hbox (badness 1565) in paragraph at lines 326--326
+[]\OT1/ptm/m/n/10 Scope, Qual-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 330--331
+[]\OT1/ptm/m/n/10 Move server
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 340--340
+[]\OT1/ptm/m/n/10 Civilisation
+ []
+
+
+Underfull \hbox (badness 1565) in paragraph at lines 342--342
+[]\OT1/ptm/m/n/10 Scope, Qual-
+ []
+
+
+Underfull \hbox (badness 6641) in paragraph at lines 346--347
+[]\OT1/ptm/m/n/10 Join par-ti-san
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 346--347
+\OT1/ptm/m/n/10 de-tach-ments
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 346--347
+\OT1/ptm/m/n/10 re-sis-tance,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 346--347
+\OT1/ptm/m/n/10 stop de-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 346--347
+\OT1/ptm/m/n/10 vel-op-ing,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 346--347
+\OT1/ptm/m/n/10 the prod-uct
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 346--347
+\OT1/ptm/m/n/10 is use-less
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 346--347
+\OT1/ptm/m/n/10 in case of
+ []
+
+
+Overfull \hbox (36.58348pt too wide) in paragraph at lines 287--361
+[]
+ []
+
+
+Overfull \hbox (36.58348pt too wide) in paragraph at lines 287--361
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 287--361
+
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 363--364
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 365--366
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 367--368
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 390--390
+[]\OT1/ptm/m/n/10 Get project re-quire-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 390--390
+\OT1/ptm/m/n/10 ments, ask ques-tion
+ []
+
+
+Overfull \hbox (2.75053pt too wide) in paragraph at lines 392--392
+[]\OT1/ptm/m/n/10 Supervisor,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 396--396
+[]\OT1/ptm/m/n/10 Meeting
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 396--396
+\OT1/ptm/m/n/10 (brain-
+ []
+
+
+Underfull \hbox (badness 1281) in paragraph at lines 397--397
+[]\OT1/ptm/m/n/10 Create the idea of the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 397--397
+\OT1/ptm/m/n/10 project in ac-cor-dance
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 401--402
+[]\OT1/ptm/m/n/10 Concept of the
+ []
+
+
+Overfull \hbox (2.75053pt too wide) in paragraph at lines 406--406
+[]\OT1/ptm/m/n/10 Supervisor,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 411--411
+[]\OT1/ptm/m/n/10 Reconcile the scope
+ []
+
+
+Overfull \hbox (2.75053pt too wide) in paragraph at lines 413--413
+[]\OT1/ptm/m/n/10 Supervisor,
+ []
+
+
+Underfull \hbox (badness 4805) in paragraph at lines 415--416
+[]\OT1/ptm/m/n/10 Permission to start
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 415--416
+\OT1/ptm/m/n/10 ac-tual de-vel-op-ment
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 417--417
+[]\OT1/ptm/m/n/10 Meeting
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 417--417
+\OT1/ptm/m/n/10 (brain-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 424--424
+[]\OT1/ptm/m/n/10 Meeting
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 424--424
+\OT1/ptm/m/n/10 (brain-
+ []
+
+
+Underfull \hbox (badness 1845) in paragraph at lines 425--425
+[]\OT1/ptm/m/n/10 Identify the tech-no-log-
+ []
+
+
+Underfull \hbox (badness 2726) in paragraph at lines 425--425
+\OT1/ptm/m/n/10 i-cal im-ple-men-ta-tion of
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 431--431
+[]\OT1/ptm/m/n/10 Meeting
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 431--431
+\OT1/ptm/m/n/10 (brain-
+ []
+
+
+Underfull \hbox (badness 2856) in paragraph at lines 432--432
+[]\OT1/ptm/m/n/10 Identify the de-tails of
+ []
+
+
+Underfull \hbox (badness 2261) in paragraph at lines 439--439
+\OT1/ptm/m/n/10 in-de-pen-dent parts with
+ []
+
+
+Underfull \hbox (badness 2941) in paragraph at lines 446--446
+[]\OT1/ptm/m/n/10 Set dead-lines, iden-tify
+ []
+
+
+Underfull \hbox (badness 3271) in paragraph at lines 460--460
+[]\OT1/ptm/m/n/10 Demonstrate re-sults to
+ []
+
+
+Overfull \hbox (2.75053pt too wide) in paragraph at lines 462--462
+[]\OT1/ptm/m/n/10 Supervisor,
+ []
+
+
+Underfull \hbox (badness 4132) in paragraph at lines 464--465
+[]\OT1/ptm/m/n/10 Feedback from the
+ []
+
+
+Overfull \hbox (6.76016pt too wide) in paragraph at lines 466--466
+[]\OT1/ptm/m/n/10 Presentation| 
+ []
+
+
+Overfull \hbox (2.75053pt too wide) in paragraph at lines 469--469
+[]\OT1/ptm/m/n/10 Supervisor,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 469--469
+\OT1/ptm/m/n/10 Dev
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 469--469
+\OT1/ptm/m/n/10 Team,
+ []
+
+
+Underfull \hbox (badness 2932) in paragraph at lines 469--469
+\OT1/ptm/m/n/10 other stu-
+ []
+
+
+Underfull \hbox (badness 2932) in paragraph at lines 469--469
+\OT1/ptm/m/n/10 dents and
+ []
+
+
+Underfull \hbox (badness 4132) in paragraph at lines 471--472
+[]\OT1/ptm/m/n/10 Feedback from the
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 473--473
+[]\OT1/ptm/m/n/10 Skype
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 473--473
+\OT1/ptm/m/n/10 con-ver-sa-
+ []
+
+
+Underfull \hbox (badness 7030) in paragraph at lines 474--474
+[]\OT1/ptm/m/n/10 Discuss par-tic-u-lar de-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 474--474
+\OT1/ptm/m/n/10 vel-op-ment pro-cess
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 474--474
+\OT1/ptm/m/n/10 and prob-lems with
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 478--479
+[]\OT1/ptm/m/n/10 Exchange opin-ions
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 478--479
+\OT1/ptm/m/n/10 about par-tic-u-lar
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 478--479
+\OT1/ptm/m/n/10 prob-lems, share
+ []
+
+
+Overfull \hbox (2.75053pt too wide) in paragraph at lines 483--483
+[]\OT1/ptm/m/n/10 Supervisor,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 382--488
+
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 490--491
+
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 495--496
+
+ []
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 513.
+[9]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 513.
+ (/Users/alexey/Documents/tex/2015:2016/out/essay.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 513.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 513.
+Package rerunfilecheck Info: File `essay.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 249.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 513.
  ) 
 Here is how much of TeX's memory you used:
- 7860 strings out of 493117
- 116021 string characters out of 6135432
- 222691 words of memory out of 5000000
- 11157 multiletter control sequences out of 15000+600000
- 23596 words of font info for 50 fonts, out of 8000000 for 9000
+ 6653 strings out of 493117
+ 98301 string characters out of 6135432
+ 211995 words of memory out of 5000000
+ 9916 multiletter control sequences out of 15000+600000
+ 22468 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,11n,43p,621b,458s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,10n,43p,640b,573s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
-xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
-live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texli
-ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive
-/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/20
-14/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2014/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2014/tex
-mf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fo
-nts/type1/urw/times/utmr8a.pfb>
-Output written on /Users/alexey/Documents/tex/2015:2016/out/labview.pdf (7 page
-s, 216002 bytes).
+exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
+xlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014
+/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
+Output written on /Users/alexey/Documents/tex/2015:2016/out/essay.pdf (10 pages
+, 106071 bytes).
 PDF statistics:
- 195 PDF objects out of 1000 (max. 8388607)
- 165 compressed objects within 2 object streams
- 40 named destinations out of 1000 (max. 500000)
- 122 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 249 PDF objects out of 1000 (max. 8388607)
+ 230 compressed objects within 3 object streams
+ 115 named destinations out of 1000 (max. 500000)
+ 94 words of extra memory for PDF output out of 10000 (max. 10000000)
 

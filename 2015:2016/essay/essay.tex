@@ -1,0 +1,513 @@
+\documentclass[english]{article}
+
+\usepackage{babel}
+\usepackage{graphicx}
+\usepackage{times}
+\usepackage{pifont}
+\usepackage[margin=1in]{geometry}
+\usepackage{eurosym}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+\usepackage{framed}
+\usepackage{enumitem}
+
+\pagestyle{fancy}
+\fancyhf{}
+
+
+%HEADER
+%**************************************************************************************
+\pagestyle{fancy}
+\fancyhf{}
+%**************************************************************************************
+\lhead{Essay}		 	 
+\rhead{Management Skills} 
+\lfoot{EFA12SF}
+\cfoot{\thepage}
+\rfoot{Alexey Tukalo}
+%**************************************************************************************
+
+\date{}
+\setlength\parindent{0pt}
+
+\begin{document}
+
+\title{\vspace{2in}Management Skills\\
+\small for Planing for Project Management\\
+\vspace{0.5in}\includegraphics{savonia.jpg}}
+
+\nopagebreak
+\maketitle
+
+
+\vspace{3in}
+
+\author{
+\begin{flushright}
+Alexey Tukalo,\\
+EFA12SF,\\
+Information Technology,\\
+Savonia University of Applied Sciences
+\end{flushright}
+}
+
+\date{\today}
+\thispagestyle{empty}
+
+\newpage
+\setcounter{page}{1}
+\setcounter{tocdepth}{2}
+\tableofcontents
+
+\newpage
+
+%MAIN CONTENT ******************************************************************************************************************
+
+\section{Introduction}
+
+A planning is an essential part of a project management. The plan provides many advantages for the project manager, investors and other stakeholders, because:
+
+\begin{itemize}
+\item It gives a structure to the process.
+\item It allows to predict different problems at a very early stage.
+\item It can be used to measure performance of the project execution.
+\item It gives an opportunity to analyze problem and figure out the best solution for it during the project execution process.
+\item It helps to set a budget and deadlines.
+\item It is the main source of information about the project for stakeholders and investors.
+\item It helps in a conflict resolution.
+\end{itemize}
+
+It is almost impossible to manage more or less large scale project without proper planning. Usually, a project plan contains at least:
+
+\begin{itemize}
+\item Scope Statement
+\item Risk Register
+\item Communication Plan
+\item Work breakdown structure
+\item Budget
+\end{itemize}
+
+Let's take a little bit deeper look into the documents. \cite{man}
+
+\section{Scope Statement}
+Scope Statement is the main document which contains an explanation of project justification, requirements and the project success criteria. It also contains an information about product-related deliverables and the list of documents related with the project. The document is used to separate rights and obligations between a project owner, a project manager and a project team. The separation is important for a conflict resolution.\cite{man}\\
+
+\subsection{Scope Statement example}
+You can see an example of a Scope Statement below.
+
+\begin{framed}
+\textbf{Project Title:  Space monitor } \\
+\textbf{Date: \today}
+\textbf{Prepared by: April 27, 2015 }
+\end{framed}
+\begin{framed}
+  \textbf{Project Justification:} \\
+  The aim is to develop project with complex network architecture, the project should contain microcontroller which communicates with server over internet and the webpage which demonstrate the sensors work in visual way. The project have to follow philosophy of internet of things.
+  \end{framed}
+  \begin{framed}
+   \textbf{Product Characteristics and Requirements:}
+\begin{enumerate}
+  \item The microcontroller have to:
+  \begin{enumerate}
+  \item transmit data over internet to the server
+  \item read data from Ultrosonic sensor 
+	\end{enumerate}
+  \item The server have to:
+    \begin{enumerate}
+  \item received data from microcontroller
+  \item keep data in the database
+  \item provide RESTfull API for webpage
+  \item be based on IBM BlueMix
+	\end{enumerate}
+  \item The webpage have to:
+    \begin{enumerate}
+  \item be implement fluid-design 
+  \item contain:
+  \begin{enumerate}
+  \item legend
+  \item two donut chart
+  \item bar chart
+  \item plot
+	\end{enumerate}
+  \item receive data from RESTfull API
+	\end{enumerate}
+\end{enumerate}
+  \end{framed}
+  \begin{framed}
+  \textbf{Summary of Project Deliverables}\\
+  
+ \textbf{Project management-related deliverables: }the following documentation and any other documents required to manage the project.
+ \begin{enumerate}
+  \item  Scope statement
+  \item WBS
+  \item Network diagram and critical path
+  \item Risk register and probability impact matrix
+  \item Communication plan
+  \item Cost baseline
+  \item Team contract
+  \item Project completion report
+	\end{enumerate}
+
+
+ \textbf{Product-related deliverables:}
+  \begin{enumerate}
+  \item A project meeting the agreed specification
+  \item A design document detailing the project architecture
+  \item All software code
+  \item Final presentation
+	\end{enumerate}
+
+
+\textbf{Non Project Deliverables}
+  \begin{enumerate}
+  \item No guarantee of increased revenue for the project
+  \item The ongoing site maintenance following the completion of the project
+  \item The website hosting and hosting contract
+  \item The website launch
+	\end{enumerate}
+  \end{framed}
+  \begin{framed}
+  \textbf{Project Success Criteria:} \\
+   \begin{enumerate}
+  \item The project will be completion within 3 months.
+  \item All HTML and CSS to validate to W3C standards.
+  \item The project will be fully functional
+  \item The product will follow Product Characteristics and Requirements
+	\end{enumerate}
+  \end{framed}
+  \begin{framed}
+\textbf{Assumptions:} \\
+
+The project team will consist of a Sponsor(University) and Project Manager/Programmer(Alexey Tukalo) and Programmers(Gaëtan M., Florian Henriet).
+\end{framed}
+
+\section{Work Breakdown Structure}
+
+The PMBOK\footnote{The Project Management Body of Knowledge - industry standards for a complete project plan} describes the Work Breakdown Structure as "deliverable oriented hierarchical decomposition of the work to be executed by the project team". Basically, the WBS represents a project execution process as list of manageable sections.\\
+
+Typically it is demonstrated as multiple level list of actions and milestones. Software for project management usually add timing/schedule, resources and team members columns to the WBS, this kind of table can be used for an automatic generation of a Gantt Chart. It is the main tool of project manager, because it contains the most important information for the project execution process.\cite{ms}\\
+
+It is very important for settings of a schedule to take in an account different types of slacks and delays. Usually, they are handled via small buffers before key milestones and a big feeding buffer in the very end of project, right before the final deadline.
+
+\subsection{Work Breakdown Structure example}
+
+You can see an example of the Work Breakdown Structure below.
+
+\begin{enumerate}
+\item Idea creation
+	\begin{enumerate}[label*=\arabic*]
+	\item Get requirements
+	\item Create concept (brainstorm)
+	\item Reconcile the project the concept with supervisor
+	\item Reconcile scope statement
+	\item Prepare abstract
+	\item Consept is ready
+	\end{enumerate}
+\item Planning
+	\begin{enumerate}[label*=\arabic*]
+	\item Develop the architecture of system
+	\item Identify the technologies
+	\item Identify the details of data transmission
+	\item Separate roles between team members
+	\item Set deadlines for development
+	\item Create resource list
+	\item Order hardware
+	\item Plan is ready
+	\end{enumerate}
+\item Development 
+	\begin{enumerate}[label*=\arabic*]
+	\item Webpage
+		\begin{enumerate}[label*=\arabic*]
+		\item Create design
+		\item Parse data
+		\item Create layout
+		\item Create donut charts
+		\item Create bar chart
+		\item Create plot
+		\item Add legend
+		\item Add tooltips
+		\end{enumerate}
+	\item Server
+		\begin{enumerate}[label*=\arabic*]
+		\item Install MongoDB
+		\item Set connection to IoT
+		\item Create server logic at Node-red
+		\item Turn on API for Web Page
+		\end{enumerate}
+	\item Sensor
+		\begin{enumerate}[label*=\arabic*]
+		\item Install driver and set IDE
+		\item Stick together hardware
+		\item Read data from the sensor
+		\item Send data to the server
+		\end{enumerate}
+	\item Integration of the system
+		\begin{enumerate}[label*=\arabic*]
+		\item Test system together
+		\item Fix problems
+		\item System is integrated
+		\end{enumerate}
+	\end{enumerate}
+\item Testing
+	\begin{enumerate}[label*=\arabic*]
+	\item Test the system in real life case
+	\item Confirm HTML and CSS code validate to W3C standards
+	\item Test visualisation on different browsers and screen sizes
+	\item Fix problems
+	\item Show result to supervisor and get feedback
+	\item Make final editions in according with supervisor's feedback
+	\item Testing is pasted
+	\end{enumerate}
+\item Closing 
+	\begin{enumerate}[label*=\arabic*]
+	\item Prepare final report
+	\item Final presentation
+	\item Project is ready
+	\end{enumerate}
+\end{enumerate}
+
+\section{Risk Register}
+
+Risk register gives an opportunity to predict possible problems and develop scenarios for the resolution of them. This part of project plan is very important for sponsors, because they can use it for an estimation of riskiness of the project and competence of the management team.\cite{man}\\
+
+Every entity in a risk register contains at least 8 fields:
+\begin{itemize}
+\item Name for the risk
+\item Short description of possible problems
+\item Combination of probability and impact of the risk (from low to high)
+\item An area affected by the problem (scope, schedule, quality, cost and so on)
+\item Probability that the event will occur (from low to high)
+\item Evaluation of possible influences (from low to high)
+\item Shortcut for the stakeholder responsible for resolving of the problem, list of the shortcuts is presented below the table
+\item Potential solution for the problem
+\end{itemize}
+
+\subsection{Risk Register example}
+
+\begin{tabular}{|p{0.3cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{1.5cm}|p{1.2cm}|p{1cm}|p{2cm}|}
+  \hline  
+No & Risk & Description & Rank & Affected Areas & Probability & Impact & Owner & Potential Responses \\
+  \hline  
+1 &
+Loss of funding &
+Loss of funding for hardware & 
+Medium & 
+Scope, Schedule & 
+Low & 
+Low & 
+U & 
+Use hardware already available at University \\
+  \hline  
+  2 &
+Teammate illness &
+Teammate is sick and not able to work  & 
+Medium & 
+Schedule & 
+Medium & 
+Medium & 
+T & 
+Reallocate tasks of the sick teammate between other developers \\
+\hline
+    3 &
+Hardware problems &
+Hardware problems during development & 
+High & 
+Scope, Schedule, Cost & 
+High & 
+Low & 
+T & 
+Troubleshoot the device, repair or buy new\\
+  \hline  
+
+      4 &
+BlueMix failure &
+BlueMix Cloud is unavailable for some reason  & 
+High & 
+Scope, Quality, Schedule, Cost & 
+Low & 
+High & 
+B & 
+Move server to other cloud or build own server\\
+  \hline  
+
+  
+\end{tabular}
+\begin{tabular}{|p{0.3cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{1.5cm}|p{1.2cm}|p{1cm}|p{2cm}|}
+
+  \hline 
+ 5 &
+Aliens attack &
+Civilisation from far space captured control under the Earth & 
+High & 
+Scope, Quality, Schedule, Cost & 
+Low & 
+High & 
+A & 
+Join partisan detachments resistance, stop developing, the product is useless in case of Galactic war \\
+  \hline 
+  \end{tabular}
+\begin{tabular}{ l l}
+\\
+Prepared by: Alexey Tukalo & Date: \today \\
+
+\end{tabular}\\\\
+Owners:\\
+\begin{tabular}{l l l}
+U & University & Project sponsor\\
+T & Team & Project team\\
+B & IBM BlueMix & Supplier\\
+A & Aliens & Aliens from far space\\
+\end{tabular}
+
+\section{Communication Plan}
+Communication is very a important part of a team cooperation. Project manager has to take care about cooperation inside team, an external communication and dialog between project owner and project team. Good team leader should take in an account that number of links between team members equals to the factorial of team members amount, so it grows very fast. In other side bigger teams or companies have an advantage in terms of external communication, because they are more flexible in terms of delegation of the communication responsibilities and more important players for their partners.\cite{num}\\
+
+Communication plan contains a schedule for all meetings, presentations, negotiations and other communication events between different part of project team during the project execution time. Some of them can be unique for an example a kick-off meeting or a finale presentation, another ones can be repeatable, for an example daily scrum meetings.\\
+
+The plan also has to include list of key documents used to transfer information among stakeholders for example, the most important part of the list gives an information about documents which will be used to set the project requirements and report about the project results.\cite{man}\\
+
+\subsection{Communication Plan example}
+Documents: 
+\begin{itemize}
+\item List of the project requirements: list of requirements to the project from supervisor
+\item Concept of the project: detailed an explanation of the general idea behind the project.
+\item Plan of the system architecture: an abstract plan of the project's software and hardware implementations and a network diagram.
+\item Technical plan of the project: detailed plan of the project's software and hardware implementation.
+\item Format of the JSON object: example of the JSON object used to transmit data between components of the system.
+\item Plan of the development: Gantt chart with steps of development, responsible people and deadlines.
+\item Resource list: list of hardware resources required for realisation of the project prototype.
+\item Progress report: the Project Manager will maintain a record of project work and will record decisions made, along with budgetary and timeline monitoring.
+\end{itemize}
+
+\begin{tabular}{l l}
+Date: \today  & Prepared by: Alexey Tukalo\\
+\end{tabular}\\\\
+\begin{tabular}{|p{1.5cm}|p{3.5cm}|p{2.5cm}|p{1.5cm}|p{1.5cm}|p{3cm}|}
+\hline
+Method & Purpose & Responsibility & Audience & Frequency & Deliverable\\
+\hline
+Meeting & 
+Get project requirements, ask question about unclear statements &
+Supervisor &
+Supervisor, Dev Team &
+Once off &
+List of the project requirements \\
+\hline 
+Meeting (brainstorm) & 
+Create the idea of the project in accordance with the specification &
+Project Manager &
+Dev Team &
+Once off &
+Concept of the project \\
+\hline 
+Meeting & 
+Discuss the project concept with supervisor, get advices and permission &
+Project Manager &
+Supervisor, Dev Team &
+Once off &
+Permission for a future development of the concept\\
+\hline 
+Meeting & 
+Reconcile the scope statement of the project with supervisor &
+Project Manager &
+Supervisor, Dev Team &
+Once off &
+Permission to start actual development of the system\\
+\hline 
+Meeting (brainstorm) & 
+Develop an architecture of the system &
+Project Manager &
+Dev Team &
+Once off &
+Plan of the system architecture\\
+\hline 
+Meeting (brainstorm) & 
+Identify the technological implementation of the architecture &
+Project Manager &
+Dev Team &
+Once off &
+Technical plan of the project\\
+\hline 
+Meeting (brainstorm) & 
+Identify the details of data transmission in the system &
+Project Manager &
+Dev Team &
+Once off &
+Format of the JSON object\\
+\hline 
+Meeting & 
+Spread the project into independent parts with equal scope and spread the roles between developers &
+Project Manager &
+Dev Team &
+Once off &
+Reconcile roles in the Dev Team\\
+\hline 
+Meeting & 
+Set deadlines, identify steps of the project development &
+Project Manager &
+Dev Team &
+Once off &
+Plan of the development (Gantt chart)\\
+\hline 
+Meeting & 
+Create a list of hardware for project implementation &
+Project Manager &
+Dev Team &
+Once off &
+Resource list\\
+\hline 
+Meeting & 
+Demonstrate results to the supervisor &
+Project Manager &
+Supervisor, Dev Team &
+Once off &
+Feedback from the supervisor\\
+\hline 
+Presentation & 
+Present project in University &
+Project Manager &
+Supervisor, Dev Team, other students and teacher &
+Once off &
+Feedback from the focus group \\
+\hline 
+Skype conversation & 
+Discuss particular development process and problems with teammates &
+All team member &
+Dev Team &
+any time &
+Exchange opinions with other teammate about particular problems, share results \\
+\hline 
+Meeting & 
+Discuss particular development process with supervisor &
+Project Manager &
+Supervisor, Dev Team &
+Weekly &
+Progress reports\\
+\hline 
+\end{tabular}
+
+\section{Budget}
+Budget is usually based on the Work Breakdown Structure of the project. A project management software like Microsoft Project provides an extra column at the WBS table for costs. Detailed project budget gives an opportunity to make an accurate estimation of finale cost and meet it. Team leader has to avoid increasing of costs.\cite{ms} \\
+
+Costs are able to raise because of extra slacks in schedule which leads to additional working hours and in result extra expenses to the staff's salary. They also can raise because of supplies problem, breakages of equipment, macro and micro economical or political issues. A budget gives an opportunity to detect extra costs, figure out the way to meet baseline budget or estimate new baseline.\cite{ms}
+
+\section{Conclusion}
+A plan is a fundamental part of project management. A planning is essential for an accurate cost estimation and setting of correct deadlines. Realistic deadlines are very good way of a project team motivation and mobilization. Moreover, it is a very important source of information for chiefs or investors, which makes comunication between project manager and project owners much more clear and easy.\\
+
+In addition, a plan helps to resolve many types of conflicts related with accidental changes of the project scope. It also gives an opportunity to make a precise evaluation of the current project execution process and the project final results.
+
+\begin{thebibliography}{1}
+
+   \bibitem{num} "Number Theory in Science and Communication: With Applications in Cryptography, Physics, Digital Information, Computing, and Self-Similarity" by Manfred Schroeder
+   
+   \bibitem{man} "Managing Information Technology Projects" - Kathy Schwalbe
+   
+   \bibitem{ms} support.office.com - tutorial for MS Project
+
+  \end{thebibliography}
+
+
+
+
+
+\end{document}

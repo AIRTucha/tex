@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.30)  17 DEC 2015 09:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.30)  15 FEB 2016 20:19
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**internship_report/internship_report.tex
-(./internship_report/internship_report.tex
+**thesis/plan.tex
+(./thesis/plan.tex
 LaTeX2e <2014/05/01>
 Babel <3.9k> and hyphenation patterns for 78 languages loaded.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/article.cls
@@ -238,14 +238,6 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip52
 )
-(/usr/local/texlive/2014/texmf-dist/tex/latex/float/float.sty
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count102
-\float@exts=\toks16
-\float@box=\box27
-\@float@everytoks=\toks17
-\@floatcapt=\box28
-)
 (/usr/local/texlive/2014/texmf-dist/tex/latex/pdfpages/pdfpages.sty
 Package: pdfpages 2013/08/25 v0.4v Insert pages of external PDF documents (AM)
 
@@ -254,15 +246,15 @@ Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
 )
 (/usr/local/texlive/2014/texmf-dist/tex/latex/tools/calc.sty
 Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count103
-\calc@Bcount=\count104
+\calc@Acount=\count102
+\calc@Bcount=\count103
 \calc@Adimen=\dimen118
 \calc@Bdimen=\dimen119
 \calc@Askip=\skip53
 \calc@Bskip=\skip54
 LaTeX Info: Redefining \setlength on input line 75.
 LaTeX Info: Redefining \addtolength on input line 76.
-\calc@Ccount=\count105
+\calc@Ccount=\count104
 \calc@Cskip=\skip55
 )
 (/usr/local/texlive/2014/texmf-dist/tex/latex/eso-pic/eso-pic.sty
@@ -288,13 +280,21 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/pdfpages/pppdftex.def
 File: pppdftex.def 2013/08/25 v0.4v Pdfpages driver for pdfTeX (AM)
 )
-\AM@pagebox=\box29
-\AM@toc@title=\toks18
-\c@AM@survey=\count106
-\AM@templatesizebox=\box30
+\AM@pagebox=\box27
+\AM@toc@title=\toks16
+\c@AM@survey=\count105
+\AM@templatesizebox=\box28
 )
-(/Users/alexey/Documents/tex/2015:2016/out/internship_report.aux)
-\openout1 = `internship_report.aux'.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\labelindent=\skip56
+\enit@outerparindent=\dimen120
+\enit@toks=\toks17
+\enit@inbox=\box29
+\enitdp@description=\count106
+)
+(/Users/alexey/Documents/tex/2015:2016/out/plan.aux)
+\openout1 = `plan.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
 LaTeX Font Info:    ... okay on input line 33.
@@ -318,16 +318,16 @@ File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count107
-\scratchdimen=\dimen120
-\scratchbox=\box31
+\scratchdimen=\dimen121
+\scratchbox=\box30
 \nofMPsegments=\count108
 \nofMParguments=\count109
-\everyMPshowfont=\toks19
+\everyMPshowfont=\toks18
 \MPscratchCnt=\count110
-\MPscratchDim=\dimen121
+\MPscratchDim=\dimen122
 \MPnumerator=\count111
 \makeMPintoPDFobject=\count112
-\everyMPtoPDFconversion=\toks20
+\everyMPtoPDFconversion=\toks19
 ) (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -377,7 +377,7 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box32
+\AtBeginShipoutBox=\box31
 Package hyperref Info: Link coloring OFF on input line 33.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -391,13 +391,13 @@ LaTeX Info: Redefining \ref on input line 33.
 LaTeX Info: Redefining \pageref on input line 33.
 LaTeX Info: Redefining \nameref on input line 33.
 
-(/Users/alexey/Documents/tex/2015:2016/out/internship_report.out)
-(/Users/alexey/Documents/tex/2015:2016/out/internship_report.out)
+(/Users/alexey/Documents/tex/2015:2016/out/plan.out)
+(/Users/alexey/Documents/tex/2015:2016/out/plan.out)
 \@outlinefile=\write3
-\openout3 = `internship_report.out'.
+\openout3 = `plan.out'.
 
 
-<savonia.jpg, id=56, 139.722pt x 37.5804pt>
+<savonia.jpg, id=32, 139.722pt x 37.5804pt>
 File: savonia.jpg Graphic file (type jpg)
  <use savonia.jpg>
 Package pdftex.def Info: savonia.jpg used on input line 41.
@@ -417,413 +417,292 @@ LaTeX Warning: No \author given.
 {/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./savon
 ia.jpg>]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 61.
- (/Users/alexey/Documents/tex/2015:2016/out/internship_report.toc
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 3.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 3.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 60.
+
+Underfull \hbox (badness 10000) in paragraph at lines 62--63
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 74.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omsptm.fd
+File: omsptm.fd 
 )
-\tf@toc=\write4
-\openout4 = `internship_report.toc'.
+LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 74.
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--81
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--89
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 97--99
+
+ []
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.63 \newpage
-              [1]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 71.
+l.99 
+      [1]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 100.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 100.
 
-Underfull \hbox (badness 10000) in paragraph at lines 73--74
-
- []
-
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 81.
-(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omsptm.fd
-File: omsptm.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 81.
-
-Underfull \hbox (badness 10000) in paragraph at lines 93--94
-
- []
-
-[2] <internship_report/images.png, id=89, 705.63625pt x 198.7425pt>
-File: internship_report/images.png Graphic file (type png)
-
-<use internship_report/images.png>
-Package pdftex.def Info: internship_report/images.png used on input line 104.
-(pdftex.def)             Requested size: 352.81726pt x 99.371pt.
-
-<internship_report/nicol.png, id=93, 561.09625pt x 397.485pt>
-File: internship_report/nicol.png Graphic file (type png)
-
-<use internship_report/nicol.png>
-Package pdftex.def Info: internship_report/nicol.png used on input line 120.
-(pdftex.def)             Requested size: 224.43452pt x 158.99118pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 125--126
-
- []
-
-[3pdfTeX warning (ext4): destination with the same identifier (name{figure.1}) 
-has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.126 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-2}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.126 
-       <./internship_report/images.png> <./internship_report/nicol.png>]
-
-LaTeX Warning: Reference `fig:prot' on page 4 undefined on input line 139.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 139--140
-
- []
-
-<internship_report/pro.png, id=109, 598.235pt x 716.6775pt>
-File: internship_report/pro.png Graphic file (type png)
-
-<use internship_report/pro.png>
-Package pdftex.def Info: internship_report/pro.png used on input line 142.
-(pdftex.def)             Requested size: 239.28975pt x 286.66592pt.
-
-<internship_report/hsv.png, id=110, 238.8925pt x 159.59625pt>
-File: internship_report/hsv.png Graphic file (type png)
-
-<use internship_report/hsv.png>
-Package pdftex.def Info: internship_report/hsv.png used on input line 156.
-(pdftex.def)             Requested size: 143.3366pt x 95.75847pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 160--161
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 162--163
+Underfull \hbox (badness 10000) in paragraph at lines 134--135
 
  []
 
-[4pdfTeX warning (ext4): destination with the same identifier (name{figure.4}) 
-has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.163 
-       <./internship_report/hsv.png>]
-<internship_report/hsv2rgb.png, id=124, 265.99374pt x 193.72375pt>
-File: internship_report/hsv2rgb.png Graphic file (type png)
-
-<use internship_report/hsv2rgb.png>
-Package pdftex.def Info: internship_report/hsv2rgb.png used on input line 165.
-(pdftex.def)             Requested size: 186.19434pt x 135.60568pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 171--172
-
- []
-
-[5pdfTeX warning (ext4): destination with the same identifier (name{figure.3}) 
-has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.174 T
-       he DICOM realisation has a simpler user interface than the MATLAB imp...
-pdfTeX warning (ext4): destination with the same identifier (name{figure.5}) ha
-s been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.174 T
-       he DICOM realisation has a simpler user interface than the MATLAB imp...
- <./internship_report/pro.png> <./internship_report/hsv2rgb.png>]
-<internship_report/final.png, id=136, 790.955pt x 548.0475pt>
-File: internship_report/final.png Graphic file (type png)
-
-<use internship_report/final.png>
-Package pdftex.def Info: internship_report/final.png used on input line 177.
-(pdftex.def)             Requested size: 395.47653pt x 274.02307pt.
-
-<internship_report/model.png, id=137, 229.85875pt x 174.6525pt>
-File: internship_report/model.png Graphic file (type png)
-
-<use internship_report/model.png>
-Package pdftex.def Info: internship_report/model.png used on input line 185.
-(pdftex.def)             Requested size: 160.90001pt x 122.2559pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 183--187
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 188--189
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 190--191
-
- []
-
-[6pdfTeX warning (ext4): destination with the same identifier (name{figure.6}) 
-has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.191 
-      pdfTeX warning (ext4): destination with the same identifier (name{figure.
-7}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.191 
-       <./internship_report/final.png> <./internship_report/model.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 194--195
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 196--197
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 198--199
-
- []
-
-<internship_report/usct.png, id=148, 1234.6125pt x 698.61pt>
-File: internship_report/usct.png Graphic file (type png)
-
-<use internship_report/usct.png>
-Package pdftex.def Info: internship_report/usct.png used on input line 201.
-(pdftex.def)             Requested size: 432.12085pt x 244.51715pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 205--206
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 207--208
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 212--213
-
- []
-
-[7pdfTeX warning (ext4): destination with the same identifier (name{figure.8}) 
-has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.213 
-       <./internship_report/usct.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 214--215
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 216--217
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 222--223
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 224--225
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 226--227
-
- []
-
-
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./internship_report/certificate.pdf)
-: PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
-<internship_report/certificate.pdf, id=159, 605.14081pt x 828.69597pt>
-File: internship_report/certificate.pdf Graphic file (type pdf)
-
-<use internship_report/certificate.pdf>
-Package pdftex.def Info: internship_report/certificate.pdf used on input line 2
-40.
-(pdftex.def)             Requested size: 453.85449pt x 621.52045pt.
-
-<internship_report/contract.pdf, id=160, 597.432pt x 844.5954pt>
-File: internship_report/contract.pdf Graphic file (type pdf)
-
-<use internship_report/contract.pdf>
-Package pdftex.def Info: internship_report/contract.pdf used on input line 241.
-
-(pdftex.def)             Requested size: 597.43054pt x 844.59334pt.
-File: internship_report/contract.pdf Graphic file (type pdf)
- <use internship_report/contract.pdf>
-Package pdftex.def Info: internship_report/contract.pdf used on input line 241.
-
-(pdftex.def)             Requested size: 597.43054pt x 844.59334pt.
-
-[8] [9 <./internship_report/certificate.pdf>]
-<internship_report/contract.pdf, id=175, page=1, 597.432pt x 844.5954pt>
-File: internship_report/contract.pdf Graphic file (type pdf)
-
-<use internship_report/contract.pdf, page 1>
-Package pdftex.def Info: internship_report/contract.pdf, page1 used on input li
-ne 241.
-(pdftex.def)             Requested size: 597.43054pt x 844.59334pt.
-File: internship_report/contract.pdf Graphic file (type pdf)
-
-<use internship_report/contract.pdf, page 1>
-Package pdftex.def Info: internship_report/contract.pdf, page1 used on input li
-ne 241.
-(pdftex.def)             Requested size: 562.71655pt x 795.51784pt.
-File: internship_report/contract.pdf Graphic file (type pdf)
-
-<use internship_report/contract.pdf, page 1>
-Package pdftex.def Info: internship_report/contract.pdf, page1 used on input li
-ne 241.
-(pdftex.def)             Requested size: 562.71655pt x 795.51784pt.
-File: internship_report/contract.pdf Graphic file (type pdf)
-
-<use internship_report/contract.pdf, page 1>
-Package pdftex.def Info: internship_report/contract.pdf, page1 used on input li
-ne 241.
-(pdftex.def)             Requested size: 562.71655pt x 795.51784pt.
-File: internship_report/contract.pdf Graphic file (type pdf)
-
-<use internship_report/contract.pdf, page 1>
-Package pdftex.def Info: internship_report/contract.pdf, page1 used on input li
-ne 241.
-(pdftex.def)             Requested size: 562.71655pt x 795.51784pt.
- [10 <./internship_report/contract.pdf>] <internship_report/contract.pdf, id=18
-4, page=2, 597.432pt x 844.5954pt>
-File: internship_report/contract.pdf Graphic file (type pdf)
-
-<use internship_report/contract.pdf, page 2>
-Package pdftex.def Info: internship_report/contract.pdf, page2 used on input li
-ne 241.
-(pdftex.def)             Requested size: 562.71655pt x 795.51784pt.
-File: internship_report/contract.pdf Graphic file (type pdf)
-
-<use internship_report/contract.pdf, page 2>
-Package pdftex.def Info: internship_report/contract.pdf, page2 used on input li
-ne 241.
-(pdftex.def)             Requested size: 562.71655pt x 795.51784pt.
-File: internship_report/contract.pdf Graphic file (type pdf)
-
-<use internship_report/contract.pdf, page 2>
-Package pdftex.def Info: internship_report/contract.pdf, page2 used on input li
-ne 241.
-(pdftex.def)             Requested size: 562.71655pt x 795.51784pt.
- [11 <./internship_report/contract.pdf>] <internship_report/contract.pdf, id=19
-2, page=3, 597.432pt x 844.5954pt>
-File: internship_report/contract.pdf Graphic file (type pdf)
-
-<use internship_report/contract.pdf, page 3>
-Package pdftex.def Info: internship_report/contract.pdf, page3 used on input li
-ne 241.
-(pdftex.def)             Requested size: 562.71655pt x 795.51784pt.
-File: internship_report/contract.pdf Graphic file (type pdf)
-
-<use internship_report/contract.pdf, page 3>
-Package pdftex.def Info: internship_report/contract.pdf, page3 used on input li
-ne 241.
-(pdftex.def)             Requested size: 562.71655pt x 795.51784pt.
-File: internship_report/contract.pdf Graphic file (type pdf)
-
-<use internship_report/contract.pdf, page 3>
-Package pdftex.def Info: internship_report/contract.pdf, page3 used on input li
-ne 241.
-(pdftex.def)             Requested size: 562.71655pt x 795.51784pt.
- [12 <./internship_report/contract.pdf>] <internship_report/contract.pdf, id=20
-1, page=4, 597.432pt x 844.5954pt>
-File: internship_report/contract.pdf Graphic file (type pdf)
-
-<use internship_report/contract.pdf, page 4>
-Package pdftex.def Info: internship_report/contract.pdf, page4 used on input li
-ne 241.
-(pdftex.def)             Requested size: 562.71655pt x 795.51784pt.
-File: internship_report/contract.pdf Graphic file (type pdf)
-
-<use internship_report/contract.pdf, page 4>
-Package pdftex.def Info: internship_report/contract.pdf, page4 used on input li
-ne 241.
-(pdftex.def)             Requested size: 562.71655pt x 795.51784pt.
-File: internship_report/contract.pdf Graphic file (type pdf)
-
-<use internship_report/contract.pdf, page 4>
-Package pdftex.def Info: internship_report/contract.pdf, page4 used on input li
-ne 241.
-(pdftex.def)             Requested size: 562.71655pt x 795.51784pt.
- [13 <./internship_report/contract.pdf>] <internship_report/contract.pdf, id=21
-0, page=5, 597.432pt x 844.5954pt>
-File: internship_report/contract.pdf Graphic file (type pdf)
-
-<use internship_report/contract.pdf, page 5>
-Package pdftex.def Info: internship_report/contract.pdf, page5 used on input li
-ne 241.
-(pdftex.def)             Requested size: 562.71655pt x 795.51784pt.
-File: internship_report/contract.pdf Graphic file (type pdf)
-
-<use internship_report/contract.pdf, page 5>
-Package pdftex.def Info: internship_report/contract.pdf, page5 used on input li
-ne 241.
-(pdftex.def)             Requested size: 562.71655pt x 795.51784pt.
-File: internship_report/contract.pdf Graphic file (type pdf)
-
-<use internship_report/contract.pdf, page 5>
-Package pdftex.def Info: internship_report/contract.pdf, page5 used on input li
-ne 241.
-(pdftex.def)             Requested size: 562.71655pt x 795.51784pt.
- [14 <./internship_report/contract.pdf>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 243.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 243.
- (/Users/alexey/Documents/tex/2015:2016/out/internship_report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 243.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 243.
-Package rerunfilecheck Info: File `internship_report.out' has not changed.
+[2] <thesis/cv.pdf, id=63, 597.23125pt x 845.1575pt>
+File: thesis/cv.pdf Graphic file (type pdf)
+ <use thesis/cv.pdf>
+Package pdftex.def Info: thesis/cv.pdf used on input line 166.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+File: thesis/cv.pdf Graphic file (type pdf)
+
+<use thesis/cv.pdf>
+Package pdftex.def Info: thesis/cv.pdf used on input line 166.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+ [3]
+<thesis/cv.pdf, id=84, page=1, 597.23125pt x 845.1575pt>
+File: thesis/cv.pdf Graphic file (type pdf)
+
+<use thesis/cv.pdf, page 1>
+Package pdftex.def Info: thesis/cv.pdf, page1 used on input line 166.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+File: thesis/cv.pdf Graphic file (type pdf)
+ <use thesis/cv.pdf, page 1>
+Package pdftex.def Info: thesis/cv.pdf, page1 used on input line 166.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: thesis/cv.pdf Graphic file (type pdf)
+
+<use thesis/cv.pdf, page 1>
+Package pdftex.def Info: thesis/cv.pdf, page1 used on input line 166.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: thesis/cv.pdf Graphic file (type pdf)
+ <use thesis/cv.pdf, page 1>
+Package pdftex.def Info: thesis/cv.pdf, page1 used on input line 166.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: thesis/cv.pdf Graphic file (type pdf)
+
+<use thesis/cv.pdf, page 1>
+Package pdftex.def Info: thesis/cv.pdf, page1 used on input line 166.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+ [4 <./thesis/cv.pdf>]
+<thesis/cv.pdf, id=138, page=2, 597.23125pt x 845.1575pt>
+File: thesis/cv.pdf Graphic file (type pdf)
+
+<use thesis/cv.pdf, page 2>
+Package pdftex.def Info: thesis/cv.pdf, page2 used on input line 166.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: thesis/cv.pdf Graphic file (type pdf)
+ <use thesis/cv.pdf, page 2>
+Package pdftex.def Info: thesis/cv.pdf, page2 used on input line 166.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: thesis/cv.pdf Graphic file (type pdf)
+
+<use thesis/cv.pdf, page 2>
+Package pdftex.def Info: thesis/cv.pdf, page2 used on input line 166.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+ [5 <./thesis/cv.pdf>]
+<thesis/cv.pdf, id=148, page=3, 597.23125pt x 845.1575pt>
+File: thesis/cv.pdf Graphic file (type pdf)
+
+<use thesis/cv.pdf, page 3>
+Package pdftex.def Info: thesis/cv.pdf, page3 used on input line 166.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: thesis/cv.pdf Graphic file (type pdf)
+ <use thesis/cv.pdf, page 3>
+Package pdftex.def Info: thesis/cv.pdf, page3 used on input line 166.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: thesis/cv.pdf Graphic file (type pdf)
+
+<use thesis/cv.pdf, page 3>
+Package pdftex.def Info: thesis/cv.pdf, page3 used on input line 166.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+ [6 <./thesis/cv.pdf>]
+<thesis/cv.pdf, id=154, page=4, 597.23125pt x 845.1575pt>
+File: thesis/cv.pdf Graphic file (type pdf)
+
+<use thesis/cv.pdf, page 4>
+Package pdftex.def Info: thesis/cv.pdf, page4 used on input line 166.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: thesis/cv.pdf Graphic file (type pdf)
+ <use thesis/cv.pdf, page 4>
+Package pdftex.def Info: thesis/cv.pdf, page4 used on input line 166.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: thesis/cv.pdf Graphic file (type pdf)
+
+<use thesis/cv.pdf, page 4>
+Package pdftex.def Info: thesis/cv.pdf, page4 used on input line 166.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+ [7 <./thesis/cv.pdf>]
+<thesis/cv.pdf, id=187, page=5, 845.1575pt x 597.23125pt>
+File: thesis/cv.pdf Graphic file (type pdf)
+
+<use thesis/cv.pdf, page 5>
+Package pdftex.def Info: thesis/cv.pdf, page5 used on input line 166.
+(pdftex.def)             Requested size: 795.10587pt x 561.86221pt.
+File: thesis/cv.pdf Graphic file (type pdf)
+ <use thesis/cv.pdf, page 5>
+Package pdftex.def Info: thesis/cv.pdf, page5 used on input line 166.
+(pdftex.def)             Requested size: 795.10587pt x 561.86221pt.
+File: thesis/cv.pdf Graphic file (type pdf)
+
+<use thesis/cv.pdf, page 5>
+Package pdftex.def Info: thesis/cv.pdf, page5 used on input line 166.
+(pdftex.def)             Requested size: 795.10587pt x 561.86221pt.
+ [8 <./thesis/cv.pdf>]
+<thesis/cv.pdf, id=198, page=6, 597.23125pt x 845.1575pt>
+File: thesis/cv.pdf Graphic file (type pdf)
+
+<use thesis/cv.pdf, page 6>
+Package pdftex.def Info: thesis/cv.pdf, page6 used on input line 166.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: thesis/cv.pdf Graphic file (type pdf)
+ <use thesis/cv.pdf, page 6>
+Package pdftex.def Info: thesis/cv.pdf, page6 used on input line 166.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: thesis/cv.pdf Graphic file (type pdf)
+
+<use thesis/cv.pdf, page 6>
+Package pdftex.def Info: thesis/cv.pdf, page6 used on input line 166.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+ [9 <./thesis/cv.pdf>]
+<thesis/cv.pdf, id=241, page=7, 597.23125pt x 845.1575pt>
+File: thesis/cv.pdf Graphic file (type pdf)
+
+<use thesis/cv.pdf, page 7>
+Package pdftex.def Info: thesis/cv.pdf, page7 used on input line 166.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: thesis/cv.pdf Graphic file (type pdf)
+ <use thesis/cv.pdf, page 7>
+Package pdftex.def Info: thesis/cv.pdf, page7 used on input line 166.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: thesis/cv.pdf Graphic file (type pdf)
+
+<use thesis/cv.pdf, page 7>
+Package pdftex.def Info: thesis/cv.pdf, page7 used on input line 166.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+ [10 <./thesis/cv.pdf>]
+<thesis/cv.pdf, id=248, page=8, 597.23125pt x 845.1575pt>
+File: thesis/cv.pdf Graphic file (type pdf)
+
+<use thesis/cv.pdf, page 8>
+Package pdftex.def Info: thesis/cv.pdf, page8 used on input line 166.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: thesis/cv.pdf Graphic file (type pdf)
+ <use thesis/cv.pdf, page 8>
+Package pdftex.def Info: thesis/cv.pdf, page8 used on input line 166.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: thesis/cv.pdf Graphic file (type pdf)
+
+<use thesis/cv.pdf, page 8>
+Package pdftex.def Info: thesis/cv.pdf, page8 used on input line 166.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+ [11 <./thesis/cv.pdf>]
+<thesis/cv.pdf, id=262, page=9, 597.23125pt x 845.1575pt>
+File: thesis/cv.pdf Graphic file (type pdf)
+
+<use thesis/cv.pdf, page 9>
+Package pdftex.def Info: thesis/cv.pdf, page9 used on input line 166.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: thesis/cv.pdf Graphic file (type pdf)
+ <use thesis/cv.pdf, page 9>
+Package pdftex.def Info: thesis/cv.pdf, page9 used on input line 166.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: thesis/cv.pdf Graphic file (type pdf)
+
+<use thesis/cv.pdf, page 9>
+Package pdftex.def Info: thesis/cv.pdf, page9 used on input line 166.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+ [12 <./thesis/cv.pdf>]
+<thesis/cv.pdf, id=283, page=10, 597.23125pt x 845.1575pt>
+File: thesis/cv.pdf Graphic file (type pdf)
+
+<use thesis/cv.pdf, page 10>
+Package pdftex.def Info: thesis/cv.pdf, page10 used on input line 166.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: thesis/cv.pdf Graphic file (type pdf)
+ <use thesis/cv.pdf, page 10>
+Package pdftex.def Info: thesis/cv.pdf, page10 used on input line 166.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: thesis/cv.pdf Graphic file (type pdf)
+
+<use thesis/cv.pdf, page 10>
+Package pdftex.def Info: thesis/cv.pdf, page10 used on input line 166.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+ [13 <./thesis/cv.pdf>]
+<thesis/cv.pdf, id=300, page=11, 597.23125pt x 845.1575pt>
+File: thesis/cv.pdf Graphic file (type pdf)
+
+<use thesis/cv.pdf, page 11>
+Package pdftex.def Info: thesis/cv.pdf, page11 used on input line 166.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: thesis/cv.pdf Graphic file (type pdf)
+ <use thesis/cv.pdf, page 11>
+Package pdftex.def Info: thesis/cv.pdf, page11 used on input line 166.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+File: thesis/cv.pdf Graphic file (type pdf)
+
+<use thesis/cv.pdf, page 11>
+Package pdftex.def Info: thesis/cv.pdf, page11 used on input line 166.
+(pdftex.def)             Requested size: 561.86221pt x 795.10587pt.
+ [14 <./thesis/cv.pdf>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 169.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 169.
+
+(/Users/alexey/Documents/tex/2015:2016/out/plan.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 169.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 169.
+Package rerunfilecheck Info: File `plan.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
-
-
-LaTeX Warning: There were undefined references.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 243.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 169.
  ) 
 Here is how much of TeX's memory you used:
- 7506 strings out of 493117
- 111301 string characters out of 6135432
- 215904 words of memory out of 5000000
- 10800 multiletter control sequences out of 15000+600000
- 22585 words of font info for 46 fonts, out of 8000000 for 9000
+ 7678 strings out of 493117
+ 113421 string characters out of 6135432
+ 220189 words of memory out of 5000000
+ 10988 multiletter control sequences out of 15000+600000
+ 19333 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,18n,46p,802b,472s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 40i,18n,46p,564b,476s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/te
 xlive/2014/texmf-dist/fonts/type1/public/eurosym/feymr10.pfb></usr/local/texliv
 e/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/tex
 mf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on /Users/alexey/Documents/tex/2015:2016/out/internship_report.p
-df (15 pages, 3258763 bytes).
+Output written on /Users/alexey/Documents/tex/2015:2016/out/plan.pdf (15 pages,
+ 826558 bytes).
 PDF statistics:
- 247 PDF objects out of 1000 (max. 8388607)
- 181 compressed objects within 2 object streams
- 51 named destinations out of 1000 (max. 500000)
- 195 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 351 PDF objects out of 1000 (max. 8388607)
+ 239 compressed objects within 3 object streams
+ 49 named destinations out of 1000 (max. 500000)
+ 132 words of extra memory for PDF output out of 10000 (max. 10000000)
 

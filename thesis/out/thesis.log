@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.30)  30 APR 2016 12:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.30)  1 MAY 2016 13:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"Final Report.tex"
-(./Final Report.tex
+**thesis.tex
+(./thesis.tex
 LaTeX2e <2014/05/01>
 Babel <3.9k> and hyphenation patterns for 78 languages loaded.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/base/article.cls
@@ -377,24 +377,27 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks18
 \@floatcapt=\box37
 )
-(/Users/alexey/Documents/tex/20014:2015/out/Final Report.aux)
-\openout1 = `"Final Report.aux"'.
+(/usr/local/texlive/2014/texmf-dist/tex/latex/lastpage/lastpage.sty
+Package: lastpage 2013/01/28 v1.2l Refers to last page's name (HMM; JPG)
+)
+(/Users/alexey/Documents/tex/thesis/out/thesis.aux)
+\openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 35.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 34.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
@@ -434,13 +437,13 @@ e
 * paper: <default>
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: landscape 
-* h-part:(L,W,R)=(56.9055pt, 681.15898pt, 56.9055pt)
-* v-part:(T,H,B)=(56.9055pt, 500.484pt, 56.9055pt)
-* \paperwidth=794.96999pt
-* \paperheight=614.295pt
-* \textwidth=681.15898pt
-* \textheight=500.484pt
+* modes: 
+* h-part:(L,W,R)=(56.9055pt, 500.484pt, 56.9055pt)
+* v-part:(T,H,B)=(56.9055pt, 681.15898pt, 56.9055pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=500.484pt
+* \textheight=681.15898pt
 * \oddsidemargin=-15.36449pt
 * \evensidemargin=-15.36449pt
 * \topmargin=-52.36449pt
@@ -462,7 +465,7 @@ e
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box39
-Package hyperref Info: Link coloring OFF on input line 35.
+Package hyperref Info: Link coloring OFF on input line 34.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -471,324 +474,78 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count114
 )
-LaTeX Info: Redefining \ref on input line 35.
-LaTeX Info: Redefining \pageref on input line 35.
-LaTeX Info: Redefining \nameref on input line 35.
+LaTeX Info: Redefining \ref on input line 34.
+LaTeX Info: Redefining \pageref on input line 34.
+LaTeX Info: Redefining \nameref on input line 34.
 
-(/Users/alexey/Documents/tex/20014:2015/out/Final Report.out)
-(/Users/alexey/Documents/tex/20014:2015/out/Final Report.out)
+(/Users/alexey/Documents/tex/thesis/out/thesis.out)
+(/Users/alexey/Documents/tex/thesis/out/thesis.out)
 \@outlinefile=\write3
-\openout3 = `"Final Report.out"'.
+\openout3 = `thesis.out'.
 
+Package lastpage Info: Please have a look at the pageslts package at
+(lastpage)             http://www.ctan.org/tex-archive/ 
+(lastpage)             macros/latex/contrib/pageslts/ 
+(lastpage)             or
+(lastpage)             http://www.ctan.org/tex-archive/ 
+(lastpage)             install/macros/latex/contrib/pageslts.tds.zip
+(lastpage)             ! on input line 34.
+
+<savonia.jpg, id=4, 139.722pt x 37.5804pt>
+File: savonia.jpg Graphic file (type jpg)
+ <use savonia.jpg>
+Package pdftex.def Info: savonia.jpg used on input line 39.
+(pdftex.def)             Requested size: 139.72165pt x 37.58029pt.
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+ [1
+
+{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./savon
+ia.jpg>]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 41.
+(Font)              <7> on input line 65.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 41.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 41.
-
-
-LaTeX Warning: No \author given.
-
-[1
-
-{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+(Font)              <5> on input line 65.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 59.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 96.
 
-(/Users/alexey/Documents/tex/20014:2015/out/Final Report.toc
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 10.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 10.
-)
+(/Users/alexey/Documents/tex/thesis/out/thesis.toc)
 \tf@toc=\write4
-\openout4 = `"Final Report.toc"'.
+\openout4 = `thesis.toc'.
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.61 \newpage
-              [1]
-Underfull \hbox (badness 10000) in paragraph at lines 102--103
-
- []
-
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 135--137
-
- []
-
-[3]
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no « in font ptmr7t!
-
-Underfull \hbox (badness 10000) in paragraph at lines 152--152
-[]\OT1/ptm/m/n/10 Affected
- []
-
-
-Overfull \hbox (1.77028pt too wide) in paragraph at lines 152--152
-[]\OT1/ptm/m/n/10 Probability| 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 158--158
-[]\OT1/ptm/m/n/10 Scope,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 175--175
-[]\OT1/ptm/m/n/10 Hardware prob-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 178--178
-[]\OT1/ptm/m/n/10 Scope,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 178--178
-\OT1/ptm/m/n/10 Sched-ule,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 188--188
-[]\OT1/ptm/m/n/10 Scope,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 188--188
-\OT1/ptm/m/n/10 Qual-ity,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 188--188
-\OT1/ptm/m/n/10 Sched-ule,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 198--198
-[]\OT1/ptm/m/n/10 Scope,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 198--198
-\OT1/ptm/m/n/10 Qual-ity,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 198--198
-\OT1/ptm/m/n/10 Sched-ule,
- []
-
-
-Overfull \hbox (10.12242pt too wide) in paragraph at lines 150--206
-[] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 207--219
-
- []
-
-[4]
-Underfull \hbox (badness 1072) in paragraph at lines 250--251
-[]\OT1/ptm/m/n/10 Permission for a fu-ture de-vel-op-
- []
-
-
-Underfull \hbox (badness 1418) in paragraph at lines 267--267
-[]\OT1/ptm/m/n/10 Identify the tech-no-log-i-cal im-ple-
- []
-
-
-Underfull \hbox (badness 2318) in paragraph at lines 292--293
-[]\OT1/ptm/m/n/10 Plan of the de-vel-op-ment (Gantt
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 316--316
-[]\OT1/ptm/m/n/10 Discuss par-tic-u-lar de-vel-op-ment
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 320--321
-[]\OT1/ptm/m/n/10 Exchange opin-ions with other
- []
-
-
-Underfull \hbox (badness 2809) in paragraph at lines 320--321
-\OT1/ptm/m/n/10 team-mate about par-tic-u-lar prob-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 323--323
-[]\OT1/ptm/m/n/10 Discuss par-tic-u-lar de-vel-op-ment
- []
-
-
-Overfull \hbox (2.57524pt too wide) in paragraph at lines 224--348
-[] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 224--348
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 224--348
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 224--348
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 224--348
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 224--348
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 224--348
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 224--348
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 224--348
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 224--348
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 224--348
-
- []
-
-[5]
-Easytable[row:4,col:4]
-
-Overfull \hbox (4.5071pt too wide) in paragraph at lines 384--395
-[] 
- []
-
-[6] [7] [8] [9]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 489.
- <FR/timeline.png, id=233, 1083.29718pt x 502.87875pt>
-File: FR/timeline.png Graphic file (type png)
-
-<use FR/timeline.png>
-Package pdftex.def Info: FR/timeline.png used on input line 491.
-(pdftex.def)             Requested size: 649.98332pt x 301.72957pt.
- [10 <./FR/timeline.png>]
-<FR/costs.png, id=240, 811.53188pt x 499.8675pt>
-File: FR/costs.png Graphic file (type png)
- <use FR/costs.png>
-Package pdftex.def Info: FR/costs.png used on input line 496.
-(pdftex.def)             Requested size: 624.88147pt x 384.89915pt.
- [11 <./FR/costs.png>] <FR/ev.png, id=246, 740.7675pt x 452.4403pt>
-File: FR/ev.png Graphic file (type png)
- <use FR/ev.png>
-Package pdftex.def Info: FR/ev.png used on input line 501.
-(pdftex.def)             Requested size: 592.6148pt x 361.95274pt.
-
-<FR/ml.png, id=247, 565.36218pt x 293.59688pt>
-File: FR/ml.png Graphic file (type png)
- <use FR/ml.png>
-Package pdftex.def Info: FR/ml.png used on input line 505.
-(pdftex.def)             Requested size: 565.3608pt x 293.59615pt.
- [12 <./FR/ev.png>] [13 <./FR/ml.png>] <FR/resoursec.png, id=260, 780.66656pt x
- 453.94594pt>
-File: FR/resoursec.png Graphic file (type png)
-
-<use FR/resoursec.png>
-Package pdftex.def Info: FR/resoursec.png used on input line 510.
-(pdftex.def)             Requested size: 624.5341pt x 363.15724pt.
- <FR/slack.png, id=261, 485.56406pt x 254.45062pt>
-File: FR/slack.png Graphic file (type png)
-
-<use FR/slack.png>
-Package pdftex.def Info: FR/slack.png used on input line 514.
-(pdftex.def)             Requested size: 485.56287pt x 254.45pt.
- [14 <./FR/resoursec.png>]
-<FR/bt.png, id=267, 474.27188pt x 94.10156pt>
-File: FR/bt.png Graphic file (type png)
- <use FR/bt.png>
-Package pdftex.def Info: FR/bt.png used on input line 518.
-(pdftex.def)             Requested size: 474.27072pt x 94.10132pt.
-
-<FR/pj.png, id=268, 791.20593pt x 327.47343pt>
-File: FR/pj.png Graphic file (type png)
- <use FR/pj.png>
-Package pdftex.def Info: FR/pj.png used on input line 523.
-(pdftex.def)             Requested size: 632.9656pt x 261.97911pt.
- [15 <./FR/slack.png> <./FR/bt.png>] <FR/rco.png, id=275, 676.02562pt x 429.103
-12pt>
-File: FR/rco.png Graphic file (type png)
-
-<use FR/rco.png>
-Package pdftex.def Info: FR/rco.png used on input line 527.
-(pdftex.def)             Requested size: 676.02396pt x 429.10207pt.
- [16 <./FR/pj.png>]
-<FR/tco.png, id=281, 683.55376pt x 445.665pt>
-File: FR/tco.png Graphic file (type png)
- <use FR/tco.png>
-Package pdftex.def Info: FR/tco.png used on input line 531.
-(pdftex.def)             Requested size: 683.5521pt x 445.66391pt.
- [17 <./FR/rco.png>] <FR/wo.png, id=287, 738.50906pt x 462.97969pt>
-File: FR/wo.png Graphic file (type png)
- <use FR/wo.png>
-Package pdftex.def Info: FR/wo.png used on input line 535.
-(pdftex.def)             Requested size: 590.80806pt x 370.38425pt.
- [18 <./FR/tco.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 539.
- [19 <./FR/wo.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 539.
-
-(/Users/alexey/Documents/tex/20014:2015/out/Final Report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 539.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 539.
-Package rerunfilecheck Info: File `"Final Report".out' has not changed.
-(rerunfilecheck)             Checksum: 58B656F4C821C1FE798F8BE2BBA73B45;1132.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 539.
+l.100 \newpage
+               [1] 
+AED: lastpage setting LastPage
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 107.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 107.
+(/Users/alexey/Documents/tex/thesis/out/thesis.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 107.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 107.
+Package rerunfilecheck Info: File `thesis.out' has not changed.
+(rerunfilecheck)             Checksum: <no file>.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 107.
  ) 
 Here is how much of TeX's memory you used:
- 6974 strings out of 493117
- 102825 string characters out of 6135432
- 211180 words of memory out of 5000000
- 10208 multiletter control sequences out of 15000+600000
- 17206 words of font info for 38 fonts, out of 8000000 for 9000
+ 6758 strings out of 493117
+ 100714 string characters out of 6135432
+ 202026 words of memory out of 5000000
+ 10134 multiletter control sequences out of 15000+600000
+ 12803 words of font info for 27 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,10n,43p,302b,709s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,10n,43p,236b,340s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/201
 4/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on "/Users/alexey/Documents/tex/20014:2015/out/Final Report.pdf"
- (20 pages, 314873 bytes).
+Output written on /Users/alexey/Documents/tex/thesis/out/thesis.pdf (2 pages, 6
+8485 bytes).
 PDF statistics:
- 338 PDF objects out of 1000 (max. 8388607)
- 289 compressed objects within 3 object streams
- 129 named destinations out of 1000 (max. 500000)
- 208 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 28 PDF objects out of 1000 (max. 8388607)
+ 20 compressed objects within 1 object stream
+ 3 named destinations out of 1000 (max. 500000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

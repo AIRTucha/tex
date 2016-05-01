@@ -13,6 +13,7 @@
 \usepackage{enumitem}
 \usepackage{float}
 \usepackage{lastpage}
+\restylefloat{table}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -61,8 +62,11 @@
 \setcounter{page}{1}
 \setcounter{tocdepth}{2}
 
-\begin{table*}
-\begin{tabular}{| p{2cm} | p{3cm} | p{4cm} | p{4cm} |}
+\begin{table*}[htbp]
+\begin{tabular}{| l | l | l | l |}
+\multicolumn{2}{l}{\textbf{SAVONIA UNIVERSITY OF APPLIED SCIENCES}}&
+\multicolumn{2}{r}{\textbf{THESIS}}\\
+\multicolumn{4}{r}{\textbf{Abstract}}\\
 \hline
 \multicolumn{4}{|l|}{Field of Study}\\
 \multicolumn{4}{|l|}{Technology, Communication and Transport}\\
@@ -86,34 +90,47 @@ Data & \today & Pages/Appendices & \pageref{LastPage}\\
 \hline
 \multicolumn{4}{|l|}{Abstract}\\
 \multicolumn{4}{|l|}{ }\\
-\multicolumn{4}{|p{13cm}|}{
+\multicolumn{4}{|p{14cm}|}{
 Arction Oy, Finnish software company, based in Kuopio, produces LightningChart, the fastest C\# framework for visualisation of scientific, engineering, trading and research data. The library contains banch of tools for visualisation of XY graph, 3D XYZ, smith, polar, 3D pie/donut views and 3D objects.
 }\\
 \multicolumn{4}{|l|}{ }\\
-\multicolumn{4}{|p{13cm}|}{
-The company wanted to extend the LightingChart's abilities of poligonal 3D models rendering by volume rendering. It gives Arction an opportunity to attract new clients to the product.
+\multicolumn{4}{|p{14cm}|}{
+The company wanted to extend the LightingChart's abilities of poligonal 3D models rendering by volume rendering. It gives Arction an opportunity to attract new clients to the product. In result the framework provides an uniqe possibility to  render volume and poligonal models at same visualisation.
 }\\
 \multicolumn{4}{|l|}{ }\\
-\multicolumn{4}{|p{13cm}|}{
+\multicolumn{4}{|p{14cm}|}{
 The project started from a literature research and comparing of different volume visualisation techniques, to choose the best one for the Arction's case and implement it inside the framework. The implementation of the volume rendering engine is based on DirectX used together with C\# via SharpDX API and HSLS shader language for low level optimisation of rendering calculations.
 }\\
 \multicolumn{4}{|l|}{ }\\
-\multicolumn{4}{|p{13cm}|}{
+\multicolumn{4}{|p{14cm}|}{
 The final chapter of the report contains an evaluation of the results and suggestion for a future development of the engine.
 }\\
 \multicolumn{4}{|l|}{ }\\
 \hline
 \multicolumn{4}{|l|}{Keywords}\\
-\multicolumn{4}{|p{13cm}|}{Visualisation, Ray Casting, 3D, C\#, LightningChart, DirectX, HLSL, Image Processing, Volume Rendering, Rendering}\\
+\multicolumn{4}{|p{14cm}|}{Visualisation, Ray Casting, 3D, C\#, LightningChart, DirectX, HLSL, Image Processing, Volume Rendering, Rendering}\\
 \hline
 \end{tabular}
 \end{table*}
 
+\newpage
+
+ACKNOWLEDGEMENTS\\
+
+I am very thankful to Action Oy for offering me an opportunity to take part at development of the project. I really like the office atmosphere and freedom in terms of my working style and schedule allowed by the company.\\
+
+My special thanks go to Mr. Pasi Toummainen, CEO of the company, who expressed interest to my idea to extend the library by the volume rendering engine,  gave me permission to work on the project and guided me especially at very early part of the development process.\\
+
+Moreover, I would like to say thank you to my thesis supervisor, Arto Toppinen, for his mentoring and support during the report writing stage of my work. \\
+
+In addition I would like to express my deepest gratitude Karlsuruhe Institute of Technology, there I got the first experience with volume rendering via ray casting. I am also grateful to Nicolas Tan Jerome, who was my mentor during the part of my internship related to modification of TomorayCaster 2 and to Aleksandr Lizin, the creator of the WebGL volume rendering engine.
+
+\newpage
 
 \tableofcontents
 
 
-\newpage
+
 
 
 \end{document}

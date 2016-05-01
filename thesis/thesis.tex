@@ -4,7 +4,7 @@
 \usepackage{graphicx}
 \usepackage{times}
 \usepackage{pifont}
-\usepackage[margin=2cm]{geometry}
+\usepackage{geometry}
 \usepackage{eurosym}
 \usepackage{fancyhdr}
 \usepackage[hidelinks]{hyperref}
@@ -44,7 +44,7 @@
  Alexey Tukalo\\
  \vspace{0.5cm}
 \small Bachelor's Thesis\\
-\vspace{3in}
+\vspace{2.1in}
 \today \hspace{0.5cm} \noindent\rule{4cm}{0.4pt}
 \end{center}
 \begin {flushleft}
@@ -62,7 +62,7 @@
 \setcounter{tocdepth}{2}
 
 \begin{table*}
-\begin{tabular}{| l | l | l | l |}
+\begin{tabular}{| p{2cm} | p{3cm} | p{4cm} | p{4cm} |}
 \hline
 \multicolumn{4}{|l|}{Field of Study}\\
 \multicolumn{4}{|l|}{Technology, Communication and Transport}\\
@@ -86,24 +86,34 @@ Data & \today & Pages/Appendices & \pageref{LastPage}\\
 \hline
 \multicolumn{4}{|l|}{Abstract}\\
 \multicolumn{4}{|l|}{ }\\
-\multicolumn{4}{|l|}{
-
+\multicolumn{4}{|p{13cm}|}{
+Arction Oy, Finnish software company, based in Kuopio, produces LightningChart, the fastest C\# framework for visualisation of scientific, engineering, trading and research data. The library contains banch of tools for visualisation of XY graph, 3D XYZ, smith, polar, 3D pie/donut views and 3D objects.
 }\\
+\multicolumn{4}{|l|}{ }\\
+\multicolumn{4}{|p{13cm}|}{
+The company wanted to extend the LightingChart's abilities of poligonal 3D models rendering by volume rendering. It gives Arction an opportunity to attract new clients to the product.
+}\\
+\multicolumn{4}{|l|}{ }\\
+\multicolumn{4}{|p{13cm}|}{
+The project started from a literature research and comparing of different volume visualisation techniques, to choose the best one for the Arction's case and implement it inside the framework. The implementation of the volume rendering engine is based on DirectX used together with C\# via SharpDX API and HSLS shader language for low level optimisation of rendering calculations.
+}\\
+\multicolumn{4}{|l|}{ }\\
+\multicolumn{4}{|p{13cm}|}{
+The final chapter of the report contains an evaluation of the results and suggestion for a future development of the engine.
+}\\
+\multicolumn{4}{|l|}{ }\\
 \hline
 \multicolumn{4}{|l|}{Keywords}\\
-\multicolumn{4}{|l|}{Visualisation, Ray Casting, 3D, C\#, LightningChart, DirectX, HLSL, Image Processing, Volume Rendering, Rendering}\\
+\multicolumn{4}{|p{13cm}|}{Visualisation, Ray Casting, 3D, C\#, LightningChart, DirectX, HLSL, Image Processing, Volume Rendering, Rendering}\\
 \hline
 \end{tabular}
 \end{table*}
+
+
 \tableofcontents
 
-%
 
 \newpage
-
-
-\newpage
-
 
 
 \end{document}

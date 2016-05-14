@@ -1,4 +1,4 @@
-\documentclass[english]{article}
+\documentclass[english]{report}
 
 \usepackage{babel}
 \usepackage{graphicx}
@@ -62,7 +62,7 @@
 \setcounter{page}{1}
 \setcounter{tocdepth}{2}
 
-\begin{table*}[htbp]
+\begin{table*}[!h]
 \begin{tabular}{| l | l | l | l |}
 \multicolumn{2}{l}{\textbf{SAVONIA UNIVERSITY OF APPLIED SCIENCES}}&
 \multicolumn{2}{r}{\textbf{THESIS}}\\
@@ -91,7 +91,7 @@ Data & \today & Pages/Appendices & \pageref{LastPage}\\
 \multicolumn{4}{|l|}{Abstract}\\
 \multicolumn{4}{|l|}{ }\\
 \multicolumn{4}{|p{14cm}|}{
-Arction Oy, Finnish software company, based in Kuopio, produces LightningChart, the fastest C\# framework for visualisation of scientific, engineering, trading and research data. The library contains banch of tools for visualisation of XY graph, 3D XYZ, smith, polar, 3D pie/donut views and 3D objects.
+Arction Oy is a Finnish software company, based in Kuopio. Their main poduect is LightningChart, the fastest C\# framework for visualisation of scientific, engineering, trading and research data. The library contains banch of tools for visualisation of XY graph, 3D XYZ, smith, polar, 3D pie/donut views and 3D objects.
 }\\
 \multicolumn{4}{|l|}{ }\\
 \multicolumn{4}{|p{14cm}|}{
@@ -128,6 +128,77 @@ In addition I would like to express my deepest gratitude Karlsuruhe Institute of
 \newpage
 
 \tableofcontents
+
+\chapter{Introduction}
+
+\section{Motivation}
+
+Volume data is very commone our day. An importance of the type of datasets will grow in nearest future, because of development if field of 3D data acquisition and possiblities to performe the visualisations on modern office workstation with an interective frame rate.\\
+
+Volume rendering is a process of multi-dimentional data visualisation into two-dimensional image which gives observer an opportunity to reconise meaningful insights in the origianl information. The technology allows us to represent 3 dimensions of the data via position in a 3D space and 3 more via color of the point.\\
+
+The dataset can be captured by vaiouse number of technologies like: MRI\footnote{Magnetic resonance imaging}, CT\footnote{Computer tomograthy}, PET\footnote{Positron emission tomography}, or USCT\footnote{Ultrasound computer tomography}. They also can be produced by physical symulations, especially for fluid dynamics. Volumetric information plaies a big role in medicine for an advenced cancer detection, visualization of aneurisms and treatment planning. This kind of rendering is also very useful for nondesctructive material testing via computer tomography or ultrasound. Geoseismic researches produces huge three-dimensional datasets need to be visualised. They are used to an oil exploration and planning of the deposit development.\\
+
+%http://www.labri.fr/perso/preuter/imageSynthesis/02-03/papers/volvistut.pdf
+
+\section{Personal backgound}
+
+I recieved my first expirince in visualisation of volumetric data during my internship at Institute of Data Processing and Electronics, which belonges to the Karlsruhe Institute of Technology (KIT). I was a part of the 3D Ultrasound Computer Tomography (USCT) team. Thier main goal is development of a new imaging methodology for early breast cancer detection. During the work placement I had to develop an algorithm to visualise five-dimensional datasets. In result the algorithm was integrated into Tomoraycaster 2\footnote{JavaScript framework for visualisation of 3D data, developed in IPE} and USCT's edition of DICOM Viewer.\\
+
+On the project I made my very first steps in modern computer graphics. I got my first expirince in work with WebGL during custimisation of the Tomoraycater, learned GLSL, my first shader languag, I also gained a lot of knowledge about image processing and scintific data visualisation, which became the basis for my thesis work.
+
+%INTERNSHIP REPORT
+
+\section{Arction Oy and Ligthning Chart}
+
+
+\section{Project Goals}
+
+
+\chapter{Theory}
+\section{Rendering}
+\section{Polygonal Rendering}
+\section{Volume Rendering}
+\subsection{Indirect}
+\subsection{Direct}
+\subsubsection{Texture-based}
+\subsubsection{Ray Casting}
+\subsubsection{Splatting}
+\subsubsection{Shear-warp}
+
+\chapter{Implementation}
+\section{Tools}
+\subsection{C\#}
+\subsection{DirectX 11}
+\subsubsection{Redering Pipeline}
+\subsubsection{HLSL}
+\subsection{SharpDX}
+\subsection{LightningChart Ultimate}
+\section{Visualisation process}
+\subsection{Loading and preprocessing of dataset}
+\subsection{Multi-pass rendering}
+\subsubsection{First pass}
+\subsubsection{Second pass}
+\paragraph{Empty space skipping}
+\paragraph{Ray function}
+
+\chapter{Conclusion}
+\section{Results}
+\subsection{Rotation and position}
+\subsection{Settings}
+\subsubsection{Windowing}
+\subsubsection{Thresholding}
+\subsubsection{Slice range clipping}
+\subsection{Mouse picking}
+
+\section{Disscusion}
+
+\section{Future Development}
+
+\chapter{Appendix}
+
+
+
 
 
 

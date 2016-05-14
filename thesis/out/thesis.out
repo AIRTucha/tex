@@ -1,0 +1,28 @@
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Motivation}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Personal backgound}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{Arction Oy and Ligthning Chart}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.4}{Project Goals}{chapter.1}% 5
+\BOOKMARK [0][-]{chapter.2}{Theory}{}% 6
+\BOOKMARK [1][-]{section.2.1}{Rendering}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.2}{Polygonal Rendering}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.3}{Volume Rendering}{chapter.2}% 9
+\BOOKMARK [2][-]{subsection.2.3.1}{Indirect}{section.2.3}% 10
+\BOOKMARK [2][-]{subsection.2.3.2}{Direct}{section.2.3}% 11
+\BOOKMARK [0][-]{chapter.3}{Implementation}{}% 12
+\BOOKMARK [1][-]{section.3.1}{Tools}{chapter.3}% 13
+\BOOKMARK [2][-]{subsection.3.1.1}{C\043}{section.3.1}% 14
+\BOOKMARK [2][-]{subsection.3.1.2}{DirectX 11}{section.3.1}% 15
+\BOOKMARK [2][-]{subsection.3.1.3}{SharpDX}{section.3.1}% 16
+\BOOKMARK [2][-]{subsection.3.1.4}{LightningChart Ultimate}{section.3.1}% 17
+\BOOKMARK [1][-]{section.3.2}{Visualisation process}{chapter.3}% 18
+\BOOKMARK [2][-]{subsection.3.2.1}{Loading and preprocessing of dataset}{section.3.2}% 19
+\BOOKMARK [2][-]{subsection.3.2.2}{Multi-pass rendering}{section.3.2}% 20
+\BOOKMARK [0][-]{chapter.4}{Conclusion}{}% 21
+\BOOKMARK [1][-]{section.4.1}{Results}{chapter.4}% 22
+\BOOKMARK [2][-]{subsection.4.1.1}{Rotation and position}{section.4.1}% 23
+\BOOKMARK [2][-]{subsection.4.1.2}{Settings}{section.4.1}% 24
+\BOOKMARK [2][-]{subsection.4.1.3}{Mouse picking}{section.4.1}% 25
+\BOOKMARK [1][-]{section.4.2}{Disscusion}{chapter.4}% 26
+\BOOKMARK [1][-]{section.4.3}{Future Development}{chapter.4}% 27
+\BOOKMARK [0][-]{chapter.5}{Appendix}{}% 28

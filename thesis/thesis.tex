@@ -1,4 +1,4 @@
-\documentclass[english]{report}
+\documentclass[english, 11pt]{report}
 
 \usepackage{babel}
 \usepackage{graphicx}
@@ -91,15 +91,15 @@ Data & \today & Pages/Appendices & \pageref{LastPage}\\
 \multicolumn{4}{|l|}{Abstract}\\
 \multicolumn{4}{|l|}{ }\\
 \multicolumn{4}{|p{14cm}|}{
-Arction Oy is a Finnish software company, based in Kuopio. Their main poduect is LightningChart, the fastest C\# framework for visualisation of scientific, engineering, trading and research data. The library contains banch of tools for visualisation of XY graph, 3D XYZ, smith, polar, 3D pie/donut views and 3D objects.
+Arctive Oy is a Finnish software company, based in Kuopio. Their main product is LightningChart, the fastest C\# framework for the visualisation of scientific, engineering, trading and research data. The library contains a bunch of tools for visualisation of XY, 3D XYZ, smith and polar graph, 3D pie/donut views, 3D objects.
 }\\
 \multicolumn{4}{|l|}{ }\\
 \multicolumn{4}{|p{14cm}|}{
-The company wanted to extend the LightingChart's abilities of poligonal 3D models rendering by volume rendering. It gives Arction an opportunity to attract new clients to the product. In result the framework provides an uniqe possibility to  render volume and poligonal models at same visualisation.
+The company wanted to extend the LightingChart's abilities of polygonal 3D models rendering by volume rendering. It gives Arction an opportunity to attract new clients to the product. In result the framework provides a unique possibility to render volume and polygonal models at same visualisation.
 }\\
 \multicolumn{4}{|l|}{ }\\
 \multicolumn{4}{|p{14cm}|}{
-The project started from a literature research and comparing of different volume visualisation techniques, to choose the best one for the Arction's case and implement it inside the framework. The implementation of the volume rendering engine is based on DirectX used together with C\# via SharpDX API and HSLS shader language for low level optimisation of rendering calculations.
+The project started from a literature research and comparison of different volume visualisation techniques, to choose the best one for the Arction's case and implement it inside the framework. The implementation of the volume rendering engine is based on DirectX used together with C\# via SharpDX API and HSLS shader language for low level optimisation of rendering calculations.
 }\\
 \multicolumn{4}{|l|}{ }\\
 \multicolumn{4}{|p{14cm}|}{
@@ -108,7 +108,9 @@ The final chapter of the report contains an evaluation of the results and sugges
 \multicolumn{4}{|l|}{ }\\
 \hline
 \multicolumn{4}{|l|}{Keywords}\\
-\multicolumn{4}{|p{14cm}|}{Visualisation, Ray Casting, 3D, C\#, LightningChart, DirectX, HLSL, Image Processing, Volume Rendering, Rendering}\\
+\multicolumn{4}{|p{14cm}|}{
+Visualisation, Ray Casting, 3D, C\#, LightningChart, DirectX, HLSL, Image Processing, Volume Rendering, Rendering
+}\\
 \hline
 \end{tabular}
 \end{table*}
@@ -117,13 +119,13 @@ The final chapter of the report contains an evaluation of the results and sugges
 
 ACKNOWLEDGEMENTS\\
 
-I am very thankful to Action Oy for offering me an opportunity to take part at development of the project. I really like the office atmosphere and freedom in terms of my working style and schedule allowed by the company.\\
+I am very thankful to Arction Oy for offering me an opportunity to take part in the development of the project. I really like the office atmosphere and freedom in terms of my working style and schedule allowed by the company.\\
 
-My special thanks go to Mr. Pasi Toummainen, CEO of the company, who expressed interest to my idea to extend the library by the volume rendering engine,  gave me permission to work on the project and guided me especially at very early part of the development process.\\
+My special thanks go to Mr. Pasi Toummainen, CEO of the company, who expressed interest in my idea to extend the library by the volume rendering engine, gave me permission to work on the project and guided me especially in the very early part of the development process.\\
 
-Moreover, I would like to say thank you to my thesis supervisor, Arto Toppinen, for his mentoring and support during the report writing stage of my work. \\
+Moreover, I would like to say thank you to my supervisor of thesis, Arto Toppinen, for his mentoring and support during the report writing stage of my work. \\
 
-In addition I would like to express my deepest gratitude Karlsuruhe Institute of Technology, there I got the first experience with volume rendering via ray casting. I am especially grateful to Nicolas Tan Jerome, who was my mentor during the part of my internship related to modification of TomorayCaster 2 and to Aleksandr Lizin, the creator of the WebGL volume rendering engine.
+In addition, I would like to express my deepest gratitude Karlsuruhe Institute of Technology, there I got the first experience with volume rendering via Ray Casting. I am especially grateful to Nicolas Tan, Jerome, who was my mentor during the part of my internship related to modification of Tomo Ray Caster 2 and to Aleksandr Lizin, the creator of the volume rendering engine based on WebGL.
 
 \newpage
 
@@ -133,27 +135,49 @@ In addition I would like to express my deepest gratitude Karlsuruhe Institute of
 
 \section{Motivation}
 
-Volume data is very commone our day. An importance of the type of datasets will grow in nearest future, because of development if field of 3D data acquisition and possiblities to performe the visualisations on modern office workstation with an interective frame rate.\\
+Volume data is very common our day. An importance of the type of datasets will grow in the near future, because of development in the field of 3D data acquisition and possibilities to perform the visualisations on a modern office workstation with an interactive frame rate.\\
 
-Volume rendering is a process of multi-dimentional data visualisation into two-dimensional image which gives observer an opportunity to reconise meaningful insights in the origianl information. The technology allows us to represent 3 dimensions of the data via position in a 3D space and 3 more via color of the point.\\
+Volume rendering is a process of multi-dimensional data visualisation into a two-dimensional image which gives the observer an opportunity to recognize meaningful insights in the original information. The technology allows us to represent 3 dimensions of the data via position in a 3D space and 3 more via color of the point.\\
 
-The dataset can be captured by vaiouse number of technologies like: MRI\footnote{Magnetic resonance imaging}, CT\footnote{Computer tomograthy}, PET\footnote{Positron emission tomography}, or USCT\footnote{Ultrasound computer tomography}. They also can be produced by physical symulations, especially for fluid dynamics. Volumetric information plaies a big role in medicine for an advenced cancer detection, visualization of aneurisms and treatment planning. This kind of rendering is also very useful for nondesctructive material testing via computer tomography or ultrasound. Geoseismic researches produces huge three-dimensional datasets need to be visualised. They are used to an oil exploration and planning of the deposit development.\\
-
+The dataset can be captured by various numbers of technologies like: MRI\footnote{Magnetic resonance imaging}, CT\footnote{Computer tomography}, PET\footnote{Positron emission tomography}, or USCT\footnote{Ultrasound computer tomography}. They also can be produced by physical simulations, for example fluid dynamics. Volumetric information plays a big role in medicine for an advanced cancer detection, visualization of aneurisms and treatment planning. This kind of rendering is also very useful for non-destructive material testing via computer tomography or ultrasound. Geoseismic researches produce huge three-dimensional datasets. Their visualisations are used in an oil exploration and planning of the deposit development.\\
 %http://www.labri.fr/perso/preuter/imageSynthesis/02-03/papers/volvistut.pdf
 
 \section{Personal backgound}
 
-I recieved my first expirince in visualisation of volumetric data during my internship at Institute of Data Processing and Electronics, which belonges to the Karlsruhe Institute of Technology (KIT). I was a part of the 3D Ultrasound Computer Tomography (USCT) team. Thier main goal is development of a new imaging methodology for early breast cancer detection. During the work placement I had to develop an algorithm to visualise five-dimensional datasets. In result the algorithm was integrated into Tomoraycaster 2\footnote{JavaScript framework for visualisation of 3D data, developed in IPE} and USCT's edition of DICOM Viewer.\\
+I received my first experience in the visualisation of volumetric data during my internship at the Institute of Data Processing and Electronics, which belongs to the Karlsruhe Institute of Technology (KIT). I was a part of the 3D Ultrasound Computer Tomography (USCT) team. Their main goal is the development of a new methodology for early breast cancer detection. During the work placement I had to develop an algorithm to visualise five-dimensional datasets. In result the algorithm was integrated into Tomo Ray Caster 2\footnote{JavaScript framework for the visualisation of 3D data, developed in Institute of Data Processing and Electronics} and USCT's edition of DICOM Viewer.\\
 
-On the project I made my very first steps in modern computer graphics. I got my first expirince in work with WebGL during custimisation of the Tomoraycater, learned GLSL, my first shader languag, I also gained a lot of knowledge about image processing and scintific data visualisation, which became the basis for my thesis work.
+\begin{figure}[H]
+\includegraphics[scale=0.4]{img/usct1}\includegraphics[scale=0.4335]{img/usct2}\\
+\caption{Volume visualisation of breast phantom made by USCT}
+\end{figure}
+%USCT VIS
+
+During the project I made my very first steps in modern computer graphics. I got my first experience in work with WebGL during customisation of the Tomo Ray Caster, learned GLSL, my first shader language, I also gained a lot of knowledge about image processing and scientific data visualisation, which became the basis for my thesis work.
 
 %INTERNSHIP REPORT
 
 \section{Arction Oy and Ligthning Chart}
 
+Arction Oy is a Finnish software company based in Kuopio. Their team has a strong background in computer graphics and science. The main product of the company called LightningChart Ultimate. It is the fastest C\# library for scientific and engineering data visualisation. The library is capable to draw massive XY, Polar, Smith and 3D XYZ graphs, polygonal mesh models, surfaces, 3D pies/donuts and Geographic information.The library has an API for .NET WinForm and WPF applications, it is also possible to use it for a traditional Win32 C++ software development. The main advantage of the library is the fact that it is based on low-level DirectX graphics routines developed by Arction, then the most part of competitors use graphics routines which belongs to System.Windows.Media.\\
+\begin{figure}[H]
+\includegraphics[scale=0.33]{img/lchu}\\
+\caption{Example of Lightning Chart possibilities from the main page of Acrtion}
+\end{figure}
+%arction website
 
 \section{Project Goals}
 
+So, as you can conclude from the previous section, LightningChart is very advanced software for 3D rendering based on polygons and lines and I came up with an idea to extend it by the special rendering engine for visualisation of volumetric data. It will give Arction's clients the unique possibility to combine visualisation of volume datasets with a wide range of other 3D possibilities of the library. \\
+
+The rendering engine must be able:
+\begin{itemize} 
+\item to render large multi-dimensional volumes with an interactive frame rate.
+\item to move and rotate the model in the chart's space.
+\item to provide clients with possibilities to apply windowing and thresholding to the initial dataset.
+\item to render the model semi-transparent.
+\end{itemize}
+
+Basically, this tool will give end user possibilities to change the contrast and brightness of the model's visualisation for better recognition of tiny details and make areas, which are out off certain range totally, transparent, it will also reveal insights into the internal structure of the model to the user via semi-transparency.
 
 \chapter{Theory}
 \section{Rendering}

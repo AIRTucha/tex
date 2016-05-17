@@ -132,7 +132,7 @@ In addition, I would like to express my deepest gratitude Karlsuruhe Institute o
 \tableofcontents
 
 \chapter{Introduction}
-
+This chapter contains brigh information about the motivation bihind volume rendering, my personal baground in computer graphics especially volume rendering. It allso introduce Acrtion the owner of the project, examplains the reasons of Arction's interest in the development, set reqerments for the final product.
 \section{Motivation}
 
 Volume data is very common our day. An importance of the type of datasets will grow in the near future, because of development in the field of 3D data acquisition and possibilities to perform the visualisations on a modern office workstation with an interactive frame rate.\\
@@ -180,8 +180,38 @@ The rendering engine must be able:
 Basically, this tool will give end user possibilities to change the contrast and brightness of the model's visualisation for better recognition of tiny details and make areas, which are out off certain range totally, transparent, it will also reveal insights into the internal structure of the model to the user via semi-transparency.
 
 \chapter{Theory}
+
+This chapter explains the theory behind the project. It should introduce the main consepts of computer graphics, specify difference between polygonal meshmodel and volume rendering. It also contains overview of different volume rendering technique with their advantages and disadvantages in terms of speed, final image quality, flexibility and other implementation issues.
+
 \section{Rendering}
+
+At this Visualisation of 3D object as 2D image called rendering. Usually, 2D image is based pixel. In this case of grayscale pucture, it is two-dimensional array and the value of the array elements represents brightness of correspondent pixels on the screen. Configuration of colored images are dependend from color model, the most popular one is RGB, it represents image as three different grayscale images for three different colors called chanells. In case of RGB color models the images contains Red, Green and Blue values, sometimes it also keeps  an information about Opacity and the chanel called Alpha.\\
+
+Color model is mathematical abstrasction which allows computers to calculate brightness of corespondent point on the screen. RGB is original one for modern computer graphics, because it represents colors in the way they are physicly repdroduced on screen. There are several other color models. They have thier own advanges, for example some of them gives us an advenced editing possibilities while others represent physucal characteristic of different types of output devises like printers.\\
+
+Multidimensinal data can be represented in two different ways: as surface and as volume. Future in this chapter we are going to talk about this two consepts a little bit closer. We will deffine their advantage and disadvantages, common and uncommon features. Moreover we are going to disscuss an implementation ditalies of the techniques on modern hardware.
+
+%https://www.artstation.com/artist/vidarrapp illustration
+
+
 \section{Polygonal Rendering}
+
+Today we are litirally suraunded by surface rendering based on polygonal mesh. The technology is used on computer games, design, cinema, science enigering and etc. The technology is so popular that entier 3D graphic pipeline is build around the idea.\\
+
+Traditionally, 3D surfaces are constructed out of huge amount of polygons connected to a mesh. Due to simplisity, they usually have triangular shape. It is possible to describe traingle via list of three coordinates called vertexs. The internal area of the shape filled by color during rastarization step. The color is calculated as dot product between the surface normal vector and the vector of light.
+%http://people.csail.mit.edu/fredo/Depiction/1_Introduction/reviewGraphics.pdf
+
+\begin{figure}[H]
+\includegraphics[scale=0.55]{img/mesh}\\
+\caption{Wireframe and flat shading polygonal meshmodel}
+\end{figure}
+
+Surface normal vector of triangle can be calculated as a cross product of two triangle's sides, but it will give an acceptable result only for very flat surfaces. That's why curve serfaces usually contains an aditional normal vectors for every vertex. The are able to significantly improve detalisation of the model. The information kept in them is used during shading and tesseletion of the model's geometry.
+
+%http://www.emeyex.com/site/tuts/VertexNormals.pdf
+
+
+
 \section{Volume Rendering}
 \subsection{Indirect}
 \subsection{Direct}

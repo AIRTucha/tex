@@ -1,10 +1,10 @@
-\documentclass[english, 11pt]{report}
+\documentclass[twoside, english, 11pt]{report}
 
 \usepackage{babel}
 \usepackage{graphicx}
 \usepackage{times}
 \usepackage{pifont}
-\usepackage{geometry}
+\usepackage[margin=1in]{geometry} 
 \usepackage{eurosym}
 \usepackage{fancyhdr}
 \usepackage[hidelinks]{hyperref}
@@ -14,6 +14,9 @@
 \usepackage{float}
 \usepackage{lastpage}
 \restylefloat{table}
+ \geometry{
+ a4paper
+ }
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -24,17 +27,17 @@
 \pagestyle{fancy}
 \fancyhf{}
 %**************************************************************************************
-\lhead{Savonia UAS}		 	 
-\rhead{Bachelor's Thesis} 
-\cfoot{\thepage}
+%\lfoot{Savonia UAS}		 	 
+%\rfoot{Bachelor's Thesis} 
+\chead{\thepage}
+\renewcommand{\headrulewidth}{0pt}
 %**************************************************************************************
 
 \date{}
 \setlength\parindent{0pt}
 
 \begin{document}
-
-
+\thispagestyle{empty}
 \nopagebreak
 \begin {flushleft}
 \includegraphics{savonia.jpg}
@@ -42,16 +45,16 @@
 \begin {center}
 \vspace{2.5in}\Huge Implementation of volume rendering in C\#\\ for LightningChart\\
 \vspace{1cm}
- Alexey Tukalo\\
+ \LARGE Alexey Tukalo\\
  \vspace{0.5cm}
-\small Bachelor's Thesis\\
-\vspace{2.1in}
+\large Bachelor's Thesis\\
+\vspace{2.5in}
 \today \hspace{0.5cm} \noindent\rule{4cm}{0.4pt}
 \end{center}
 \begin {flushleft}
 \large Bachelor’s degree (UAS)
 \end{flushleft}
-\thispagestyle{empty}
+
 
 \vspace{2.5in}
 
@@ -61,6 +64,7 @@
 \newpage
 \setcounter{page}{1}
 \setcounter{tocdepth}{2}
+\newgeometry{inner=2cm,outer=4.3cm}
 
 \begin{table*}[!h]
 \begin{tabular}{| l | l | l | l |}
@@ -95,11 +99,11 @@ Arctive Oy is a Finnish software company, based in Kuopio. Their main product is
 }\\
 \multicolumn{4}{|l|}{ }\\
 \multicolumn{4}{|p{14cm}|}{
-The company wanted to extend the LightingChart's abilities of polygonal 3D models rendering by volume rendering. It gives Arction an opportunity to attract new clients to the product. In result the framework will provide an unique possibility to render volume and polygonal models at same visualisation.
+The company wanted to extend the LightingChart's ability to render polygonal 3D models by volume rendering. It gives Arction an opportunity to attract new clients to the product. In result the framework will provide an unique possibility to render volume and polygonal models at same visualisation.
 }\\
 \multicolumn{4}{|l|}{ }\\
 \multicolumn{4}{|p{14cm}|}{
-The project started from a literature research and comparison of different volume visualisation techniques, to choose the best one for the Arction's case and implement it inside the framework. The implementation of the volume rendering engine is based on DirectX used together with C\# via SharpDX API and HLSL shader language for low level optimisation of rendering calculations.
+The project started from a literature research and comparison of different volume visualisation techniques. The best approach for the Arction's case was chosen and implemented it in the framework. The volume rendering engine is based on DirectX used together with C\# via SharpDX API and HLSL shader language for low level optimisation of complex calculations.
 }\\
 \multicolumn{4}{|l|}{ }\\
 \multicolumn{4}{|p{14cm}|}{
@@ -144,7 +148,7 @@ The dataset can be captured by various numbers of technologies like: MRI\footnot
 
 \section{Personal backgound}
 
-I received my first experience in the visualisation of volumetric data during my internship at the Institute of Data Processing and Electronics, which belongs to the Karlsruhe Institute of Technology (KIT). I was a part of the 3D Ultrasound Computer Tomography (USCT) team. Their main goal is the development of a new methodology for early breast cancer detection. During the work placement I had to develop an algorithm to visualise five-dimensional datasets. In result the algorithm was integrated into Tomo Ray Caster 2\footnote{JavaScript framework for the visualisation of 3D data, developed in Institute of Data Processing and Electronics} and USCT's edition of DICOM Viewer.\\
+The first experience in the visualisation of volumetric data was gained by me during my internship at the Institute of Data Processing and Electronics, which belongs to the Karlsruhe Institute of Technology (KIT). I was a part of the 3D Ultrasound Computer Tomography (USCT) team there. Their main goal is the development of a new methodology for early breast cancer detection. An algorithm for visualisation of five-dimensional datasets was developed by me during the work placement. In result the it was integrated into Tomo Ray Caster 2\footnote{JavaScript framework for the visualisation of 3D data, developed in Institute of Data Processing and Electronics} and USCT's edition of DICOM Viewer.\\
 
 \begin{figure}[H]
 \includegraphics[scale=0.4]{img/usct1}\includegraphics[scale=0.4335]{img/usct2}\\
@@ -152,7 +156,7 @@ I received my first experience in the visualisation of volumetric data during my
 \end{figure}
 %USCT VIS
 
-During the project I made my very first steps in modern computer graphics. I got my first experience in work with WebGL during customisation of the Tomo Ray Caster and learned GLSL as my first shader language. I also gained a lot of knowledge about image processing and scientific data visualisation, which became the basis for my thesis work.
+The very first steps in modern computer graphics was made by me during the project. The first experience in work with WebGL was gained during customisation of the Tomo Ray Caster. GLSL as my first shader language was learned during the work. A lot of knowledge about image processing and scientific data visualisation, which became the basis for my thesis work was received by me at the workplacement.
 
 %INTERNSHIP REPORT
 
@@ -167,7 +171,7 @@ Arction Oy is a Finnish software company based in Kuopio. Their team has a stron
 
 \section{Project Goals}
 
-So, as you can conclude from the previous section, LightningChart is a very advanced software for 3D rendering based on polygons and lines. That's why, I came up with an idea to extend it by the special rendering engine for visualisation of volumetric data. It will give Arction's clients the unique possibility to combine visualisation of volume datasets with a wide range of other 3D possibilities provided by the library. \\
+So, as it can be concluded from the previous section, LightningChart is a very advanced software for 3D rendering based on polygons and lines. That's why, an idea to extend it by the special rendering engine for visualisation of volumetric data was suggested by me to the CEO of the company. It will give Arction's clients the unique possibility to combine visualisation of volume datasets with a wide range of other 3D possibilities provided by the library. \\
 
 The rendering engine must be able:
 \begin{itemize} 
@@ -252,9 +256,28 @@ Unfortunately, this technology is not suitable for our project, because it does 
 
 
 \subsection{Direct}
-Direct volume rendering does not require any preprocessing. The data visualised from the initial dataset and it gives the algorithms an opportunity to modify the transfer function run time. There are four technics for direct volume rendering based on totally different ideas. Future we are going to discuss about them more detailed.
+Direct volume rendering does not require any preprocessing. The data is visualised from the initial dataset. It gives the algorithms an opportunity to modify the transfer function runtime. There are four technics for direct volume rendering based on totally different ideas. Future we are going to discuss them more detailed.
 %http://www.forceflow.be/wp-content/uploads/2012/02/vr_overview.pdf
 \subsubsection{Texture-based}
+
+As it was mentioned befor the graphics pipeline of modern graphic cards is optimized for rendering of polygonal mesh models. So, volume rendering algorithms are forced to use the set of tools to achieve hardware acceleration. Texture-based volume rendering is the most straight forward way to the aim.\\
+
+As it was already said textures are used to add tiny details to polygonal models. Any graphic library has an advanced set of tools for texture mapping, which can be used to this kind of volume rendering. The algorithm creates set of planes called proxy geometry. The dataset is loaded to the graphic card as 3D texture or as set of 2D textures. Several slices can be collected to one huge texture map due to optimization of  a texture's buffer consumption. Transfer function projects the texture on the proxy geometry. The final image is rendered out of the planes with applied on them textures via Alpha-blending.\\
+
+
+%http://http.developer.nvidia.com/GPUGems/gpugems_ch39.html
+A proxy geometry can be created in two different ways. The first one called 2D texture-based rendering. In this case three different sets of planes are generated. All sets are generated perpendicular to a different directions in 3D space. This approach leads us to sudden jumps in image quality for different camera position and does not allow to change the sampling rate of the visualisation.\\
+\begin{figure}[H]
+\centerline{
+\includegraphics[scale=0.7]{img/texture-based}
+}
+\caption{a) example of proxy geometry for 3D texture-based volume rendering a) Texture-based volume rendering with a lower sampling rate c) high sampling rate texture-based volume rendering}
+\end{figure}
+That's why the second way was invented. It is called 3D texture-based volume rendering. In this solution the algorithm creates only one set of planes which are always perpendicular to the camera and textures are mapped on them differently for different camera position. \\
+
+It gets rid of an artifact of the first technique and allows to modify the sampling rate of the visualisation. The approach is the most popular direct volume rendering algorithm among medical software, but it was not selected for Arction's Volume rendering engine, because it is less flexible than all other methods discussed further. It is possible to use transfer function to emphasize or classify features of interest in the volume, but it is not comparable with future possibilities provided by other approaches.
+%http://www.forceflow.be/wp-content/uploads/2012/02/vr_overview.pdf
+
 \subsubsection{Ray Casting}
 \subsubsection{Splatting}
 \subsubsection{Shear-warp}
@@ -270,10 +293,10 @@ Direct volume rendering does not require any preprocessing. The data visualised 
 \section{Visualisation process}
 \subsection{Loading and preprocessing of dataset}
 \subsection{Multi-pass rendering}
-\subsubsection{First pass}
-\subsubsection{Second pass}
-\paragraph{Empty space skipping}
-\paragraph{Ray function}
+\subsection{First pass}
+\subsection{Second pass}
+\subsubsection{Empty space skipping}
+\subsubsection{Ray function}
 
 \chapter{Conclusion}
 \section{Results}

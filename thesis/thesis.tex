@@ -13,10 +13,17 @@
 \usepackage{enumitem}
 \usepackage{float}
 \usepackage{lastpage}
+\usepackage{titlesec}
+\usepackage{caption}
+\captionsetup{figurename=FIGURE}
+\titleformat{\chapter}
+  {\normalfont\LARGE\bfseries}{\thechapter}{1em}{}
+\titlespacing*{\chapter}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
 \restylefloat{table}
- \geometry{
+\geometry{
  a4paper
  }
+ 
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -95,11 +102,11 @@ Data & \today & Pages/Appendices & \pageref{LastPage}\\
 \multicolumn{4}{|l|}{Abstract}\\
 \multicolumn{4}{|l|}{ }\\
 \multicolumn{4}{|p{14cm}|}{
-Arctive Oy is a Finnish software company, based in Kuopio. Their main product is LightningChart, the fastest C\# framework for the visualisation of scientific, engineering, trading and research data. The library contains a bunch of tools for visualisation of XY, 3D XYZ, smith and polar graphs, 3D pie/donut views, 3D objects.
+Arctive Oy is a Finnish software company based in Kuopio. Their main product is LightningChart, the fastest C\# framework for the visualisation of scientific, engineering, trading and research data. The library contains a bunch of tools for visualisation of XY, 3D XYZ, smith and polar graphs, 3D pie/donut views, 3D objects.
 }\\
 \multicolumn{4}{|l|}{ }\\
 \multicolumn{4}{|p{14cm}|}{
-The company wanted to extend the LightingChart's ability to render polygonal 3D models by volume rendering. It gives Arction an opportunity to attract new clients to the product. In result the framework will provide an unique possibility to render volume and polygonal models at same visualisation.
+The company wanted to extend LightingChart's ability to render polygonal 3D models by volume rendering. It gives Arction an opportunity to attract new clients to use the product. As a result the framework will provide a unique possibility to render volume and polygonal models at the same visualisation.
 }\\
 \multicolumn{4}{|l|}{ }\\
 \multicolumn{4}{|p{14cm}|}{
@@ -125,17 +132,17 @@ ACKNOWLEDGEMENTS\\
 
 I am very thankful to Arction Oy for offering me an opportunity to take part in the development of the project. I really like the office atmosphere and freedom in terms of my working style and schedule allowed by the company.\\
 
-My special thanks goes to Mr. Pasi Toummainen, CEO of the company, who expressed interest in my idea to extend the library by the volume rendering engine, gave me permission to work on the project and guided me especially in the very early part of the development process.\\
+My special thanks go to Mr. Pasi Toummainen, the CEO of the company, who expressed interest in my idea to extend the library by the volume rendering engine, gave me permission to work on the project and guided me especially in the very early part of the development process.\\
 
-Moreover, I would like to say thank you to my supervisor of thesis, Arto Toppinen, for his mentoring and support during the report writing stage of my work. \\
+I am very grateful to Savonia UAS and especially lectures who used to teache me.  Moreover, I would like to say thank you to my supervisor of thesis and head of my Degree Programm, Mr. Arto Toppinen, Principal Lecturer, for his mentoring and support during the report writing stage of my work. \\
 
-In addition, I would like to express my deepest gratitude Karlsuruhe Institute of Technology, there I got the first experience with volume rendering via Ray Casting. I am especially grateful to Nicolas Tan, Jerome, who was my mentor during the part of my internship related to modification of Tomo Ray Caster 2 and to Aleksandr Lizin, the creator of the volume rendering engine based on WebGL.
+In addition, I would like to express my deepest gratitude to Karlsuruhe Institute of Technology, there I got the first experience with volume rendering via Ray Casting. I am especially grateful to Nicolas Tan, Jerome, who was my mentor during the part of my internship related to modification of Tomo Ray Caster 2 and to Aleksandr Lizin, the creator of the volume rendering engine based on WebGL.
 
 \newpage
 
 \tableofcontents
 
-\chapter{Introduction}
+\chapter{INTRODUCTION}
 This chapter contains brief information about the motivation behind volume rendering, my personal background in computer graphics especially volume rendering. It also introduces Acrtion as the owner of the project, explains the reasons for Arction's interest in the development, set requirements for the final product.
 \section{Motivation}
 
@@ -183,7 +190,7 @@ The rendering engine must be able:
 
 Basically, this tool will give end users possibilities to change the contrast and brightness of the model's visualisation for better recognition of tiny details and make areas, which are out off certain range, totally transparent. It will also reveal insights into the internal structure of the model to the user via semi-transparency.
 
-\chapter{Theory}
+\chapter{THEORY}
 
 This chapter explains the theory behind the project. It should introduce the main concepts of computer graphics, specify the difference between polygonal mesh model and volume rendering. It also contains an overview of different volume rendering techniques with their advantages and disadvantages in terms of speed, final image quality, flexibility and other implementation issues.
 
@@ -229,7 +236,9 @@ Position, scale, rotation of the object and perspective characteristics of the s
 Specific program called shader receives all the information together with a camera and light source positions, after that they are able to perform calculations needed to render the final image in accord with the goals of the visualisation. Usually, the calculations are produced by graphic card in a parallel way.
 
 \section{Volume Rendering}
-There are two ways to render volumes. We are going to discuss about main principles, advantages and disadvantages of the technologies in this section.
+
+Volume data are composed out of voxels\footnote{volume element}. Voxel is simply a point in 3D space, which has a position and a color. Together gives us an opportunity to visualise up to six scalar parameters. There are two ways to render volumes. We are going to discuss about main principles, advantages and disadvantages of the technologies in this section.\\
+%shear-warp paper 3
 
 \subsection{Indirect}
 
@@ -279,6 +288,21 @@ It gets rid of an artifact of the first technique and allows to modify the sampl
 %http://www.forceflow.be/wp-content/uploads/2012/02/vr_overview.pdf
 
 \subsubsection{Ray Casting}
+
+Image is produced by the algorithm throughout sampling of the volume along tracks of the rays which travel inside the dataset. A smiple realisation of hardware acceleration of the aproach requer generation of boundaries for our volume. Usually they are represented by cube. As in Texture-based approach data is loaded to graphic cards as set of 2D slices, mapped to several huge 2D texture or as single 3D textures.\\
+
+Volume Ray Casting includes three simple steps:
+\begin{itemize}
+\item An engine shoots a ray in a direction of observation for every point on a screen.
+\item A vector of the ray's track is calculated based on position there the ray hits front and back faces of the cube.
+\item The volume is downsampled along the ray track and color of the pixel is calculated out of collected information in according with a Ray Function.
+\end{itemize}
+
+Ray Function is a core of the algorithm. It possess enier power of the technique, because it specifes the way how the data is combined. Such a high level of flexibility is provided the algorigth by Ray Function. It is very powerful tool for feature extraction, becuase it controls how color, opacity and gradient of isosurface are calculated by the enigene. Transfer function and classification are also performed via Ray Function.\\
+
+The algorithm has very high rendering quality without any additional arifacts and due to the reasone that every ray is calculated seperatly it is easilly implemented in modern hardware focused on parallel calculations. The main problem of the algorith is that rays usually  do not hit the voxel to the center, That is why, the samples have to be calculated via interpolation which is especially complex operation in terms of calculation in case of 3D space.
+
+ 
 \subsubsection{Splatting}
 \subsubsection{Shear-warp}
 
@@ -310,6 +334,8 @@ It gets rid of an artifact of the first technique and allows to modify the sampl
 \section{Disscusion}
 
 \section{Future Development}
+
+\chapter{REFERENCES}
 
 \chapter{Appendix}
 

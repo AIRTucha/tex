@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.30)  20 MAY 2016 02:06
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.30)  21 MAY 2016 01:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -381,43 +381,78 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 (/usr/local/texlive/2014/texmf-dist/tex/latex/lastpage/lastpage.sty
 Package: lastpage 2013/01/28 v1.2l Refers to last page's name (HMM; JPG)
 )
-\@float@every@table=\toks19
+(/usr/local/texlive/2014/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
+\ttl@box=\box38
+\beforetitleunit=\skip55
+\aftertitleunit=\skip56
+\ttl@plus=\dimen219
+\ttl@minus=\dimen220
+\ttl@toksa=\toks19
+\titlewidth=\dimen221
+\titlewidthlast=\dimen222
+\titlewidthfirst=\dimen223
+)
+(/usr/local/texlive/2014/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen224
+\captionmargin@=\dimen225
+\captionwidth=\dimen226
+\caption@tempdima=\dimen227
+\caption@indent=\dimen228
+\caption@parindent=\dimen229
+\caption@hangindent=\dimen230
+)
+\c@ContinuedFloat=\count109
+Package caption Info: float package is loaded.
+Package caption Info: hyperref package is loaded.
+)
+Package caption Info: We need package `newfloat' on input line 18.
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/caption/newfloat.sty
+Package: newfloat 2013/05/11 v1.1-91 Defining new floating environments (AR)
+)
+\@float@every@table=\toks20
 
 (/Users/alexey/Documents/tex/thesis/out/thesis.aux)
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 39.
-LaTeX Font Info:    ... okay on input line 39.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 39.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 46.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count109
-\scratchdimen=\dimen219
-\scratchbox=\box38
-\nofMPsegments=\count110
-\nofMParguments=\count111
-\everyMPshowfont=\toks20
-\MPscratchCnt=\count112
-\MPscratchDim=\dimen220
-\MPnumerator=\count113
-\makeMPintoPDFobject=\count114
-\everyMPtoPDFconversion=\toks21
+\scratchcounter=\count110
+\scratchdimen=\dimen231
+\scratchbox=\box39
+\nofMPsegments=\count111
+\nofMParguments=\count112
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count113
+\MPscratchDim=\dimen232
+\MPnumerator=\count114
+\makeMPintoPDFobject=\count115
+\everyMPtoPDFconversion=\toks22
 ) (/usr/local/texlive/2014/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
@@ -467,19 +502,19 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box39
-Package hyperref Info: Link coloring OFF on input line 39.
+\AtBeginShipoutBox=\box40
+Package hyperref Info: Link coloring OFF on input line 46.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
 (/usr/local/texlive/2014/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count115
+\c@section@level=\count116
 )
-LaTeX Info: Redefining \ref on input line 39.
-LaTeX Info: Redefining \pageref on input line 39.
-LaTeX Info: Redefining \nameref on input line 39.
+LaTeX Info: Redefining \ref on input line 46.
+LaTeX Info: Redefining \pageref on input line 46.
+LaTeX Info: Redefining \nameref on input line 46.
 
 (/Users/alexey/Documents/tex/thesis/out/thesis.out)
 (/Users/alexey/Documents/tex/thesis/out/thesis.out)
@@ -492,12 +527,14 @@ Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             or
 (lastpage)             http://www.ctan.org/tex-archive/ 
 (lastpage)             install/macros/latex/contrib/pageslts.tds.zip
-(lastpage)             ! on input line 39.
+(lastpage)             ! on input line 46.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
 
-<savonia.jpg, id=140, 139.722pt x 37.5804pt>
+<savonia.jpg, id=144, 139.722pt x 37.5804pt>
 File: savonia.jpg Graphic file (type jpg)
  <use savonia.jpg>
-Package pdftex.def Info: savonia.jpg used on input line 43.
+Package pdftex.def Info: savonia.jpg used on input line 50.
 (pdftex.def)             Requested size: 139.72165pt x 37.58029pt.
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
@@ -542,13 +579,13 @@ ia.jpg>]
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 70.
+(Font)              <10.95> on input line 77.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 70.
+(Font)              <8> on input line 77.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 70.
+(Font)              <6> on input line 77.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 71.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 78.
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.59999pt.
@@ -559,32 +596,32 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.122 \newpage
+l.129 \newpage
                [1
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 124--125
+Underfull \hbox (badness 10000) in paragraph at lines 131--132
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 126--127
+Underfull \hbox (badness 10000) in paragraph at lines 133--134
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 128--129
+Underfull \hbox (badness 10000) in paragraph at lines 135--136
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 130--131
+Underfull \hbox (badness 10000) in paragraph at lines 137--138
 
  []
 
 [2]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 136.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 143.
  (/Users/alexey/Documents/tex/thesis/out/thesis.toc [3
 
 ])
@@ -593,26 +630,10 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
 
  [4]
 Chapter 1.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 138.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 140.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 147.
 
-Underfull \hbox (badness 10000) in paragraph at lines 142--143
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 144--145
-
- []
-
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 146.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 146.
-
-Underfull \hbox (badness 10000) in paragraph at lines 146--148
+Underfull \hbox (badness 10000) in paragraph at lines 149--150
 
  []
 
@@ -621,198 +642,225 @@ Underfull \hbox (badness 10000) in paragraph at lines 151--152
 
  []
 
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9> on input line 153.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 153.
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--155
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 158--159
+
+ []
+
 [5
 
-] <img/usct1.png, id=214, 586.19pt x 519.9425pt>
+] <img/usct1.png, id=219, 586.19pt x 519.9425pt>
 File: img/usct1.png Graphic file (type png)
  <use img/usct1.png>
-Package pdftex.def Info: img/usct1.png used on input line 154.
+Package pdftex.def Info: img/usct1.png used on input line 161.
 (pdftex.def)             Requested size: 234.47185pt x 207.97331pt.
 
-<img/usct2.png, id=216, 438.63875pt x 479.7925pt>
+<img/usct2.png, id=221, 438.63875pt x 479.7925pt>
 File: img/usct2.png Graphic file (type png)
  <use img/usct2.png>
-Package pdftex.def Info: img/usct2.png used on input line 154.
+Package pdftex.def Info: img/usct2.png used on input line 161.
 (pdftex.def)             Requested size: 190.15039pt x 207.99057pt.
 
-Overfull \hbox (6.36679pt too wide) in paragraph at lines 154--155
+Overfull \hbox (6.36679pt too wide) in paragraph at lines 161--162
 [][][] 
  []
 
-<img/lchu.png, id=217, 1274.7625pt x 387.4475pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
+
+ []
+
+<img/lchu.png, id=222, 1274.7625pt x 387.4475pt>
 File: img/lchu.png Graphic file (type png)
  <use img/lchu.png>
-Package pdftex.def Info: img/lchu.png used on input line 167.
+Package pdftex.def Info: img/lchu.png used on input line 174.
 (pdftex.def)             Requested size: 420.67293pt x 127.85806pt.
 
-Overfull \hbox (2.41748pt too wide) in paragraph at lines 167--168
+Overfull \hbox (2.41748pt too wide) in paragraph at lines 174--175
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 165--169
-
- []
-
-[6pdfTeX warning (ext4): destination with the same identifier (name{figure.1.1}
-) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.169 \end{figure}
-                   <./img/usct1.png> <./img/usct2.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 174--175
 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 178.
+
+Underfull \hbox (badness 10000) in paragraph at lines 172--176
+
+ []
+
+[6 <./img/usct1.png> <./img/usct2.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 181--182
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 185.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 178.
- [7pdfTeX warning (ext4): destination with the same identifier (name{figure.1.2
-}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.186 \chapter
-              {Theory} <./img/lchu.png>]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 185.
+ [7 <./img/lchu.png>]
 Chapter 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 192--193
+Underfull \hbox (badness 10000) in paragraph at lines 199--200
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 194--195
+Underfull \hbox (badness 10000) in paragraph at lines 201--202
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 203--204
+Underfull \hbox (badness 10000) in paragraph at lines 210--211
 
  []
 
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 212.
 [8
 
-]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 205.
- <img/mesh.png, id=240, 809.0225pt x 412.54124pt>
+] <img/mesh.png, id=245, 809.0225pt x 412.54124pt>
 File: img/mesh.png Graphic file (type png)
  <use img/mesh.png>
-Package pdftex.def Info: img/mesh.png used on input line 210.
+Package pdftex.def Info: img/mesh.png used on input line 217.
 (pdftex.def)             Requested size: 444.96376pt x 226.89838pt.
 
-Overfull \hbox (26.70831pt too wide) in paragraph at lines 210--211
+Overfull \hbox (26.70831pt too wide) in paragraph at lines 217--218
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 215--216
-
- []
-
-[9pdfTeX warning (ext4): destination with the same identifier (name{figure.2.1}
-) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.219 \subsection
-                 {Textures} <./img/mesh.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 220--221
+Underfull \hbox (badness 10000) in paragraph at lines 217--218
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 225--226
+Underfull \hbox (badness 10000) in paragraph at lines 222--223
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 227--228
+
+ []
+
+[9 <./img/mesh.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 232--233
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 240--242
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 260--261
 
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 251--252
+Underfull \hbox (badness 10000) in paragraph at lines 272--273
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 263--264
+Underfull \hbox (badness 10000) in paragraph at lines 274--275
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 265--266
-
- []
-
-<img/texture-based.png, id=252, 398.48875pt x 155.58125pt>
+<img/texture-based.png, id=259, 398.48875pt x 155.58125pt>
 File: img/texture-based.png Graphic file (type png)
 
 <use img/texture-based.png>
-Package pdftex.def Info: img/texture-based.png used on input line 273.
+Package pdftex.def Info: img/texture-based.png used on input line 282.
 (pdftex.def)             Requested size: 278.94022pt x 108.90611pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 269--275
+Underfull \hbox (badness 10000) in paragraph at lines 278--284
 
  []
 
 
-Underfull \vbox (badness 2662) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [11]
-Underfull \hbox (badness 10000) in paragraph at lines 276--277
+Underfull \hbox (badness 10000) in paragraph at lines 285--286
 
  []
 
-[12pdfTeX warning (ext4): destination with the same identifier (name{figure.2.2
-}) has been already used, duplicate ignored
 
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.285 \chapter
-              {Implementation} <./img/texture-based.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 292--293
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 301--302
+
+ []
+
+[12 <./img/texture-based.png>] [13]
 Chapter 3.
-[13
-
-]
-Chapter 4.
 [14
 
 ]
-Chapter 5.
-
-AED: lastpage setting LastPage
+Chapter 4.
 [15
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 323.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 323.
+Chapter 5.
+[16
+
+]
+Chapter 6.
+
+AED: lastpage setting LastPage
+[17
+
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 349.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 349.
  (/Users/alexey/Documents/tex/thesis/out/thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 323.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 323.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 349.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 349.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 323.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 349.
  ) 
 Here is how much of TeX's memory you used:
- 6977 strings out of 493117
- 103586 string characters out of 6135432
- 205533 words of memory out of 5000000
- 10256 multiletter control sequences out of 15000+600000
- 28220 words of font info for 54 fonts, out of 8000000 for 9000
+ 8347 strings out of 493117
+ 127495 string characters out of 6135432
+ 233111 words of memory out of 5000000
+ 11622 multiletter control sequences out of 15000+600000
+ 26087 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,11n,43p,847b,457s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,11n,43p,847b,458s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/tex
 live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
 ive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/t
 exmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on /Users/alexey/Documents/tex/thesis/out/thesis.pdf (16 pages, 
-1472332 bytes).
+Output written on /Users/alexey/Documents/tex/thesis/out/thesis.pdf (18 pages, 
+1474375 bytes).
 PDF statistics:
- 320 PDF objects out of 1000 (max. 8388607)
- 284 compressed objects within 3 object streams
- 72 named destinations out of 1000 (max. 500000)
- 303 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 323 PDF objects out of 1000 (max. 8388607)
+ 285 compressed objects within 3 object streams
+ 65 named destinations out of 1000 (max. 500000)
+ 311 words of extra memory for PDF output out of 10000 (max. 10000000)
 

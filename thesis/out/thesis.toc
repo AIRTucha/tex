@@ -22,26 +22,26 @@
 \contentsline {section}{\numberline {3.1}Tools}{15}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}C\# and .NET}{15}{subsection.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}DirectX 11}{16}{subsection.3.1.2}
-\contentsline {subsubsection}{Rendering Pipeline}{16}{subsection.3.1.2}
-\contentsline {subsubsection}{HLSL}{17}{figure.caption.8}
-\contentsline {subsection}{\numberline {3.1.3}SharpDX}{17}{subsection.3.1.3}
-\contentsline {subsection}{\numberline {3.1.4}LightningChart Ultimate}{17}{subsection.3.1.4}
-\contentsline {section}{\numberline {3.2}Visualisation process}{17}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Loading and preprocessing of dataset}{17}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Multi-pass rendering}{17}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}First pass}{17}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Second pass}{17}{subsection.3.2.4}
-\contentsline {subsubsection}{Empty space skipping}{17}{subsection.3.2.4}
-\contentsline {subsubsection}{Ray function}{17}{subsection.3.2.4}
-\contentsline {chapter}{\numberline {4}Conclusion}{19}{chapter.4}
-\contentsline {section}{\numberline {4.1}Results}{19}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Rotation and position}{19}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Settings}{19}{subsection.4.1.2}
-\contentsline {subsubsection}{Windowing}{19}{subsection.4.1.2}
-\contentsline {subsubsection}{Thresholding}{19}{subsection.4.1.2}
-\contentsline {subsubsection}{Slice range clipping}{19}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Mouse picking}{19}{subsection.4.1.3}
-\contentsline {section}{\numberline {4.2}Disscusion}{19}{section.4.2}
-\contentsline {section}{\numberline {4.3}Future Development}{19}{section.4.3}
-\contentsline {chapter}{\numberline {5}REFERENCES}{20}{chapter.5}
-\contentsline {chapter}{\numberline {6}Appendix}{21}{chapter.6}
+\contentsline {subsubsection}{Rendering Pipeline}{17}{figure.caption.8}
+\contentsline {subsubsection}{HLSL}{18}{figure.caption.8}
+\contentsline {subsection}{\numberline {3.1.3}SharpDX}{19}{subsection.3.1.3}
+\contentsline {subsection}{\numberline {3.1.4}LightningChart Ultimate}{19}{subsection.3.1.4}
+\contentsline {section}{\numberline {3.2}Visualisation process}{19}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Loading and preprocessing of dataset}{19}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Multi-pass rendering}{19}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}First pass}{19}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Second pass}{19}{subsection.3.2.4}
+\contentsline {subsubsection}{Empty space skipping}{19}{subsection.3.2.4}
+\contentsline {subsubsection}{Ray function}{19}{subsection.3.2.4}
+\contentsline {chapter}{\numberline {4}Conclusion}{20}{chapter.4}
+\contentsline {section}{\numberline {4.1}Results}{20}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Rotation and position}{20}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Settings}{20}{subsection.4.1.2}
+\contentsline {subsubsection}{Windowing}{20}{subsection.4.1.2}
+\contentsline {subsubsection}{Thresholding}{20}{subsection.4.1.2}
+\contentsline {subsubsection}{Slice range clipping}{20}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Mouse picking}{20}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.2}Disscusion}{20}{section.4.2}
+\contentsline {section}{\numberline {4.3}Future Development}{20}{section.4.3}
+\contentsline {chapter}{\numberline {5}REFERENCES}{21}{chapter.5}
+\contentsline {chapter}{\numberline {6}Appendix}{22}{chapter.6}

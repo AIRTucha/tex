@@ -342,7 +342,10 @@ Other advanced feature of C\# is Language-Integrated Query expressions or shortl
 
 DirectX is a C/C++ API\footnote{Application Programming Interface} for work with multimedia resources created by Microsoft for Windows and Xbox. It contains advanced tools for rednering of 2D and 3D graphic and sound management. Direct3D is a part of the library responsible for hardware accelerated rendering of 3D graphics. The tool is mainly focused on GPU accelerated rendering of polygonal meshmodels.\\
 %http://searchwindowsserver.techtarget.com/definition/DirectX
-
+ \begin{figure}[H]
+\centerline{\includegraphics[scale=0.9]{img/pipeline}}
+\caption{Flowchart of Direct3D 11 Graphics Pipeline\label{fig:pipeline}}
+\end{figure}
 \subsubsection{Rendering Pipeline}
 Key consept of the library is redering pipeline. It is a very general term in computer grapics. The pipeline is a siqence of stages which recieves an input data as set of polygons, textures and variables, process the information step by step and generates the final image in the end.\\
 
@@ -351,8 +354,8 @@ Direct3D's pipeline has two types of steps:
 \item Fixed-function - perform certain processing operation which can be customize due to some level thougth the API.
 \item Programmable - processing is performed by so called shader program. It is function which is created by developer and satisfies input and output parameters of the stage.
 \end{itemize}
- 
-The graphics pipeline is shown on Figure \ref{fig:pipeline}. Let me exaplain every step of the pipeline more detailed: 
+
+The graphics pipeline is shown on Figure \ref{fig:pipeline}. Boxes with rounded angles represent programable stages and other ones are fixed-functions. Let me exaplain every step of the pipeline more detailed: 
 
 \begin{itemize}
 \item Input-Assembler Stage recieve input information as set of buffers and supply future to the pipeline. There are four types of buffers in Direct3D:
@@ -360,21 +363,28 @@ The graphics pipeline is shown on Figure \ref{fig:pipeline}. Let me exaplain eve
     \item Vertex Buffer is used to define geometry of the object by list of vertexs. Every vertex has to follow Input Layout deffined for the pipeline by developer. It discribes the vertex members like: position and texture coordinates, color value, normal etc used in this application.
     \item Index Buffer conatins an order of vertexs as sequence of integer variables.
     \item Constant supplies pipeline with a constant data, like transfor matrixes, position and directions of ligth sources, textures, and so on.
+    %https://msdn.microsoft.com/en-us/library/windows/desktop/ff476898(v=vs.85).aspx
   \end{itemize}
-\item 
-%https://msdn.microsoft.com/en-us/library/windows/desktop/ff476898(v=vs.85).aspx
+\item Vertex-Shader Stage is the first programmable stage of the pipeline. Verteces are read one by one and processed in according with Vertex Shader program supplied by developer. For best performence the processing has to includes every operation which can be performed on every vertex indivudualy. The function is not able to destroy or create new vertex.
+
+%книга
+\item Hull Shader, Tessellator and Domain Shader stage are used togher to archive tessellation\footnote{Process of mesh model's enchantment via aoutomatic generation of additional polygons} of the mesh.
+  \begin{itemize}
+    \item Hull Shader programm includes two functions. The first one recieve primitives and calculates tessellation factors out of the data. The second function is called once for every contorl point and creates them.
+    %книга
+    \item Tessellator uses data provided by Hull Shader and one of several algorithms to choose the best point to break of current primitive into smaller polygons.
+    \item Domain Shader uses an original infromation from Hull Shader toughert with results of tessellator to generate new verteces list.
+  \end{itemize}
+\item Geometry Shader recieves several verteces at the same times and perform operations on them. An ability to add and remove points from pipeline makes the function extimly powerful and flexible tool. For example it can easelly turn single vertex to the polygon of even set of polygons. It is able to pass geomtry future along pipeline or away to output stream.
+\item Rasterization projects geometry to the final image and determines which pixels are covered by the polygons. It interpolates the verteces' atributes inside the primitives to get the pixels values for the area. It also perfoms depth and stencil tests.
+\item Pixel shader is executed once for every pixel on the output target. It is supplied with an information from Resterizetion step and calculates per pixel data for example color of imga's points. Usually texture sampling and hight quality lightning calculations are implemented by pixel shaders.
+\item Output-Merge Stage uses pixel shader's output togher with depth/stencil information to generate final image and write it in appropriate way to render target.
 \end{itemize}
 
-\begin{figure}[h]
-\centerline{\includegraphics{img/pipeline}}
-\caption{Flowchart of Direct3D 11 Graphics Pipeline\label{fig:pipeline}}
-\end{figure}
-
-
-
-
-
 \subsubsection{HLSL}
+There are two way of rendering pipeline customization. Fixed-functions behavoure can be modified by the API and programable stages flexiblities is orgonised via special type of programming languages called Shader Languages. Direct3D's realisation of shader language called HLSL\footnote{High Level Shader Language}.\\
+
+The language is basically significantly modified version of C. The lanaguage does not support features like pointer artichmetics and dynamic momory allocation, but the syntax is still understandable for C developers. It extends C syntax by classes, several new data types, buffers, sematics and huge library of useful for shader development functions. There are vector, matrix and 1D-3D texture data types which are very useful for processing of 3D primitives. As it was already mentioned buffers are used to supply pipeline with data. Sematics contains metadata which is related with data exchange among fixed-function and programable stages of the pipeline.
 \subsection{SharpDX}
 \subsection{LightningChart Ultimate}
 \section{Visualisation process}

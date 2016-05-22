@@ -260,19 +260,19 @@ It is the oldest idea behind volume rendering and it has plenty of disadvantages
 But the algorithm is very popular for generation of medical illustrations, video or other static visualisation. The main advantage of the solution is that nicely preprocessed model can be easily rendered in via wel-known 3D mesh models' rendering, even in very weak hardware.\\
 
 Unfortunately, this technology is not suitable for our project, because it does not satisfy our requirements.
-
 %http://www.forceflow.be/wp-content/uploads/2012/02/vr_overview.pdf
 
-
 \subsection{Direct}
-Direct volume rendering does not require any preprocessing. The data is visualised from the initial dataset. It gives the algorithms an opportunity to modify the transfer function runtime. There are four technics for direct volume rendering based on totally different ideas. Future we are going to discuss them more detailed.
+Direct volume rendering does not require any preprocessing. The data is visualised from an original dataset. It gives the algorithms an opportunity to modify a transfer function runtime. There are four most common technics for direct volume rendering algortithms, which will be discussed more detailed future at the section.\\
+
+For an implementation of hardware acceleration for redering process a volume data has to be loaded to the grapic cards. It is usually served as 3D texture or as set of 2D textures. Several slices can be collected to one huge texture map due to optimization of  a texture's buffer consumption. 
+
 %http://www.forceflow.be/wp-content/uploads/2012/02/vr_overview.pdf
 \subsubsection{Texture-based}
 
-As it was mentioned befor the graphics pipeline of modern graphic cards is optimized for rendering of polygonal mesh models. So, volume rendering algorithms are forced to use the set of tools to achieve hardware acceleration. Texture-based volume rendering is the most straight forward way to the aim.\\
+As it was mentioned befor the graphics pipeline of modern graphic cards is optimized for rendering of polygonal mesh models. So, volume rendering algorithms are forced to use the set of tools to achieve hardware acceleration. Texture-based volume rendering is the most straight forward way to achive the aim.\\
 
-As it was already said textures are used to add tiny details to polygonal models. Any graphic library has an advanced set of tools for texture mapping, which can be used to this kind of volume rendering. The algorithm creates set of planes called proxy geometry. The dataset is loaded to the graphic card as 3D texture or as set of 2D textures. Several slices can be collected to one huge texture map due to optimization of  a texture's buffer consumption. Transfer function projects the texture on the proxy geometry. The final image is rendered out of the planes with applied on them textures via Alpha-blending.\\
-
+As it was already said textures are used to add tiny details to polygonal models. Any graphic library has an advanced set of tools for texture mapping, which can be used to this kind of volume rendering. The algorithm creates set of planes called proxy geometry. Transfer function projects the volumetric dataset on the proxy geometry. The final image is rendered out of the planes with applied on them textures via Alpha-blending.\\
 
 %http://http.developer.nvidia.com/GPUGems/gpugems_ch39.html
 A proxy geometry can be created in two different ways. The first one called 2D texture-based rendering. In this case three different sets of planes are generated. All sets are generated perpendicular to a different directions in 3D space. This approach leads us to sudden jumps in image quality for different camera position and does not allow to change the sampling rate of the visualisation.\\
@@ -284,33 +284,96 @@ A proxy geometry can be created in two different ways. The first one called 2D t
 \end{figure}
 That's why the second way was invented. It is called 3D texture-based volume rendering. In this solution the algorithm creates only one set of planes which are always perpendicular to the camera and textures are mapped on them differently for different camera position. \\
 
-It gets rid of an artifact of the first technique and allows to modify the sampling rate of the visualisation. The approach is the most popular direct volume rendering algorithm among medical software, but it was not selected for Arction's Volume rendering engine, because it is less flexible than all other methods discussed further. It is possible to use transfer function to emphasize or classify features of interest in the volume, but it is not comparable with future possibilities provided by other approaches.
+It gets rid of an artifact of the first technique and allows to modify the sampling rate of the visualisation. The approach is the most popular direct volume rendering algorithm among medical software, but it was not selected for Arction's Volume rendering engine, because it is less flexible than all other methods discussed further. It is possible to use transfer function to emphasize or classify features of interest in the volume, but it is not comparable with possibilities provided by other approaches.
 %http://www.forceflow.be/wp-content/uploads/2012/02/vr_overview.pdf
 
 \subsubsection{Ray Casting}
 
-Image is produced by the algorithm throughout sampling of the volume along tracks of the rays which travel inside the dataset. A smiple realisation of hardware acceleration of the aproach requer generation of boundaries for our volume. Usually they are represented by cube. As in Texture-based approach data is loaded to graphic cards as set of 2D slices, mapped to several huge 2D texture or as single 3D textures.\\
+Image is produced by the algorithm throughout sampling of the volume along tracks of the rays which travel inside the dataset. A smiple realisation of hardware acceleration of the aproach requer generation of boundaries for our volume. Usually they are represented by cube. \\
 
-Volume Ray Casting includes three simple steps:
+Volume Ray Casting includes four simple steps:
 \begin{itemize}
 \item An engine shoots a ray in a direction of observation for every point on a screen.
+\item The ray travels throught scene and dataset.
 \item A vector of the ray's track is calculated based on position there the ray hits front and back faces of the cube.
 \item The volume is downsampled along the ray track and color of the pixel is calculated out of collected information in according with a Ray Function.
 \end{itemize}
+\begin{figure}[H]
+\centerline{\includegraphics[scale=0.35]{img/rayCast}}
+\caption{Raycasting steps: 1) The ray is shooted, 2) The ray travels throught scene and dataset. 3) Inlet and outlet position of the ray's track are detected 4) Downsampling and the pixel's color calculation process}
+\end{figure}
 
-Ray Function is a core of the algorithm. It possess enier power of the technique, because it specifes the way how the data is combined. Such a high level of flexibility is provided the algorigth by Ray Function. It is very powerful tool for feature extraction, becuase it controls how color, opacity and gradient of isosurface are calculated by the enigene. Transfer function and classification are also performed via Ray Function.\\
+Ray Function is a core of the algorithm. It possesses an entier power of the technique, because it specifes the way how the data is combined. Such a high level of flexibility is provided to the algorigth by Ray Function. It is very powerful tool for feature extraction, becuase it controls how color, opacity and gradient of isosurface are calculated by the enigene. Transfer function and classification are also performed via Ray Function.\\
 
-The algorithm has very high rendering quality without any additional arifacts and due to the reasone that every ray is calculated seperatly it is easilly implemented in modern hardware focused on parallel calculations. The main problem of the algorith is that rays usually  do not hit the voxel to the center, That is why, the samples have to be calculated via interpolation which is especially complex operation in terms of calculation in case of 3D space.
-
- 
+The algorithm has very high rendering quality without any additional arifacts. Due to the reasone that every ray is calculated seperatly it is easilly implemented in modern hardware focused on parallel calculations. The main problem of the algorith is that rays usually do not hit the voxel to the center. In case of 3D space an interpolation is a very complex operation in terms of calculanal expensis, which has to be performed to get nice sampling.
 \subsubsection{Splatting}
+
+The technique was created to reduce interpolation expensis which were the main problem of Volume Ray Casting. The solution uses totally oposite aproach to reach the goal. Instead of sampling of the dataset by ray, the algorigthm projects the voxel to the image plane one by one. Of course the voxel porjections do not always fit excatly to pixels' grid of screen, but the problem is again solved by an interpolation, fortunately in this case the operation is much less expensive in term of calculation, becaus it is perfomed in 2D space. \\
+
+The final pixel's color is calculated in a very similar way used by Ray Function, that is why the algorithm is as flexible as Volume Ray Casting. The main disadvanrage of the approach is that some artifacts are contributesd to the final image due to voxels overlap. It is also difficalt to change sampling rate of the approach. The issues make the algorithm less interesting for us.
+
 \subsubsection{Shear-warp}
 
-\chapter{Implementation}
+As Splatting, the aproach also tries to speed Ray Caster up by solving of the interpolation issue, but it uses totally different way to illuminate the problem. Shear-warp has a very similar idea to the Volume Ray Casting. In some sence it is an optomozation of the technique which makes rays always hit excatly to the center of voxel.\\
+
+The aim is achived by transformation of the volume data to sheared object space by translation and scaling of slices. After that an intermediat 2D image is produced by Ray Casting performed in the sheared object space. The transformation brings some distortion to the output image. It is fixed at last step of the algorithm called wraping. Final image is result of transformation applied to the intermideia picture.\\
+\begin{figure}[H]
+\centerline{\includegraphics[scale=0.5]{img/shear-warp}}
+\caption{(left)Ray Casting in world coorinates, (right)Ray Casting in shear object coordinates}
+\end{figure}
+This solution gives us the fastest volume rendering process, but unfortunatly the algorthm also suffers from several types of artifacts. Some of them are result of sampling rate inconsistent along different directions, others are produced by 2D transformation at wrapping stage.
+
+
+\chapter{IMPLEMENTATION}
+This chapter contains detailed explanation of the product implementation. It discribes how the engine works, what kind of parts contains and which tools are used in it. Key step of the engine work are highlighted and explaned in this chapter.
 \section{Tools}
-\subsection{C\#}
+This part of the chapter discibes technologies used in the implementation of the project. It also gives a short explation to thier usage in the solution. The rendering engine has to became a part of LightningChart Ultimate. An integration with the library gives some restrictions in terms of set of tools which can be used in the project and it plays a key role in technology selection.
+\subsection{C\# and .NET}
+C\# is general perpuse  multi-paradigm programing language with strong types. It is created by Microsoft as native language of .NET Framework. Our days the language can be used for Web services, Windows desk-top and mobile applications, computer games with several different game engines. In addition, Xamarin created set of tools for croos-platfom C\# development.\\
+%xamarin.com
+
+In some sence it contains constructions ispiered by an object-oriented, imperative, functional and many other programming paradigm. The language belongs to C-like family, that is why the curly-brace syntax looks very similar to the C, C++, Java.  C\# combines an advantages of Java and C++ in single powerful and elegant way. It is more simple and safe than C++, but at the same times it has advanced features like: pointers arithmetics, enumerations, lambda expressions, structs, delegates and implicitly typed local variables. Even today when the most part of them are implemented in the last version of Java, C\# still is way more flexible.\\
+
+Other advanced feature of C\# is Language-Integrated Query expressions or shortly LINQ, it is set of functions for strong-typed queries, which allows to write very short functional stylied code for collection processing.\\
+
+.NET Framwork contains applications run in virtual execution system called the Common Language Runtime shortly CLR and more than 4000 of class which implements wide range of useful functionalities. The runtime is able to execute an Intermediate Language, which is compiled from C\# or 20 other languages.
+%https://msdn.microsoft.com/en-us/library/z1zx9t92.aspx
 \subsection{DirectX 11}
-\subsubsection{Redering Pipeline}
+
+DirectX is a C/C++ API\footnote{Application Programming Interface} for work with multimedia resources created by Microsoft for Windows and Xbox. It contains advanced tools for rednering of 2D and 3D graphic and sound management. Direct3D is a part of the library responsible for hardware accelerated rendering of 3D graphics. The tool is mainly focused on GPU accelerated rendering of polygonal meshmodels.\\
+%http://searchwindowsserver.techtarget.com/definition/DirectX
+
+\subsubsection{Rendering Pipeline}
+Key consept of the library is redering pipeline. It is a very general term in computer grapics. The pipeline is a siqence of stages which recieves an input data as set of polygons, textures and variables, process the information step by step and generates the final image in the end.\\
+
+Direct3D's pipeline has two types of steps:
+\begin{itemize}
+\item Fixed-function - perform certain processing operation which can be customize due to some level thougth the API.
+\item Programmable - processing is performed by so called shader program. It is function which is created by developer and satisfies input and output parameters of the stage.
+\end{itemize}
+ 
+The graphics pipeline is shown on Figure \ref{fig:pipeline}. Let me exaplain every step of the pipeline more detailed: 
+
+\begin{itemize}
+\item Input-Assembler Stage recieve input information as set of buffers and supply future to the pipeline. There are four types of buffers in Direct3D:
+  \begin{itemize}
+    \item Vertex Buffer is used to define geometry of the object by list of vertexs. Every vertex has to follow Input Layout deffined for the pipeline by developer. It discribes the vertex members like: position and texture coordinates, color value, normal etc used in this application.
+    \item Index Buffer conatins an order of vertexs as sequence of integer variables.
+    \item Constant supplies pipeline with a constant data, like transfor matrixes, position and directions of ligth sources, textures, and so on.
+  \end{itemize}
+\item 
+%https://msdn.microsoft.com/en-us/library/windows/desktop/ff476898(v=vs.85).aspx
+\end{itemize}
+
+\begin{figure}[h]
+\centerline{\includegraphics{img/pipeline}}
+\caption{Flowchart of Direct3D 11 Graphics Pipeline\label{fig:pipeline}}
+\end{figure}
+
+
+
+
+
 \subsubsection{HLSL}
 \subsection{SharpDX}
 \subsection{LightningChart Ultimate}

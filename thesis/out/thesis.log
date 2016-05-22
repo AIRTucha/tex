@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.30)  21 MAY 2016 01:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.30)  22 MAY 2016 03:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -773,12 +773,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 260--261
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 272--273
+Underfull \hbox (badness 10000) in paragraph at lines 266--267
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 274--275
+Underfull \hbox (badness 10000) in paragraph at lines 273--274
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 275--276
 
  []
 
@@ -806,48 +811,115 @@ Underfull \hbox (badness 10000) in paragraph at lines 292--293
 
  []
 
+<img/rayCast.png, id=264, 1137.24875pt x 378.41376pt>
+File: img/rayCast.png Graphic file (type png)
+ <use img/rayCast.png>
+Package pdftex.def Info: img/rayCast.png used on input line 302.
+(pdftex.def)             Requested size: 398.04303pt x 132.4468pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 301--302
+Underfull \vbox (badness 1019) has occurred while \output is active []
+
+ [12 <./img/texture-based.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 306--307
 
  []
 
-[12 <./img/texture-based.png>] [13]
+
+Underfull \hbox (badness 10000) in paragraph at lines 311--312
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 317--318
+
+ []
+
+[13 <./img/rayCast.png>]
+<img/shear-warp.png, id=278, 644.4075pt x 253.94875pt>
+File: img/shear-warp.png Graphic file (type png)
+
+<use img/shear-warp.png>
+Package pdftex.def Info: img/shear-warp.png used on input line 321.
+(pdftex.def)             Requested size: 322.20296pt x 126.97406pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 319--323
+
+ []
+
+[14 <./img/shear-warp.png>]
 Chapter 3.
-[14
+
+Underfull \hbox (badness 10000) in paragraph at lines 332--334
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 335--336
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 337--338
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 343--345
+
+ []
+
+
+Underfull \vbox (badness 1584) has occurred while \output is active []
+
+ [15
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 347--348
+
+ []
+
+<img/pipeline.jpg, id=291, 292.09125pt x 481.8pt>
+File: img/pipeline.jpg Graphic file (type jpg)
+ <use img/pipeline.jpg>
+Package pdftex.def Info: img/pipeline.jpg used on input line 367.
+(pdftex.def)             Requested size: 292.09052pt x 481.79881pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 1521) has occurred while \output is active []
+
+ [16]
+[17] [18 <./img/pipeline.jpg>]
 Chapter 4.
-[15
+[19
 
 ]
 Chapter 5.
-[16
+[20
 
 ]
 Chapter 6.
 
 AED: lastpage setting LastPage
-[17
+[21
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 349.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 349.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 410.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 410.
  (/Users/alexey/Documents/tex/thesis/out/thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 349.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 349.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 410.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 410.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 349.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 410.
  ) 
 Here is how much of TeX's memory you used:
- 8347 strings out of 493117
- 127495 string characters out of 6135432
- 233111 words of memory out of 5000000
- 11622 multiletter control sequences out of 15000+600000
+ 8373 strings out of 493117
+ 127910 string characters out of 6135432
+ 233187 words of memory out of 5000000
+ 11637 multiletter control sequences out of 15000+600000
  26087 words of font info for 51 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  36i,11n,43p,847b,458s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -856,11 +928,11 @@ exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/tex
 live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
 ive/2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/t
 exmf-dist/fonts/type1/urw/times/utmr8a.pfb>
-Output written on /Users/alexey/Documents/tex/thesis/out/thesis.pdf (18 pages, 
-1474375 bytes).
+Output written on /Users/alexey/Documents/tex/thesis/out/thesis.pdf (22 pages, 
+1692035 bytes).
 PDF statistics:
- 323 PDF objects out of 1000 (max. 8388607)
- 285 compressed objects within 3 object streams
- 65 named destinations out of 1000 (max. 500000)
- 311 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 355 PDF objects out of 1000 (max. 8388607)
+ 307 compressed objects within 4 object streams
+ 73 named destinations out of 1000 (max. 500000)
+ 326 words of extra memory for PDF output out of 10000 (max. 10000000)
 

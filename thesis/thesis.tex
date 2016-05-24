@@ -430,7 +430,7 @@ The most commune way of volume data distribution is collection of 2D slices. The
 \end{figure}
 Unfortunatly, current implementation of the volume rendering engine supports only first approach, because slice-based data is easier to get. Specific software can converte DICOM slices to the picture formats supported by .NET like *.JPEG, *.TIFF and *.PNG. RAW volume data files can be converted to *.CSV files, but due to the reason that there are many different specifications of the files it is very difficalt fo find the software.\\
 
-.NET tools for file handling load images in supported by framework formats. The slices are loaded to the memory from specified folder as an array of bitmaps in the same order they are stored. An example of slice is shown on Fugire \label{fig:slice}.\\
+.NET tools for file handling load images in supported by framework formats. The slices are loaded to the memory from specified folder as an array of bitmaps in the same order they are already stored. An example of slice is shown on Fugire \label{fig:slice}. DirectX 11 also supports 3D textures, but the approch was not used in the engine, becuase the feature is not supported by DirectX 9. Arction wanted to have an opportunity to port the volume engine to DirectX 9 quickly, if it would be needed. \\
 
 \begin{figure}[!h]
 \centerline{\includegraphics[scale = 0.35]{img/map}}
@@ -464,12 +464,97 @@ Possibility to render scene in several steps makes rendering pipeline especially
 
 Deferred rendering is one of the most popular realisatiom of the idea. The technology is created for rednering of scenes with large amount of dynamic lights. Traditionaly this kind of functionality requers a cemplex set of shaders. Multi-pass approach breaks the process to smaller peaces and perfomes the calculations separatly for every step. It allows to simplify an architcture of rendering framework. It can also give an opportunity to apply GPI acceleration to some parts of rendering algorithm which used to be executed on CPU befor.\\
 
-Our volume ray caster is also going to get some advantages from multi-pass rendering. In case of the solution it has only two passes and it allows the algorith to determine vectors of the sampling ray in the volume coordinate system without any additional mathematical calculations.
+Our volume ray caster is also going to get some advantages from multi-pass rendering. In case of the solution it has only two passes and it allows the algorith to determine vectors of the sampling ray in the volume coordinate system without any additional mathematical calculations. It means that entier rendering pipeline of the engine contains two typical rednering pipelines. The first one is generates tecxture which contains an important information for rendering of final image at the second pass. Both passes use only vertex and pixel shader programs.
 
 \subsection{First pass}
+
+At this step rendering engine has to generate texture which keeps an information about the exit position of sampling rays. For this reason front-face culling mode of Direct3D has to be turned on. It makes the library to draw only polygons which are normally not visualised, because their front side looks in an opposite to the screen's direction.\\
+
+An input of the first pass contains only set of vertecs for boundries of the dataset, constant buffers for slice range clipping and matrixs for calculatuin of the vertecs position of the chart space. The boundaries are always renpresened by cube. The cube contains 8 verteces calculated on C\# according with requered size of the volume model. Constant buffer is represented by two Vector3 variables, one of them contains the number of minimal slice for every direction and another one keeps an information about maximal boundaries. We also have three traditional for 3D graphic Matrixes: World Coordinate, View, and Projection. This matrixes have uque values for every object and allows to calculate desierable position, scale and rotation of the object in  screen coordinats.\\
+
+The Vertex Shader of the first pass calculates positions of the cube verteces in accodring with clipping range buffers. After that matrixes are applied to transform the geometry to the screen coordinates. Internal coordinates of the dataset are calctulated out an original position of verteces. They are represented by Vector3, with value range from 0 to 1 along every axis and stored as texture coordonates.\\
+
+The Pixel Shader represents the coordinates as color. X coordinate is stored in red chanel, Y one is stored in green channel and Z coordinates is stored as blue value. The final result of the first pass is demostrated on Figure \ref{fig:first}.
+\begin{figure}[!h]
+\centerline{\includegraphics[scale = 0.5]{img/first}}
+\caption{First pass output\label{fig:first}}
+\end{figure}
+
 \subsection{Second pass}
+
+At this pass the engine has to calculate vector of sampling ray displaisment thougnt dataset. The enter coordinates of the rays are need for the calculation that is why defult culling mode has to be restored. The input of the pipeline has a set of vertecs, matrixs, an original dataset represeted as texture map, texture rendered at the first pass, buffers with slice range, contrast, brighness and tresholds setting.\\
+\begin{figure}[!h]
+\centerline{\includegraphics[scale = 0.5]{img/second}}
+\caption{Coordinates of the hit points.\label{fig:second}}
+\end{figure}
+
+Second pass has excatly same vertex shader with the first one, but due to changes in culling mode it output enter point of sampling rays. In other word the coordinates of the points there the rays hit the boundaries. Firgue \ref{fig:second} shows them at the same way it was done on the first pass.\\
+
+The pixel shader samples coordinates there rays hit the back side of cube from the texture generated at the first pass. After that it substracts enter coordinates calculated at the vertex shader of the second pass from the information. The operation result is the vector of the rays track. The tracks are visulised as colors on the figure \ref{fig:final} The vector is devided by sampling rate to get step vector. 
+\begin{figure}[!h]
+\centerline{\includegraphics[scale = 0.5]{img/final}}
+\caption{The visualisation of sampling ray vectors' tracks \label{fig:final}}
+\end{figure}
+Acruall volume sampling is prefomed by for loop. It starts from the hit point of the ray and adds a step vector every interation to get coordinates of new sampling point. The data is sampled out of volume by function which calculates correspondent position on the texture map.\\
+
+It calculates the nearest slice coorespondent to the Z position. After that it checks how many full rows are included in to the value and what is the column number of the rest. Values from two closest slices can be interpolated to get smoother result. Handling of the information depends from Ray Function.\\
+
 \subsubsection{Empty space skipping}
+
+The most part of volume dataset is represented by an empty space. Empty space does not contain any importan information, usually it is represented by pixel with a very low value per each chenalle. In our case a voxel is classified as empty one if its values is out of a treshold range for all of its channels. There are huge amount of rays which travels thought arrays which contains only empty space. The optimization has to prevent high resolution downsampling of the regions.\\
+
+Due to realisation of the technique, the sampling is brouken down into two steps. At the first step ray travels thougnt dataset with a very low sampling rate. It saves positions of the first and the last non-empty voxel hitted by the ray. After another ray goes thougt the dataset with a higher sampling rate. The second ray starts one low resolution sampling rate step vector earlier than the position of the first non-empty voxel. It stops one low resolution sampling rate step vector after the last non-emtpry voxel detected by the first ray. The process is shown on figire \ref{fig:empty}.\\
+
+\begin{figure}[!h]
+\centerline{\includegraphics[scale = 0.5]{img/empty}}
+\caption{Red arrows represents low resolution sampling rate ray. Green demostrates high resolution sampling one.\label{fig:empty}}
+\end{figure}
+
+High and low resolution sampling rates are spcified by constant buffers. High sampling rate determines rendering quality. An optimal quallity is reached then it mutch an amount of voxels in the longest dimmension, because it allows to performe uniform sampling of entier dataset and collect all information stored inside. Low resolution sampling can only be defined via experiment. Too small low resolution sampling rate can contibute some artifact to the final visualistion. It is a trade of quality and frame rate. The rigth value have to keep an intertive framerate and unnoticable artifacts.
+
+
 \subsubsection{Ray function}
+
+Ray function determines how the sampled data is combined. Different ray functions allows to extract diffrent features out of the dataset. Two most commune ray function are implemented in out rendering engine.
+
+Accomulation function uses alpha-compositing to get compose as much data as it is possibel. The visualisations produced by the technique look like semi-transperent gel. Ray function implementation is represented by for loop, which runs from 0 to the value sampling rate. Every interation contains several steps:
+\begin{itemize}
+\item The voxel is sampled out of texture map.
+\item The volel's value validation is performed by if-statement. It checks that every chennal is in its personal treashold range. If the voxel is empty next four steps have to be skipped.
+\item The alpha is calculated in according with an equation:
+\begin{equation} \label{eq:alpha}
+\alpha_{output} = \alpha \times opacity \times \frac {1}{{sampling\ rate}}
+\end{equation}
+
+\item The colors are calculated in according with an equation:
+\begin{equation} \label{eq:color}
+color_{output} = (1 - \alpha_{accomulation}) \times (color + brighness) \times contrast  \times \alpha
+\end{equation}\\
+
+$\alpha_{accomulation}$ contains previosuly accomulated alpha values. Brighness and contrast are supplied by constant buffers and used to perform windowing.
+\item After that the colors and alpha are added to the correcpondent variable which keeps a previousl accomulated infromation.
+\item If-statement checks that alpha is not oversaturated. The ray has to be terminated in this case.
+\item Step vector is added to reach next sampling position.
+\end{itemize}
+
+An example of images produced by an accomulation function is demostrated on figure \ref{fig:accum}.\\
+
+\begin{figure}[!h]
+\centerline{\includegraphics[scale = 0.6]{img/accum}}
+\caption{An example of an accomulation function output\label{fig:accum}}
+\end{figure}
+
+Maximal intesnsity visualise only the brightest value sampled by ray. It gives very similar result to the X-ray images. The ray function is very similar to the prevouse one. It also use for loop and step vector to sample the dataset, but it does not accomulate the information as it is done in previous example. Instead it keeps the biggest value which ray meet during the travel and put it to the pixel in the end. It allows end user to idetify specific structures inside the volume. An example of the ray function result is shown in the figure \ref{fig:maxi}
+
+\begin{figure}[!h]
+\centerline{\includegraphics[scale = 0.6]{img/maxi}}
+\caption{An example of maximum intensity function output\label{fig:maxi}}
+\end{figure}
+
+
+%https://graphics.ethz.ch/teaching/former/scivis_07/Notes/Handouts/03-raycasting.pdf
+
+
 
 \chapter{Conclusion}
 \section{Results}

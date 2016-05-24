@@ -16,6 +16,7 @@
 \usepackage{titlesec}
 \usepackage{caption}
 \captionsetup{figurename=FIGURE}
+\captionsetup{tablename=TABLE}
 \titleformat{\chapter}
   {\normalfont\LARGE\bfseries}{\thechapter}{1em}{}
 \titlespacing*{\chapter}{0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
@@ -27,7 +28,6 @@
 
 \pagestyle{fancy}
 \fancyhf{}
-
 
 %HEADER
 %**************************************************************************************
@@ -157,7 +157,7 @@ The dataset can be captured by various numbers of technologies like: MRI\footnot
 
 The first experience in the visualisation of volumetric data was gained by me during my internship at the Institute of Data Processing and Electronics, which belongs to the Karlsruhe Institute of Technology (KIT). I was a part of the 3D Ultrasound Computer Tomography (USCT) team there. Their main goal is the development of a new methodology for early breast cancer detection. An algorithm for visualisation of five-dimensional datasets was developed by me during the work placement. In result the it was integrated into Tomo Ray Caster 2\footnote{JavaScript framework for the visualisation of 3D data, developed in Institute of Data Processing and Electronics} and USCT's edition of DICOM Viewer.\\
 
-\begin{figure}[H]
+\begin{figure}[!h]
 \includegraphics[scale=0.4]{img/usct1}\includegraphics[scale=0.4335]{img/usct2}\\
 \caption{Volume visualisation of breast phantom made by USCT}
 \end{figure}
@@ -170,7 +170,7 @@ The very first steps in modern computer graphics was made by me during the proje
 \section{Arction Oy and Ligthning Chart}
 
 Arction Oy is a Finnish software company based in Kuopio. Their team has a strong background in computer graphics and science. The main product of the company called LightningChart Ultimate. It is the fastest C\# library for scientific and engineering data visualisation. The library is capable to draw massive XY, Polar, Smith and 3D XYZ graphs, polygonal mesh models, surfaces, 3D pies/donuts and Geographic information. The library has an API for .NET WinForm and WPF applications, it is also possible to use it for a traditional Win32 C++ software development. The main advantage of the library is the fact that it is based on low-level DirectX graphics routines developed by Arction, then the most part of competitors use graphics routines which belongs to System.Windows.Media.\\
-\begin{figure}[H]
+\begin{figure}[!h]
 \includegraphics[scale=0.33]{img/lchu}\\
 \caption{Example of LightningChart possibilities from the main page of Acrtion}
 \end{figure}
@@ -213,7 +213,7 @@ Today we are literally surrounded by the surface rendering based on polygonal me
 Traditionally, 3D surfaces are constructed out of huge amount of polygons connected as a mesh. Due to simplicity, they usually have a triangular shape. It is possible to describe triangle via list of three coordinates called vertices. The internal area of the shape filled with color during rasterization step. The color is calculated as dot product between the surface vector normal and the vector of light.
 %http://people.csail.mit.edu/fredo/Depiction/1_Introduction/reviewGraphics.pdf
 
-\begin{figure}[H]
+\begin{figure}[!h]
 \includegraphics[scale=0.55]{img/mesh}\\
 \caption{Wireframe and flat shading polygonal meshmodel}
 \end{figure}
@@ -276,7 +276,7 @@ As it was already said textures are used to add tiny details to polygonal models
 
 %http://http.developer.nvidia.com/GPUGems/gpugems_ch39.html
 A proxy geometry can be created in two different ways. The first one called 2D texture-based rendering. In this case three different sets of planes are generated. All sets are generated perpendicular to a different directions in 3D space. This approach leads us to sudden jumps in image quality for different camera position and does not allow to change the sampling rate of the visualisation.\\
-\begin{figure}[H]
+\begin{figure}[!h]
 \centerline{
 \includegraphics[scale=0.7]{img/texture-based}
 }
@@ -298,7 +298,7 @@ Volume Ray Casting includes four simple steps:
 \item A vector of the ray's track is calculated based on position there the ray hits front and back faces of the cube.
 \item The volume is downsampled along the ray track and color of the pixel is calculated out of collected information in according with a Ray Function.
 \end{itemize}
-\begin{figure}[H]
+\begin{figure}[!h]
 \centerline{\includegraphics[scale=0.35]{img/rayCast}}
 \caption{Raycasting steps: 1) The ray is shooted, 2) The ray travels throught scene and dataset. 3) Inlet and outlet position of the ray's track are detected 4) Downsampling and the pixel's color calculation process}
 \end{figure}
@@ -317,15 +317,20 @@ The final pixel's color is calculated in a very similar way used by Ray Function
 As Splatting, the aproach also tries to speed Ray Caster up by solving of the interpolation issue, but it uses totally different way to illuminate the problem. Shear-warp has a very similar idea to the Volume Ray Casting. In some sence it is an optomozation of the technique which makes rays always hit excatly to the center of voxel.\\
 
 The aim is achived by transformation of the volume data to sheared object space by translation and scaling of slices. After that an intermediat 2D image is produced by Ray Casting performed in the sheared object space. The transformation brings some distortion to the output image. It is fixed at last step of the algorithm called wraping. Final image is result of transformation applied to the intermideia picture.\\
-\begin{figure}[H]
+\begin{figure}[!h]
 \centerline{\includegraphics[scale=0.5]{img/shear-warp}}
 \caption{(left)Ray Casting in world coorinates, (right)Ray Casting in shear object coordinates}
 \end{figure}
 This solution gives us the fastest volume rendering process, but unfortunatly the algorthm also suffers from several types of artifacts. Some of them are result of sampling rate inconsistent along different directions, others are produced by 2D transformation at wrapping stage.
 
-
 \chapter{IMPLEMENTATION}
-This chapter contains detailed explanation of the product implementation. It discribes how the engine works, what kind of parts contains and which tools are used in it. Key step of the engine work are highlighted and explaned in this chapter.
+This chapter contains detailed explanation of the product implementation. It discribes how the engine works, what kind of parts contains and which tools are used in it. Key step of the engine work are highlighted and explaned in this chapter.\\
+
+In according with results of literature research several the most commone algorithms for volume redering were comparied and the most siutable approch was implemented as Volume Rendering Add-On of LigthinghChart Ultimate. One of the main requerment for the LightningChart's volume rendering engine is possiblity to combine volume and other 3D visualisation at the same chart space. Easy and accurate convertion between volume and chart coordinate system is needed. The volume ray caster and texture-based volume rendering can provide us with the feature. The algorighms keep entier visualisation inside the coordinate system of a proxy geometry. It is placed on the coordinate system of chart. It means that the coordinates of volume model can be easilly converted to the coordinates of enier chart.\\
+
+Anouther important thing is implementation of rotation, scaling and transmition of the model in the chart space. As it was already mentioned the proxy geometry also makes it much easier. But this approach is not fully applieable for 3D Texture-based solution. In this approach slices always have to be perpendicular to the camera, that is why rotation has to be implemented on the process of texture mapping.\\
+
+Finally there are only two technologies. The final chose is Ray Casting, because it has better image quality than 2D Texture-based rendering. In addtition, Texture-based volume rendering is less flexible than Volume Ray Casting.
 \section{Tools}
 This part of the chapter discibes technologies used in the implementation of the project. It also gives a short explation to thier usage in the solution. The rendering engine has to became a part of LightningChart Ultimate. An integration with the library gives some restrictions in terms of set of tools which can be used in the project and it plays a key role in technology selection.
 \subsection{C\# and .NET}
@@ -338,11 +343,14 @@ Other advanced feature of C\# is Language-Integrated Query expressions or shortl
 
 .NET Framwork contains applications run in virtual execution system called the Common Language Runtime shortly CLR and more than 4000 of class which implements wide range of useful functionalities. The runtime is able to execute an Intermediate Language, which is compiled from C\# or 20 other languages.
 %https://msdn.microsoft.com/en-us/library/z1zx9t92.aspx
+
+C\# is used in the porject for as close as it is possible intergration with LightningChart Ultimate. It performes loadign and preprocessing of the dataset and management of visualisation process.
+
 \subsection{DirectX 11}
 
 DirectX is a C/C++ API\footnote{Application Programming Interface} for work with multimedia resources created by Microsoft for Windows and Xbox. It contains advanced tools for rednering of 2D and 3D graphic and sound management. Direct3D is a part of the library responsible for hardware accelerated rendering of 3D graphics. The tool is mainly focused on GPU accelerated rendering of polygonal meshmodels.\\
 %http://searchwindowsserver.techtarget.com/definition/DirectX
- \begin{figure}[H]
+ \begin{figure}[!h]
 \centerline{\includegraphics[scale=0.9]{img/pipeline}}
 \caption{Flowchart of Direct3D 11 Graphics Pipeline\label{fig:pipeline}}
 \end{figure}
@@ -381,15 +389,83 @@ The graphics pipeline is shown on Figure \ref{fig:pipeline}. Boxes with rounded 
 \item Output-Merge Stage uses pixel shader's output togher with depth/stencil information to generate final image and write it in appropriate way to render target.
 \end{itemize}
 
+It is worth to metntion that a render terget is not always represented by screen. Sometimes the output is stored in texture. For example the image can be loaded again to graphic card and sampled to get some precalculated prevously information. The technique called miltyi-pass rendering.
+
+%https://msdn.microsoft.com/en-us/library/windows/desktop/ff476882(v=vs.85).aspx
 \subsubsection{HLSL}
 There are two way of rendering pipeline customization. Fixed-functions behavoure can be modified by the API and programable stages flexiblities is orgonised via special type of programming languages called Shader Languages. Direct3D's realisation of shader language called HLSL\footnote{High Level Shader Language}.\\
 
 The language is basically significantly modified version of C. The lanaguage does not support features like pointer artichmetics and dynamic momory allocation, but the syntax is still understandable for C developers. It extends C syntax by classes, several new data types, buffers, sematics and huge library of useful for shader development functions. There are vector, matrix and 1D-3D texture data types which are very useful for processing of 3D primitives. As it was already mentioned buffers are used to supply pipeline with data. Sematics contains metadata which is related with data exchange among fixed-function and programable stages of the pipeline.
 \subsection{SharpDX}
+
+As it was already mentioned DirectX is C++ library, so it is not possible to use in directly from C\#. The problem is solved by SharpDX. It is open-source managed C\# wrapper for an original API of DirectX. It plays role of bridge between API and .NET. As result developers are able to manipulate the functionality of the API  from C\#.\\
+%http://sharpdx.org
+Every feature of the API is implemented in a very natural way. That is why a huge amount of tutorials and example avable for original C++ API can be easylly translatted to C\# and SharpDX. Even original documentaion is still useable for SharpDX development.
+
 \subsection{LightningChart Ultimate}
+
+LightningChart Ultimate is the fastest C\# library for scientific and engineering data visualisation. It is able to draw massive XY, Polar, Smith and 3D XYZ graphs, polygonal mesh models, surfaces, 3D pies/donuts and Geographic information. 
+
+\begin{figure}[!h]
+\centerline{\includegraphics[scale=0.4]{img/chart}}
+\caption{Some of LightningChart Examples}
+\end{figure}
+
+The library has an API for .NET WinForm and WPF applications, it is also possible to use it for a traditional Win32 C++ software development. The main advantage of the library is the fact that it is based on low-level DirectX graphics routines developed by Arction, then the most part of competitors use graphics routines which belongs to System.Windows.Media.\\
+
+An intergration with LightningChart has sevral advantages and disadvantages. In one hand, it applies main role in terms of tools selection for project implementation, because deep enough integration can be achived only via usage of exactly same set of techologies. It also  forces the volume rendering engine to follow similar class arcitecture. Moreover, LightningChart is commercial software package. That is why any external dependences have to be avoided as much as it is possible. It means that even open-source libraries can not be used without extrimly important reason.\\
+%http://arction.com/products_lc_ultimate_sdk
+
+On the another hand an abilities of LightningChart to draw 3D polygonal mesh models make the development much more simple. The library is able to rotate, scale and move the models around chart's space, so the functionality can be easilly applied to proxy geometry. As result the features are implemented without almost any development from the side of volume rendering engine. In addition it is a huge advantage for clients, because volume and mesh 3D models can be visulised at the same chart in the same coordinate system. It provides them with really uniqe and powerful opportinity for complex 3D visualisations.
+
 \section{Visualisation process}
+
+This section of the paper explaines main principles and implementation detailes of the project. It disribes the main challangs and explain how were solved during development of the rendering engine.
+
 \subsection{Loading and preprocessing of dataset}
+The most commune way of volume data distribution is collection of 2D slices. The 2D slices are just images in common format. Sometimes they can be represented as set of DICOM\footnote{Digital Imaging and Communications in Medicine} files. In this case they contain metadata of the studies toughere with embeded picture. Volumes can also be distibuted as table of original values. The table usually is part of RAW file which also contain some meta information. Actually, RAW is several different format with commone name and more detialed specification of every single approach depends from machine which perfomed the data aqusition.\\
+\begin{figure}[!h]
+\centerline{\includegraphics[scale = 0.35]{img/slice}}
+\caption{Single slice from Volume dataset.\label{fig:slice}}
+\end{figure}
+Unfortunatly, current implementation of the volume rendering engine supports only first approach, because slice-based data is easier to get. Specific software can converte DICOM slices to the picture formats supported by .NET like *.JPEG, *.TIFF and *.PNG. RAW volume data files can be converted to *.CSV files, but due to the reason that there are many different specifications of the files it is very difficalt fo find the software.\\
+
+.NET tools for file handling load images in supported by framework formats. The slices are loaded to the memory from specified folder as an array of bitmaps in the same order they are stored. An example of slice is shown on Fugire \label{fig:slice}.\\
+
+\begin{figure}[!h]
+\centerline{\includegraphics[scale = 0.35]{img/map}}
+\caption{An example of slice map\label{fig:map}}
+\end{figure}
+Texture buffers have a limmited amount of avaible slot. Slices usually have a very low resolution so it is not efficent to load them one by one, due to an optimization of texture buffers' consumption an array of slices is mapped to the big texture map. The map contains slices mapped from left to right in according with an array index, look Figure \label{fig:map}. A bitmap processing is accelerated via pointer arifmetic, but any way it requers some time. That is why the engine is also able to load preprocessed texture map for quicker start of visualisation. \\
+
+\begin{table*}[!h]
+ \begin{center}
+    \begin{tabular}{ c  c }
+    \multicolumn{2}{l}{TABLE 3.1: Characterisation of different technologies \label{tab:level}}\\
+    Feature level & Maximal size of texture map\\
+    \hline
+    9\_2 & 2048\\
+    9\_3 & 4096\\
+    10\_0 & 8192\\
+    10\_1 & 8192\\
+    11\_0 & 16384\\
+    11\_1 & 16384\\
+    12\_0 & 16384\\
+    \end{tabular}
+
+  \end{center}
+\end{table*}
+DirectX has a limmitation in terms of the biggest avaible texture size, which can be loaded to the graphic card. The value depends from feature level of the graphic card, look table 3.1. Featue level defines the functionality supported by the graphic card. Usually, modern graphic cards have at least 11\_0. It means that they supprot up to 16 384 pixels per side. Sich a big texture can keep volume dataset with more than 600 voxel long in every dimenssion. It is possible to render even bigger models, because several texture maps can be generated if it is not possible to fit entier data into single one.\\
+%https://msdn.microsoft.com/en-us/library/windows/desktop/ff476876(v=vs.85).aspx
+
 \subsection{Multi-pass rendering}
+
+Possibility to render scene in several steps makes rendering pipeline especially flexible. The technique called Multi-pass rendering. Sometimes it is more efficient to render scene in several steps. Multi-pass rendering is based on an idea that every step excpet the last one outputs the result of perfomed calculation to to texture. The final pass sample information from the set of textures and generates the final image.\\
+
+Deferred rendering is one of the most popular realisatiom of the idea. The technology is created for rednering of scenes with large amount of dynamic lights. Traditionaly this kind of functionality requers a cemplex set of shaders. Multi-pass approach breaks the process to smaller peaces and perfomes the calculations separatly for every step. It allows to simplify an architcture of rendering framework. It can also give an opportunity to apply GPI acceleration to some parts of rendering algorithm which used to be executed on CPU befor.\\
+
+Our volume ray caster is also going to get some advantages from multi-pass rendering. In case of the solution it has only two passes and it allows the algorith to determine vectors of the sampling ray in the volume coordinate system without any additional mathematical calculations.
+
 \subsection{First pass}
 \subsection{Second pass}
 \subsubsection{Empty space skipping}

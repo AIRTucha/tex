@@ -196,7 +196,7 @@ This chapter explains the theory behind the project. It should introduce the mai
 
 \section{Rendering}
 
-Visualisation of 3D object as 2D image called rendering. Usually, 2D image is based on pixels\footnote{a shortcut from picture element}. In case of a grayscale picture, it is a two-dimensional array and the value of the array elements represents the brightness of corresponding pixels on a screen. Configuration of colored images is dependent from a color model, the most popular one is RGB. It represents an image as three different grayscale pictures for three different colors called channels. In case of the RGB color model the images contain Red, Green and Blue values, sometimes it also keeps an informant about opacity and the channel called Alpha.\\
+Visualisation of 3D object as 2D image called rendering. Usually, 2D image is based on pixels\footnote{a shortcut for picture element}. In case of a grayscale picture, it is a two-dimensional array and the value of the array elements represents the brightness of corresponding pixels on a screen. Configuration of colored images is dependent from a color model, the most popular one is RGB. It represents an image as three different grayscale pictures for three different colors called channels. In case of the RGB color model the images contain Red, Green and Blue values, sometimes it also keeps an informant about opacity and the channel called Alpha.\\
 
 Color model is the mathematical abstraction which allows computers to calculate brightness of a corresponding point on the screen. RGB is the original one for modern computer graphics, because it represents colors in the way they are physically reproduced on screen. There are several other color models. They have their own advantages, for example, some of them gives us an advanced editing possibilities while others represent physical characteristic of different types of output devices like printers.\\
 
@@ -210,7 +210,7 @@ Multidimensional data can be represented in two different ways: as a surface and
 Today we are literally surrounded by the surface rendering based on polygonal mesh. The technology is used in computer games, design, cinema, science, engineering and etc. The technology is so popular that entire 3D graphic pipeline is built around the idea. That's why this type of visualization is easily accelerated by graphic cards.\\
 
 \subsection{Vertexs}
-Traditionally, 3D surfaces are constructed out of huge amount of polygons connected as a mesh. Due to simplicity, they usually have a triangular shape. It is possible to describe triangle via list of three coordinates called vertices. The internal area of the shape filled with color during rasterization step. The color is calculated as dot product between the surface vector normal and the vector of light.
+Traditionally, 3D surfaces are constructed out of huge amount of polygons connected as a mesh. Due to simplicity, they usually have a triangular shape. It is possible to describe a triangle via list of three coordinates called vertices. The internal area of the shape filled with color during rasterization step. The color is calculated as dot product between the normal vector of the surface and the vector of light.
 %http://people.csail.mit.edu/fredo/Depiction/1_Introduction/reviewGraphics.pdf
 
 \begin{figure}[!h]
@@ -219,17 +219,18 @@ Traditionally, 3D surfaces are constructed out of huge amount of polygons connec
 \end{figure}
 
 \subsection{Normals}
-Surface normal vector of a triangle can be calculated as a cross product of two triangle's sides, but it will give an acceptable result only for very flat surfaces. That's why curve surfaces usually contain an additional normal vector for every vertex. They are able to significantly improve detailisation on the model. The information kept in them is used during shading and the tessellation of the model's geometry.\\
+Surface normal vector of a triangle can be calculated as a cross product of two triangle's sides, but it will give an acceptable result only for very flat surfaces. That's why curve surfaces usually contain an additional normal vector for every vertex. They are able to significantly improve detailisation on the model. The information kept in them is used during shading and the tesselation of the model's geometry.\\
 
 %http://www.emeyex.com/site/tuts/VertexNormals.pdf
 
 \subsection{Textures}
-Very small details can be added to the model via textures. It is specific 2D image which is used to sample high frequency information during rendering. The picture usually contains local color values, but it also can carry an information about normal vectors for a nice visualisation of very small structures on the surface. Textures are mapped to the surface via third vertex' parameter called texture coordinates. They keep an information about corresponding to this vector position in the 2D space of the image.\\
+Very small details can be added to the model via textures. It is specific 2D image which is used to sample high frequency information during rendering. The picture usually contains local color values, but it also can carry any information about normal vectors for a nice visualisation of very small structures on the surface. Textures are mapped to the surface via third parameter of vertex which is called texture coordinate. They keep any information about corresponding to this vector position in the 2D space of the image.\\
 
 %http://www.dcs.ed.ac.uk/teaching/cs4/www/graphics/Web/advanced_ogl.pdf
 
 \subsection{Redering process}
-Position, scale, rotation of the object and perspective characteristics of the space is specified via matrixes $4\times4$.\\
+Position, scale, rotation of the object and perspective characteristics of the space is specified via matrixes $4\times4$. This kind of matrix allows to apply any kind of transformation possible in 3D space. Usually, three matrixes are applied to the object. The first one transfers an object to the world space coordinates, it specifies the position, rotation and scale of an original object in the world coordinate system. The next one is viewing matrix. It also takes in consideration position of camera and transforms the models to achieve desirable framing. The last matrix called projection. It applies perspective to the scene, in other word it defines an angle of view of the camera.\\
+%http://www.opengl-tutorial.org/beginners-tutorials/tutorial-3-matrices/
 
 %http://www.tutorialspoint.com/computer_graphics/3d_transformation.htm
 
@@ -237,7 +238,7 @@ Specific program called shader receives all the information together with a came
 
 \section{Volume Rendering}
 
-Volume data are composed out of voxels\footnote{volume element}. Voxel is simply a point in 3D space, which has a position and a color. Together gives us an opportunity to visualise up to six scalar parameters. There are two ways to render volumes. We are going to discuss about main principles, advantages and disadvantages of the technologies in this section.\\
+Volume data are composed out of voxels\footnote{volume element}. A voxel is simply a point in 3D space, which has a position and a color. Together gives us an opportunity to visualise up to six scalar parameters. There are two ways to render volumes. We are going to discuss about main principles, advantages and disadvantages of the technologies in this section.\\
 %shear-warp paper 3
 
 \subsection{Indirect}
@@ -251,86 +252,84 @@ The first one called indirect volume rendering. It is based on the idea that it 
 It is the oldest idea behind volume rendering and it has plenty of disadvantages:
 \begin{itemize}
 \item complex and slow preprocessing algorithms
-\item can be inacurate due to noise
-\item sometimes does not able to generate isosurface out of specific dataset, for example smoke
+\item can be inaccurate due to noise
+\item sometimes does not able to generate an isosurface out of specific dataset, for example smoke
 \item lose an information about an internal structure
 \item need to repeat preprocessing to apply changes in a transfer function
 \end{itemize}
 
-But the algorithm is very popular for generation of medical illustrations, video or other static visualisation. The main advantage of the solution is that nicely preprocessed model can be easily rendered in via wel-known 3D mesh models' rendering, even in very weak hardware.\\
+But the algorithm is very popular for generation of medical illustrations, video or other static visualisation. The main advantage of the solution is that nicely preprocessed model can be easily rendered via well-known technique for 3D mesh model's rendering. They can be used even in very weak hardware.\\
 
-Unfortunately, this technology is not suitable for our project, because it does not satisfy our requirements.
+Unfortunately, this technology is not suitable for our project, because it does not satisfy our requirements. First of all it is not acceptable for us to lose an internal structure and lose an opportunity to modify the transfer function runtime.
 %http://www.forceflow.be/wp-content/uploads/2012/02/vr_overview.pdf
 
 \subsection{Direct}
-Direct volume rendering does not require any preprocessing. The data is visualised from an original dataset. It gives the algorithms an opportunity to modify a transfer function runtime. There are four most common technics for direct volume rendering algortithms, which will be discussed more detailed future at the section.\\
+Direct volume rendering does not require any preprocessing. The data are visualised from an original dataset. It gives the algorithms an opportunity to modify a transfer function runtime. There are four most common technique for direct volume rendering algorithm, which will be discussed more detailed in this section in the future.\\
 
-For an implementation of hardware acceleration for redering process a volume data has to be loaded to the grapic cards. It is usually served as 3D texture or as set of 2D textures. Several slices can be collected to one huge texture map due to optimization of  a texture's buffer consumption. 
-
+For an implementation of hardware acceleration for rendering process a volume data has to be loaded to the graphics cards. It is usually served as 3D texture or as set of 2D textures. For the optimization of a texture's buffer consumption, several slices can be collected to one huge texture map. 
 %http://www.forceflow.be/wp-content/uploads/2012/02/vr_overview.pdf
 \subsubsection{Texture-based}
 
-As it was mentioned befor the graphics pipeline of modern graphic cards is optimized for rendering of polygonal mesh models. So, volume rendering algorithms are forced to use the set of tools to achieve hardware acceleration. Texture-based volume rendering is the most straight forward way to achive the aim.\\
+As it was mentioned before the graphics pipeline of modern graphic cards is optimized for rendering of polygonal mesh models. So, volume rendering algorithms are forced to use this set of tools to achieve hardware acceleration. Texture-based volume rendering is the most straightforward way to achieve the aim.\
 
-As it was already said textures are used to add tiny details to polygonal models. Any graphic library has an advanced set of tools for texture mapping, which can be used to this kind of volume rendering. The algorithm creates set of planes called proxy geometry. Transfer function projects the volumetric dataset on the proxy geometry. The final image is rendered out of the planes with applied on them textures via Alpha-blending.\\
+As it was already said textures are used to add tiny details to polygonal models. Any graphic library has an advanced set of tools for texture mapping, which can be used to this kind of volume rendering. The algorithm creates set of planes called proxy geometry. Transfer function maps the volumetric dataset on the proxy geometry. The final image is constructed out of the planes with mapped on them textures via Alpha-blending.\\
 
 %http://http.developer.nvidia.com/GPUGems/gpugems_ch39.html
-A proxy geometry can be created in two different ways. The first one called 2D texture-based rendering. In this case three different sets of planes are generated. All sets are generated perpendicular to a different directions in 3D space. This approach leads us to sudden jumps in image quality for different camera position and does not allow to change the sampling rate of the visualisation.\\
+A proxy geometry can be created in two different ways. The first one called 2D texture-based rendering. In this case three different sets of planes are generated. All sets are generated perpendicular to a different direction in 3D space. This approach leads us to sudden jumps in image quality for different camera position and does not allow to change the sampling rate of the visualisation.\\
 \begin{figure}[!h]
 \centerline{
 \includegraphics[scale=0.7]{img/texture-based}
 }
 \caption{a) example of proxy geometry for 3D texture-based volume rendering a) Texture-based volume rendering with a lower sampling rate c) high sampling rate texture-based volume rendering}
 \end{figure}
-That's why the second way was invented. It is called 3D texture-based volume rendering. In this solution the algorithm creates only one set of planes which are always perpendicular to the camera and textures are mapped on them differently for different camera position. \\
+That's why the second way was invented. It is called 3D texture-based volume rendering. In this solution the algorithm creates only one set of planes which are always perpendicular to the camera and textures are mapped on them differently for the different camera position. \\
 
-It gets rid of an artifact of the first technique and allows to modify the sampling rate of the visualisation. The approach is the most popular direct volume rendering algorithm among medical software, but it was not selected for Arction's Volume rendering engine, because it is less flexible than all other methods discussed further. It is possible to use transfer function to emphasize or classify features of interest in the volume, but it is not comparable with possibilities provided by other approaches.
+It gets rid of an artifact of the first technique and allows to modify the sampling rate of the visualisation. The approach is the most popular direct volume rendering algorithm among medical software. But it has significant disadvantages against competitors. It is able to use, transfer function to emphasize or classify features of interest in the volume, while final blending is performed via Alpha-blending provided by DirectX API. It makes the approach less flexible than all other methods which provides more advanced tools for blending of sampled information.
 %http://www.forceflow.be/wp-content/uploads/2012/02/vr_overview.pdf
 
 \subsubsection{Ray Casting}
 
-Image is produced by the algorithm throughout sampling of the volume along tracks of the rays which travel inside the dataset. A smiple realisation of hardware acceleration of the aproach requer generation of boundaries for our volume. Usually they are represented by cube. \\
+An image is produced by the algorithm throughout sampling of the volume along tracks of the rays which travel inside the dataset. A simple realisation of hardware acceleration of the approach require generation of boundaries for our volume. Usually they are represented by a cube.\\
 
 Volume Ray Casting includes four simple steps:
-\begin{itemize}
-\item An engine shoots a ray in a direction of observation for every point on a screen.
-\item The ray travels throught scene and dataset.
-\item A vector of the ray's track is calculated based on position there the ray hits front and back faces of the cube.
-\item The volume is downsampled along the ray track and color of the pixel is calculated out of collected information in according with a Ray Function.
+\begin{itemize} \item An engine shoots a ray in a direction of observation for every point on a screen.
+\item The ray travels through a scene and dataset.
+\item A vector of the ray's track is calculated based on the position where the ray hits front and back faces of the cube.
+\item The volume is downsampled along the ray track and color of the pixel is calculated out of collecting information in accordance with a Ray Function.
 \end{itemize}
 \begin{figure}[!h]
 \centerline{\includegraphics[scale=0.35]{img/rayCast}}
-\caption{Raycasting steps: 1) The ray is shooted, 2) The ray travels throught scene and dataset. 3) Inlet and outlet position of the ray's track are detected 4) Downsampling and the pixel's color calculation process}
+\caption{Ray Casting steps: 1) The ray is shot, 2) The ray travels through a scene and dataset. 3) Inlet and outlet position of the ray's track are detected 4) downsampling and the pixel's color calculation process}
 \end{figure}
 
-Ray Function is a core of the algorithm. It possesses an entier power of the technique, because it specifes the way how the data is combined. Such a high level of flexibility is provided to the algorigth by Ray Function. It is very powerful tool for feature extraction, becuase it controls how color, opacity and gradient of isosurface are calculated by the enigene. Transfer function and classification are also performed via Ray Function.\\
+Ray Function is a core of the algorithm. Such a high level of flexibility is provided to the algorithm by the feature. It possesses an entire power of the technique, because it specifies the way how the data is combined.  It is very powerful tool for feature extraction, because it controls how color, opacity and gradient of isosurface are calculated by the engine. Transfer function and classification are also performed via Ray Function.\\
 
-The algorithm has very high rendering quality without any additional arifacts. Due to the reasone that every ray is calculated seperatly it is easilly implemented in modern hardware focused on parallel calculations. The main problem of the algorith is that rays usually do not hit the voxel to the center. In case of 3D space an interpolation is a very complex operation in terms of calculanal expensis, which has to be performed to get nice sampling.
+The algorithm has very high rendering quality without any additional artifacts. Due to the reason that every ray is calculated separately it is usually implemented in modern hardware focused on parallel calculations. The main problem of the algorithm is that rays usually do not hit the voxel's centers. In case of 3D space an interpolation is a very complex operation in terms of calculational expenses, which has to be performed to get a nice sampling.
 \subsubsection{Splatting}
 
 The technique was created to reduce interpolation expensis which were the main problem of Volume Ray Casting. The solution uses totally oposite aproach to reach the goal. Instead of sampling of the dataset by ray, the algorigthm projects the voxel to the image plane one by one. Of course the voxel porjections do not always fit excatly to pixels' grid of screen, but the problem is again solved by an interpolation, fortunately in this case the operation is much less expensive in term of calculation, becaus it is perfomed in 2D space. \\
 
-The final pixel's color is calculated in a very similar way used by Ray Function, that is why the algorithm is as flexible as Volume Ray Casting. The main disadvanrage of the approach is that some artifacts are contributesd to the final image due to voxels overlap. It is also difficalt to change sampling rate of the approach. The issues make the algorithm less interesting for us.
+The final pixel's color is calculated in a very similar way used by Ray Function, that is why the algorithm is as flexible as Volume Ray Casting. The main disadvantage of the approach is that some artifacts have contributed to the final image due to boxes overlap. It is also difficult to change the sampling rate of the approach. The issues make the algorithm less interesting for us. 
 
 \subsubsection{Shear-warp}
 
-As Splatting, the aproach also tries to speed Ray Caster up by solving of the interpolation issue, but it uses totally different way to illuminate the problem. Shear-warp has a very similar idea to the Volume Ray Casting. In some sence it is an optomozation of the technique which makes rays always hit excatly to the center of voxel.\\
+As Splatting, the approach also tries to accelerate Ray Caster by solving of the interpolation issue, but it uses totally different way to illuminate the problem. Shear-warp has a very similar idea to the Volume Ray Casting. In some sense it is an optimization of the technique which makes rays always hit exactly in the center of the voxel.\\
 
-The aim is achived by transformation of the volume data to sheared object space by translation and scaling of slices. After that an intermediat 2D image is produced by Ray Casting performed in the sheared object space. The transformation brings some distortion to the output image. It is fixed at last step of the algorithm called wraping. Final image is result of transformation applied to the intermideia picture.\\
+The aim is achieved by the transformation of the volume data to sheared object space by translation and scaling of slices. After that an intermediate 2D image is produced by Ray Casting performed in the shared object space. The transformation brings some distortion to the output image. It is fixed at the last step of the algorithm called wrapping. The final image is the result of the transformation applied to the intermediate picture.\\
 \begin{figure}[!h]
 \centerline{\includegraphics[scale=0.5]{img/shear-warp}}
 \caption{(left)Ray Casting in world coorinates, (right)Ray Casting in shear object coordinates}
 \end{figure}
-This solution gives us the fastest volume rendering process, but unfortunatly the algorthm also suffers from several types of artifacts. Some of them are result of sampling rate inconsistent along different directions, others are produced by 2D transformation at wrapping stage.
+This solution gives us the fastest volume rendering process, but unfortunately the algorithm also suffers from several types of artifacts. Some of them are caused by an unevenness of sampling rate along different directions, others are produced by 2D transformation on wrapping stage.
 
 \chapter{IMPLEMENTATION}
-This chapter contains detailed explanation of the product implementation. It discribes how the engine works, what kind of parts contains and which tools are used in it. Key step of the engine work are highlighted and explaned in this chapter.\\
+This chapter contains detailed explanation of the product implementation. It describes how the engine works, what kind of parts contains and which tools are used in it. The key step of the engine work is highlighted and explained in this chapter.\\
 
-In according with results of literature research several the most commone algorithms for volume redering were comparied and the most siutable approch was implemented as Volume Rendering Add-On of LigthinghChart Ultimate. One of the main requerment for the LightningChart's volume rendering engine is possiblity to combine volume and other 3D visualisation at the same chart space. Easy and accurate convertion between volume and chart coordinate system is needed. The volume ray caster and texture-based volume rendering can provide us with the feature. The algorighms keep entier visualisation inside the coordinate system of a proxy geometry. It is placed on the coordinate system of chart. It means that the coordinates of volume model can be easilly converted to the coordinates of enier chart.\\
+In accord with results of literature research, several the most common algorithms for volume rendering were compared and the most suitable approach was implemented as Volume Rendering Add-On of LigthinghChart Ultimate. One of the main requirements for the LightningChart's volume rendering engine is possible to combine volume and other 3D visualisation at the same chart space. Easy and accurate conversion between volume's and chart's coordinate systems is needed for this  purpose. Only volume ray caster and texture-based volume rendering can provide us with the feature. The algorithms keep entire visualisation inside the coordinate system of a proxy geometry. It is placed on the coordinate system of the chart. It means that the coordinates of volume model can be easily converted to the coordinates of the entire chart. Shear-warp and Splatting do not use any kind of proxy geometry, that is why they are not good solutuon for Arction's case.\\
 
-Anouther important thing is implementation of rotation, scaling and transmition of the model in the chart space. As it was already mentioned the proxy geometry also makes it much easier. But this approach is not fully applieable for 3D Texture-based solution. In this approach slices always have to be perpendicular to the camera, that is why rotation has to be implemented on the process of texture mapping.\\
+Another important thing is implementation of rotation, scaling and transmission of the model in the chart space. As it was already mentioned the proxy geometry also makes it much easier. But this approach is not fully applicable for 3D Texture-based solution. In this approach slices always have to be perpendicular to the camera, that is why rotation has to be implemented in the process of texture mapping.\\
 
-Finally there are only two technologies. The final chose is Ray Casting, because it has better image quality than 2D Texture-based rendering. In addtition, Texture-based volume rendering is less flexible than Volume Ray Casting.
+Finally, there are only two technologies. The final choice is Ray Casting, because it has better image quality than 2D Texture-based rendering. In addition, Texture-based volume rendering is less flexible than Volume Ray Casting.
 \section{Tools}
 This part of the chapter discibes technologies used in the implementation of the project. It also gives a short explation to thier usage in the solution. The rendering engine has to became a part of LightningChart Ultimate. An integration with the library gives some restrictions in terms of set of tools which can be used in the project and it plays a key role in technology selection.
 \subsection{C\# and .NET}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.30)  25 MAY 2016 14:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.30)  25 MAY 2016 15:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -869,18 +869,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 341--342
 
  []
 
-<img/pipeline.jpg, id=290, 292.09125pt x 481.8pt>
+<img/pipeline.jpg, id=292, 292.09125pt x 481.8pt>
 File: img/pipeline.jpg Graphic file (type jpg)
  <use img/pipeline.jpg>
-Package pdftex.def Info: img/pipeline.jpg used on input line 353.
+Package pdftex.def Info: img/pipeline.jpg used on input line 352.
 (pdftex.def)             Requested size: 262.87967pt x 433.61598pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 357--358
+Underfull \hbox (badness 10000) in paragraph at lines 356--357
 
+ []
+
+
+Overfull \hbox (5.40683pt too wide) in paragraph at lines 364--365
+[]\OT1/ptm/m/n/10.95 The graph-ics pipeline is shown on Fig-ure []3.1[]. Boxes 
+with rounded an-gles rep-re-sent pro-grammable
  []
 
 [16] [17 <./img/pipeline.jpg>]
@@ -888,7 +894,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 395--396
 
  []
 
-[18] <img/chart.png, id=311, 1023.825pt x 736.7525pt>
+[18] <img/chart.png, id=315, 1023.825pt x 736.7525pt>
 File: img/chart.png Graphic file (type png)
  <use img/chart.png>
 Package pdftex.def Info: img/chart.png used on input line 409.
@@ -907,7 +913,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 415--417
 
  []
 
-[19] <img/slice.png, id=318, 537.00626pt x 537.00626pt>
+[19] <img/slice.png, id=322, 537.00626pt x 537.00626pt>
 File: img/slice.png Graphic file (type png)
  <use img/slice.png>
 Package pdftex.def Info: img/slice.png used on input line 427.
@@ -925,7 +931,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 432--433
 
  []
 
-<img/map.png, id=325, 1205.50375pt x 533.995pt>
+<img/map.png, id=329, 1205.50375pt x 533.995pt>
 File: img/map.png Graphic file (type png)
  <use img/map.png>
 Package pdftex.def Info: img/map.png used on input line 435.
@@ -972,13 +978,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 474--475
 
  []
 
-[23] <img/first.png, id=344, 498.86375pt x 527.9725pt>
+[23] <img/first.png, id=348, 498.86375pt x 527.9725pt>
 File: img/first.png Graphic file (type png)
  <use img/first.png>
 Package pdftex.def Info: img/first.png used on input line 478.
 (pdftex.def)             Requested size: 249.43126pt x 263.9856pt.
 
-<img/second.png, id=345, 488.82625pt x 520.94624pt>
+<img/second.png, id=349, 488.82625pt x 520.94624pt>
 File: img/second.png Graphic file (type png)
  <use img/second.png>
 Package pdftex.def Info: img/second.png used on input line 486.
@@ -992,7 +998,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 490--491
 
  []
 
-<img/final.png, id=348, 490.83376pt x 517.935pt>
+<img/final.png, id=352, 490.83376pt x 517.935pt>
 File: img/final.png Graphic file (type png)
  <use img/final.png>
 Package pdftex.def Info: img/final.png used on input line 494.
@@ -1021,7 +1027,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 505--506
 
  []
 
-[25 <./img/second.png>] <img/empty.png, id=364, 854.19125pt x 432.61626pt>
+[25 <./img/second.png>] <img/empty.png, id=368, 854.19125pt x 432.61626pt>
 File: img/empty.png Graphic file (type png)
 
 <use img/empty.png>
@@ -1041,7 +1047,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 539--540
 
  []
 
-<img/accum.png, id=372, 614.295pt x 573.14125pt>
+<img/accum.png, id=376, 614.295pt x 573.14125pt>
 File: img/accum.png Graphic file (type png)
  <use img/accum.png>
 Package pdftex.def Info: img/accum.png used on input line 542.
@@ -1050,7 +1056,7 @@ Package pdftex.def Info: img/accum.png used on input line 542.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[27 <./img/empty.png>] <img/maxi.png, id=383, 578.16pt x 625.33624pt>
+[27 <./img/empty.png>] <img/maxi.png, id=387, 578.16pt x 625.33624pt>
 File: img/maxi.png Graphic file (type png)
 
 <use img/maxi.png>
@@ -1089,8 +1095,8 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 582.
  ) 
 Here is how much of TeX's memory you used:
- 8453 strings out of 493117
- 129032 string characters out of 6135432
+ 8455 strings out of 493117
+ 129056 string characters out of 6135432
  234073 words of memory out of 5000000
  11684 multiletter control sequences out of 15000+600000
  26087 words of font info for 51 fonts, out of 8000000 for 9000
@@ -1104,10 +1110,10 @@ e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
 /2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texm
 f-dist/fonts/type1/urw/times/utmr8a.pfb>
 Output written on /Users/alexey/Documents/tex/thesis/out/thesis.pdf (33 pages, 
-3703115 bytes).
+3703227 bytes).
 PDF statistics:
- 454 PDF objects out of 1000 (max. 8388607)
- 375 compressed objects within 4 object streams
- 98 named destinations out of 1000 (max. 500000)
+ 458 PDF objects out of 1000 (max. 8388607)
+ 379 compressed objects within 4 object streams
+ 100 named destinations out of 1000 (max. 500000)
  371 words of extra memory for PDF output out of 10000 (max. 10000000)
 

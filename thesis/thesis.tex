@@ -331,75 +331,75 @@ Another important thing is implementation of rotation, scaling and transmission 
 
 Finally, there are only two technologies. The final choice is Ray Casting, because it has better image quality than 2D Texture-based rendering. In addition, Texture-based volume rendering is less flexible than Volume Ray Casting.
 \section{Tools}
-This part of the chapter discibes technologies used in the implementation of the project. It also gives a short explation to thier usage in the solution. The rendering engine has to became a part of LightningChart Ultimate. An integration with the library gives some restrictions in terms of set of tools which can be used in the project and it plays a key role in technology selection.
+This part of the chapter describes technologies used in the implementation of the project. It also gives a short explanation to their usage in the solution. The rendering engine has to become a part of LightningChart Ultimate. An integration with the library gives some restrictions in terms of a set of tools which can be used in the project and it plays a key role in technology selection.
 \subsection{C\# and .NET}
-C\# is general perpuse  multi-paradigm programing language with strong types. It is created by Microsoft as native language of .NET Framework. Our days the language can be used for Web services, Windows desk-top and mobile applications, computer games with several different game engines. In addition, Xamarin created set of tools for croos-platfom C\# development.\\
+C\# is a general purpose multi-paradigm programming language with strong types. It is created by Microsoft as the native language .NET Framework. Our days the language can be used for Web services, Windows desktop and mobile applications, computer games with several different game engines. In addition, Xamarin created set of tools for cross-platform C\# development.\\
 %xamarin.com
 
-In some sence it contains constructions ispiered by an object-oriented, imperative, functional and many other programming paradigm. The language belongs to C-like family, that is why the curly-brace syntax looks very similar to the C, C++, Java.  C\# combines an advantages of Java and C++ in single powerful and elegant way. It is more simple and safe than C++, but at the same times it has advanced features like: pointers arithmetics, enumerations, lambda expressions, structs, delegates and implicitly typed local variables. Even today when the most part of them are implemented in the last version of Java, C\# still is way more flexible.\\
+In some since it contains constructions inspired by an object-oriented, imperative, functional and many other programming paradigms. The language belongs to C-like family, that is why the curly-brace syntax looks very similar to the C, C++, Java. C\# combines an advantages of Java and C++ in single, powerful and elegant way. It is more simple and safe than C++, but at the same times it has advanced features like: pointers arithmetics, enumerations, lambda expressions, structs, delegates and implicitly typed local variables. Even today when the most part of them are implemented in the last version of Java, C\# still is way more flexible.\\
 
-Other advanced feature of C\# is Language-Integrated Query expressions or shortly LINQ, it is set of functions for strong-typed queries, which allows to write very short functional stylied code for collection processing.\\
+Another advanced feature of C\# is  LINQ\footnote{Language-Integrated Query} expressions, it sets of functions for strongly-typed queries, which allows to write very short code in functional style for collection processing.\\
 
-.NET Framwork contains applications run in virtual execution system called the Common Language Runtime shortly CLR and more than 4000 of class which implements wide range of useful functionalities. The runtime is able to execute an Intermediate Language, which is compiled from C\# or 20 other languages.
+.NET framework contains applications run in a virtual execution system called the CLR\footnote{Common Language Runtime} and more than 4000 of classes which implements a wide range of useful functionalities. The runtime is able to execute an Intermediate Language, which is compiled from C\# or 20 other languages.
 %https://msdn.microsoft.com/en-us/library/z1zx9t92.aspx
 
-C\# is used in the porject for as close as it is possible intergration with LightningChart Ultimate. It performes loadign and preprocessing of the dataset and management of visualisation process.
+C\# is used in the project to reach as close integration with LightningChart Ultimate as it is possible. It performs loading and preprocessing of the dataset and management of visualisation process.
 
 \subsection{DirectX 11}
-
-DirectX is a C/C++ API\footnote{Application Programming Interface} for work with multimedia resources created by Microsoft for Windows and Xbox. It contains advanced tools for rednering of 2D and 3D graphic and sound management. Direct3D is a part of the library responsible for hardware accelerated rendering of 3D graphics. The tool is mainly focused on GPU accelerated rendering of polygonal meshmodels.\\
+DirectX is a C/C++ API\footnote{Application Programming Interface} for work with multimedia resources created by Microsoft for Windows and Xbox. It contains advanced tools for rendering of 2D and 3D graphic and sound management. Direct3D is a part of the library responsible for hardware accelerated rendering of 3D graphics. The tool is mainly focused on GPU accelerated rendering of polygonal mesh models.\\
 %http://searchwindowsserver.techtarget.com/definition/DirectX
  \begin{figure}[!h]
 \centerline{\includegraphics[scale=0.9]{img/pipeline}}
 \caption{Flowchart of Direct3D 11 Graphics Pipeline\label{fig:pipeline}}
 \end{figure}
 \subsubsection{Rendering Pipeline}
-Key consept of the library is redering pipeline. It is a very general term in computer grapics. The pipeline is a siqence of stages which recieves an input data as set of polygons, textures and variables, process the information step by step and generates the final image in the end.\\
+The key concept of the library is a rendering pipeline. It is a very general term in computer graphics. The pipeline is a sequence of stages which receives an input data as a set of polygons, textures and variables, process the information step by step and generates the final image in the end.\\
 
 Direct3D's pipeline has two types of steps:
-\begin{itemize}
-\item Fixed-function - perform certain processing operation which can be customize due to some level thougth the API.
-\item Programmable - processing is performed by so called shader program. It is function which is created by developer and satisfies input and output parameters of the stage.
+\begin{itemize} 
+\item Fixed-function - perform certain processing operation which can be customized up to some level via the API.
+\item Programmable - processing is performed by the so called shader program. It is a function which is created by the developer and satisfies input and output parameters of the stage.
 \end{itemize}
 
-The graphics pipeline is shown on Figure \ref{fig:pipeline}. Boxes with rounded angles represent programable stages and other ones are fixed-functions. Let me exaplain every step of the pipeline more detailed: 
+The graphics pipeline is shown on Figure \ref{fig:pipeline}. Boxes with rounded angles represent programmable stages and the other ones are fixed-functions. Let me explain every step of the pipeline more detailed:
 
 \begin{itemize}
-\item Input-Assembler Stage recieve input information as set of buffers and supply future to the pipeline. There are four types of buffers in Direct3D:
+\item Input-Assembler Stage receive input information as a set of buffers and supply future to the pipeline. There are four types of buffers in Direct3D:
   \begin{itemize}
-    \item Vertex Buffer is used to define geometry of the object by list of vertexs. Every vertex has to follow Input Layout deffined for the pipeline by developer. It discribes the vertex members like: position and texture coordinates, color value, normal etc used in this application.
+    \item Vertex Buffer is used to define the geometry of the object by a list of vertices. Every vertex has to follow Input Layout defined for the pipeline by the developer. It describes the vertex members: position and texture coordinates, color, value, normal etc. used in a particular application.
     \item Index Buffer conatins an order of vertexs as sequence of integer variables.
-    \item Constant supplies pipeline with a constant data, like transfor matrixes, position and directions of ligth sources, textures, and so on.
+    \item Index Buffer contains an order of vertices as a sequence of integer variables.
+    \item Constant Buffer provides pipeline with uniform variables data, like: transformation matrixes, position and directions of light sources, textures, and so on.
     %https://msdn.microsoft.com/en-us/library/windows/desktop/ff476898(v=vs.85).aspx
   \end{itemize}
-\item Vertex-Shader Stage is the first programmable stage of the pipeline. Verteces are read one by one and processed in according with Vertex Shader program supplied by developer. For best performence the processing has to includes every operation which can be performed on every vertex indivudualy. The function is not able to destroy or create new vertex.
+\item Vertex Shader Stage is the first programmable stage of the pipeline. Vertices are read one by one and processed in accord with a Vertex Shader program which is supplied by the developer. For best performance the processing has to include every operation which can be performed on every vertex individually. The function is not able to destroy or create new vertex.
 
 %книга
-\item Hull Shader, Tessellator and Domain Shader stage are used togher to archive tessellation\footnote{Process of mesh model's enchantment via aoutomatic generation of additional polygons} of the mesh.
+\item Hull Shader, Tessellator and Domain Shader stage are used together to achive tessellation\footnote{Process of mesh model's enchantment via automatic generation of additional polygons} of the mesh.
   \begin{itemize}
-    \item Hull Shader programm includes two functions. The first one recieve primitives and calculates tessellation factors out of the data. The second function is called once for every contorl point and creates them.
+    \item The Hull Shader program includes two functions. The first one receive primitives and calculates tessellation factors out of the data. The second function is called once for every control point and creates them.
     %книга
-    \item Tessellator uses data provided by Hull Shader and one of several algorithms to choose the best point to break of current primitive into smaller polygons.
-    \item Domain Shader uses an original infromation from Hull Shader toughert with results of tessellator to generate new verteces list.
+    \item Tessellator uses data provided by Hull Shader and one of several algorithms to choose the best point to break of the current primitive into smaller polygons.
+    \item Domain Shader uses an original information from Hull Shader together with results of the tessellator to generate the new vertex list.
   \end{itemize}
-\item Geometry Shader recieves several verteces at the same times and perform operations on them. An ability to add and remove points from pipeline makes the function extimly powerful and flexible tool. For example it can easelly turn single vertex to the polygon of even set of polygons. It is able to pass geomtry future along pipeline or away to output stream.
+\item Geometry Shader receives several vertices at the same time and perform operations on them. An ability to add and remove points from pipeline makes the function extremely powerful and flexible tool. For example, it can easily turn single vertex to the polygon of even a set of polygons. It is able to pass geometry along the pipeline or to output stream.
 \item Rasterization projects geometry to the final image and determines which pixels are covered by the polygons. It interpolates the verteces' atributes inside the primitives to get the pixels values for the area. It also perfoms depth and stencil tests.
-\item Pixel shader is executed once for every pixel on the output target. It is supplied with an information from Resterizetion step and calculates per pixel data for example color of imga's points. Usually texture sampling and hight quality lightning calculations are implemented by pixel shaders.
-\item Output-Merge Stage uses pixel shader's output togher with depth/stencil information to generate final image and write it in appropriate way to render target.
+\item Pixel shader is executed once for every pixel on the output target. It is supplied with an information from Resterizetion step and calculates per pixel data. Usually the texture sampling and high quality, lightning calculations are implemented with pixel shaders.
+\item Output-Merge Stage uses pixel shader output together with depth/stencil information to generate the final image and write it in an appropriate way to render target.
 \end{itemize}
 
-It is worth to metntion that a render terget is not always represented by screen. Sometimes the output is stored in texture. For example the image can be loaded again to graphic card and sampled to get some precalculated prevously information. The technique called miltyi-pass rendering.
+It is worth to mention that a render target is not always represented by screen. Sometimes the output is stored in texture. For example the image can be loaded again to the graphic card. It can be used to get some pre-calculated previously information. The technique, called multi-pass rendering.
 
 %https://msdn.microsoft.com/en-us/library/windows/desktop/ff476882(v=vs.85).aspx
 \subsubsection{HLSL}
-There are two way of rendering pipeline customization. Fixed-functions behavoure can be modified by the API and programable stages flexiblities is orgonised via special type of programming languages called Shader Languages. Direct3D's realisation of shader language called HLSL\footnote{High Level Shader Language}.\\
+There are two ways of rendering pipeline customization. Fixed-functions behavior can be modified by the API. A flexibility of programmable stages  is organized via a special type of programming languages called Shader Languages. Direct3D's realisation of shared language called HLSL\footnote{High Level Shader Language}.\\
 
-The language is basically significantly modified version of C. The lanaguage does not support features like pointer artichmetics and dynamic momory allocation, but the syntax is still understandable for C developers. It extends C syntax by classes, several new data types, buffers, sematics and huge library of useful for shader development functions. There are vector, matrix and 1D-3D texture data types which are very useful for processing of 3D primitives. As it was already mentioned buffers are used to supply pipeline with data. Sematics contains metadata which is related with data exchange among fixed-function and programable stages of the pipeline.
+The language is basically significantly modified version of C. The language does not support an advanced features like pointer's arithmetics and dynamic memory allocation, but the syntax is still understandable for C developers. It extends C syntax by classes, several new data types, buffers, semantics and huge library of useful for shared development functions. There are vector, matrix and 1D-3D texture data types which are very useful for processing of 3D primitives. As it was already mentioned buffers are used to supply pipeline with data. Sematics contains metadata which is related to data exchange among fixed-function and programmable stages of the pipeline.
 \subsection{SharpDX}
 
-As it was already mentioned DirectX is C++ library, so it is not possible to use in directly from C\#. The problem is solved by SharpDX. It is open-source managed C\# wrapper for an original API of DirectX. It plays role of bridge between API and .NET. As result developers are able to manipulate the functionality of the API  from C\#.\\
+As it was already mentioned DirectX is C++ library, so it is not possible to use directly from C\#. The problem is solved by SharpDX. It is an open-source C\# wrapper for the original DirectX API. It plays role of bridge between API and .NET. As a result, developers are able to manipulate with the functional of the API from C\#.\\
 %http://sharpdx.org
-Every feature of the API is implemented in a very natural way. That is why a huge amount of tutorials and example avable for original C++ API can be easylly translatted to C\# and SharpDX. Even original documentaion is still useable for SharpDX development.
+Every feature of the API is implemented in a very natural way. That is why a huge amount of tutorials and example available for the original C++ API can be easily translated to C\# and SharpDX. Even original documentation is still useable for SharpDX developers.
 
 \subsection{LightningChart Ultimate}
 
@@ -410,38 +410,38 @@ LightningChart Ultimate is the fastest C\# library for scientific and engineerin
 \caption{Some of LightningChart Examples}
 \end{figure}
 
-The library has an API for .NET WinForm and WPF applications, it is also possible to use it for a traditional Win32 C++ software development. The main advantage of the library is the fact that it is based on low-level DirectX graphics routines developed by Arction, then the most part of competitors use graphics routines which belongs to System.Windows.Media.\\
+The library has an API for .NET WinForm and WPF applications, it is also possible to use it for a traditional Win32 C++ software development. The main advantage of the library is the fact that it is based on low-level DirectX graphics routines developed by Arction, then the most part of competitors use graphics routines which belong to System.Windows.Media.\\
 
-An intergration with LightningChart has sevral advantages and disadvantages. In one hand, it applies main role in terms of tools selection for project implementation, because deep enough integration can be achived only via usage of exactly same set of techologies. It also  forces the volume rendering engine to follow similar class arcitecture. Moreover, LightningChart is commercial software package. That is why any external dependences have to be avoided as much as it is possible. It means that even open-source libraries can not be used without extrimly important reason.\\
+An integration with LightningChart has several advantages and disadvantages. On one hand, it plays main role in terms of tool selection for project implementation, because deep enough integration can be achieved only via usage of a exactly same set of technologies. It also forces the volume rendering engine to follow similar architecture. Moreover, LightningChart is a commercial software package. That is why any external dependencies have to be avoided as much as it is possible. It means that even open-source libraries cannot be used without extremely important reason.\\
 %http://arction.com/products_lc_ultimate_sdk
 
-On the another hand an abilities of LightningChart to draw 3D polygonal mesh models make the development much more simple. The library is able to rotate, scale and move the models around chart's space, so the functionality can be easilly applied to proxy geometry. As result the features are implemented without almost any development from the side of volume rendering engine. In addition it is a huge advantage for clients, because volume and mesh 3D models can be visulised at the same chart in the same coordinate system. It provides them with really uniqe and powerful opportinity for complex 3D visualisations.
+On the another hand, an abilities of LightningChart to draw 3D polygonal mesh models make the development much more simple. The library is able to rotate, scale and move the models around chart's space, so the functionality can be easily applied to proxy geometry. As a result the features are implemented without almost any development from the side of the volume rendering engine. In addition, it is a huge advantage for clients, because the volume and mesh 3D models can be visualized at the same chart in the same coordinate system. It provides them with really a unique and powerful opportunity for complex 3D visualisations.
 
 \section{Visualisation process}
 
-This section of the paper explaines main principles and implementation detailes of the project. It disribes the main challangs and explain how were solved during development of the rendering engine.
+This section of the paper explains main principles and implementation details of the project. It describes the main challenges and explains how they were solved during development of the rendering engine.
 
 \subsection{Loading and preprocessing of dataset}
-The most commune way of volume data distribution is collection of 2D slices. The 2D slices are just images in common format. Sometimes they can be represented as set of DICOM\footnote{Digital Imaging and Communications in Medicine} files. In this case they contain metadata of the studies toughere with embeded picture. Volumes can also be distibuted as table of original values. The table usually is part of RAW file which also contain some meta information. Actually, RAW is several different format with commone name and more detialed specification of every single approach depends from machine which perfomed the data aqusition.\\
+The most common way of volume data distribution is a collection of 2D slices. The 2D slices are just images in common formats. Sometimes they can be represented as set of DICOM\footnote{Digital Imaging and Communications in Medicine} files. In this case they contain metadata of the studies together with embedded pictures. Volumes can also be distributed at table of original values. The table usually is part of RAW file which also contains some meta information. Actually, RAW is several different formats with common name. More detailed specification of every single realisation depends from a machine which performed the data acquisition.\\
 \begin{figure}[!h]
 \centerline{\includegraphics[scale = 0.35]{img/slice}}
-\caption{Single slice from Volume dataset.\label{fig:slice}}
+\caption{Example of slice from Volume dataset.\label{fig:slice}}
 \end{figure}
-Unfortunatly, current implementation of the volume rendering engine supports only first approach, because slice-based data is easier to get. Specific software can converte DICOM slices to the picture formats supported by .NET like *.JPEG, *.TIFF and *.PNG. RAW volume data files can be converted to *.CSV files, but due to the reason that there are many different specifications of the files it is very difficalt fo find the software.\\
+Unfortunately, the current implementation of the volume rendering engine supports only a first approach, because slice-based data is easier to get. Specific software can convert DICOM slices to the picture formats supported by .NET like *. JPEG, *. TIFF and *. PNG. RAW volume data files can be converted to *. CSV files, but due to the reason that there are many different specifications of the the extension it is very difficult to find the software.\\
 
-.NET tools for file handling load images in supported by framework formats. The slices are loaded to the memory from specified folder as an array of bitmaps in the same order they are already stored. An example of slice is shown on Fugire \label{fig:slice}. DirectX 11 also supports 3D textures, but the approch was not used in the engine, becuase the feature is not supported by DirectX 9. Arction wanted to have an opportunity to port the volume engine to DirectX 9 quickly, if it would be needed. \\
+.NET tools for file handling are responsible for loading of images in supported by the framework formats. The slices are loaded into the memory from specified folder as an array of bitmaps in the same order they are already stored. An example of a slice is shown on Figure \label{fig:slice}. DirectX 11 also supports 3D textures, but the approach was not used in the engine, because the feature is not supported by DirectX 9. Arction wanted to have an opportunity to port the volume engine to DirectX 9 quickly, if it would be needed. \\
 
 \begin{figure}[!h]
 \centerline{\includegraphics[scale = 0.35]{img/map}}
 \caption{An example of slice map\label{fig:map}}
 \end{figure}
-Texture buffers have a limmited amount of avaible slot. Slices usually have a very low resolution so it is not efficent to load them one by one, due to an optimization of texture buffers' consumption an array of slices is mapped to the big texture map. The map contains slices mapped from left to right in according with an array index, look Figure \label{fig:map}. A bitmap processing is accelerated via pointer arifmetic, but any way it requers some time. That is why the engine is also able to load preprocessed texture map for quicker start of visualisation. \\
+Constant buffer has a limited amount of available slots for texture. Slices usually have a very low resolution so it is not efficient to load them one by one. For an optimization of of consumption of the buffers, an array of slices is mapped to the big texture map. The map contains slices mapped from left to right in accord with an array index, look Figure \label{fig:map}. A bitmap processing is accelerated via pointer arithmetic, but anyway it requires some time. That is why the engine is also able to load preprocessed texture map for quicker start of visualisation. \\
 
 \begin{table*}[!h]
  \begin{center}
     \begin{tabular}{ c  c }
-    \multicolumn{2}{l}{TABLE 3.1: Characterisation of different technologies \label{tab:level}}\\
-    Feature level & Maximal size of texture map\\
+    \multicolumn{2}{l}{TABLE 3.1: Maximum size of a texture for different feature levels \label{tab:level}}\\
+    Feature level & Maximum size of a texture\\
     \hline
     9\_2 & 2048\\
     9\_3 & 4096\\
@@ -454,96 +454,95 @@ Texture buffers have a limmited amount of avaible slot. Slices usually have a ve
 
   \end{center}
 \end{table*}
-DirectX has a limmitation in terms of the biggest avaible texture size, which can be loaded to the graphic card. The value depends from feature level of the graphic card, look table 3.1. Featue level defines the functionality supported by the graphic card. Usually, modern graphic cards have at least 11\_0. It means that they supprot up to 16 384 pixels per side. Sich a big texture can keep volume dataset with more than 600 voxel long in every dimenssion. It is possible to render even bigger models, because several texture maps can be generated if it is not possible to fit entier data into single one.\\
+DirectX has a limitation in terms of the biggest available texture size, which can be loaded to the graphic card. The value depends from feature level of the graphic card, look table 3.1. Feature level defines the functionality supported by the graphic card. Usually, modern graphic cards have at least 11\_0. It means that they support up to 16 384 pixels per side. Such a big texture can keep the volume dataset with more than 600 voxel long in every dimension. It is possible to render even bigger models, because several texture maps can be generated if it is not possible to fit enter data into a single one.\\
 %https://msdn.microsoft.com/en-us/library/windows/desktop/ff476876(v=vs.85).aspx
 
 \subsection{Multi-pass rendering}
 
-Possibility to render scene in several steps makes rendering pipeline especially flexible. The technique called Multi-pass rendering. Sometimes it is more efficient to render scene in several steps. Multi-pass rendering is based on an idea that every step excpet the last one outputs the result of perfomed calculation to to texture. The final pass sample information from the set of textures and generates the final image.\\
+Possibility to render a scene in several steps makes rendering pipeline especially flexible. The technique, called the Multi-pass rendering. Sometimes it is more efficient to render a scene in several steps. Multi-pass rendering is based on an idea that every step except the last one outputs the result of performing calculation to to texture. The final pass samples information from the set of textures and generates the output image.\\
 
-Deferred rendering is one of the most popular realisatiom of the idea. The technology is created for rednering of scenes with large amount of dynamic lights. Traditionaly this kind of functionality requers a cemplex set of shaders. Multi-pass approach breaks the process to smaller peaces and perfomes the calculations separatly for every step. It allows to simplify an architcture of rendering framework. It can also give an opportunity to apply GPI acceleration to some parts of rendering algorithm which used to be executed on CPU befor.\\
+Deferred rendering is one of the most popular realization of the idea. The technology is created for rendering of scenes with large amount of dynamic lights. Traditionally, this kind of functionality requires a complex set of shaders. Multi-pass approach breaks the process to smaller pieces and performs the calculations separately for every step. It allows to simplify an architecture of rendering framework. It can also give an opportunity to apply GPU acceleration to some parts of rendering algorithm which used to be executed on CPU before.\\
 
-Our volume ray caster is also going to get some advantages from multi-pass rendering. In case of the solution it has only two passes and it allows the algorith to determine vectors of the sampling ray in the volume coordinate system without any additional mathematical calculations. It means that entier rendering pipeline of the engine contains two typical rednering pipelines. The first one is generates tecxture which contains an important information for rendering of final image at the second pass. Both passes use only vertex and pixel shader programs.
+Our volume ray caster is also going to get some advantages from multi-pass rendering. In case of this solution, it has only two passes. It allows the algorithm to determine vectors of the sampling ray in the volume coordinate system without any additional mathematical calculations. It means that entire rendering pipeline of the engine contains two typical rendering pipelines. The first one generates texture which contains an important information for rendering of the final image at the second pass. Both passes use only vertex and pixel shader programs.
 
 \subsection{First pass}
 
 At this step rendering engine has to generate texture which keeps an information about the exit position of sampling rays. For this reason front-face culling mode of Direct3D has to be turned on. It makes the library to draw only polygons which are normally not visualised, because their front side looks in an opposite to the screen's direction.\\
 
-An input of the first pass contains only set of vertecs for boundries of the dataset, constant buffers for slice range clipping and matrixs for calculatuin of the vertecs position of the chart space. The boundaries are always renpresened by cube. The cube contains 8 verteces calculated on C\# according with requered size of the volume model. Constant buffer is represented by two Vector3 variables, one of them contains the number of minimal slice for every direction and another one keeps an information about maximal boundaries. We also have three traditional for 3D graphic Matrixes: World Coordinate, View, and Projection. This matrixes have uque values for every object and allows to calculate desierable position, scale and rotation of the object in  screen coordinats.\\
+An input of the first pass contains only set of vertices of the boundaries of the dataset, constant buffers for slice range clipping and matrices for calculation of the vertex position of the chart space. The boundaries are always represented by a cube. The cube contains 8 vertices calculated on C\# according with the required size of the volume model. Constant buffer is represented by two Vector3 variables, one of them contains the number of minimal slices for every direction and another one keeps an information about maximal boundaries. We also have three traditional for 3D graphic Matrixes: World, View, and Projection Coordinate. This matrix has unique values for every object and allows to calculate desirable position, scale and rotation of the object in screen coordinates.\\
 
-The Vertex Shader of the first pass calculates positions of the cube verteces in accodring with clipping range buffers. After that matrixes are applied to transform the geometry to the screen coordinates. Internal coordinates of the dataset are calctulated out an original position of verteces. They are represented by Vector3, with value range from 0 to 1 along every axis and stored as texture coordonates.\\
+The Vertex Shader of the first pass calculates positions of the cube vertices in accord with a clipping range buffer. After that matrixes are applied to transform the geometry to the screen coordinates. Internal coordinates of the dataset are calculated out an original position of vertex. They are represented by Vector3, with value range from 0 to 1 along every axis and stored as texture coordinates.\\
 
-The Pixel Shader represents the coordinates as color. X coordinate is stored in red chanel, Y one is stored in green channel and Z coordinates is stored as blue value. The final result of the first pass is demostrated on Figure \ref{fig:first}.
+The Pixel Shader represents the coordinates as color. X coordinate is stored in the red channel, Y one is stored in the green channel and Z coordinates is stored as blue value. The final result of the first pass is demonstrated on Figure \ref{fig:first}.
 \begin{figure}[!h]
 \centerline{\includegraphics[scale = 0.5]{img/first}}
-\caption{First pass output\label{fig:first}}
+\caption{The first pass output\label{fig:first}}
 \end{figure}
 
 \subsection{Second pass}
 
-At this pass the engine has to calculate vector of sampling ray displaisment thougnt dataset. The enter coordinates of the rays are need for the calculation that is why defult culling mode has to be restored. The input of the pipeline has a set of vertecs, matrixs, an original dataset represeted as texture map, texture rendered at the first pass, buffers with slice range, contrast, brighness and tresholds setting.\\
+At this pass the engine has to calculate the vector of sampling ray displacement through the dataset. The input coordinates of the rays are needed for the calculation that is why the default culling mode has to be restored. The coordinates are defined by position where the rays hit at the front sides of the cube's planes. The input of the pipeline has a set of vertices, matrices, an original dataset represented as a texture map, texture created at the first pass, buffers with slice range, contrast, brightness and threshold setting.\\
 \begin{figure}[!h]
 \centerline{\includegraphics[scale = 0.5]{img/second}}
-\caption{Coordinates of the hit points.\label{fig:second}}
+\caption{Coordinates of hit points.\label{fig:second}}
 \end{figure}
 
-Second pass has excatly same vertex shader with the first one, but due to changes in culling mode it output enter point of sampling rays. In other word the coordinates of the points there the rays hit the boundaries. Firgue \ref{fig:second} shows them at the same way it was done on the first pass.\\
+Second pass has exactly same vertex shader with the first one, but due to changes in clipping mode it outputs the inlet points of sampling rays.  Figure \ref{fig:second} shows them in the same way it was done on the first pass.\\
 
-The pixel shader samples coordinates there rays hit the back side of cube from the texture generated at the first pass. After that it substracts enter coordinates calculated at the vertex shader of the second pass from the information. The operation result is the vector of the rays track. The tracks are visulised as colors on the figure \ref{fig:final} The vector is devided by sampling rate to get step vector. 
+The pixel shader subtracts the input coordinates from output ones. The input coordinates are calculated at the vertex shader of the second pass. The output coordinates keep positions where rays hit the back side of the cube. They are sampled from the texture generated at the first pass. The operation result is the vector of the ray's track. The tracks are visualized as colors on the figure \ref{fig:final} The vector is divided by sampling rate to get step vector.
 \begin{figure}[!h]
 \centerline{\includegraphics[scale = 0.5]{img/final}}
-\caption{The visualisation of sampling ray vectors' tracks \label{fig:final}}
+\caption{The visualisation of the sampling rays vectors' tracks \label{fig:final}}
 \end{figure}
-Acruall volume sampling is prefomed by for loop. It starts from the hit point of the ray and adds a step vector every interation to get coordinates of new sampling point. The data is sampled out of volume by function which calculates correspondent position on the texture map.\\
+Actual volume sampling is performed by for loop. It starts from the hit point of the ray and adds the step vector every intention to get coordinates of the new sampling point. The data are sampled out of volume by a function which calculates the corresponding position on the texture map.\\
 
-It calculates the nearest slice coorespondent to the Z position. After that it checks how many full rows are included in to the value and what is the column number of the rest. Values from two closest slices can be interpolated to get smoother result. Handling of the information depends from Ray Function.\\
+It calculates the nearest slice corresponding to the Z position. After that it checks how many full rows are included in the value and what is the column number of the rest. Values from two closest slices can be interpolated to get a smoother result. Handling of the information depends from Ray Function.\\
 
 \subsubsection{Empty space skipping}
 
-The most part of volume dataset is represented by an empty space. Empty space does not contain any importan information, usually it is represented by pixel with a very low value per each chenalle. In our case a voxel is classified as empty one if its values is out of a treshold range for all of its channels. There are huge amount of rays which travels thought arrays which contains only empty space. The optimization has to prevent high resolution downsampling of the regions.\\
+The most part of volume dataset is represented by an empty space. Empty space does not contain any important information, usually it is represented by pixel with a very low value per each channel. In our case a voxel is classified as empty one if its values are out of an acceptable range for all of channels. There is a huge amount of rays which travels through arrays which contains only empty space. In addition there are areas with an empty space in front and behind the model. The optimization has to prevent high resolution downsampling of this regions.\\
 
-Due to realisation of the technique, the sampling is brouken down into two steps. At the first step ray travels thougnt dataset with a very low sampling rate. It saves positions of the first and the last non-empty voxel hitted by the ray. After another ray goes thougt the dataset with a higher sampling rate. The second ray starts one low resolution sampling rate step vector earlier than the position of the first non-empty voxel. It stops one low resolution sampling rate step vector after the last non-emtpry voxel detected by the first ray. The process is shown on figire \ref{fig:empty}.\\
+Due to the realisation of the technique, the sampling is broken down into two steps. At the first step ray travels through dataset with a very low sampling rate. It saves positions of the first and the last non-empty voxels which is met by the ray. After that the second ray starts a one low resolution sampling rate step vector earlier than the position of the first non-empty voxel. It stops a one low resolution sampling rate step vector after the very last non-emtpy voxel detected by the first ray. The process is shown on figure \ref{fig:empty}. The ray with low sampling resolution can skip some part of non-empty voxels between sampling position. In this case actual border of the shape can be a little bit further or closer.  Possible artifacts are prevented by two low resolution sampling rate steps which is added in front and behind the model.\\
 
 \begin{figure}[!h]
 \centerline{\includegraphics[scale = 0.5]{img/empty}}
-\caption{Red arrows represents low resolution sampling rate ray. Green demostrates high resolution sampling one.\label{fig:empty}}
+\caption{Red arrows represents the low sampling rate ray. Green demonstrates high resolution sampling one.\label{fig:empty}}
 \end{figure}
 
-High and low resolution sampling rates are spcified by constant buffers. High sampling rate determines rendering quality. An optimal quallity is reached then it mutch an amount of voxels in the longest dimmension, because it allows to performe uniform sampling of entier dataset and collect all information stored inside. Low resolution sampling can only be defined via experiment. Too small low resolution sampling rate can contibute some artifact to the final visualistion. It is a trade of quality and frame rate. The rigth value have to keep an intertive framerate and unnoticable artifacts.
+High and low resolution sampling rates are specified by constant buffer. High sampling rate determines rendering quality. An optimal quality is reached, then it match an amount of voxels in the longest dimension, because it allows to perform uniform sampling of the entire dataset and collect all information stored inside. Lower resolution sampling can only be defined via experiment. Too small, low resolution of sampling rate can contribute some artifact to the final picture. It is a trade of quality and frame rate. The right value has to keep an interactive frame rate and unnoticeable level of artifacts.
 
 
 \subsubsection{Ray function}
+Ray function determines the way how the sampled data are combined. A different ray functions allow to extract different features out of the dataset. Two the most common ray functions are implemented in our rendering engine.\\
 
-Ray function determines how the sampled data is combined. Different ray functions allows to extract diffrent features out of the dataset. Two most commune ray function are implemented in out rendering engine.
-
-Accomulation function uses alpha-compositing to get compose as much data as it is possibel. The visualisations produced by the technique look like semi-transperent gel. Ray function implementation is represented by for loop, which runs from 0 to the value sampling rate. Every interation contains several steps:
+Accumulation function uses alpha-compositing to collect as much data as it is possible. The visualisation which are produced by this technique looks like semi-transparent gel. Ray function implementation is represented by for-loops, which runs from 0 to the number of samples which is need to perform sampling of the region in according with desirable sampling rate. Every iteration contains several steps:
 \begin{itemize}
-\item The voxel is sampled out of texture map.
-\item The volel's value validation is performed by if-statement. It checks that every chennal is in its personal treashold range. If the voxel is empty next four steps have to be skipped.
-\item The alpha is calculated in according with an equation:
+\item The voxel is sampled out of the texture map.
+\item The validation of voxels value is performed by if-statement. It checks that every channel is in its personal threshold range. If the voxel is empty next four steps have to be skipped.
+\item The alpha is calculated in accordance with an equation:
 \begin{equation} \label{eq:alpha}
 \alpha_{output} = \alpha \times opacity \times \frac {1}{{sampling\ rate}}
 \end{equation}
 
-\item The colors are calculated in according with an equation:
+\item The colors are calculated in accordance with an equation:
 \begin{equation} \label{eq:color}
 color_{output} = (1 - \alpha_{accomulation}) \times (color + brighness) \times contrast  \times \alpha
 \end{equation}\\
 
-$\alpha_{accomulation}$ contains previosuly accomulated alpha values. Brighness and contrast are supplied by constant buffers and used to perform windowing.
-\item After that the colors and alpha are added to the correcpondent variable which keeps a previousl accomulated infromation.
-\item If-statement checks that alpha is not oversaturated. The ray has to be terminated in this case.
+$\alpha_{accomulation}$ contains previously accumulated alpha values. Brightness and contrast are supplied by constant buffers and used to perform dynamic range correction.
+\item After that the colors and alpha values are added to the corresponding variables which keep a previously accumulated information.
+\item If-statement checks that alpha is not oversaturated. The ray has to be terminated in this case, due to performance optimization.
 \item Step vector is added to reach next sampling position.
 \end{itemize}
 
-An example of images produced by an accomulation function is demostrated on figure \ref{fig:accum}.\\
+An example of images produced by an accumulation function is demonstrated in figure \ref{fig:accum}. \\
 
 \begin{figure}[!h]
 \centerline{\includegraphics[scale = 0.6]{img/accum}}
 \caption{An example of an accomulation function output\label{fig:accum}}
 \end{figure}
 
-Maximal intesnsity visualise only the brightest value sampled by ray. It gives very similar result to the X-ray images. The ray function is very similar to the prevouse one. It also use for loop and step vector to sample the dataset, but it does not accomulate the information as it is done in previous example. Instead it keeps the biggest value which ray meet during the travel and put it to the pixel in the end. It allows end user to idetify specific structures inside the volume. An example of the ray function result is shown in the figure \ref{fig:maxi}
+Maximum intensity function visualizes only the brightest value sampled by the ray. It gives very similar results to the X-ray images. The ray function is very similar to the previous one. It is also used for-loop and step vector to sample the dataset, but it does not accumulate the information as it is done in the previous example. Instead, it keeps the biggest value which ray meets during the travel and put it to the pixel in the end. It allows end user to identify specific structures inside the volume. An example of the ray function result is shown in the figure \ref{fig:maxi}
 
 \begin{figure}[!h]
 \centerline{\includegraphics[scale = 0.6]{img/maxi}}

@@ -17,7 +17,7 @@
 \contentsline {subsubsection}{Texture-based}{11}{subsection.2.3.2}
 \contentsline {subsubsection}{Ray Casting}{12}{figure.caption.5}
 \contentsline {subsubsection}{Splatting}{13}{figure.caption.6}
-\contentsline {subsubsection}{Shear-warp}{13}{figure.caption.6}
+\contentsline {subsubsection}{Shear-warp}{14}{figure.caption.6}
 \contentsline {chapter}{\numberline {3}IMPLEMENTATION}{15}{chapter.3}
 \contentsline {section}{\numberline {3.1}Tools}{15}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}C\# and .NET}{15}{subsection.3.1.1}
@@ -32,7 +32,7 @@
 \contentsline {subsection}{\numberline {3.2.3}First pass}{23}{subsection.3.2.3}
 \contentsline {subsection}{\numberline {3.2.4}Second pass}{24}{subsection.3.2.4}
 \contentsline {subsubsection}{Empty space skipping}{25}{figure.caption.14}
-\contentsline {subsubsection}{Ray function}{26}{figure.caption.15}
+\contentsline {subsubsection}{Ray function}{27}{figure.caption.15}
 \contentsline {chapter}{\numberline {4}Conclusion}{30}{chapter.4}
 \contentsline {section}{\numberline {4.1}Results}{30}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Rotation and position}{30}{subsection.4.1.1}

@@ -26,8 +26,11 @@
 \@writefile{toc}{\contentsline {section}{\numberline {1.1}Motivation}{5}{section.1.1}}
 \@writefile{toc}{\contentsline {section}{\numberline {1.2}Personal backgound}{5}{section.1.2}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces Volume visualisation of breast phantom made by USCT\relax }}{6}{figure.caption.2}}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:usct}{{1.1}{6}{Volume visualisation of breast phantom made by USCT\relax }{figure.caption.2}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {1.3}Arction Oy and Ligthning Chart}{6}{section.1.3}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces Example of LightningChart possibilities from the main page of Acrtion\relax }}{7}{figure.caption.3}}
+\newlabel{fig:lchu}{{1.2}{7}{Example of LightningChart possibilities from the main page of Acrtion\relax }{figure.caption.3}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {1.4}Project Goals}{7}{section.1.4}}
 \@writefile{toc}{\contentsline {chapter}{\numberline {2}THEORY}{8}{chapter.2}}
 \@writefile{lof}{\addvspace {10\p@ }}
@@ -36,6 +39,7 @@
 \@writefile{toc}{\contentsline {section}{\numberline {2.2}Polygonal Rendering}{8}{section.2.2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.1}Vertexs}{9}{subsection.2.2.1}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces Wireframe and flat shading polygonal meshmodel\relax }}{9}{figure.caption.4}}
+\newlabel{fig:mesh}{{2.1}{9}{Wireframe and flat shading polygonal meshmodel\relax }{figure.caption.4}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.2}Normals}{9}{subsection.2.2.2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.3}Textures}{9}{subsection.2.2.3}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2.4}Redering process}{10}{subsection.2.2.4}}
@@ -43,12 +47,14 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3.1}Indirect}{10}{subsection.2.3.1}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3.2}Direct}{11}{subsection.2.3.2}}
 \@writefile{toc}{\contentsline {subsubsection}{Texture-based}{11}{subsection.2.3.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces a) example of proxy geometry for 3D texture-based volume rendering a) Texture-based volume rendering with a lower sampling rate c) high sampling rate texture-based volume rendering\relax }}{12}{figure.caption.5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces a) an example of proxy geometry for 3D texture-based volume rendering a) Texture-based volume rendering with a lower sampling rate c) high sampling rate texture-based volume rendering\relax }}{12}{figure.caption.5}}
+\newlabel{fig:text}{{2.2}{12}{a) an example of proxy geometry for 3D texture-based volume rendering a) Texture-based volume rendering with a lower sampling rate c) high sampling rate texture-based volume rendering\relax }{figure.caption.5}{}}
 \@writefile{toc}{\contentsline {subsubsection}{Ray Casting}{12}{figure.caption.5}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Ray Casting steps: 1) The ray is shot, 2) The ray travels through a scene and dataset. 3) Inlet and outlet position of the ray's track are detected 4) downsampling and the pixel's color calculation process\relax }}{13}{figure.caption.6}}
 \@writefile{toc}{\contentsline {subsubsection}{Splatting}{13}{figure.caption.6}}
-\@writefile{toc}{\contentsline {subsubsection}{Shear-warp}{13}{figure.caption.6}}
+\@writefile{toc}{\contentsline {subsubsection}{Shear-warp}{14}{figure.caption.6}}
 \@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces (left)Ray Casting in world coorinates, (right)Ray Casting in shear object coordinates\relax }}{14}{figure.caption.7}}
+\newlabel{fig:sw}{{2.4}{14}{(left)Ray Casting in world coorinates, (right)Ray Casting in shear object coordinates\relax }{figure.caption.7}{}}
 \@writefile{toc}{\contentsline {chapter}{\numberline {3}IMPLEMENTATION}{15}{chapter.3}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -57,7 +63,6 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}DirectX 11}{16}{subsection.3.1.2}}
 \@writefile{toc}{\contentsline {subsubsection}{Rendering Pipeline}{16}{figure.caption.8}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Flowchart of Direct3D 11 Graphics Pipeline\relax }}{17}{figure.caption.8}}
-\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:pipeline}{{3.1}{17}{Flowchart of Direct3D 11 Graphics Pipeline\relax }{figure.caption.8}{}}
 \@writefile{toc}{\contentsline {subsubsection}{HLSL}{19}{figure.caption.8}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1.3}SharpDX}{19}{subsection.3.1.3}}
@@ -65,26 +70,26 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Some of LightningChart Examples\relax }}{20}{figure.caption.9}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.2}Visualisation process}{20}{section.3.2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Loading and preprocessing of dataset}{21}{subsection.3.2.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Single slice from Volume dataset.\relax }}{21}{figure.caption.10}}
-\newlabel{fig:slice}{{3.3}{21}{Single slice from Volume dataset.\relax }{figure.caption.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Example of slice from Volume dataset.\relax }}{21}{figure.caption.10}}
+\newlabel{fig:slice}{{3.3}{21}{Example of slice from Volume dataset.\relax }{figure.caption.10}{}}
 \newlabel{fig:slice}{{3.2.1}{21}{Loading and preprocessing of dataset}{figure.caption.10}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces An example of slice map\relax }}{22}{figure.caption.11}}
 \newlabel{fig:map}{{3.4}{22}{An example of slice map\relax }{figure.caption.11}{}}
 \newlabel{fig:map}{{3.2.1}{22}{Loading and preprocessing of dataset}{figure.caption.11}{}}
-\newlabel{tab:level}{{\caption@xref {tab:level}{ on input line 443}}{22}{Loading and preprocessing of dataset}{figure.caption.11}{}}
+\newlabel{tab:level}{{\caption@xref {tab:level}{ on input line 444}}{22}{Loading and preprocessing of dataset}{figure.caption.11}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Multi-pass rendering}{23}{subsection.3.2.2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}First pass}{23}{subsection.3.2.3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces First pass output\relax }}{24}{figure.caption.12}}
-\newlabel{fig:first}{{3.5}{24}{First pass output\relax }{figure.caption.12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces The first pass output\relax }}{24}{figure.caption.12}}
+\newlabel{fig:first}{{3.5}{24}{The first pass output\relax }{figure.caption.12}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.4}Second pass}{24}{subsection.3.2.4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces Coordinates of the hit points.\relax }}{25}{figure.caption.13}}
-\newlabel{fig:second}{{3.6}{25}{Coordinates of the hit points.\relax }{figure.caption.13}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces Coordinates of hit points.\relax }}{25}{figure.caption.13}}
+\newlabel{fig:second}{{3.6}{25}{Coordinates of hit points.\relax }{figure.caption.13}{}}
 \@writefile{toc}{\contentsline {subsubsection}{Empty space skipping}{25}{figure.caption.14}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces The visualisation of sampling ray vectors' tracks \relax }}{26}{figure.caption.14}}
-\newlabel{fig:final}{{3.7}{26}{The visualisation of sampling ray vectors' tracks \relax }{figure.caption.14}{}}
-\@writefile{toc}{\contentsline {subsubsection}{Ray function}{26}{figure.caption.15}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces Red arrows represents low resolution sampling rate ray. Green demostrates high resolution sampling one.\relax }}{27}{figure.caption.15}}
-\newlabel{fig:empty}{{3.8}{27}{Red arrows represents low resolution sampling rate ray. Green demostrates high resolution sampling one.\relax }{figure.caption.15}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces The visualisation of the sampling rays vectors' tracks \relax }}{26}{figure.caption.14}}
+\newlabel{fig:final}{{3.7}{26}{The visualisation of the sampling rays vectors' tracks \relax }{figure.caption.14}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces Red arrows represents the low sampling rate ray. Green demonstrates high resolution sampling one.\relax }}{27}{figure.caption.15}}
+\newlabel{fig:empty}{{3.8}{27}{Red arrows represents the low sampling rate ray. Green demonstrates high resolution sampling one.\relax }{figure.caption.15}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Ray function}{27}{figure.caption.15}}
 \newlabel{eq:alpha}{{3.1}{27}{Ray function}{equation.3.2.1}{}}
 \newlabel{eq:color}{{3.2}{27}{Ray function}{equation.3.2.2}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces An example of an accomulation function output\relax }}{28}{figure.caption.16}}

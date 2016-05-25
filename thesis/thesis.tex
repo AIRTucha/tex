@@ -155,11 +155,11 @@ The dataset can be captured by various numbers of technologies like: MRI\footnot
 
 \section{Personal backgound}
 
-The first experience in the visualisation of volumetric data was gained by me during my internship at the Institute of Data Processing and Electronics, which belongs to the Karlsruhe Institute of Technology (KIT). I was a part of the 3D Ultrasound Computer Tomography (USCT) team there. Their main goal is the development of a new methodology for early breast cancer detection. An algorithm for visualisation of five-dimensional datasets was developed by me during the work placement. In result the it was integrated into Tomo Ray Caster 2\footnote{JavaScript framework for the visualisation of 3D data, developed in Institute of Data Processing and Electronics} and USCT's edition of DICOM Viewer.\\
+The first experience in the visualisation of volumetric data was gained by me during my internship at the Institute of Data Processing and Electronics, which belongs to the Karlsruhe Institute of Technology (KIT). I was a part of the 3D Ultrasound Computer Tomography (USCT) team there. Their main goal is the development of a new methodology for early breast cancer detection. An algorithm for visualisation of five-dimensional datasets was developed by me during the work placement. In result the it was integrated into Tomo Ray Caster 2\footnote{JavaScript framework for the visualisation of 3D data, developed in Institute of Data Processing and Electronics} and USCT's edition of DICOM Viewer. An example of Tomo Ray Caster's output image is presented on figure \ref{fig:usc}.\\
 
 \begin{figure}[!h]
 \includegraphics[scale=0.4]{img/usct1}\includegraphics[scale=0.4335]{img/usct2}\\
-\caption{Volume visualisation of breast phantom made by USCT}
+\caption{Volume visualisation of breast phantom made by USCT\label{fig:usct}}
 \end{figure}
 %USCT VIS
 
@@ -169,10 +169,10 @@ The very first steps in modern computer graphics was made by me during the proje
 
 \section{Arction Oy and Ligthning Chart}
 
-Arction Oy is a Finnish software company based in Kuopio. Their team has a strong background in computer graphics and science. The main product of the company called LightningChart Ultimate. It is the fastest C\# library for scientific and engineering data visualisation. The library is capable to draw massive XY, Polar, Smith and 3D XYZ graphs, polygonal mesh models, surfaces, 3D pies/donuts and Geographic information. The library has an API for .NET WinForm and WPF applications, it is also possible to use it for a traditional Win32 C++ software development. The main advantage of the library is the fact that it is based on low-level DirectX graphics routines developed by Arction, then the most part of competitors use graphics routines which belongs to System.Windows.Media.\\
+Arction Oy is a Finnish software company based in Kuopio. Their team has a strong background in computer graphics and science. The main product of the company called LightningChart Ultimate. It is the fastest C\# library for scientific and engineering data visualisation. The library is capable to draw massive XY, Polar, Smith and 3D XYZ graphs, polygonal mesh models, surfaces, 3D pies/donuts and Geographic information. The library has an API for .NET WinForm and WPF applications, it is also possible to use it for a traditional Win32 C++ software development. The main advantage of the library is the fact that it is based on low-level DirectX graphics routines developed by Arction, then the most part of competitors use graphics routines which belongs to System.Windows.Media. Several example of the library's abilites are shown on the advetisment, figure \ref{fig:lchu}.\\
 \begin{figure}[!h]
 \includegraphics[scale=0.33]{img/lchu}\\
-\caption{Example of LightningChart possibilities from the main page of Acrtion}
+\caption{Example of LightningChart possibilities from the main page of Acrtion\label{fig:lchu}}
 \end{figure}
 %arction website
 
@@ -210,12 +210,12 @@ Multidimensional data can be represented in two different ways: as a surface and
 Today we are literally surrounded by the surface rendering based on polygonal mesh. The technology is used in computer games, design, cinema, science, engineering and etc. The technology is so popular that entire 3D graphic pipeline is built around the idea. That's why this type of visualization is easily accelerated by graphic cards.\\
 
 \subsection{Vertexs}
-Traditionally, 3D surfaces are constructed out of huge amount of polygons connected as a mesh. Due to simplicity, they usually have a triangular shape. It is possible to describe a triangle via list of three coordinates called vertices. The internal area of the shape filled with color during rasterization step. The color is calculated as dot product between the normal vector of the surface and the vector of light.
+Traditionally, 3D surfaces are constructed out of huge amount of polygons connected as a mesh. Due to simplicity, they usually have a triangular shape. It is possible to describe a triangle via list of three coordinates called vertices. The internal area of the shape filled with color during rasterization step. The color is calculated as dot product between the normal vector of the surface and the vector of light. An examples of wireframe and flat shading of the polygonal mesh model is demostrated on figure \ref{fig:mesh}
 %http://people.csail.mit.edu/fredo/Depiction/1_Introduction/reviewGraphics.pdf
 
 \begin{figure}[!h]
 \includegraphics[scale=0.55]{img/mesh}\\
-\caption{Wireframe and flat shading polygonal meshmodel}
+\caption{Wireframe and flat shading polygonal meshmodel\label{fig:mesh}}
 \end{figure}
 
 \subsection{Normals}
@@ -280,9 +280,9 @@ A proxy geometry can be created in two different ways. The first one called 2D t
 \centerline{
 \includegraphics[scale=0.7]{img/texture-based}
 }
-\caption{a) example of proxy geometry for 3D texture-based volume rendering a) Texture-based volume rendering with a lower sampling rate c) high sampling rate texture-based volume rendering}
+\caption{a) an example of proxy geometry for 3D texture-based volume rendering a) Texture-based volume rendering with a lower sampling rate c) high sampling rate texture-based volume rendering\label{fig:text}}
 \end{figure}
-That's why the second way was invented. It is called 3D texture-based volume rendering. In this solution the algorithm creates only one set of planes which are always perpendicular to the camera and textures are mapped on them differently for the different camera position. \\
+That's why the second way was invented. It is called 3D texture-based volume rendering. In this solution the algorithm creates only one set of planes which are always perpendicular to the camera and textures are mapped on them differently for the different camera position. The figure \ref{fig:text} shows an example of proxy geometry for 3D texture-based volume rendering, Texture-based volume rendering with a lower sampling rate and high sampling rate texture-based volume rendering.\\
 
 It gets rid of an artifact of the first technique and allows to modify the sampling rate of the visualisation. The approach is the most popular direct volume rendering algorithm among medical software. But it has significant disadvantages against competitors. It is able to use, transfer function to emphasize or classify features of interest in the volume, while final blending is performed via Alpha-blending provided by DirectX API. It makes the approach less flexible than all other methods which provides more advanced tools for blending of sampled information.
 %http://www.forceflow.be/wp-content/uploads/2012/02/vr_overview.pdf
@@ -315,10 +315,10 @@ The final pixel's color is calculated in a very similar way used by Ray Function
 
 As Splatting, the approach also tries to accelerate Ray Caster by solving of the interpolation issue, but it uses totally different way to illuminate the problem. Shear-warp has a very similar idea to the Volume Ray Casting. In some sense it is an optimization of the technique which makes rays always hit exactly in the center of the voxel.\\
 
-The aim is achieved by the transformation of the volume data to sheared object space by translation and scaling of slices. After that an intermediate 2D image is produced by Ray Casting performed in the shared object space. The transformation brings some distortion to the output image. It is fixed at the last step of the algorithm called wrapping. The final image is the result of the transformation applied to the intermediate picture.\\
+The aim is achieved by the transformation of the volume data to sheared object space by translation and scaling of slices. After that an intermediate 2D image is produced by Ray Casting performed in the shared object space. The transformation brings some distortion to the output image. It is fixed at the last step of the algorithm called wrapping. The final image is the result of the transformation applied to the intermediate picture. The key difference between normal Ray Casting and Shear-Warp is shown in the figure \ref{fig:sw}.\\
 \begin{figure}[!h]
 \centerline{\includegraphics[scale=0.5]{img/shear-warp}}
-\caption{(left)Ray Casting in world coorinates, (right)Ray Casting in shear object coordinates}
+\caption{(left)Ray Casting in world coorinates, (right)Ray Casting in shear object coordinates\label{fig:sw}}
 \end{figure}
 This solution gives us the fastest volume rendering process, but unfortunately the algorithm also suffers from several types of artifacts. Some of them are caused by an unevenness of sampling rate along different directions, others are produced by 2D transformation on wrapping stage.
 

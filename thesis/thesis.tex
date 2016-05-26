@@ -562,22 +562,37 @@ The Ray Caster is able to visualise large multi-dimensional volume dataset. Theo
 
 It is not realistic to say that can be possible to reach an interactive frame rate for such a huge volume models on modern hardware. In addition it is totally useless to render volumes with a much bigger amount of voxels per side than resolution of the visualisation itself. That is why such a big volumes are useless even for full screen visulisations at 4K displayes. Too large datasets can be carefully downscaled to get desirable resolution.\\
 
-Anyway such a huge dataset are very exotica, typical dataset does not contain more than 268 milion of voxel and they are able to be mapped to the single texture map. It is about 600 of voxels per dimenssion in case of cubic shape of the volume. Our engine is able render this amount of voxel with an intaractive frame rate even in a very weak graphic card.\\
-%https://msdn.microsoft.com/en-us/library/windows/desktop/ff819065(v=vs.85).aspx
-\begin{itemize} 
-\item to render large multi-dimensional volumes with an interactive frame rate.
-\item to move and rotate the model in the chart's space.
-\item to provide clients with possibilities to apply windowing and thresholding to the initial dataset.
-\item to render the model semi-transparent.
-\end{itemize}
-\subsection{Rotation and position}
-\subsection{Settings}
-\subsubsection{Windowing}
-\subsubsection{Thresholding}
-\subsubsection{Slice range clipping}
-\subsection{Mouse picking}
+Anyway such a huge dataset are very exotica, typical dataset does not contain more than 268 milion of voxel and they are able to be mapped to the single texture map. It is about 600 of voxels per dimenssion in case of cubic shape of the volume. Our engine is able render this amount of voxel with an intaractive frame rate even in a very weak graphic card. An exmple of the engine output is visualised on figure \ref{fig:head}\\
 
-\section{Disscusion}
+\begin{figure}[H]
+\centerline{\includegraphics[scale = 0.6]{img/head}}
+\caption{Semi-transperent rendering of rotated model of male's head.\label{fig:head}}
+\end{figure}
+
+
+The model can be rotated, scaled and moved, because it is hosted by cube. The cube is rendered by LigthningChart and it allows to apply to the volume any kind of transformation. An example of models rotation are shown in figure \ref{fig:cuttedhead}.
+
+\begin{figure}[H]
+\centerline{\includegraphics[scale = 0.5]{img/sculp}}
+\caption{Rotated sculpe model with applied slice range chages and tresholding\label{fig:sculp}}
+\end{figure}
+
+The visualisation of sculp(figure \ref{fig:sculp}) is a tresholdided out of other tissues types, but because of contrast and brightness correction, the sculp allocetes full dinamic range. As result even tiny detiales are rocognisable. Initial shape of the model without treashold is demostrated on figure \ref{fig:maxi}. 
+
+\begin{figure}[H]
+\centerline{\includegraphics[scale = 0.5]{img/cuttedhead}}
+\caption{Rotated head model with applied slice range chages and tresholding\label{fig:sculp}}
+\end{figure}
+
+The figure \ref{fig:semisculp} is a demosntration of very semi-transperent visualisation of the model. This kind of visualisation allows to get more understanding of internal sctructure of the object. Treasholding is not applied to the model, the sculp is so recognisable because of high brigthness differnse and high transperensy of the model.
+
+\begin{figure}[H]
+\centerline{\includegraphics[scale = 0.5]{img/semi-sculp}}
+\caption{Rotated head model with applied slice range chages and tresholding\label{fig:sculp}}
+\end{figure}
+
+
+%https://msdn.microsoft.com/en-us/library/windows/desktop/ff819065(v=vs.85).aspx
 
 \section{Future Development}
 

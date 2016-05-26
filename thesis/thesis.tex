@@ -102,7 +102,7 @@ Data & \today & Pages/Appendices & \pageref{LastPage}\\
 \multicolumn{4}{|l|}{Abstract}\\
 \multicolumn{4}{|l|}{ }\\
 \multicolumn{4}{|p{14cm}|}{
-Arctive Oy is a Finnish software company based in Kuopio. Their main product is LightningChart, the fastest C\# framework for the visualisation of scientific, engineering, trading and research data. The library contains a bunch of tools for visualisation of XY, 3D XYZ, smith and polar graphs, 3D pie/donut views, 3D objects.
+Arction Oy is a Finnish software company based in Kuopio. Their main product is LightningChart, the fastest C\# framework for the visualisation of scientific, engineering, trading and research data. The library contains a bunch of tools for visualisation of XY, 3D XYZ, smith and polar graphs, 3D pie/donut views, 3D objects.
 }\\
 \multicolumn{4}{|l|}{ }\\
 \multicolumn{4}{|p{14cm}|}{
@@ -143,7 +143,7 @@ In addition, I would like to express my deepest gratitude to Karlsuruhe Institut
 \tableofcontents
 
 \chapter{INTRODUCTION}
-This chapter contains brief information about the motivation behind volume rendering, my personal background in computer graphics especially volume rendering. It also introduces Acrtion as the owner of the project, explains the reasons for Arction's interest in the development, set requirements for the final product.
+This chapter contains brief information about the motivation behind a volume rendering, my personal background in computer graphics especially in a volume rendering. It also introduces Acrtion as the owner of the project, explains the reasons for Arction's interest in the development, sets requirements for the final product.
 \section{Motivation}
 
 Volume data is very common our day. An importance of the type of datasets will grow in the near future, because of development in the field of 3D data acquisition and possibilities to perform the visualisation of this type of information on a modern office workstation with an interactive frame rate.\\
@@ -556,6 +556,20 @@ Maximum intensity function visualizes only the brightest value sampled by the ra
 
 \chapter{Conclusion}
 \section{Results}
+The volume rendering engine developed for the thesis project succesfully became a part of Lightning Chart Ultimate as Volume Rendering Add-On. It is going to be distributed in according with new Arction's licences with allows client to purchase components of Lightning Chart separatly.\\
+
+The Ray Caster is able to visualise large multi-dimensional volume dataset. Theoreticaly the size of the dataset is only limmited by the total size of textures which can be loaded to the single texture array. In according with documention of DirectX 11, modern graphic cards are able to load more than 2048 textures with 16 384 pixel per side on each. It is more than 549 bilions of voxels or cubic volume with more than 8000 of voxels along each axies.\\
+
+It is not realistic to say that can be possible to reach an interactive frame rate for such a huge volume models on modern hardware. In addition it is totally useless to render volumes with a much bigger amount of voxels per side than resolution of the visualisation itself. That is why such a big volumes are useless even for full screen visulisations at 4K displayes. Too large datasets can be carefully downscaled to get desirable resolution.\\
+
+Anyway such a huge dataset are very exotica, typical dataset does not contain more than 268 milion of voxel and they are able to be mapped to the single texture map. It is about 600 of voxels per dimenssion in case of cubic shape of the volume. Our engine is able render this amount of voxel with an intaractive frame rate even in a very weak graphic card.\\
+%https://msdn.microsoft.com/en-us/library/windows/desktop/ff819065(v=vs.85).aspx
+\begin{itemize} 
+\item to render large multi-dimensional volumes with an interactive frame rate.
+\item to move and rotate the model in the chart's space.
+\item to provide clients with possibilities to apply windowing and thresholding to the initial dataset.
+\item to render the model semi-transparent.
+\end{itemize}
 \subsection{Rotation and position}
 \subsection{Settings}
 \subsubsection{Windowing}

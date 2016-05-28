@@ -350,7 +350,7 @@ C\# is used in the project to reach as close integration with LightningChart Ult
 DirectX is a C/C++ API\footnote{Application Programming Interface} for work with multimedia resources created by Microsoft for Windows and Xbox. It contains advanced tools for rendering of 2D and 3D graphic and sound management. Direct3D is a part of the library responsible for hardware accelerated rendering of 3D graphics. The tool is mainly focused on GPU accelerated rendering of polygonal mesh models.\\
 %http://searchwindowsserver.techtarget.com/definition/DirectX
  \begin{figure}[!h]
-\centerline{\includegraphics[scale=0.9]{img/pipeline}}
+\centerline{\includegraphics[scale=1]{img/pipeline}}
 \caption{Flowchart of Direct3D 11 Graphics Pipeline\label{fig:pipeline}}
 \end{figure}
 \subsubsection{Rendering Pipeline}
@@ -399,6 +399,7 @@ The language is basically significantly modified version of C. The language does
 \subsection{SharpDX}
 
 As it was already mentioned DirectX is C++ library, so it is not possible to use directly from C\#. The problem is solved by SharpDX. It is an open-source C\# wrapper for the original DirectX API. It plays role of bridge between API and .NET. As a result, developers are able to manipulate with the functional of the API from C\#.\\
+
 %http://sharpdx.org
 Every feature of the API is implemented in a very natural way. That is why a huge amount of tutorials and example available for the original C++ API can be easily translated to C\# and SharpDX. Even original documentation is still useable for SharpDX developers.
 
@@ -476,7 +477,7 @@ The Vertex Shader of the first pass calculates positions of the cube vertices in
 
 The Pixel Shader represents the coordinates as color. X coordinate is stored in the red channel, Y one is stored in the green channel and Z coordinates is stored as blue value. The final result of the first pass is demonstrated on Figure \ref{fig:first}.
 \begin{figure}[!h]
-\centerline{\includegraphics[scale = 0.5]{img/first}}
+\centerline{\includegraphics[scale = 0.45]{img/first}}
 \caption{The first pass output\label{fig:first}}
 \end{figure}
 
@@ -557,67 +558,64 @@ Maximum intensity function visualizes only the brightest value sampled by the ra
 
 \chapter{Conclusion}
 \section{Results}
-The volume rendering engine developed for the thesis project succesfully became a part of Lightning Chart Ultimate as Volume Rendering Add-On. It is going to be distributed in according with a new Arction's licence which allows client to purchase components of Lightning Chart separatly.\\
+The volume rendering engine developed for the thesis project successfully became a part of Lightning Chart Ultimate as Volume Rendering Add-On. It is going to be distributed in accordance with an Arction's brand new licensing system which allows clients to purchase components of Lightning Chart separately.\\
 
 \begin{figure}[H]
 \centerline{\includegraphics[scale = 0.6]{img/brain}}
-\caption{Semi-transperent rendering of rotated model of male's head with contrast brain.\label{fig:brain}}
+\caption{Semi-transparent rendering of rotated model of male's head with contrast brain.\label{fig:brain}}
 \end{figure}
 
-The Ray Caster is able to visualise large multi-dimensional volume dataset. Theoreticaly the size of the dataset is only limmited by the total size of textures which can be loaded to the single texture array. In according with documention of DirectX 11, modern graphic cards are able to load more than 2048 textures with 16 384 pixel per side on each. It is more than 549 bilions of voxels or cubic volume with more than 8000 of voxels along each axies.\\
+The Ray Caster is able to visualise large multi-dimensional volume dataset. Theoretically the size of the dataset is only limited by the total size of textures which can be loaded into the single texture array. In accord with documentation of DirectX 11, modern graphic cards are able to load more than 2048 textures with 16 384 pixels per side on each. It is more than 549 billions of voxels or cubic volume with more than 8000 of voxels along each axis.\\
 
 \begin{figure}[H]
 \centerline{\includegraphics[scale = 0.5]{img/head}}
-\caption{Visualisation of female's head CT-scan, 512x512x230 voxels.\label{fig:head}}
+\caption{Visualisation of the female's head CT-scan, 512x512x230 voxels.\label{fig:head}}
 \end{figure}
 
-It is not realistic to say that it can be possible to reach an interactive frame rate for such a huge volume models on modern hardware, because it is not possible to fit it to the memory of graphic card. For example single channel of 1024x1024x1024 dataset would requer more than 1gb of graphic RAM to keep it. In addition it is totally useless to render volumes with a much bigger amount of voxels per side than resolution of the visualisation itself. Too large datasets can be carefully downscaled to get desirable resolution.\\
+The Ray Caster is able to visualise large multi-dimensional volumetric dataset. Theoretically the size of the dataset is only limited by the total size of textures which can be loaded into the single texture array. In accord with documentation of DirectX 11, modern graphic cards are able to load more than 2048 textures with 16 384 pixels per side on each. It is more than 549 billions of voxels or cubic volume with more than 8000 of voxels along each axis.\\
 
-Moreover such a huge dataset are very exotice, typical dataset does not contain more than 268 milion of voxel. It is even possible to fit this amount of information to a single texture map. It is about 600 of voxels per dimenssion in case of cubic shape of a volume. Our engine is able render this amount of voxel with an intaractive frame rate even in a very weak graphic card. An exmple of the engine output is visualised on figure \ref{fig:brain}. A part of the skull was removed during preprocessing. The segmentation was made to visualise the model with a teniqueach which does not have an treasholding tools.\\
+Moreover, such a huge dataset is very exotic case. Typical dataset does not contain more than 268 million of the voxel. It is even possible to fit this amount of information to a single texture map. It is about 600 of voxels per dimension in the case of cubic shape of a volume. Our engine is able to render this amount of voxels with an interactive frame rate even in a very weak graphic card. An example of the engine output is visualised on the figure \ref{fig:brain}. A part of the skull was removed during preprocessing. The segmentation was made to visualise the model with a technique which does not have a tool for a thresholding.\\
 
 
 \begin{figure}[H]
 \centerline{\includegraphics[scale = 0.65]{img/head-zcor}}
-\caption{Visualisation of female's head CT-scan with Z coordinate scaling, 512x512x230 voxels.\label{fig:head-zcor}}
+\caption{Visualisation of the female's head CT-scan with Z coordinate scaling, 512x512x230 voxels.\label{fig:head-zcor}}
 \end{figure}
+Another example is shown on the figure \ref{fig:head}. It is a female head captured by CT. The dataset is 512x512x230 voxels. The dataset has only 230 voxels along a Z - dimension. Since the volume is visualised as a dataset with cubic shape, it makes the final model be two times stretched in this direction. The figure \ref{fig:head-zcor} demonstrates the object with correction of the stretching via scaling of the Z coordinate.\\
 
-Another example is shown on figure \ref{fig:head}. It is a females had captured by CT. The dataset is 512x512x230 voxels. The dataset has only 230 voxels along Z-dimenssion. Since the volume is visualised as dataset with cubic shape, it makes the final model be two times streached in this direction. The figure \ref{fig:head-zcor} demonstrates the object with correction of the streaching via scaling of Z coordinate.\\
+There are two main types of tissues in the model: soft-ones and bones. The skull and muscles are in different parts of the histogram, that is why the engine is able to visualise them separately by thresholding by a brightness. The thresholded skull is demonstrated on the figure \ref{fig:head-th}.\\
 
-
-There are two main types of tissues at the model: soft-ones and bones. The skull and muscles are in a different parts of histogram, that is why the engine is able to visualise them separatly by tresholding of them out of other tissues. The skull treasholding is demostrated on figure \ref{fig:head-th}.\\
-
-The bone has a very low dynamic range itself. That is why contrast and brightness correction is very imprtant in this case, because it makes the skull to allocete full possible dinamic range. As result even tiny detiales of the bone are well recognisable. Initial shape of the model without treashold is demostrated on figure \ref{fig:head-th-win}. \\
+The bone has a very low dynamic range. That is why contrast and brightness correction is very important in this case, because it makes the skull to allocate full possible dynamic range. As a result, even tiny details of the bone are well recognisable. The initial shape of the model without threshold is demonstrated in the figure \ref{fig:head-th-win}. \\
 
 \begin{figure}[H]
 \centerline{\includegraphics[scale = 0.45]{img/head-th-win}}
-\caption{Visualisation of female's head CT-scan with Z coordinate scaling, tresholding of soft-tissues which reveal skull and contrast correction, 512x512x230 voxels.\label{fig:head-th-win}}
+\caption{Visualisation of the female's head CT-scan with Z coordinate scaling, thresholding of soft-tissues which reveal a skull and contrast correction, 512x512x230 voxels.\label{fig:head-th-win}}
 \end{figure}
 
 \begin{figure}[H]
 \centerline{\includegraphics[scale = 0.45]{img/head-clip}}
-\caption{Visualisation of female's head CT-scan with Z coordinate scaling, tresholding of soft-tissues which reveal skull, contrast correction and slice range clipping, 512x512x230 voxels.\label{fig:head-clip}}
+\caption{Visualisation of the female's head CT-scan with Z coordinate scaling, thresholding of soft-tissues which reveal skull, contrast correction and slice range clipping, 512x512x230 voxels.\label{fig:head-clip}}
 \end{figure}
 
-Slice range clipping is also very powerful tool of the engine. The figure \ref{fig:head-clip} shows the skull with cutted part at the left side. At certain angle this kind of optine allows to take a look directly inside of the object, figure \ref{fig:head-clip-rot}. The model can be rotated, scaled and moved, because it is hosted by cube. The cube is rendered by LigthningChart and it allows to apply to the volume any kind of transformation.\\
+Slice ranges clipping is also very powerful tool of the engine. The figure \ref{fig:head-clip} shows the skull with a cut away part on the left side. At certain angles this kind of settings allows to take a look directly inside of the object, figure \ref{fig:head-clip-rot}. The model can be rotated, scaled and moved, because it is hosted by cube. The cube is rendered by LigthningChart and it allows to apply to the volume any kind of transformation.\\
 
 \begin{figure}[H]
 \centerline{\includegraphics[scale = 0.7]{img/head-clip-rot}}
-\caption{Visualisation of female's head CT-scan with Z coordinate scaling, tresholding of soft-tissues which reveal skull, contrast correction, slice range clipping and rotation, 512x512x230 voxels.\label{fig:head-clip-rot}}
+\caption{Visualisation of the female's head CT-scan with Z coordinate scaling, thresholding of soft-tissues which reveal skull, contrast correction, slice range clipping and rotation, 512x512x230 voxels.\label{fig:head-clip-rot}}
 \end{figure}
 
-In addition it is possible to display internal stricture via semi-transperent rendering. The example of semi-tranperent rendering is shown on the figure \ref{fig:head-op}. Picture \ref{fig:head-op-rot} contains excactly same visualisation with a little bit different rotation settings. It does not have any treasholding and contrast settigns are similar with skull visualisations. The result is achived by a very low opacity. 
-This kind of visualisation allows to get more understanding of internal sctructure of the object.\\
+In addition, it is possible to display internal stricture via semi-transparent rendering. The example of semi-transparent rendering is shown on the figure \ref{fig:head-op}. The picture \ref{fig:head-op-rot} contains exactly same visualisation with a little bit different rotational settings. It does not have any thresholding. Contrast settings are similar with skull's visualisations. The result is achieved by a very low opacity. This kind of visualisation allows to get more understanding of the internal structure of the object.\\
 
-Figure \ref{fig:head-all} and figure \ref{fig:cuttedhead} are two more examples of the engine output. They show how all different settings can be combined at single picture. This kind of visualisation can be used at reshearching, planing or teaching process.
+There are two more examples of the engine output on the figures \ref{fig:head-all} and \ref{fig:cuttedhead} . They show how all different settings can be combined at single picture. This kind of visualisation can be used in researching, planning or teaching process
 
 \begin{figure}[H]
 \centerline{\includegraphics[scale = 0.5]{img/head-op}}
-\caption{Visualisation of female's head CT-scan with Z coordinate scaling, low opacity and contrast correction, 512x512x230 voxels.\label{fig:head-op}}
+\caption{Visualisation of the female's head CT-scan with Z coordinate scaling, low opacity and contrast correction, 512x512x230 voxels.\label{fig:head-op}}
 \end{figure}
 
 \begin{figure}[H]
 \centerline{\includegraphics[scale = 0.5]{img/head-op-rot}}
-\caption{Visualisation of female's head CT-scan with Z coordinate scaling, low opacity, contrast correction and rotation, 512x512x230 voxels.\label{fig:head-op-rot}}
+\caption{Visualisation of the female's head CT-scan with Z coordinate scaling, low opacity, contrast correction and rotation, 512x512x230 voxels.\label{fig:head-op-rot}}
 \end{figure}
 
 
@@ -625,50 +623,58 @@ Figure \ref{fig:head-all} and figure \ref{fig:cuttedhead} are two more examples 
 
 \section{Future Development}
 
-The result of my thesis project is a  fast, but at the same time simple realisation of volume rendering engine. There are lot of development of different features, which can be added in future versions of the product to queallity of rendering and performance for extrimly large datasets.
+The result of my thesis project is a fast, but at the same time a simple realisation of volume rendering engine. There are a lot of different features, which can be added in future versions of the product. There are two main areas of growth: quality of rendering and performance for an extremely large datasets.\\
 
 \begin{figure}[H]
 \centerline{\includegraphics[scale = 0.7]{img/head-all}}
-\caption{Visualisation of female's head CT-scan with Z coordinate scaling, tresholding of soft-tissues which reveal skull, contrast correction, slice range clipping, low opacity and rotation, 512x512x230 voxels.\label{fig:head-all}}
+\caption{Visualisation of the female's head CT-scan with Z coordinate scaling, thresholding of soft-tissues which reveal skull, contrast correction, slice range clipping, low opacity and rotation, 512x512x230 voxels.\label{fig:head-all}}
 \end{figure}
 
 \subsection{Picture quality}
 
-There are two main ways in terms of quality improvment. Light interaction and Isosurface rendering ray function were out of the thesis scope, but they have to be implemented at the engine in future version of the library.
+There are two main ways in terms of quality improvement. Light interaction and an isosurface rendering ray function were out of the thesis scope, but they have to be implemented in the engine in a future version of the library.\\
 
-Light and shadow is a very important part of 3D visualisation. It takes a majour part in transmission of the 3D objects shape. Depth is usually evaluated by combination of shadows and perspective. There are several techniques for the task. Some of them use combine volume data with a polygonal one, others do not. Not every solution for ligntning of volume objects supports semi-transperent shadows. Shading signifisantly improve quality of final image, bug has very negative impact to the final performance. Performance is a main reqerment for Arction's solutions, that is why the development will be done only after cearfull investigation of the issue.\\
+Light and shadow is a very important part of 3D visualisation. It takes a major part in the transmission of the 3D object's shape. The depth is usually evaluated in combination of shadows and perspective. There are several techniques for the task. Some of them combine volume data with a polygonal model, others do not. Not every solution for lightning of volume objects supports semi-transparent shadows. A shading significantly improves quality of the final image, but has very negative impact on the final performance. Performance is a main requirement for Arction's solutions, that is why the development will be done only after careful investigation of the issue.\\
 
 
 \begin{figure}[H]
 \centerline{\includegraphics[scale = 0.7]{img/cuttedhead}}
-\caption{Semi-transperent rendering of rotated model of male's head with contrast brain wit slice range clipping along two diffrent axis.\label{fig:cuttedhead}}
+\caption{Semi-transparent rendering of the rotated model of a male's head with contrast brain wit slice range clipping along two different axis.\label{fig:cuttedhead}}
 \end{figure}
 
-Isosurface rendering draws the surface of the model in the way that it looks like rendering of polygonal model. The final result is very similar to the one which is porduced by inderect volume rendering. The visualisation looks like much more impresive than the output of accomulation function which is the main mode of LightningChart's Volume Rendering Add-On. An examples of isosurface and accomulation rendering are shown on the figure \ref{fig:iso}, the compression is not fear, because the accomulation ray function does not implement an interpolation while arctions use it to fill gaps between slices. In addition both of them has a very similar performance. But an isosurface ray function has the same main problem with an indirect volume rendering. It is not able to visualuse an infromation about an internal structure of the dataset. It makes the scintific application of the aproach much more limmited than the current solution has. It is the main resone why an implementation of the feature was not high priority task for me on this project.
+An isosurface rendering draws the surface of the model in the way that it looks like a rendering of polygonal model. The final result is very similar to the one which is produced by indirect volume rendering. The visualisation looks like much more impressive than the output of the accumulation function which is the main mode of LightningChart's Volume Rendering Add-On.An example of isosurface and accumulation rendering are shown on the figure \ref{fig:iso}, the comparing is not fully fair, because the accumulation ray function does not implement an interpolation while Arction's one use it to fill gaps between slices. In addition, both of them has a very similar performance. But an isosurface ray function has the same main problem with an indirect volume rendering. It is not able to visual use any information about an internal structure of the dataset. It makes the scientific application of the approach much more limited than the current solution has. It is the main reason why an implementation of the feature was not a high priority task for me on this project.
 \begin{figure}[H]
 \centerline{\includegraphics[scale = 0.5]{img/iso}}
-\caption{Rendering of acomulation ray function with out interpolation (left) and isoserface ray functuin(right)\label{fig:iso}}
+\caption{Rendering of accumulation ray function without interpolation (left) and isosurface ray function (right)\label{fig:iso}}
 \end{figure}
 
-The technique detects the voxel which satisfy treshold. Takes in account several pixels around the point and calculate gradient vector, the gradient is used as a normal vector. Brightness of correspondent pixel is calculated in a very similar way with traditional Phong aproach for polygon-based 3D graphic. It is dot product of the normal vector and direction of light.
+The technique detects a voxel which satisfies threshold. Takes into account several pixels around the point and calculate gradient vector. It is used as a normal vector. Brightness of corresponding pixel are calculated in a very similar way with a traditional Phong approach for polygon-based 3D graphic. It is a dot product of the normal vector and direction of light.
 
 \subsection{Sampling rate manager}
  
-In a future complex ray function can became a reasone for performance problem. It can be solved by sampling rate manager. The tool will add to the rendering engine an addtional option which will turn on a dynamic conrtol over the sampling rate. In case of low framerate it will be able to drop the sampling rate during transmission to make interactions with the model smoother. For a short period of time the quality of the model will drop down to achive more responsible rotation and transition of the object in 3D space, but the general shape will remain to be recognisable. Rigth after that the manager will set default sampling rate and quality will be back.\\
+In a future complex ray function can become a reason for the performance problem. It can be solved by sampling rate manager. The tool will add to the rendering engine an additional option which will turn on a dynamic control over the sampling rate. In case of low frame rate it will be able to drop the sampling rate during transmission to make interactions with the model smoother. For a short period of time the quality of the model will drop down to achieve more responsive rotation and transition of the object in 3D space, but the general shape will remain to be recognisable. Right after that, the manager will set the default sampling rate and quality will be back.\\
 
-An other application is rendering a huge dataset on a very pure hardware. Signifisant changes in sampling rate should not have a dramatic effect to the quality of the final image, in case of models with a very high resolution. Relatively low sampling rate of the models will be at the same level  as average sampling rate of usual volume data. That is why they will have to keep good quality even on low sampling rate mode.
+Another application is rendering a huge data set on a very weak hardware. Significant changes in sampling rate should not have a dramatic effect on the quality of the final image, in case of models with a very high resolution. Relatively low sampling rate of the models will be at the same level as the average sampling rate of usual volume data. That is why they will have to keep good quality even in the low sampling rate mode.
 
 
 \subsection{API}
 
-Future development also have to be related with extension of the API provided by the engine. The engine will have to be able to load data as *.CSV files and recieve data created by clients code. Additionally Arction want to implement so kind of interactive modification of the dataset runtime, for example for vusialisation of electromagnetic or other fields inside an object. 
+Future development also has to be related to the extension of the API provided by the engine. The engine will have to be able to load data as *. CSV files and receive data created by client code. Additionally Arction want to implement so kind of interactive modification of the dataset runtime, for example for visualization of electromagnetic or other fields inside an object. \\
 
-The main proble is that it is very expensive to modify entire dataset on CPU site for an every frame. That is why the most realistic aproach requers creation of an additional low resolution volume. The dataset will be modifed runtime and supply graphic card with an information about the field. Fields do not usully have tiny detiales inside, in addition traditionally they are represented by hue component of a color. For humans it is difficult to reveal tiny detailes in this way. That is why the final picture will be create by fussion of this to datasets. Hue of the color will be sampled from a small dataset and brightness from an original one.
-
-
+The main problem is that it is very expensive to modify the entire dataset on CPU side for an every frame. That is why the most realistic approach requires creation of an additional low resolution volume. The dataset will be modified runtime and supply graphic card with an information about the field. Fields do not usually have tiny details inside, in addition traditionally they are represented by a hue component of a color. For humans, it is difficult to reveal tiny details in this way. That is why the final picture will be created by fusion of this to datasets. The hue of the color will be sampled from a small data set and brightness from an original one.
 
 
-\chapter{REFERENCES}
+
+
+%************************REFERENCES****************************
+\newpage
+
+
+% \clearpage
+
+\addcontentsline{toc}{section}{References}
+\bibliographystyle{plain}
+\bibliography{\jobname}
 
 
 

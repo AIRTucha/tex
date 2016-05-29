@@ -15,7 +15,6 @@
 \usepackage{lastpage}
 \usepackage{titlesec}
 \usepackage{caption}
-\usepackage[nottoc,numbib]{tocbibind}
 \captionsetup{figurename=FIGURE}
 \captionsetup{tablename=TABLE}
 \titleformat{\chapter}
@@ -25,6 +24,9 @@
 \geometry{
  a4paper
  }
+ \makeatletter
+\renewcommand\@biblabel[1]{}
+\makeatother
  
 
 \pagestyle{fancy}
@@ -151,7 +153,7 @@ Volume data is very common our day. An importance of the type of datasets will g
 
 Volume rendering is a process of multi-dimensional data visualisation into a two-dimensional image which gives the observer an opportunity to recognize meaningful insights in the original information. The technology allows us to represent 3 dimensions of the data via position in a 3D space and 3 more via color of the point.\\
 
-The dataset can be captured by various numbers of technologies like: MRI\footnote{Magnetic resonance imaging}, CT\footnote{Computer tomography}, PET\footnote{Positron emission tomography}, USCT\footnote{Ultrasound computer tomography} or echolocation. They also can be produced by physical simulations, for example fluid dynamics. The set of technologies mentioned before demonstrates that volumetric information plays a big role in medicine. It is used for an advanced cancer detection, visualization of aneurisms and treatment planning. This kind of rendering is also very useful for non-destructive material testing via computer tomography or ultrasound. Geoseismic researches produce huge three-dimensional datasets. Their visualisations are used in an oil exploration and planning of the deposit development.\\
+The dataset can be captured by various numbers of technologies like: MRI\footnote{Magnetic resonance imaging}, CT\footnote{Computer tomography}, PET\footnote{Positron emission tomography}, USCT\footnote{Ultrasound computer tomography} or echolocation. They also can be produced by physical simulations, for example fluid dynamics. The set of technologies mentioned before demonstrates that volumetric information plays a big role in medicine. It is used for an advanced cancer detection, visualization of aneurisms and treatment planning. This kind of rendering is also very useful for non-destructive material testing via computer tomography or ultrasound. Geoseismic researches produce huge three-dimensional datasets. Their visualisations are used in an oil exploration and planning of the deposit development.(Meißner, Pfister, Westermann \& Wittenbrink 2000, 1-2)\\
 %http://www.labri.fr/perso/preuter/imageSynthesis/02-03/papers/volvistut.pdf
 
 \section{Personal backgound}
@@ -664,24 +666,32 @@ Future development also has to be related to the extension of the API provided b
 The main problem is that it is very expensive to modify the entire dataset on CPU side for an every frame. That is why the most realistic approach requires creation of an additional low resolution volume. The dataset will be modified runtime and supply graphic card with an information about the field. Fields do not usually have tiny details inside, in addition traditionally they are represented by a hue component of a color. For humans, it is difficult to reveal tiny details in this way. That is why the final picture will be created by fusion of this to datasets. The hue of the color will be sampled from a small data set and brightness from an original one.
 
 
-
-
 %************************REFERENCES****************************
 \newpage
 
+\LARGE \textbf{REFERENCES}\\
+\addcontentsline{toc}{chapter}{References}
 
-% \clearpage
+\small M. Meißner , H. Pfister , R. Westermann \& C.M. Wittenbrink, 2000 \textit{Volume Visualization and Volume Rendering Techniques}[web document][accessed \today] The Eurographics Association 2000.\\
+Available from: http://www.labri.fr/perso/preuter/imageSynthesis/02-03/papers/volvistut.pdf\\
 
-\addcontentsline{toc}{section}{References}
-\bibliographystyle{plain}
-\bibliography{\jobname}
+\small Jeroen Baert, 2012 \textit{Rendering Large volumetric datasets: Overview, Using Sparse Voxel Octrees \& GPU ray casting}[web document][accessed \today] University of Leuven.\\
+Available from: http://www.forceflow.be/wp-content/uploads/2012/02/vr\_overview.pdf\\
 
+\small Milan Ikits, Joe Kniss, Aaron Lefohn \& Charles Hansen, 2007 \textit{GPU Gems} Chapter 39. \textit{Volume Rendering Techniques} [web publication][accessed \today] NVIDIA Corporation.\\
+Available from: http://http.developer.nvidia.com/GPUGems/gpugems\_ch39.html\\
 
+\small Kyle Hayward, 2009 \textit{Volume Rendering 101}[web publication][accessed \today]
+Available from: http://graphicsrunner.blogspot.fi/2009/01/volume-rendering-101.html\\
 
+\small Markus Hadwiger, Patric Ljung, Christof Rezk Salama \& Timo Ropinski, 2008\textit{Advanced Illumination Techniques for GPU-Based Volume Raycasting} [web document][accessed \today] NACM SIGGRAPH Asia 2008 \\
+Available from: http://www.voreen.org/files/sa08-coursenotes\_1.pdf\\
 
+\small Philippe G. Lacroute, 1995 \textit{FAST VOLUME RENDERING USING A SHEAR-WARP FACTORIZATION OF THE VIEWING TRANSFORMATION} [web document][accessed \today] Computer Systems Laboratory
+Departments of Electrical Engineering and Computer Science Stanford University \\
+Available from: https://graphics.stanford.edu/papers/lacrou\_thesis/lacroute\_thesis.pdf\\
 
-
-
-
+\small Leandro R Barbagallo, 2014 \textit{WEBGL VOLUME RENDERING MADE SIMPLE} [webpage][accessed \today] 
+Available from: http://lebarbacom.ipage.com/blog/\\
 
 \end{document}

@@ -39,3 +39,4 @@
 \contentsline {subsection}{\numberline {4.2.1}Picture quality}{36}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Sampling rate manager}{38}{subsection.4.2.2}
 \contentsline {subsection}{\numberline {4.2.3}API}{39}{subsection.4.2.3}
+\contentsline {chapter}{References}{40}{subsection.4.2.3}

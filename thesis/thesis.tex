@@ -168,7 +168,6 @@ The first experience in the visualisation of volumetric data was gained by me du
 
 The very first steps in modern computer graphics was made by me during the project. The first experience in work with WebGL was gained during customisation of the Tomo Ray Caster. GLSL as my first shader language was learned during the work. A lot of knowledge about image processing and scientific data visualisation, which became the basis for my thesis work was received by me at the workplacement.
 
-%INTERNSHIP REPORT
 
 \section{Arction Oy and Ligthning Chart}
 
@@ -205,8 +204,6 @@ Color model is the mathematical abstraction which allows computers to calculate 
 
 Multidimensional data can be represented in two different ways: as a surface and as volume. Future in this chapter, we are going to talk about these two concepts a little bit closer. We will highlight their advantage and disadvantages, common and uncommon features. Moreover, we are going to discuss an implementation detail of the techniques on modern hardware.
 
-%https://www.artstation.com/artist/vidarrapp illustration
-
 
 \section{Polygonal Rendering}
 
@@ -218,7 +215,7 @@ Traditionally, 3D surfaces are constructed out of huge amount of polygons connec
 
 \begin{figure}[!h]
 \includegraphics[scale=0.55]{img/mesh}\\
-\caption{Wireframe and flat shading polygonal meshmodel\label{fig:mesh}}
+\caption{Wireframe and flat shading polygonal meshmodel provided by Vidar Rapp\label{fig:mesh}}
 \end{figure}
 
 \subsection{Normals}
@@ -264,7 +261,7 @@ It is the oldest idea behind volume rendering and it has plenty of disadvantages
 But the algorithm is very popular for generation of medical illustrations, video or other static visualisation. The main advantage of the solution is that nicely preprocessed model can be easily rendered via well-known technique for 3D mesh model's rendering. They can be used even in very weak hardware.\\
 
 Unfortunately, this technology is not suitable for our project, because it does not satisfy our requirements. First of all it is not acceptable for us to lose an internal structure and lose an opportunity to modify the transfer function runtime.
-%http://www.forceflow.be/wp-content/uploads/2012/02/vr_overview.pdf
+%слайды
 
 \subsection{Direct}
 Direct volume rendering does not require any preprocessing. The data are visualised from an original dataset. It gives the algorithms an opportunity to modify a transfer function runtime. There are four most common technique for direct volume rendering algorithm, which will be discussed more detailed in this section in the future.\\
@@ -672,26 +669,85 @@ The main problem is that it is very expensive to modify the entire dataset on CP
 \LARGE \textbf{REFERENCES}\\
 \addcontentsline{toc}{chapter}{References}
 
-\small M. Meißner , H. Pfister , R. Westermann \& C.M. Wittenbrink, 2000 \textit{Volume Visualization and Volume Rendering Techniques}[web document][accessed \today] The Eurographics Association 2000.\\
-Available from: http://www.labri.fr/perso/preuter/imageSynthesis/02-03/papers/volvistut.pdf\\
+\small Arction Ltd \textit{About us page} [webpage][accessed \today] \\
+Available from: http://arction.com/about\_us\\
+
+\small Action Ltd \textit{LightningChart Ultimate SDK} [webpage][accessed \today] \\
+Available from: http://arction.com/products\_lc\_ultimate\_sdk\\
 
 \small Jeroen Baert, 2012 \textit{Rendering Large volumetric datasets: Overview, Using Sparse Voxel Octrees \& GPU ray casting}[web document][accessed \today] University of Leuven.\\
 Available from: http://www.forceflow.be/wp-content/uploads/2012/02/vr\_overview.pdf\\
 
-\small Milan Ikits, Joe Kniss, Aaron Lefohn \& Charles Hansen, 2007 \textit{GPU Gems} Chapter 39. \textit{Volume Rendering Techniques} [web publication][accessed \today] NVIDIA Corporation.\\
-Available from: http://http.developer.nvidia.com/GPUGems/gpugems\_ch39.html\\
+\small Leandro R Barbagallo, 2014 \textit{WEBGL VOLUME RENDERING MADE SIMPLE} [webpage][accessed \today]\\ 
+Available from: http://lebarbacom.ipage.com/blog/\\
+
+\small Frédo Durand \textit{A Short Introduction to Computer Graphics} [web document]MIT Laboratory for Computer Science[accessed \today] \\
+Available from: http://people.csail.mit.edu/fredo/Depiction/1\_Introduction/reviewGraphics.pdf\\
+
+\small Markus Hadwiger, Patric Ljung, Christof Rezk Salama \& Timo Ropinski, 2008\textit{Advanced Illumination Techniques for GPU-Based Volume Raycasting} [web document][accessed \today] NACM SIGGRAPH Asia 2008 \\
+Available from: http://www.voreen.org/files/sa08-coursenotes\_1.pdf\\
 
 \small Kyle Hayward, 2009 \textit{Volume Rendering 101}[web publication][accessed \today]
 Available from: http://graphicsrunner.blogspot.fi/2009/01/volume-rendering-101.html\\
 
-\small Markus Hadwiger, Patric Ljung, Christof Rezk Salama \& Timo Ropinski, 2008\textit{Advanced Illumination Techniques for GPU-Based Volume Raycasting} [web document][accessed \today] NACM SIGGRAPH Asia 2008 \\
-Available from: http://www.voreen.org/files/sa08-coursenotes\_1.pdf\\
+\small Milan Ikits, Joe Kniss, Aaron Lefohn \& Charles Hansen, 2007 \textit{GPU Gems} Chapter 39. \textit{Volume Rendering Techniques} [web publication][accessed \today] NVIDIA Corporation.\\
+Available from: http://http.developer.nvidia.com/GPUGems/gpugems\_ch39.html\\
+
+\small Karlsruhe Insitute of Technology, Institute of data processing and electornics, USCT Group, \textit{3D visualisation of USCT data} [webpage][accessed \today] \\
+Available from: http://ipepc57.ipe.kit.edu:10002\\
 
 \small Philippe G. Lacroute, 1995 \textit{FAST VOLUME RENDERING USING A SHEAR-WARP FACTORIZATION OF THE VIEWING TRANSFORMATION} [web document][accessed \today] Computer Systems Laboratory
 Departments of Electrical Engineering and Computer Science Stanford University \\
 Available from: https://graphics.stanford.edu/papers/lacrou\_thesis/lacroute\_thesis.pdf\\
 
-\small Leandro R Barbagallo, 2014 \textit{WEBGL VOLUME RENDERING MADE SIMPLE} [webpage][accessed \today] 
-Available from: http://lebarbacom.ipage.com/blog/\\
+\small Tom McReynolds \& Silicon Graphics, 1996\textit{Programming with OpenGL: Advanced Rendering} [web document] SIGGRAPH ‘96 Course [accessed \today] \\
+Available from: http://www.dcs.ed.ac.uk/teaching/cs4/www/graphics/Web/advanced\_ogl.pdf\\
+
+\small M. Meißner , H. Pfister , R. Westermann \& C.M. Wittenbrink, 2000 \textit{Volume Visualization and Volume Rendering Techniques}[web document][accessed \today] The Eurographics Association 2000.\\
+Available from: http://www.labri.fr/perso/preuter/imageSynthesis/02-03/papers/volvistut.pdf\\
+
+\small Microsoft Developement Center \textit{Introduction to the C\# Language and the .NET Framework} [webpage][accessed \today] \\
+Available from: https://msdn.microsoft.com/en-us/library/z1zx9t92.aspx\\
+
+\small OpenGL-tutorial \textit{Tutorial 3 : Matrices} [webpage][accessed \today] \\
+Available from: http://www.opengl-tutorial.org/beginners-tutorials/tutorial-3-matrices\\
+
+\small Ronald Peikert, 2007 \textit{Raycasting} [web document] SciVis[accessed \today] \\
+Available from: https://graphics.ethz.ch/teaching/former/scivis\_07/Notes/Handouts/03-raycasting.pdf\\
+
+\small SharpDX [webpage][accessed \today] \\
+Available from: http://sharpdx.org\\
+
+\small TechTarget, 2005 \textit{DEFINITION: DirectX} [webpage][accessed \today] \\
+Available from: http://searchwindowsserver.techtarget.com/definition/DirectX\\
+
+\small Max Wagner, 2004 \textit{Generating Vertex Normals} [web document][accessed \today] \\
+Available from: http://www.emeyex.com/site/tuts/VertexNormals.pdf\\
+
+\small Windows Dev Center \textit{Direct3D feature levels} [webpage][accessed \today] \\
+Available from: https://msdn.microsoft.com/en-us/library/windows/desktop/ff476876(v=vs.85).aspx\\
+
+\small Windows Dev Center \textit{Graphics Pipeline} [webpage][accessed \today] \\
+Available from: https://msdn.microsoft.com/en-us/library/windows/desktop/ff476882(v=vs.85).aspx\\
+
+\small Windows Dev Center \textit{Introduction to Buffers in Direct3D 11} [web document][accessed \today] \\
+Available from: https://msdn.microsoft.com/en-us/library/windows/desktop/ff476898(v=vs.85).aspx\\
+
+\small Windows Dev Center \textit{Resource Limits } [webpage][accessed \today] \\
+Available from: https://msdn.microsoft.com/en-us/library/windows/desktop/ff819065(v=vs.85).aspx\\
+
+\small Xamarin \textit{Xamarin Planform} [webpage][accessed \today] \\
+Available from: https://www.xamarin.com/platform\\
+
+
+
+
+
+
+
+
+
+
+
 
 \end{document}

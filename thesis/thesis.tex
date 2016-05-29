@@ -539,16 +539,16 @@ $\alpha_{accomulation}$ contains previously accumulated alpha values. Brightness
 An example of images produced by an accumulation function is demonstrated in figure \ref{fig:accum}. \\
 
 \begin{figure}[!h]
-\centerline{\includegraphics[scale = 0.6]{img/accum}}
+\centerline{\includegraphics[scale = 0.45]{img/accum}}
 \caption{An example of an accomulation function output\label{fig:accum}}
+\end{figure}\begin{figure}[!h]
+\centerline{\includegraphics[scale = 0.45]{img/maxi}}
+\caption{An example of maximum intensity function output\label{fig:maxi}}
 \end{figure}
 
 Maximum intensity function visualizes only the brightest value sampled by the ray. It gives very similar results to the X-ray images. The ray function is very similar to the previous one. It is also used for-loop and step vector to sample the dataset, but it does not accumulate the information as it is done in the previous example. Instead, it keeps the biggest value which ray meets during the travel and put it to the pixel in the end. It allows end user to identify specific structures inside the volume. An example of the ray function result is shown in the figure \ref{fig:maxi}
 
-\begin{figure}[!h]
-\centerline{\includegraphics[scale = 0.6]{img/maxi}}
-\caption{An example of maximum intensity function output\label{fig:maxi}}
-\end{figure}
+
 
 
 %https://graphics.ethz.ch/teaching/former/scivis_07/Notes/Handouts/03-raycasting.pdf

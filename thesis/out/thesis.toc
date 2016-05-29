@@ -33,10 +33,10 @@
 \contentsline {subsection}{\numberline {3.2.4}Second pass}{23}{subsection.3.2.4}
 \contentsline {subsubsection}{Empty space skipping}{24}{figure.caption.14}
 \contentsline {subsubsection}{Ray function}{26}{figure.caption.15}
-\contentsline {chapter}{\numberline {4}Conclusion}{30}{chapter.4}
-\contentsline {section}{\numberline {4.1}Results}{30}{section.4.1}
-\contentsline {section}{\numberline {4.2}Future Development}{36}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Picture quality}{36}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Sampling rate manager}{38}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}API}{39}{subsection.4.2.3}
-\contentsline {chapter}{References}{40}{subsection.4.2.3}
+\contentsline {chapter}{\numberline {4}Conclusion}{29}{chapter.4}
+\contentsline {section}{\numberline {4.1}Results}{29}{section.4.1}
+\contentsline {section}{\numberline {4.2}Future Development}{35}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Picture quality}{35}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Sampling rate manager}{37}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}API}{38}{subsection.4.2.3}
+\contentsline {chapter}{References}{39}{subsection.4.2.3}

@@ -135,7 +135,7 @@ ACKNOWLEDGEMENTS\\
 
 I am very thankful to Arction Oy for offering me an opportunity to take part in the development of the project. I really like the office atmosphere and freedom in terms of my working style and schedule allowed by the company.\\
 
-My special thanks go to Mr. Pasi Toummainen, the CEO of the company, who expressed interest in my idea to extend the library by the volume rendering engine, gave me permission to work on the project and guided me especially in the very early part of the development process.\\
+My special thanks go to Mr. Pasi Tuommainen, the CEO of the company, who expressed interest in my idea to extend the library by the volume rendering engine, gave me permission to work on the project and guided me especially in the very early part of the development process.\\
 
 I am very grateful to Savonia UAS and especially lectures who used to teache me.  Moreover, I would like to say thank you to my supervisor of thesis and head of my Degree Programm, Mr. Arto Toppinen, Principal Lecturer, for his mentoring and support during the report writing stage of my work. \\
 
@@ -154,7 +154,7 @@ Volume data is very common our day. An importance of the type of datasets will g
 Volume rendering is a process of multi-dimensional data visualisation into a two-dimensional image which gives the observer an opportunity to recognize meaningful insights in the original information. The technology allows us to represent 3 dimensions of the data via position in a 3D space and 3 more via color of the point.\\
 
 The dataset can be captured by various numbers of technologies like: MRI\footnote{Magnetic resonance imaging}, CT\footnote{Computer tomography}, PET\footnote{Positron emission tomography}, USCT\footnote{Ultrasound computer tomography} or echolocation. They also can be produced by physical simulations, for example fluid dynamics. The set of technologies mentioned before demonstrates that volumetric information plays a big role in medicine. It is used for an advanced cancer detection, visualization of aneurisms and treatment planning. This kind of rendering is also very useful for non-destructive material testing via computer tomography or ultrasound. Geoseismic researches produce huge three-dimensional datasets. Their visualisations are used in an oil exploration and planning of the deposit development.(Meißner, Pfister, Westermann \& Wittenbrink 2000, 1-2)\\
-%http://www.labri.fr/perso/preuter/imageSynthesis/02-03/papers/volvistut.pdf
+
 
 \section{Personal backgound}
 
@@ -162,21 +162,20 @@ The first experience in the visualisation of volumetric data was gained by me du
 
 \begin{figure}[!h]
 \includegraphics[scale=0.4]{img/usct1}\includegraphics[scale=0.4335]{img/usct2}\\
-\caption{Volume visualisation of breast phantom made by USCT\label{fig:usct}}
+\caption{Volume visualisation of breast phantom made by USCT(USCT Group, 2015)\label{fig:usct}}
 \end{figure}
-%USCT VIS
 
 The very first steps in modern computer graphics was made by me during the project. The first experience in work with WebGL was gained during customisation of the Tomo Ray Caster. GLSL as my first shader language was learned during the work. A lot of knowledge about image processing and scientific data visualisation, which became the basis for my thesis work was received by me at the workplacement.
 
 
 \section{Arction Oy and Ligthning Chart}
 
-Arction Oy is a Finnish software company based in Kuopio. Their team has a strong background in computer graphics and science. The main product of the company called LightningChart Ultimate. It is the fastest C\# library for scientific and engineering data visualisation. The library is capable to draw massive XY, Polar, Smith and 3D XYZ graphs, polygonal mesh models, surfaces, 3D pies/donuts and Geographic information. The library has an API for .NET WinForm and WPF applications, it is also possible to use it for a traditional Win32 C++ software development. The main advantage of the library is the fact that it is based on low-level DirectX graphics routines developed by Arction, then the most part of competitors use graphics routines which belongs to System.Windows.Media. Several example of the library's abilites are shown on the advetisment, figure \ref{fig:lchu}.\\
+Arction Oy is a Finnish software company based in Kuopio. Their team has a strong background in computer graphics and science. The main product of the company called LightningChart Ultimate. It is the fastest C\# library for scientific and engineering data visualisation. The library is capable to draw massive XY, Polar, Smith and 3D XYZ graphs, polygonal mesh models, surfaces, 3D pies/donuts and Geographic information. The library has an API for .NET WinForm and WPF applications, it is also possible to use it for a traditional Win32 C++ software development. The main advantage of the library is the fact that it is based on low-level DirectX graphics routines developed by Arction, then the most part of competitors use graphics routines which belongs to System.Windows.Media. Several example of the library's abilites are shown on the advetisment, figure \ref{fig:lchu}.(Arction Ltd)\\
 \begin{figure}[!h]
 \includegraphics[scale=0.33]{img/lchu}\\
 \caption{Example of LightningChart possibilities from the main page of Acrtion\label{fig:lchu}}
 \end{figure}
-%arction website
+
 
 \section{Project Goals}
 
@@ -210,8 +209,8 @@ Multidimensional data can be represented in two different ways: as a surface and
 Today we are literally surrounded by the surface rendering based on polygonal mesh. The technology is used in computer games, design, cinema, science, engineering and etc. The technology is so popular that entire 3D graphic pipeline is built around the idea. That's why this type of visualization is easily accelerated by graphic cards.\\
 
 \subsection{Vertexs}
-Traditionally, 3D surfaces are constructed out of huge amount of polygons connected as a mesh. Due to simplicity, they usually have a triangular shape. It is possible to describe a triangle via list of three coordinates called vertices. The internal area of the shape filled with color during rasterization step. The color is calculated as dot product between the normal vector of the surface and the vector of light. An examples of wireframe and flat shading of the polygonal mesh model is demostrated on figure \ref{fig:mesh}
-%http://people.csail.mit.edu/fredo/Depiction/1_Introduction/reviewGraphics.pdf
+Traditionally, 3D surfaces are constructed out of huge amount of polygons connected as a mesh. Due to simplicity, they usually have a triangular shape. It is possible to describe a triangle via list of three coordinates called vertices. The internal area of the shape filled with color during rasterization step. The color is calculated as dot product between the normal vector of the surface and the vector of light. An examples of wireframe and flat shading of the polygonal mesh model is demostrated on figure \ref{fig:mesh}.(Frédo Durand, 2)
+
 
 \begin{figure}[!h]
 \includegraphics[scale=0.55]{img/mesh}\\
@@ -219,27 +218,20 @@ Traditionally, 3D surfaces are constructed out of huge amount of polygons connec
 \end{figure}
 
 \subsection{Normals}
-Surface normal vector of a triangle can be calculated as a cross product of two triangle's sides, but it will give an acceptable result only for very flat surfaces. That's why curve surfaces usually contain an additional normal vector for every vertex. They are able to significantly improve detailisation on the model. The information kept in them is used during shading and the tesselation of the model's geometry.\\
+Surface normal vector of a triangle can be calculated as a cross product of two triangle's sides, but it will give an acceptable result only for very flat surfaces. That's why curve surfaces usually contain an additional normal vector for every vertex. They are able to significantly improve detailisation on the model. The information kept in them is used during shading and the tesselation of the model's geometry. (Wagner 2004, 1)\\
 
-%http://www.emeyex.com/site/tuts/VertexNormals.pdf
 
 \subsection{Textures}
-Very small details can be added to the model via textures. It is specific 2D image which is used to sample high frequency information during rendering. The picture usually contains local color values, but it also can carry any information about normal vectors for a nice visualisation of very small structures on the surface. Textures are mapped to the surface via third parameter of vertex which is called texture coordinate. They keep any information about corresponding to this vector position in the 2D space of the image.\\
-
-%http://www.dcs.ed.ac.uk/teaching/cs4/www/graphics/Web/advanced_ogl.pdf
+Very small details can be added to the model via textures. It is specific 2D image which is used to sample high frequency information during rendering. The picture usually contains local color values, but it also can carry any information about normal vectors for a nice visualisation of very small structures on the surface. Textures are mapped to the surface via third parameter of vertex which is called texture coordinate. They keep any information about corresponding to this vector position in the 2D space of the image.(McReynolds 1996, 10-11)\\
 
 \subsection{Redering process}
-Position, scale, rotation of the object and perspective characteristics of the space is specified via matrixes $4\times4$. This kind of matrix allows to apply any kind of transformation possible in 3D space. Usually, three matrixes are applied to the object. The first one transfers an object to the world space coordinates, it specifies the position, rotation and scale of an original object in the world coordinate system. The next one is viewing matrix. It also takes in consideration position of camera and transforms the models to achieve desirable framing. The last matrix called projection. It applies perspective to the scene, in other word it defines an angle of view of the camera.\\
-%http://www.opengl-tutorial.org/beginners-tutorials/tutorial-3-matrices/
-
-%http://www.tutorialspoint.com/computer_graphics/3d_transformation.htm
+Position, scale, rotation of the object and perspective characteristics of the space is specified via matrixes $4\times4$. This kind of matrix allows to apply any kind of transformation possible in 3D space. Usually, three matrixes are applied to the object. The first one transfers an object to the world space coordinates, it specifies the position, rotation and scale of an original object in the world coordinate system. The next one is viewing matrix. It also takes in consideration position of camera and transforms the models to achieve desirable framing. The last matrix called projection. It applies perspective to the scene, in other word it defines an angle of view of the camera.(OpenGL-Tutorial)\\
 
 Specific program called shader receives all the information together with a camera and light source positions, after that they are able to perform calculations needed to render the final image in accord with the goals of the visualisation. Usually, the calculations are produced by graphic card in a parallel way.
 
 \section{Volume Rendering}
 
 Volume data are composed out of voxels\footnote{volume element}. A voxel is simply a point in 3D space, which has a position and a color. Together gives us an opportunity to visualise up to six scalar parameters. There are two ways to render volumes. We are going to discuss about main principles, advantages and disadvantages of the technologies in this section.\\
-%shear-warp paper 3
 
 \subsection{Indirect}
 
@@ -260,22 +252,20 @@ It is the oldest idea behind volume rendering and it has plenty of disadvantages
 
 But the algorithm is very popular for generation of medical illustrations, video or other static visualisation. The main advantage of the solution is that nicely preprocessed model can be easily rendered via well-known technique for 3D mesh model's rendering. They can be used even in very weak hardware.\\
 
-Unfortunately, this technology is not suitable for our project, because it does not satisfy our requirements. First of all it is not acceptable for us to lose an internal structure and lose an opportunity to modify the transfer function runtime.
-%слайды
+Unfortunately, this technology is not suitable for our project, because it does not satisfy our requirements. First of all it is not acceptable for us to lose an internal structure and lose an opportunity to modify the transfer function runtime.(Jeroen Baert 2012, 3)
 
 \subsection{Direct}
 Direct volume rendering does not require any preprocessing. The data are visualised from an original dataset. It gives the algorithms an opportunity to modify a transfer function runtime. There are four most common technique for direct volume rendering algorithm, which will be discussed more detailed in this section in the future.\\
 
-For an implementation of hardware acceleration for rendering process a volume data has to be loaded to the graphics cards. It is usually served as 3D texture or as set of 2D textures. For the optimization of a texture's buffer consumption, several slices can be collected to one huge texture map. 
-%http://www.forceflow.be/wp-content/uploads/2012/02/vr_overview.pdf
+For an implementation of hardware acceleration for rendering process a volume data has to be loaded to the graphics cards. It is usually served as 3D texture or as set of 2D textures. For the optimization of a texture's buffer consumption, several slices can be collected to one huge texture map. (Barbagallo 2014) 
+
 \subsubsection{Texture-based}
 
-As it was mentioned before the graphics pipeline of modern graphic cards is optimized for rendering of polygonal mesh models. So, volume rendering algorithms are forced to use this set of tools to achieve hardware acceleration. Texture-based volume rendering is the most straightforward way to achieve the aim.\
+As it was mentioned before the graphics pipeline of modern graphic cards is optimized for rendering of polygonal mesh models. So, volume rendering algorithms are forced to use this set of tools to achieve hardware acceleration. Texture-based volume rendering is the most straightforward way to achieve the aim.\\
 
-As it was already said textures are used to add tiny details to polygonal models. Any graphic library has an advanced set of tools for texture mapping, which can be used to this kind of volume rendering. The algorithm creates set of planes called proxy geometry. Transfer function maps the volumetric dataset on the proxy geometry. The final image is constructed out of the planes with mapped on them textures via Alpha-blending.\\
+As it was already said textures are used to add tiny details to polygonal models. Any graphic library has an advanced set of tools for texture mapping, which can be used to this kind of volume rendering. The algorithm creates set of planes called proxy geometry. Transfer function maps the volumetric dataset on the proxy geometry. The final image is constructed out of the planes with mapped on them textures via Alpha-blending.(Ikits, Kniss, Lefohn \& Hansen 2007)\\
 
-%http://http.developer.nvidia.com/GPUGems/gpugems_ch39.html
-A proxy geometry can be created in two different ways. The first one called 2D texture-based rendering. In this case three different sets of planes are generated. All sets are generated perpendicular to a different direction in 3D space. This approach leads us to sudden jumps in image quality for different camera position and does not allow to change the sampling rate of the visualisation.\\
+A proxy geometry can be created in two different ways. The first one called 2D texture-based rendering. In this case three different sets of planes are generated. All sets are generated perpendicular to a different direction in 3D space. This approach leads us to sudden jumps in image quality for different camera position and does not allow to change the sampling rate of the visualisation.(Ikits, Kniss, Lefohn \& Hansen 2007)\\
 \begin{figure}[!h]
 \centerline{
 \includegraphics[scale=0.7]{img/texture-based}
@@ -284,8 +274,7 @@ A proxy geometry can be created in two different ways. The first one called 2D t
 \end{figure}
 That's why the second way was invented. It is called 3D texture-based volume rendering. In this solution the algorithm creates only one set of planes which are always perpendicular to the camera and textures are mapped on them differently for the different camera position. The figure \ref{fig:text} shows an example of proxy geometry for 3D texture-based volume rendering, Texture-based volume rendering with a lower sampling rate and high sampling rate texture-based volume rendering.\\
 
-It gets rid of an artifact of the first technique and allows to modify the sampling rate of the visualisation. The approach is the most popular direct volume rendering algorithm among medical software. But it has significant disadvantages against competitors. It is able to use, transfer function to emphasize or classify features of interest in the volume, while final blending is performed via Alpha-blending provided by DirectX API. It makes the approach less flexible than all other methods which provides more advanced tools for blending of sampled information.
-%http://www.forceflow.be/wp-content/uploads/2012/02/vr_overview.pdf
+It gets rid of an artifact of the first technique and allows to modify the sampling rate of the visualisation. The approach is the most popular direct volume rendering algorithm among medical software. But it has significant disadvantages against competitors. It is able to use, transfer function to emphasize or classify features of interest in the volume, while final blending is performed via Alpha-blending provided by DirectX API. It makes the approach less flexible than all other methods which provides more advanced tools for blending of sampled information.(Jeroen Baert 2012, 6-8)
 
 \subsubsection{Ray Casting}
 
@@ -302,25 +291,26 @@ Volume Ray Casting includes four simple steps:
 \caption{Ray Casting steps: 1) The ray is shot, 2) The ray travels through a scene and dataset. 3) Inlet and outlet position of the ray's track are detected 4) downsampling and the pixel's color calculation process}
 \end{figure}
 
-Ray Function is a core of the algorithm. Such a high level of flexibility is provided to the algorithm by the feature. It possesses an entire power of the technique, because it specifies the way how the data is combined.  It is very powerful tool for feature extraction, because it controls how color, opacity and gradient of isosurface are calculated by the engine. Transfer function and classification are also performed via Ray Function.\\
+Ray Function is a core of the algorithm. Such a high level of flexibility is provided to the algorithm by the feature. It possesses an entire power of the technique, because it specifies the way how the data is combined.  It is very powerful tool for feature extraction, because it controls how color, opacity and gradient of isosurface are calculated by the engine. Transfer function and classification are also performed via Ray Function.(Laramee, 2016)\\
 
-The algorithm has very high rendering quality without any additional artifacts. Due to the reason that every ray is calculated separately it is usually implemented in modern hardware focused on parallel calculations. The main problem of the algorithm is that rays usually do not hit the voxel's centers. In case of 3D space an interpolation is a very complex operation in terms of calculational expenses, which has to be performed to get a nice sampling.
+The algorithm has very high rendering quality without any additional artifacts. Due to the reason that every ray is calculated separately it is usually implemented in modern hardware focused on parallel calculations. The main problem of the algorithm is that rays usually do not hit the voxel's centers. In case of 3D space an interpolation is a very complex operation in terms of calculational expenses, which has to be performed to get a nice sampling. (Jeroen Baert 2012, 18-30)
+
 \subsubsection{Splatting}
 
-The technique was created to reduce interpolation expensis which were the main problem of Volume Ray Casting. The solution uses totally oposite aproach to reach the goal. Instead of sampling of the dataset by ray, the algorigthm projects the voxel to the image plane one by one. Of course the voxel porjections do not always fit excatly to pixels' grid of screen, but the problem is again solved by an interpolation, fortunately in this case the operation is much less expensive in term of calculation, becaus it is perfomed in 2D space. \\
+The technique was created to reduce interpolation expensis which were the main problem of Volume Ray Casting. The solution uses totally oposite aproach to reach the goal. Instead of sampling of the dataset by ray, the algorigthm projects the voxel to the image plane one by one. Of course the voxel porjections do not always fit excatly to pixels' grid of screen, but the problem is again solved by an interpolation, fortunately in this case the operation is much less expensive in term of calculation, becaus it is perfomed in 2D space. (Jeroen Baert 2012, 10-11)\\
 
-The final pixel's color is calculated in a very similar way used by Ray Function, that is why the algorithm is as flexible as Volume Ray Casting. The main disadvantage of the approach is that some artifacts have contributed to the final image due to boxes overlap. It is also difficult to change the sampling rate of the approach. The issues make the algorithm less interesting for us. 
+The final pixel's color is calculated in a very similar way used by Ray Function, that is why the algorithm is as flexible as Volume Ray Casting. The main disadvantage of the approach is that some artifacts have contributed to the final image due to boxes overlap. It is also difficult to change the sampling rate of the approach. The issues make the algorithm less interesting for us.(Jeroen Baert 2012, 10-11)\\
 
 \subsubsection{Shear-warp}
 
-As Splatting, the approach also tries to accelerate Ray Caster by solving of the interpolation issue, but it uses totally different way to illuminate the problem. Shear-warp has a very similar idea to the Volume Ray Casting. In some sense it is an optimization of the technique which makes rays always hit exactly in the center of the voxel.\\
+As Splatting, the approach also tries to accelerate Ray Caster by solving of the interpolation issue, but it uses totally different way to illuminate the problem. Shear-warp has a very similar idea to the Volume Ray Casting. In some sense it is an optimization of the technique which makes rays always hit exactly in the center of the voxel.(Jeroen Baert 2012, 13-16)\\
 
-The aim is achieved by the transformation of the volume data to sheared object space by translation and scaling of slices. After that an intermediate 2D image is produced by Ray Casting performed in the shared object space. The transformation brings some distortion to the output image. It is fixed at the last step of the algorithm called wrapping. The final image is the result of the transformation applied to the intermediate picture. The key difference between normal Ray Casting and Shear-Warp is shown in the figure \ref{fig:sw}.\\
+The aim is achieved by the transformation of the volume data to sheared object space by translation and scaling of slices. After that an intermediate 2D image is produced by Ray Casting performed in the shared object space. The transformation brings some distortion to the output image. It is fixed at the last step of the algorithm called wrapping. The final image is the result of the transformation applied to the intermediate picture. The key difference between normal Ray Casting and Shear-Warp is shown in the figure \ref{fig:sw}.(Jeroen Baert 2012, 13-16)\\
 \begin{figure}[!h]
 \centerline{\includegraphics[scale=0.5]{img/shear-warp}}
 \caption{(left)Ray Casting in world coorinates, (right)Ray Casting in shear object coordinates\label{fig:sw}}
 \end{figure}
-This solution gives us the fastest volume rendering process, but unfortunately the algorithm also suffers from several types of artifacts. Some of them are caused by an unevenness of sampling rate along different directions, others are produced by 2D transformation on wrapping stage.
+This solution gives us the fastest volume rendering process, but unfortunately the algorithm also suffers from several types of artifacts. Some of them are caused by an unevenness of sampling rate along different directions, others are produced by 2D transformation on wrapping stage.(Jeroen Baert 2012, 13-16)\\
 
 \chapter{IMPLEMENTATION}
 This chapter contains detailed explanation of the product implementation. It describes how the engine works, what kind of parts contains and which tools are used in it. The key step of the engine work is highlighted and explained in this chapter.\\
@@ -333,21 +323,19 @@ Finally, there are only two technologies. The final choice is Ray Casting, becau
 \section{Tools}
 This part of the chapter describes technologies used in the implementation of the project. It also gives a short explanation to their usage in the solution. The rendering engine has to become a part of LightningChart Ultimate. An integration with the library gives some restrictions in terms of a set of tools which can be used in the project and it plays a key role in technology selection.
 \subsection{C\# and .NET}
-C\# is a general purpose multi-paradigm programming language with strong types. It is created by Microsoft as the native language .NET Framework. Our days the language can be used for Web services, Windows desktop and mobile applications, computer games with several different game engines. In addition, Xamarin created set of tools for cross-platform C\# development.\\
-%xamarin.com
+C\# is a general purpose multi-paradigm programming language with strong types. It is created by Microsoft as the native language .NET Framework. Our days the language can be used for Web services, Windows desktop and mobile applications, computer games with several different game engines. In addition, Xamarin created set of tools for cross-platform C\# development.(Xamarin)\\
 
 In some since it contains constructions inspired by an object-oriented, imperative, functional and many other programming paradigms. The language belongs to C-like family, that is why the curly-brace syntax looks very similar to the C, C++, Java. C\# combines an advantages of Java and C++ in single, powerful and elegant way. It is more simple and safe than C++, but at the same times it has advanced features like: pointers arithmetics, enumerations, lambda expressions, structs, delegates and implicitly typed local variables. Even today when the most part of them are implemented in the last version of Java, C\# still is way more flexible.\\
 
 Another advanced feature of C\# is  LINQ\footnote{Language-Integrated Query} expressions, it sets of functions for strongly-typed queries, which allows to write very short code in functional style for collection processing.\\
 
-.NET framework contains applications run in a virtual execution system called the CLR\footnote{Common Language Runtime} and more than 4000 of classes which implements a wide range of useful functionalities. The runtime is able to execute an Intermediate Language, which is compiled from C\# or 20 other languages.
-%https://msdn.microsoft.com/en-us/library/z1zx9t92.aspx
+.NET framework contains applications run in a virtual execution system called the CLR\footnote{Common Language Runtime} and more than 4000 of classes which implements a wide range of useful functionalities. The runtime is able to execute an Intermediate Language, which is compiled from C\# or 20 other languages.(Microsoft Developement Center)\\
 
 C\# is used in the project to reach as close integration with LightningChart Ultimate as it is possible. It performs loading and preprocessing of the dataset and management of visualisation process.
 
 \subsection{DirectX 11}
-DirectX is a C/C++ API\footnote{Application Programming Interface} for work with multimedia resources created by Microsoft for Windows and Xbox. It contains advanced tools for rendering of 2D and 3D graphic and sound management. Direct3D is a part of the library responsible for hardware accelerated rendering of 3D graphics. The tool is mainly focused on GPU accelerated rendering of polygonal mesh models.\\
-%http://searchwindowsserver.techtarget.com/definition/DirectX
+DirectX is a C/C++ API\footnote{Application Programming Interface} for work with multimedia resources created by Microsoft for Windows and Xbox. It contains advanced tools for rendering of 2D and 3D graphic and sound management. Direct3D is a part of the library responsible for hardware accelerated rendering of 3D graphics. The tool is mainly focused on GPU accelerated rendering of polygonal mesh models.(TechTarget, 2005)\\
+
  \begin{figure}[!h]
 \centerline{\includegraphics[scale=1]{img/pipeline}}
 \caption{Flowchart of Direct3D 11 Graphics Pipeline\label{fig:pipeline}}
@@ -369,8 +357,7 @@ The graphics pipeline is shown on Figure \ref{fig:pipeline}. Boxes with rounded 
     \item Vertex Buffer is used to define the geometry of the object by a list of vertices. Every vertex has to follow Input Layout defined for the pipeline by the developer. It describes the vertex members: position and texture coordinates, color, value, normal etc. used in a particular application.
     \item Index Buffer conatins an order of vertexs as sequence of integer variables.
     \item Index Buffer contains an order of vertices as a sequence of integer variables.
-    \item Constant Buffer provides pipeline with uniform variables data, like: transformation matrixes, position and directions of light sources, textures, and so on.
-    %https://msdn.microsoft.com/en-us/library/windows/desktop/ff476898(v=vs.85).aspx
+    \item Constant Buffer provides pipeline with uniform variables data, like: transformation matrixes, position and directions of light sources, textures, and so on.(Windows Dev Center C)
   \end{itemize}
 \item Vertex Shader Stage is the first programmable stage of the pipeline. Vertices are read one by one and processed in accord with a Vertex Shader program which is supplied by the developer. For best performance the processing has to include every operation which can be performed on every vertex individually. The function is not able to destroy or create new vertex.
 
@@ -536,14 +523,14 @@ $\alpha_{accomulation}$ contains previously accumulated alpha values. Brightness
 \item Step vector is added to reach next sampling position.
 \end{itemize}
 
-An example of images produced by an accumulation function is demonstrated in figure \ref{fig:accum}. \\
+An example of images produced by an accumulation function is demonstrated in figure \ref{fig:head-th-win}. \\
 
 \begin{figure}[!h]
-\centerline{\includegraphics[scale = 0.45]{img/accum}}
-\caption{An example of an accomulation function output\label{fig:accum}}
+\centerline{\includegraphics[scale = 0.6]{img/head-th-win}}
+\caption{Visualisation of the female's head CT-scan with Z coordinate scaling, thresholding of soft-tissues which reveal a skull and contrast correction, 512x512x230 voxels with and an accomulation function\label{fig:head-th-win}}
 \end{figure}\begin{figure}[!h]
 \centerline{\includegraphics[scale = 0.45]{img/maxi}}
-\caption{An example of maximum intensity function output\label{fig:maxi}}
+\caption{Visualisation of the female's head CT-scan with Z coordinate scaling, thresholding of soft-tissues which reveal a skull and contrast correction, 512x512x230 voxels with and a maximal intensity function\label{fig:maxi}}
 \end{figure}
 
 Maximum intensity function visualizes only the brightest value sampled by the ray. It gives very similar results to the X-ray images. The ray function is very similar to the previous one. It is also used for-loop and step vector to sample the dataset, but it does not accumulate the information as it is done in the previous example. Instead, it keeps the biggest value which ray meets during the travel and put it to the pixel in the end. It allows end user to identify specific structures inside the volume. An example of the ray function result is shown in the figure \ref{fig:maxi}
@@ -587,8 +574,8 @@ There are two main types of tissues in the model: soft-ones and bones. The skull
 The bone has a very low dynamic range. That is why contrast and brightness correction is very important in this case, because it makes the skull to allocate full possible dynamic range. As a result, even tiny details of the bone are well recognisable. The initial shape of the model without threshold is demonstrated in the figure \ref{fig:head-th-win}. \\
 
 \begin{figure}[H]
-\centerline{\includegraphics[scale = 0.45]{img/head-th-win}}
-\caption{Visualisation of the female's head CT-scan with Z coordinate scaling, thresholding of soft-tissues which reveal a skull and contrast correction, 512x512x230 voxels.\label{fig:head-th-win}}
+\centerline{\includegraphics[scale = 0.45]{img/head-th}}
+\caption{Visualisation of the female's head CT-scan with Z coordinate scaling and thresholding of soft-tissues which reveal a skull, 512x512x230 voxels.\label{fig:head-th}}
 \end{figure}
 
 \begin{figure}[H]
@@ -693,14 +680,17 @@ Available from: http://graphicsrunner.blogspot.fi/2009/01/volume-rendering-101.h
 \small Milan Ikits, Joe Kniss, Aaron Lefohn \& Charles Hansen, 2007 \textit{GPU Gems} Chapter 39. \textit{Volume Rendering Techniques} [web publication][accessed \today] NVIDIA Corporation.\\
 Available from: http://http.developer.nvidia.com/GPUGems/gpugems\_ch39.html\\
 
-\small Karlsruhe Insitute of Technology, Institute of data processing and electornics, USCT Group, \textit{3D visualisation of USCT data} [webpage][accessed \today] \\
+\small USCT Group, 2015 \textit{3D visualisation of USCT data} [webpage] Karlsruhe Insitute of Technology, Institute of data processing and electornics [accessed \today] \\
 Available from: http://ipepc57.ipe.kit.edu:10002\\
 
 \small Philippe G. Lacroute, 1995 \textit{FAST VOLUME RENDERING USING A SHEAR-WARP FACTORIZATION OF THE VIEWING TRANSFORMATION} [web document][accessed \today] Computer Systems Laboratory
 Departments of Electrical Engineering and Computer Science Stanford University \\
-Available from: https://graphics.stanford.edu/papers/lacrou\_thesis/lacroute\_thesis.pdf\\
+Available from: https://www.youtube.com/watch?v=1PqvwOjnKJw\\
 
-\small Tom McReynolds \& Silicon Graphics, 1996\textit{Programming with OpenGL: Advanced Rendering} [web document] SIGGRAPH ‘96 Course [accessed \today] \\
+\small Robert Steven Laramee, 2016 \textit{Ray Functions for Volume Rendering: A Quick and Convenient Review} [video][accessed \today] Swansea University \\
+Available from: https://graphics.stanford.edu/papers/lacrou\_thesis/lacroute\_thesis.pdf\
+
+\small Tom McReynolds, 1996\textit{Programming with OpenGL: Advanced Rendering} [web document] Silicon Graphics, SIGGRAPH ‘96 Course [accessed \today] \\
 Available from: http://www.dcs.ed.ac.uk/teaching/cs4/www/graphics/Web/advanced\_ogl.pdf\\
 
 \small M. Meißner , H. Pfister , R. Westermann \& C.M. Wittenbrink, 2000 \textit{Volume Visualization and Volume Rendering Techniques}[web document][accessed \today] The Eurographics Association 2000.\\
@@ -709,7 +699,7 @@ Available from: http://www.labri.fr/perso/preuter/imageSynthesis/02-03/papers/vo
 \small Microsoft Developement Center \textit{Introduction to the C\# Language and the .NET Framework} [webpage][accessed \today] \\
 Available from: https://msdn.microsoft.com/en-us/library/z1zx9t92.aspx\\
 
-\small OpenGL-tutorial \textit{Tutorial 3 : Matrices} [webpage][accessed \today] \\
+\small OpenGL-Tutorial \textit{Tutorial 3 : Matrices} [webpage][accessed \today] \\
 Available from: http://www.opengl-tutorial.org/beginners-tutorials/tutorial-3-matrices\\
 
 \small Ronald Peikert, 2007 \textit{Raycasting} [web document] SciVis[accessed \today] \\
@@ -724,16 +714,16 @@ Available from: http://searchwindowsserver.techtarget.com/definition/DirectX\\
 \small Max Wagner, 2004 \textit{Generating Vertex Normals} [web document][accessed \today] \\
 Available from: http://www.emeyex.com/site/tuts/VertexNormals.pdf\\
 
-\small Windows Dev Center \textit{Direct3D feature levels} [webpage][accessed \today] \\
+\small Windows Dev Center A\textit{Direct3D feature levels} [webpage][accessed \today] \\
 Available from: https://msdn.microsoft.com/en-us/library/windows/desktop/ff476876(v=vs.85).aspx\\
 
-\small Windows Dev Center \textit{Graphics Pipeline} [webpage][accessed \today] \\
+\small Windows Dev Center B\textit{Graphics Pipeline} [webpage][accessed \today] \\
 Available from: https://msdn.microsoft.com/en-us/library/windows/desktop/ff476882(v=vs.85).aspx\\
 
-\small Windows Dev Center \textit{Introduction to Buffers in Direct3D 11} [web document][accessed \today] \\
+\small Windows Dev Center C\textit{Introduction to Buffers in Direct3D 11} [web document][accessed \today] \\
 Available from: https://msdn.microsoft.com/en-us/library/windows/desktop/ff476898(v=vs.85).aspx\\
 
-\small Windows Dev Center \textit{Resource Limits } [webpage][accessed \today] \\
+\small Windows Dev Center D\textit{Resource Limits } [webpage][accessed \today] \\
 Available from: https://msdn.microsoft.com/en-us/library/windows/desktop/ff819065(v=vs.85).aspx\\
 
 \small Xamarin \textit{Xamarin Planform} [webpage][accessed \today] \\

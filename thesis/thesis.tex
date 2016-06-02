@@ -105,15 +105,15 @@ Data & \today & Pages/Appendices & \pageref{LastPage}\\
 \multicolumn{4}{|l|}{Abstract}\\
 \multicolumn{4}{|l|}{ }\\
 \multicolumn{4}{|p{14cm}|}{
-Arction Oy is a Finnish software company based in Kuopio. Their main product is LightningChart Ultimate. It is the fastest C\# framework for the visualisation of scientific, engineering, trading and research data. The library contains a bunch of tools for visualisation of XY, 3D XYZ, smith and polar graphs, 3D pie/donut views, 3D objects.
+Arction Oy is a Finnish software company based in Kuopio. Their main product is LightningChart Ultimate. It is the fastest C\# framework for the visualisation of scientific, engineering, trading and research data. The library contains a bunch of tools to draw of XY, 3D XYZ, Smith and polar graphs, 3D pie/donut views, 3D objects.
 }\\
 \multicolumn{4}{|l|}{ }\\
 \multicolumn{4}{|p{14cm}|}{
-The company wanted to extend LightingChart's ability to render polygonal 3D models by volume rendering. It gives Arction an opportunity to attract new clients to use the product. As a result the framework will provide a unique possibility to render volume and polygonal models at the same visualisation.
+The company wanted to extend LightingChart's ability to render 3D polygonal models by volume rendering. It gives Arction an opportunity to attract new clients to use the product. As a result, the framework will provide a unique possibility to render volume and polygonal models at the same visualization.
 }\\
 \multicolumn{4}{|l|}{ }\\
 \multicolumn{4}{|p{14cm}|}{
-The project started from a literature research and comparison of different volume visualisation techniques. The best approach for the Arction's case was chosen and implemented it in the framework. The volume rendering engine is based on DirectX used together with C\# via SharpDX API and HLSL for low level optimisation of complex calculations.
+The project started from a literature research and comparison of different volume visualization techniques. The best approach for the Arction's case was chosen and implemented it in the framework. The volume rendering engine is based on DirectX used together with C\# via SharpDX API and HLSL for low-level optimization of complex calculations.
 }\\
 \multicolumn{4}{|l|}{ }\\
 \multicolumn{4}{|p{14cm}|}{
@@ -133,44 +133,44 @@ Visualisation, Ray Casting, 3D, C\#, LightningChart, DirectX, HLSL, Image Proces
 
 ACKNOWLEDGEMENTS\\
 
-I am very thankful to Arction Oy for offering me an opportunity to take part in the development of the project. I really like the office atmosphere and freedom in terms of my working style and schedule allowed by the company.\\
+I am very thankful to Arction Ltd for offering me an opportunity to take part in the development of the project. I like the office atmosphere and freedom regarding my working style and schedule allowed by the company.\\
 
-My special thanks go to Mr. Pasi Tuommainen, the CEO of the company, who expressed interest in my idea to extend the library by the volume rendering engine. I am also thankful that he gave me a permission to work on the project and guided me especially in the very early part of the development process.\\
+My particular thanks go to Mr. Pasi Tuommainen, the CEO of Arction, who expressed interest in my idea to extend the library by the volume rendering engine. I am also thankful that he gave me permission to work on the project and guided me especially in the very early part of the development process.\\
 
-I am very grateful to Savonia University of Applied Sciences and especially lectures who used to teache me.  Moreover, I would like to say thank you to my supervisor of thesis and head of my Degree Programm, Mr. Arto Toppinen, Principal Lecturer of Savonia UAS, for his mentoring and support during the report writing stage of my work. \\
+I am very grateful to Savonia University of Applied Sciences and especially lecturers who used to teach me.  Moreover, I would like to say thank you to my supervisor of thesis and head of my Degree Programm, Mr. Arto Toppinen, Principal Lecturer of Savonia UAS, for his mentoring and support during the report writing stage of my work. \\
 
-In addition, I would like to express my deepest gratitude to Karlsruhe Institute of Technology, where I got the first experience with volume rendering via Ray Casting. I am especially grateful to Nicolas Tan Jerome, who was my mentor during the part of my internship related to modification of TomoRayCaster 2 and to Aleksandr Lizin, the creator of the volume rendering engine based on WebGL which we used.
+Also, I would like to express my deepest gratitude to Karlsruhe Institute of Technology, where I got the first experience with volume rendering via Ray Casting. I am especially grateful to Nicolas Tan Jerome, who was my mentor during the part of my internship related to modification of TomoRayCaster 2 and to Aleksandr Lizin, the creator of the volume rendering engine based on WebGL which we used.
 
 \newpage
 
 \tableofcontents
 
 \chapter{INTRODUCTION}
-This chapter contains a brief information about the motivation behind a volume rendering, my personal background in computer graphics especially in a volume rendering. It also introduces Acrtion as an owner of the project, explains the reasons for Arction's interest in the development, sets requirements for the final product.
+This chapter contains brief information about the motivation behind a volume rendering, my personal background in computer graphics, especially in a volume rendering. It also introduces Arction as an owner of the project, explains the reasons for company's interest in the development, sets requirements for the final product.
 \section{Motivation}
 
-A volumetric data is very common our day. An importance of the type of datasets will grow in the near future, because of development in the field of 3D data acquisition and possibilities to perform the visualisation of this type of information on a modern office workstation with an interactive frame rate.\\
+A volumetric data is very common our day. An importance of the type of datasets will grow shortly, because of development in the field of 3D data acquisition and possibilities to perform the visualization of this kind of information on a modern office workstation with an interactive frame rate.\\
 
-A volume rendering is a process of multi-dimensional data visualisation into a two-dimensional image which gives the observer an opportunity to recognize meaningful insights in the original information. The technology allows us to represent 3 dimensions of the data via position in a 3D space and 3 more via color of the point.\\
+A volume rendering is a process of multi-dimensional data visualization into a two-dimensional image which gives the observer an opportunity to recognize meaningful insights in the original information. The technology allows us to represent three dimensions of the data via position in a 3D space and three more via color of the point.\\
 
-The dataset can be captured by various numbers of technologies like: MRI\footnote{Magnetic resonance imaging}, CT\footnote{Computer tomography}, PET\footnote{Positron emission tomography}, USCT\footnote{Ultrasound computer tomography} or echolocation. They also can be produced by physical simulations, for example fluid dynamics. The set of technologies mentioned before demonstrates that volumetric information plays an important role in medicine. It is used for an advanced cancer detection, visualization of aneurisms and treatment planning. This kind of rendering is also very useful for non-destructive material testing via computer tomography or ultrasound. Geoseismic researches produce huge three-dimensional datasets. Their visualisations are used in an oil exploration and planning of the deposit development.(Meißner, Pfister, Westermann \& Wittenbrink 2000, 1-2)\\
+The dataset can be captured by various numbers of technologies like: MRI\footnote{Magnetic resonance imaging}, CT\footnote{Computer tomography}, PET\footnote{Positron emission tomography}, USCT\footnote{Ultrasound computer tomography} or echolocation. They also can be produced by physical simulations, for example, fluid dynamics. The set of technologies mentioned before demonstrates that volumetric information plays an important role in medicine. It is used for an advanced cancer detection, visualization of aneurysms and treatment planning. This kind of rendering is also very useful for non-destructive material testing via computer tomography or ultrasound. Geoseismic research produces huge three-dimensional datasets. Their visualizations are used in an oil exploration and planning of the deposit development.(Meißner, Pfister, Westermann \& Wittenbrink 2000, 1-2)\\
 
 
 \section{Personal backgound}
 
-The first experience in the visualisation of volumetric data was gained by me during my internship at the Institute of Data Processing and Electronics, which belongs to the Karlsruhe Institute of Technology (KIT). I was a part of the 3D Ultrasound Computer Tomography (USCT) team there. Their main goal is a development of a new methodology for an early breast cancer detection. An algorithm for a visualisation of five-dimensional datasets was developed by me during the work placement. In result it was integrated into TomoRayCaster 2\footnote{JavaScript framework for the visualisation of 3D data, developed by Institute of Data Processing and Electronics} and USCT's edition of DICOM Viewer. An example of TomoRayCaster's output image is presented on the figure \ref{fig:usct}.\\
+The first experience in the visualization of volumetric data was gained by me during my internship at the Institute for Data Processing and Electronics, which belongs to the Karlsruhe Institute of Technology (KIT). I was a part of the 3D Ultrasound Computer Tomography (USCT) team there. Their main goal is a development of a new methodology for an early breast cancer detection. An algorithm for a visualization of five-dimensional datasets was developed by me during the work placement. In result it was integrated into TomoRayCaster 2\footnote{JavaScript framework for the visualization of 3D data, prepared by Institute of Data Processing and Electronics} and USCT's edition of DICOM Viewer. An example of TomoRayCaster's output image is presented on the figure \ref{fig:usct}.\\
 
 \begin{figure}[!h]
 \includegraphics[scale=0.4]{img/usct1}\includegraphics[scale=0.4335]{img/usct2}\\
 \caption{A volume visualisation of a breast phantom made by USCT(USCT Group, 2015)\label{fig:usct}}
 \end{figure}
 
-The very first steps in modern computer graphics was made by me during the project. The first experience in work with WebGL was gained during customisation of the TomoRayCaster. GLSL as my first shader language was also learned during the work. A lot of knowledge about an image processing and a scientific data visualisation, which became the basis for my thesis work was received by me at the workplacement.
+The very first steps in modern computer graphics were made by me during the project. The first experience in work with WebGL was gained during customization of the TomoRayCaster. GLSL as my first shader language was also learned during the work. Much knowledge about an image processing and a scientific data visualization, which became the basis for my thesis work was received by me at the job placement.
 
 
 \section{Arction Oy and Ligthning Chart}
 
-Arction Oy is a Finnish software company based in Kuopio. Their team has a strong background in a computer graphic and sciences. The main product of the company called LightningChart Ultimate. It is the fastest C\# library for a scientific and an engineering data visualisation. The library is capable to draw massive XY, Polar, Smith and 3D XYZ graphs, polygonal mesh models, surfaces, 3D pies/donuts and Geographic information. The library has an API for .NET WinForm and WPF applications. It is also possible to use it for a traditional Win32 C++ software development. The main advantage of the library is the fact that it is based on low-level DirectX graphic routines developed by Arction, then the most part of competitors use graphics routines which belongs to System.Windows.Media. Several example of the library's abilites are shown on the figure \ref{fig:lchu}.(Arction Ltd A; Arction Ltd B)\\
+Arction Ltd is a Finnish software company based in Kuopio. Their team has a strong background in a computer graphic and sciences. The main product of the company called LightningChart Ultimate. It is the fastest C\# library for a scientific and an engineering data visualization. The library is capable of drawing massive XY, Polar, Smith and 3D XYZ graphs, polygonal mesh models, surfaces, 3D pies/donuts and Geographic information. The library has an API for .NET WinForm and WPF applications. It is also possible to use it for a traditional Win32 C++ software development. The main advantage of the library is the fact that it is based on low-level DirectX graphic routines developed by Arction, then the most of the competitors use graphics routines which belong to System.Windows.Media. Several example of the library's abilities is shown on the figure \ref{fig:lchu}.(Arction Ltd A; Arction Ltd B)\\
 \begin{figure}[!h]
 \includegraphics[scale=0.5]{img/lchu}\\
 \caption{An example of a LightningChart's functionality\label{fig:lchu}}
@@ -179,7 +179,7 @@ Arction Oy is a Finnish software company based in Kuopio. Their team has a stron
 
 \section{Project Goals}
 
-So, as it can be concluded from the previous section, LightningChart is a very advanced software for 3D rendering based on polygons and lines. That's why, an idea to extend it by the special rendering engine for a visualisation of volumetric data was suggested by me to the CEO of the company. The engine will give Arction's clients the unique opportunity to combine visualisation of volumetric datasets with a wide range of other 3D possibilities provided by the library. \\
+So, as it can be concluded from the previous section, LightningChart is a very advanced software for 3D rendering based on polygons and lines. That is why an idea to extend it by a particular rendering engine for a visualization of volumetric data was suggested to the CEO of the company by me. The engine will give Arction's clients the unique opportunity to combine visualization of volumetric datasets with a broad range of other 3D possibilities provided by the library. \\
 
 The rendering engine must be able:
 \begin{itemize} 
@@ -193,23 +193,23 @@ Basically, this tool will give end users opportunities to change the contrast an
 
 \chapter{THEORY}
 
-This chapter explains a theoretical base behind the implementation of the project. It should introduce the main concepts of computer graphics, specify the difference between polygonal mesh model and volume rendering. It also contains an overview of different volume rendering techniques with their advantages and disadvantages in terms of a speed, a final image quality, a flexibility and other implementation issues.
+This chapter explains a theoretical base for the implementation of the project. It should introduce the main concepts of computer graphics, specify the difference between polygonal mesh model and volume rendering. It also contains an overview of different volume rendering techniques with their advantages and disadvantages regarding speed, a final image quality, a flexibility and other implementation issues.
 
 \section{Rendering}
 
-Visualisation of a 3D object as a 2D image called rendering. Usually, a 2D image is created out of pixels\footnote{a shortcut for picture element}. In case of a grayscale picture, it is a two-dimensional array and the value of the array elements represents the brightness of corresponding pixels on a screen. Configuration of colored images is dependent from a color model. The most popular one is RGB. It represents an image as three different grayscale pictures for three different colors called channels. In case of the RGB color model the images contain Red, Green and Blue values, sometimes it also keeps an informant about opacity in the channel called Alpha.\\
+Visualization of a 3D object as a 2D image called rendering. Usually, a 2D image is created out of pixels\footnote{a shortcut for picture element}. In the case of a grayscale picture, it is a two-dimensional array and the value of the array elements represents the brightness of corresponding pixels on a screen. The configuration of colored images is dependent on a color model. The most popular one is RGB. It represents an image as three different grayscale pictures for three different colors called channels. In case of the RGB color model the images contain Red, Green and Blue values, sometimes it also keeps an informant about opacity in the channel called Alpha.\\
 
-Color model is the mathematical abstraction which allows computers to calculate brightness of a corresponding point on the screen. An RGB is the original one for modern computer graphics, because it represents a color in the way they are physically reproduced on a screen. There are several other color models. They have their own advantages, for example, some of them gives us an advanced editing possibilities while others represent physical characteristic of different types of output devices like printers.\\
+A color model is a mathematical abstraction which allows computers to calculate the brightness of a corresponding point on the screen. An RGB is the original one for modern computer graphics because it represents a color in the way they are physically reproduced on a display. There are several other color models. They have their advantages, for example, some of them give us an advanced editing possibility while others represent physical characteristic of different types of output devices like printers.\\
 
-Multidimensional data can be visualised in two different ways: as a surface and as volume. Future in this chapter, we are going to talk about these two concepts a little bit closer. We will highlight their advantage and disadvantages, common and uncommon features. Moreover, we are going to discuss an implementation detail of the techniques on a modern hardware.
+Multidimensional data can be visualized in two different ways: as a surface and as volume. Future in this chapter, we are going to talk about these two concepts a little bit closer. We will highlight their advantage and disadvantages, common and uncommon features. Moreover, we are going to discuss an implementation detail of the techniques on modern hardware.
 
 
 \section{Polygonal Rendering}
 
-Today we are literally surrounded by the surface rendering based on polygonal mesh. The technology is used in computer games, a design, a cinema, a science, an engineering and etc. The technology is so popular that an entire 3D graphic pipeline is built around the idea. That's why this type of visualization is easily accelerated by graphic cards.\\
+Today we are surrounded by the surface rendering based on a polygonal mesh. The technology is used in computer games, design, a cinema, science, engineering, etc. The technology is so popular that an entire 3D graphic pipeline is built around the idea. That is why this type of visualization is easily accelerated by graphic cards.\\
 
 \subsection{Vertexs}
-Traditionally, 3D surfaces are constructed out of huge amount of polygons connected as a mesh. Due to simplicity, they usually have a triangular shape. It is possible to describe a triangle via list of three coordinates called vertices. An internal area of the shape filled with a color during a rasterization step. The color is calculated as a dot product between the normal vector of the surface and the vector of light. An examples of a wireframe and a flat shading of a polygonal mesh model is demostrated on the figure \ref{fig:mesh}.(Frédo Durand, 2)
+Traditionally, 3D surfaces are constructed out of huge amount of polygons connected as a mesh. Due to simplicity, they usually have a triangular shape. It is possible to describe a triangle via a list of three coordinates called vertices. An internal area of the shape filled with a color during a rasterization step. The color is calculated as a dot product between the normal vector of the surface and the vector of light. An example of a wireframe and a flat shading of a polygonal mesh model is demonstrated on the figure \ref{fig:mesh}.(Frédo Durand, 2)
 
 
 \begin{figure}[!h]
@@ -218,54 +218,55 @@ Traditionally, 3D surfaces are constructed out of huge amount of polygons connec
 \end{figure}
 
 \subsection{Normals}
-Surface normal vector of a triangle can be calculated as a cross product of two triangle's sides, but it gives an acceptable result only for very flat surfaces. That's why curve surfaces usually contain an additional normal vector for an every vertex. They are able to significantly improve detailisation on the model. The information kept in them is used during a shading and a tesselation of the model's geometry. (Wagner 2004, 1)\\
+The surface normal vector of a triangle can be calculated as a cross product of two triangle's sides, but it gives an acceptable result only for very flat surfaces. That is why curve surfaces usually contain an additional normal vector for an every vertex. They can significantly improve resolution on the model. The information kept in them is used during a shading and a tesselation of the model's geometry. (Wagner 2004, 1)\\
 
 
 \subsection{Textures}
-Very small details can be added to the model via textures. It is specific 2D image which is used to sample high frequency information during rendering. The picture usually contains local color values, but it also can carry any information about normal vectors for a nice visualisation of very small structures on the surface. Textures are mapped to the surface via third parameter of vertex which is called texture coordinate. They keep any information about corresponding to this vector position in the 2D space of the image.(McReynolds 1996, 10-11)\\
+Tiny details can be added to the model via textures. It is specific 2D image which is used to sample high-frequency information during rendering. The picture usually contains local color values, but it also can carry any information. For example, it can store normal vectors for a nice visualization of very small structures on the surface. Textures are mapped to the surface via the third parameter of the vertex which is called texture coordinate. They keep any information about corresponding to this vector position in the 2D space of the image.(McReynolds 1996, 10-11)\\
 
 \subsection{Redering process}
-Position, scale, rotation of the object and perspective characteristics of the space is specified via matrixes $4\times4$. This kind of matrix allows to apply any kind of transformation possible in a 3D space. Usually, three matrixes are applied to the object. The first one transfers the object to the world space coordinates, it specifies the position, rotation and scale of an original object in the world coordinate system. The next one is viewing matrix. It also takes in a consideration a position of a camera and transforms the models to achieve a desirable framing. The last matrix called projection. It applies perspective to the scene, in other word it defines an angle of view of the camera.(OpenGL-Tutorial)\\
+Position, scale, rotation of the object and perspective characteristics of the space is specified via matrixes $4\times4$. This kind of matrix allows applying any transformation possible in a 3D space. Usually, three matrixes are applied to the object. The first one transfers the object to the world space coordinates: it specifies the position, rotation, and scale of an original object in the world coordinate system. The next one is viewing matrix. It also takes in a consideration a position of a camera and transforms the models to achieve a desirable framing. The last matrix called projection. It applies perspective to the scene, in another word it defines an angle of view of the camera.(OpenGL-Tutorial)\\
 
-Specific program called shader receives all the information together with a camera and light source positions, after that they are able to perform calculations needed to render the final image in accord with the goals of the visualisation. Usually, the calculations are produced by graphic card in a parallel way.
+A specific program called shader receives all the information together with a camera and light source positions, after that they can perform calculations needed to render the final image in accord with the goals of the visualization. Usually, the calculations are produced by a graphic card in a parallel way.
 
 \section{Volume Rendering}
 
-Volume data are composed out of voxels\footnote{volume element}. Voxel is just a point in a 3D space, which has a position and a color. Together gives us an opportunity to visualise up to six scalar parameters. There are two ways to render volumes. We are going to discuss about main principles, advantages and disadvantages of the technologies in this section.\\
+Volume data are composed out of voxels\footnote{volume element}. Voxel is just a point in a 3D space, which has a position and a color. Together gives us an opportunity to visualize up to six scalar parameters. There are two ways to render volumes. We are going to discuss main principles, advantages and disadvantages of the technologies in this section.\\
 
 \subsection{Indirect}
 
-The first one called Indirect volume rendering. It is based on the idea that it is possible to extract a surface out of the dataset during a preprocessing and render the surface as a polygonal mesh. Several algorithms are invented for this application:
+The first one called Indirect volume rendering. It is based on the idea that it is possible to extract a surface out of the dataset during a preprocessing and draw the surface as a polygonal mesh. Several algorithms are invented for this application:
 \begin{itemize}
 \item Marching Cubes
 \item Surface Tracking
-\item Fourier Transfor Rendering
+\item Fourier Transform Rendering
 \end{itemize}
-It is the oldest idea behind volume rendering and it has plenty of disadvantages:
+It is the oldest idea behind volume rendering, and it has plenty of disadvantages:
 \begin{itemize}
 \item It is complex and slow preprocessing algorithms
 \item It can be inaccurate due to noise
-\item Sometimes it is not possible to generate an isosurface out of specific dataset, for example smoke
-\item It loses an information about an internal structure
+\item Sometimes it is not possible to generate an isosurface out of specific dataset, for example, smoke
+\item It loses information about an internal structure
 \item The preprocessing has to be repeated to apply changes in a transfer function 
 \end{itemize}
 
-But the algorithm is very popular for generation of medical illustrations, video or other static visualisations. The main advantage of the solution is that nicely preprocessed model can be easily rendered via well-known technique for 3D mesh model's rendering. They can be used even in a very weak hardware.(Jeroen Baert 2012, 3)\\
+However, the algorithm is very popular for generation of medical illustrations, video or other static visualizations. The main advantage of the solution is that nicely preprocessed model can be easily rendered via well-known technique for 3D mesh model's rendering. They can be used even in a very weak hardware.(Jeroen Baert 2012, 3)\\
 
-Unfortunately, this technology is not suitable for our project, because it does not satisfy Arction's requirements. First of all it is not acceptable for us to lose the internal structure and an opportunity to modify the transfer function runtime.(Jeroen Baert 2012, 3)
+Unfortunately, this technology is not suitable for our project, because it does not satisfy Arction's requirements. First of all, it is not acceptable for us to lose the internal structure and an opportunity to runtime modify the transfer function.(Jeroen Baert 2012, 3)
 
 \subsection{Direct}
-Direct volume rendering does not require any kind of preprocessing. The data are visualised from an original dataset. It gives the algorithms an opportunity to modify a transfer function runtime. There are four most common technique for direct volume rendering. The algorithms will be discussed more detailed in the future in this section.\\
+Direct volume rendering does not require any kind of preprocessing. The data are visualized from an original dataset. It gives the algorithms an opportunity to modify a transfer function runtime. There is four most common technique for direct volume rendering. The algorithms will be discussed more detailed in the future in this section.\\
 
-For an implementation of a hardware acceleration for a rendering process, a volumetric data has to be loaded to the graphics card. It is usually served as 3D texture or as set of 2D textures. For the optimization of a texture's buffer consumption, several slices can be collected to one huge texture map. (Barbagallo 2014) 
+For an implementation of a hardware acceleration for a rendering process, a volumetric data has to be loaded to the graphics card. It is usually served as 3D texture or as a set of 2D textures. For the optimization of a texture's buffer consumption, several slices can be collected to one huge texture map. (Barbagallo 2014) 
 
 \subsubsection{Texture-based}
 
-As it was mentioned before the graphics pipeline of modern graphic cards is optimized for rendering of polygonal mesh models. So, volume rendering algorithms are forced to use this set of tools to achieve hardware acceleration. Texture-based volume rendering is the most straightforward way to achieve the aim.\\
+As it was mentioned before the graphics pipeline of modern graphic cards is optimized for a rendering of polygonal mesh models. So, volume rendering algorithms are forced to use this set of tools to achieve hardware acceleration. Texture-based Volume rendering is the most straightforward way to achieve the aim.\\
 
 As it was already said textures are used to add tiny details to polygonal models. Any graphic library has an advanced set of tools for a texture mapping, which can be used to this kind of volume rendering. The algorithm creates a set of planes called proxy geometry. A transfer function maps the volumetric dataset on the proxy geometry. The final image is constructed out of the planes with mapped on them textures via Alpha-blending.(Ikits, Kniss, Lefohn \& Hansen 2007)\\
 
-A proxy geometry can be created in two different ways. The first one called 2D texture-based rendering. In this case three different sets of planes are generated. All sets are generated perpendicular to a different direction of a 3D space. This approach leads us to sudden jumps in an image quality for different camera position and it does not allow to change the sampling rate of the visualisation.(Ikits, Kniss, Lefohn \& Hansen 2007)\\
+A proxy geometry can be created in two different ways. The first one called 2D texture-based rendering. In this case, three different sets of planes are generated. All sets are generated perpendicular to a different direction of a 3D space. This approach leads us to sudden jumps in an image quality for various camera position, and it does not allow to change the sampling rate of the visualization.(Ikits, Kniss, Lefohn \& Hansen 2007)\\
+
 \begin{figure}[!h]
 \centerline{
 \includegraphics[scale=0.75]{img/texture-based}

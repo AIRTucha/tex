@@ -407,7 +407,9 @@ On the another hand, an ability of LightningChart to draw 3D polygonal mesh mode
 
 \section{Visualisation process}
 
-This section of the paper explains the main principles and implementation details of the project. It describes the main challenges and tells how they were solved during a development of the rendering engine.
+This section of the paper explains the main principles and implementation details of the project. It describes the main challenges and tells how they were solved during a development of the rendering engine.\\
+
+The process is broken down into two main steps: a preprocessing and an actual GPU accelerated volume rendering. During the preprocessing step, the engine loads the data and prepares to supply it to the graphic card. The rendering step determines the rays' tracks throughout the dataset, samples the information along them, combines it into the final image in according to different Ray Functions. The section also contains an explanation of the techniques used for in the optimisation of the process. Unfortunately, the more detailed explanation of the process is not available to the public, because it is the private property of Arction Ltd.
 
 \subsection{Loading and preprocessing of dataset}
 The most common way of a volume data distribution is a collection of 2D slices. The 2D slices are just images in common formats. Sometimes they can be represented as a set of DICOM\footnote{Digital Imaging and Communications in Medicine} files. In this case, they contain metadata of the studies together with embedded pictures. Volumes can also be distributed as a table of original values. The table usually is a part of an RAW file which also contains some meta information. Raw is several different formats with the common name. More detailed specification of an every particular realisation depends on a machine which performed the data acquisition.\\
@@ -450,7 +452,7 @@ Possibility to render a scene in several steps makes rendering pipeline especial
 
 Deferred rendering is one of the most popular realization of the idea. The technology is created for a rendering of scenes with a lot of dynamic lights. Traditionally, this kind of functionality requires a complex set of shaders. Multi-pass approach breaks the process into smaller pieces and performs the calculations separately for an every step. It allows simplifying an architecture of rendering framework. It can also give an opportunity to apply GPU acceleration to some parts of rendering algorithm which used to be previously executed on CPU.(Zink, Pettineo \& Hoxley 2011, 491-495)\\
 
-Our volume ray caster is also going to get some advantages from multi-pass rendering. In the case of this solution, it has only two passes. It means that entire rendering pipeline of the engine contains two typical rendering pipelines. The technology allows our algorithm to determine vectors of the sampling ray in the volume coordinate system without any additional mathematical calculations. The first pass generates texture which contains valuable information for a rendering of the final image at the second pass. Both passes use only vertex and pixel shader programs.(Kyle Hayward, 2009)
+Our volume ray caster is also going to get some advantages from multi-pass rendering. In the case of this solution, it has only two passes. It means that entire rendering pipeline of the engine contains two typical rendering pipelines. The technology allows our algorithm to determine vectors of the sampling ray in the volume coordinate system without any additional mathematical calculations. The first pass generates texture which contains valuable information for a rendering of the final image at the second pass. Both passes use only vertex and pixel shader programs.(Kyle Hayward, 2009A)
 
 \subsection{First pass}
 
@@ -609,10 +611,9 @@ The result of my thesis project is a fast, but at the same time a simple realisa
 
 \subsection{Picture quality}
 
-There are two main ways in terms of a quality improvement. Light interaction and isosurface rendering ray function were out of the thesis scope, but they have to be implemented in the engine in the next version of the library.\\
+There are three main ways in terms of a quality improvement. Light interaction, isosurface rendering ray function and advanced transfer function were out of the thesis scope, but they have to be implemented in the engine in the next version of the library.\\
 
 Light and shadow is a very important part of 3D visualisation. It takes a major part in the transmission of the 3D object's shape. The depth is usually evaluated by a combination of shadows and perspective. There are several techniques for a shading task. Some of them combine volumetric data with a polygonal model, and others do not. Not an every solution for the lightning of volume objects supports semi-transparent shadows. A shading significantly improves a quality of the final image but has very negative impact on the final performance. Performance is the main requirement for Arction's solutions, that is why the development will be done only after careful investigation of the issue.(Hadwiger, Ljung, Salama \& Ropinski 2008, 56-61)\\
-
 
 \begin{figure}[H]
 \centerline{\includegraphics[scale = 0.7]{img/cuttedhead}}
@@ -625,7 +626,9 @@ An isosurface rendering draws the surface of the model in the way that it looks 
 \caption{A rendering of an accumulation ray function without an interpolation (left) and an isosurface ray function (right)(Hadwiger, Ljung, Salama \& Ropinski 2008, 24-28)\label{fig:iso}}
 \end{figure}
 
-The technique detects a voxel which satisfies the thresholds. Takes into account several pixels around the point and calculate a gradient vector. It is used as a normal vector. The brightness of the corresponding pixel is calculated in a very similar way with a traditional Phong approach for polygon-based 3D graphic. It is a dot product of the normal vector and the direction of light.
+The technique detects a voxel which satisfies the thresholds. Takes into account several pixels around the point and calculate a gradient vector. It is used as a normal vector. The brightness of the corresponding pixel is calculated in a very similar way with a traditional Phong approach for polygon-based 3D graphic. It is a dot product of the normal vector and the direction of light.\\
+
+In the case of volume rendering, a transfer function is a part of ray function which determines how the sampled values are preprocessed. Current realisation of the transfer function is very simple. It is only able to linearly modify the contrast and threshold values of different channels. In a future version, it will be possible to use a lookup table as the transfer function. It is a much more flexible solution because this transfer function can be used to colorize different materials in different colours according to their brightness. The colored visualisation will produce a more natural look of the model.
 
 \subsection{Sampling rate manager}
  
@@ -636,9 +639,10 @@ Another application is a rendering a huge data set on a very weak hardware. Sign
 
 \subsection{API}
 
-Future development also has to be related to the extension of the API provided by the engine. The engine will have to be able to load data as a *.CSV files and receive the data created by a client's code. Additionally, Arction wants to implement a some interactive modification of the dataset runtime. It can be used for a visualisation of electromagnetic fields or another scalar datasets inside an object. A visualisation of a brain activity monitoring or a stress distribution inside a detail is excellent examples of applications for the approach. \\
+Future development also has to be related to the extension of the API provided by the engine. The engine will have to be able to load data as a *.CSV files and receive the data created by a client's code. Additionally, Arction wants to implement a some interactive modification of the dataset runtime. It can be used for a visualisation of electromagnetic fields or another scalar datasets inside an object. A visualisation of a brain activity monitoring or a stress distribution inside a detail are excellent examples of applications for the approach. \\
 
-The main problem is that it is very computationally expensive to modify the entire dataset on a CPU side for an every frame. That is why the most realistic approach requires the creation of an additional low-resolution dataset. An API will contain at least four functions. Two of them are a getter and a setter. The functions will give an opportunity to modify voxels of the dataset separately. It is more efficient to use pointer arithmetics for the modification. It requires locking of the bitmap and extraction of an array with raw pixel values. So, two more functions will be responsible for preparation the dataset for processing with a pointer arithmetics and a submission of the changes to the original bitmap. An every frame the low-resolution data will be updated and supplied to a graphic card. \\
+The main problem is that it is very expensive in terms of computation to modify the entire dataset on the CPU side for an every frame. That is why the most realistic approach requires the creation of an additional low-resolution dataset. An API will contain at least four functions. Two of them are a getter and a setter. The functions will give an opportunity to modify voxels of the dataset separately. It is more efficient to use pointer arithmetics for the modification. It requires locking of the bitmap and extraction of an array with raw pixel values. So, two more functions will be responsible for preparation the dataset for processing with a pointer arithmetics and a submission of the changes to the original bitmap. An every frame the low-resolution data will be updated and supplied to a graphic card. \\
+The main problem is that it is very expensive in terms of computation to modify the entire dataset on the CPU side for an every frame. That is why the most realistic approach requires the creation of an additional low-resolution dataset. An API will contain at least four functions. Two of them are a getter and a setter. The functions will give an opportunity to modify voxels of the dataset separately. It is more efficient to use pointer arithmetics for the modification. It requires locking of the bitmap and extraction of an array with raw pixel values. So, two more functions will be responsible for preparing the dataset for processing with a pointer arithmetics and a submission of the changes to the original bitmap. An every frame the low-resolution data will be updated and supplied to a graphic card. \\
 
 Scalar fields do not usually have tiny details inside, also traditionally they are represented by a hue component of a color. It is hard for humans to reveal tiny gradations of a hue. That is why it would be difficult to recognize small details, and the dataset can have a much lower resolution. The final picture will be created by a fusion of this to datasets. The hue of the color will be sampled from a small dataset; an original one will be the source of the brightness. After that, the color will be converted from HSV color model to RGB one.
 
@@ -655,38 +659,41 @@ Available from: http://arction.com/about\_us\\
 \small Action Ltd B\textit{LightningChart Ultimate SDK} [webpage][accessed \today] \\
 Available from: http://arction.com/products\_lc\_ultimate\_sdk\\
 
-\small Jeroen Baert, 2012 \textit{Rendering Large volumetric datasets: Overview, Using Sparse Voxel Octrees \& GPU ray casting}[web document][accessed \today] University of Leuven.\\
+\small Baert Jeroen, 2012 \textit{Rendering Large volumetric datasets: Overview, Using Sparse Voxel Octrees \& GPU ray casting}[web document][accessed \today] University of Leuven.\\
 Available from: http://www.forceflow.be/wp-content/uploads/2012/02/vr\_overview.pdf\\
 
-\small Leandro R Barbagallo, 2014 \textit{WEBGL VOLUME RENDERING MADE SIMPLE} [webpage][accessed \today]\\ 
+\small Barbagallo Leandro R, 2014 \textit{WEBGL VOLUME RENDERING MADE SIMPLE} [webpage][accessed \today]\\ 
 Available from: http://lebarbacom.ipage.com/blog/\\
 
-\small Frédo Durand \textit{A Short Introduction to Computer Graphics} [web document]MIT Laboratory for Computer Science[accessed \today] \\
+\small Durand Frédo \textit{A Short Introduction to Computer Graphics} [web document]MIT Laboratory for Computer Science[accessed \today] \\
 Available from: http://people.csail.mit.edu/fredo/Depiction/1\_Introduction/reviewGraphics.pdf\\
 
-\small Markus Hadwiger, Patric Ljung, Christof Rezk Salama \& Timo Ropinski, 2008\textit{Advanced Illumination Techniques for GPU-Based Volume Raycasting} [web document][accessed \today] NACM SIGGRAPH Asia 2008 \\
+\small Hadwiger Markus, Patric Ljung, Christof Rezk Salama \& Timo Ropinski, 2008\textit{Advanced Illumination Techniques for GPU-Based Volume Raycasting} [web document][accessed \today] NACM SIGGRAPH Asia 2008 \\
 Available from: http://www.voreen.org/files/sa08-coursenotes\_1.pdf\\
 
-\small Kyle Hayward, 2009 \textit{Volume Rendering 101}[web publication][accessed \today]
+\small Hayward Kyle, 2009A \textit{Volume Rendering 101}[web publication][accessed \today]
 Available from: http://graphicsrunner.blogspot.fi/2009/01/volume-rendering-101.html\\
 
-\small Milan Ikits, Joe Kniss, Aaron Lefohn \& Charles Hansen, 2007 \textit{GPU Gems} Chapter 39. \textit{Volume Rendering Techniques} [web publication][accessed \today] NVIDIA Corporation.\\
+\small Hayward Kyle, 2009B \textit{Volume Rendering 102: Transfer Functions}[web publication][accessed \today]
+Available from: http://graphicsrunner.blogspot.fi/2009/01/volume-rendering-102-transfer-functions.html\\
+
+\small Ikits Milan, Kniss Joe, Lefohn Aaron \& Hansen Charles, 2007 \textit{GPU Gems} Chapter 39. \textit{Volume Rendering Techniques} [web publication][accessed \today] NVIDIA Corporation.\\
 Available from: http://http.developer.nvidia.com/GPUGems/gpugems\_ch39.html\\
 
 \small USCT Group, 2015 \textit{3D visualisation of USCT data} [webpage] Karlsruhe Insitute of Technology, Institute of data processing and electornics [accessed \today] \\
 Available from: http://ipepc57.ipe.kit.edu:10002\\
 
-\small Philippe G. Lacroute, 1995 \textit{FAST VOLUME RENDERING USING A SHEAR-WARP FACTORIZATION OF THE VIEWING TRANSFORMATION} [web document][accessed \today] Computer Systems Laboratory
+\small Lacroute Philippe G., 1995 \textit{FAST VOLUME RENDERING USING A SHEAR-WARP FACTORIZATION OF THE VIEWING TRANSFORMATION} [web document][accessed \today] Computer Systems Laboratory
 Departments of Electrical Engineering and Computer Science Stanford University \\
 Available from: https://www.youtube.com/watch?v=1PqvwOjnKJw\\
 
-\small Robert Steven Laramee, 2016 \textit{Ray Functions for Volume Rendering: A Quick and Convenient Review} [video][accessed \today] Swansea University \\
+\small Laramee Robert Steven, 2016 \textit{Ray Functions for Volume Rendering: A Quick and Convenient Review} [video][accessed \today] Swansea University \\
 Available from: https://graphics.stanford.edu/papers/lacrou\_thesis/lacroute\_thesis.pdf\
 
-\small Tom McReynolds, 1996\textit{Programming with OpenGL: Advanced Rendering} [web document] Silicon Graphics, SIGGRAPH ‘96 Course [accessed \today] \\
+\small McReynolds Tom, 1996\textit{Programming with OpenGL: Advanced Rendering} [web document] Silicon Graphics, SIGGRAPH ‘96 Course [accessed \today] \\
 Available from: http://www.dcs.ed.ac.uk/teaching/cs4/www/graphics/Web/advanced\_ogl.pdf\\
 
-\small M. Meißner , H. Pfister , R. Westermann \& C.M. Wittenbrink, 2000 \textit{Volume Visualization and Volume Rendering Techniques}[web document][accessed \today] The Eurographics Association 2000.\\
+\small Meißner M., Pfister H., Westermann R. \& Wittenbrink C.M., 2000 \textit{Volume Visualization and Volume Rendering Techniques}[web document][accessed \today] The Eurographics Association 2000.\\
 Available from: http://www.labri.fr/perso/preuter/imageSynthesis/02-03/papers/volvistut.pdf\\
 
 \small Microsoft Development Center \textit{Introduction to the C\# Language and the .NET Framework} [webpage][accessed \today] \\
@@ -695,7 +702,7 @@ Available from: https://msdn.microsoft.com/en-us/library/z1zx9t92.aspx\\
 \small OpenGL-Tutorial \textit{Tutorial 3 : Matrices} [webpage][accessed \today] \\
 Available from: http://www.opengl-tutorial.org/beginners-tutorials/tutorial-3-matrices\\
 
-\small Ronald Peikert, 2007 \textit{Raycasting} [web document] SciVis[accessed \today] \\
+\small Peikert Ronald, 2007 \textit{Raycasting} [web document] SciVis[accessed \today] \\
 Available from: https://graphics.ethz.ch/teaching/former/scivis\_07/Notes/Handouts/03-raycasting.pdf\\
 
 \small SharpDX [webpage][accessed \today] \\
@@ -704,7 +711,7 @@ Available from: http://sharpdx.org\\
 \small TechTarget, 2005 \textit{DEFINITION: DirectX} [webpage][accessed \today] \\
 Available from: http://searchwindowsserver.techtarget.com/definition/DirectX\\
 
-\small Max Wagner, 2004 \textit{Generating Vertex Normals} [web document][accessed \today] \\
+\small Wagner Max, 2004 \textit{Generating Vertex Normals} [web document][accessed \today] \\
 Available from: http://www.emeyex.com/site/tuts/VertexNormals.pdf\\
 
 \small Windows Dev Center A\textit{Direct3D feature levels} [webpage][accessed \today] \\
@@ -722,7 +729,7 @@ Available from: https://msdn.microsoft.com/en-us/library/windows/desktop/ff81906
 \small Xamarin \textit{Xamarin Planform} [webpage][accessed \today] \\
 Available from: https://www.xamarin.com/platform\\
 
-\small Jason Zink, Matt Pettineo \& Jack Hoxley, 2011 \textit{Practical Rendering \& Computation with Direct3D 11} CRC Press, Taylor \& Francis Group \\
+\small Zink Jason, Matt Pettineo \& Jack Hoxley, 2011 \textit{Practical Rendering \& Computation with Direct3D 11} CRC Press, Taylor \& Francis Group \\
 
 
 

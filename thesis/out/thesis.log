@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.30)  3 JUN 2016 01:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.12.30)  10 JUN 2016 13:10
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -738,8 +738,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 209--210
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 211.
-Missing character: There is no √ in font ptmr7t!
-Missing character: There is no © in font ptmr7t!
 [7
 
 ] <img/mesh.png, id=233, 809.0225pt x 412.54124pt>
@@ -834,12 +832,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 302--303
 
  []
 
-
+[12 <./img/rayCast.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 304--305
 
  []
 
-[12 <./img/rayCast.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 308--309
 
  []
@@ -948,14 +946,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 404--405
 
  []
 
-[19 <./img/chart.png>] <img/slice.png, id=318, 537.00626pt x 537.00626pt>
-File: img/slice.png Graphic file (type png)
+[19 <./img/chart.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 410--411
 
-<use img/slice.png>
-Package pdftex.def Info: img/slice.png used on input line 415.
+ []
+
+<img/slice.png, id=318, 537.00626pt x 537.00626pt>
+File: img/slice.png Graphic file (type png)
+ <use img/slice.png>
+Package pdftex.def Info: img/slice.png used on input line 419.
 (pdftex.def)             Requested size: 187.955pt x 187.955pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 413--419
+Underfull \hbox (badness 10000) in paragraph at lines 417--423
 
  []
 
@@ -963,30 +965,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 413--419
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 420--421
+Underfull \hbox (badness 10000) in paragraph at lines 424--425
 
  []
 
-<img/map.png, id=319, 1205.50375pt x 533.995pt>
+[20] <img/map.png, id=324, 1205.50375pt x 533.995pt>
 File: img/map.png Graphic file (type png)
  <use img/map.png>
-Package pdftex.def Info: img/map.png used on input line 423.
-(pdftex.def)             Requested size: 421.93263pt x 186.90105pt.
+Package pdftex.def Info: img/map.png used on input line 427.
+(pdftex.def)             Requested size: 397.81747pt x 176.21889pt.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 426--427
-
- []
-
-[20]
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 445--446
+Underfull \hbox (badness 10000) in paragraph at lines 430--431
 
  []
 
@@ -996,140 +985,161 @@ Underfull \hbox (badness 10000) in paragraph at lines 449--450
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 451--452
+Underfull \hbox (badness 10000) in paragraph at lines 453--454
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 457--458
+Underfull \hbox (badness 10000) in paragraph at lines 455--456
 
  []
 
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 459--460
+Underfull \hbox (badness 10000) in paragraph at lines 461--462
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 461--462
+Underfull \hbox (badness 10000) in paragraph at lines 463--464
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 465--466
 
  []
 
 <img/first.png, id=338, 498.86375pt x 527.9725pt>
 File: img/first.png Graphic file (type png)
  <use img/first.png>
-Package pdftex.def Info: img/first.png used on input line 465.
-(pdftex.def)             Requested size: 224.4866pt x 237.58542pt.
-
-<img/second.png, id=339, 809.27344pt x 816.80156pt>
-File: img/second.png Graphic file (type png)
- <use img/second.png>
-Package pdftex.def Info: img/second.png used on input line 473.
-(pdftex.def)             Requested size: 242.7839pt x 245.04236pt.
-
-[23 <./img/first.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 477--478
-
- []
-
-<img/final.png, id=348, 938.75719pt x 938.75719pt>
-File: img/final.png Graphic file (type png)
- <use img/final.png>
-Package pdftex.def Info: img/final.png used on input line 481.
-(pdftex.def)             Requested size: 281.62933pt x 281.62933pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 479--485
-
- []
+Package pdftex.def Info: img/first.png used on input line 469.
+(pdftex.def)             Requested size: 244.44537pt x 258.70879pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[24 <./img/second.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 486--487
+<img/second.png, id=339, 809.27344pt x 816.80156pt>
+File: img/second.png Graphic file (type png)
+ <use img/second.png>
+Package pdftex.def Info: img/second.png used on input line 477.
+(pdftex.def)             Requested size: 250.87218pt x 253.20586pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 481--482
 
  []
 
+<img/final.png, id=342, 938.75719pt x 938.75719pt>
+File: img/final.png Graphic file (type png)
+ <use img/final.png>
+Package pdftex.def Info: img/final.png used on input line 485.
+(pdftex.def)             Requested size: 281.62933pt x 281.62933pt.
 
+Underfull \hbox (badness 10000) in paragraph at lines 483--489
+
+ []
+
+[23]
+
+LaTeX Warning: Text page 24 contains only floats.
+
+
+Overfull \vbox (4.58443pt too high) has occurred while \output is active []
+
+
+[24 <./img/first.png> <./img/second.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 490--491
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 492--493
+Underfull \hbox (badness 10000) in paragraph at lines 494--495
 
  []
 
-[25 <./img/final.png>] <img/empty.png, id=361, 854.19125pt x 432.61626pt>
-File: img/empty.png Graphic file (type png)
 
-<use img/empty.png>
-Package pdftex.def Info: img/empty.png used on input line 495.
+Underfull \vbox (badness 6477) has occurred while \output is active []
+
+ [25 <./img/final.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 496--497
+
+ []
+
+<img/empty.png, id=361, 854.19125pt x 432.61626pt>
+File: img/empty.png Graphic file (type png)
+ <use img/empty.png>
+Package pdftex.def Info: img/empty.png used on input line 499.
 (pdftex.def)             Requested size: 341.67046pt x 173.04343pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 503--504
-
- []
-
-[26 <./img/empty.png>]
-<img/head-th-win.png, id=368, 454.69875pt x 479.54156pt>
+<img/head-th-win.png, id=362, 454.69875pt x 479.54156pt>
 File: img/head-th-win.png Graphic file (type png)
 
 <use img/head-th-win.png>
-Package pdftex.def Info: img/head-th-win.png used on input line 515.
+Package pdftex.def Info: img/head-th-win.png used on input line 509.
 (pdftex.def)             Requested size: 272.82135pt x 287.72716pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 521--522
+Underfull \hbox (badness 10000) in paragraph at lines 507--511
 
  []
 
-[27 <./img/head-th-win.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 529--530
+[26 <./img/empty.png>] [27 <./img/head-th-win.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 524--525
 
  []
 
-<img/maxi.png, id=380, 578.16pt x 625.33624pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 532--533
+
+ []
+
+<img/maxi.png, id=376, 437.38406pt x 451.6875pt>
 File: img/maxi.png Graphic file (type png)
  <use img/maxi.png>
-Package pdftex.def Info: img/maxi.png used on input line 532.
-(pdftex.def)             Requested size: 260.16959pt x 281.39871pt.
- [28 <./img/maxi.png>] [29]
+Package pdftex.def Info: img/maxi.png used on input line 535.
+(pdftex.def)             Requested size: 262.43245pt x 271.01459pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[28] [29 <./img/maxi.png>]
 Chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 540--541
+Underfull \hbox (badness 10000) in paragraph at lines 543--544
 
  []
 
 <img/brain.png, id=392, 488.57532pt x 517.18219pt>
 File: img/brain.png Graphic file (type png)
  <use img/brain.png>
-Package pdftex.def Info: img/brain.png used on input line 543.
-(pdftex.def)             Requested size: 293.14745pt x 310.3117pt.
+Package pdftex.def Info: img/brain.png used on input line 546.
+(pdftex.def)             Requested size: 268.71725pt x 284.45108pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 547--548
+Underfull \hbox (badness 10000) in paragraph at lines 550--551
 
  []
 
-[30
-
- <./img/brain.png>] <img/head.png, id=400, 612.03656pt x 648.92438pt>
+<img/head.png, id=393, 612.03656pt x 648.92438pt>
 File: img/head.png Graphic file (type png)
+ <use img/head.png>
+Package pdftex.def Info: img/head.png used on input line 553.
+(pdftex.def)             Requested size: 287.65723pt x 304.99449pt.
+ [30
 
-<use img/head.png>
-Package pdftex.def Info: img/head.png used on input line 550.
-(pdftex.def)             Requested size: 306.01753pt x 324.4614pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 554--555
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 554--555
+ <./img/brain.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 557--558
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 556--557
+Underfull \hbox (badness 10000) in paragraph at lines 557--558
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 559--560
 
  []
 
@@ -1137,37 +1147,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 556--557
 File: img/head-zcor.png Graphic file (type png)
 
 <use img/head-zcor.png>
-Package pdftex.def Info: img/head-zcor.png used on input line 560.
+Package pdftex.def Info: img/head-zcor.png used on input line 563.
 (pdftex.def)             Requested size: 293.1461pt x 284.03703pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 563--564
+Underfull \hbox (badness 10000) in paragraph at lines 566--567
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 565--566
+Underfull \hbox (badness 10000) in paragraph at lines 568--569
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 567--568
+Underfull \hbox (badness 10000) in paragraph at lines 570--571
 
  []
 
 <img/head-th.png, id=413, 457.71pt x 486.31688pt>
 File: img/head-th.png Graphic file (type png)
  <use img/head-th.png>
-Package pdftex.def Info: img/head-th.png used on input line 570.
+Package pdftex.def Info: img/head-th.png used on input line 573.
 (pdftex.def)             Requested size: 201.39302pt x 213.98009pt.
 
 [32 <./img/head-zcor.png>]
 <img/head-clip.png, id=421, 484.81125pt x 554.82281pt>
 File: img/head-clip.png Graphic file (type png)
  <use img/head-clip.png>
-Package pdftex.def Info: img/head-clip.png used on input line 575.
+Package pdftex.def Info: img/head-clip.png used on input line 578.
 (pdftex.def)             Requested size: 213.3176pt x 244.12279pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 579--580
+Underfull \hbox (badness 10000) in paragraph at lines 582--583
 
  []
 
@@ -1176,17 +1186,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 579--580
 File: img/head-clip-rot.png Graphic file (type png)
 
 <use img/head-clip-rot.png>
-Package pdftex.def Info: img/head-clip-rot.png used on input line 582.
+Package pdftex.def Info: img/head-clip-rot.png used on input line 585.
 (pdftex.def)             Requested size: 279.81848pt x 272.44098pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 586--587
+Underfull \hbox (badness 10000) in paragraph at lines 589--590
 
  []
 
 <img/head-op.png, id=436, 431.36156pt x 490.83376pt>
 File: img/head-op.png Graphic file (type png)
  <use img/head-op.png>
-Package pdftex.def Info: img/head-op.png used on input line 591.
+Package pdftex.def Info: img/head-op.png used on input line 594.
 (pdftex.def)             Requested size: 215.68025pt x 245.41628pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1196,10 +1206,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 File: img/head-op-rot.png Graphic file (type png)
 
 <use img/head-op-rot.png>
-Package pdftex.def Info: img/head-op-rot.png used on input line 596.
+Package pdftex.def Info: img/head-op-rot.png used on input line 599.
 (pdftex.def)             Requested size: 209.28136pt x 205.5173pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 603--604
+Underfull \hbox (badness 10000) in paragraph at lines 606--607
 
  []
 
@@ -1210,15 +1220,15 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 <img/head-all.png, id=455, 429.85594pt x 489.32813pt>
 File: img/head-all.png Graphic file (type png)
  <use img/head-all.png>
-Package pdftex.def Info: img/head-all.png used on input line 606.
+Package pdftex.def Info: img/head-all.png used on input line 609.
 (pdftex.def)             Requested size: 300.89711pt x 342.52734pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 612--613
+Underfull \hbox (badness 10000) in paragraph at lines 615--616
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 614--615
+Underfull \hbox (badness 10000) in paragraph at lines 617--618
 
  []
 
@@ -1227,40 +1237,40 @@ Underfull \hbox (badness 10000) in paragraph at lines 614--615
 File: img/cuttedhead.png Graphic file (type png)
 
 <use img/cuttedhead.png>
-Package pdftex.def Info: img/cuttedhead.png used on input line 618.
+Package pdftex.def Info: img/cuttedhead.png used on input line 620.
 (pdftex.def)             Requested size: 344.6352pt x 321.97571pt.
  <img/iso.png, id=464, 774.895pt x 390.45876pt>
 File: img/iso.png Graphic file (type png)
 
 <use img/iso.png>
-Package pdftex.def Info: img/iso.png used on input line 624.
+Package pdftex.def Info: img/iso.png used on input line 626.
 (pdftex.def)             Requested size: 387.44655pt x 195.2289pt.
  [37 <./img/cuttedhead.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 632--633
+Underfull \hbox (badness 10000) in paragraph at lines 630--631
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 636--637
 
  []
 
 [38 <./img/iso.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 639--640
+Underfull \hbox (badness 10000) in paragraph at lines 643--644
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 641--642
-
- []
-
-[39]
-Underfull \hbox (badness 10000) in paragraph at lines 652--654
+Underfull \hbox (badness 10000) in paragraph at lines 645--646
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 655--657
+Underfull \hbox (badness 10000) in paragraph at lines 647--648
 
  []
 
-
+[39] [40]
 Underfull \hbox (badness 10000) in paragraph at lines 658--660
 
  []
@@ -1270,8 +1280,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 661--663
 
  []
 
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no Å in font ptmr7t!
 
 Underfull \hbox (badness 10000) in paragraph at lines 664--666
 
@@ -1282,6 +1290,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 667--669
 
  []
 
+Missing character: There is no Ã in font ptmr7t!
+Missing character: There is no Å in font ptmr7t!
 
 Underfull \hbox (badness 10000) in paragraph at lines 670--672
 
@@ -1298,36 +1308,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 676--678
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 679--682
-
- []
-
-Missing character: There is no ‚ in font ptmr7t!
-Missing character: There is no Ä in font ptmr7t!
-Missing character: There is no ò in font ptmr7t!
-
-Overfull \hbox (3.33186pt too wide) in paragraph at lines 686--688
-[]\OT1/ptm/m/n/10 Tom McReynolds, 1996\OT1/ptm/m/it/10 Pro-gram-ming with OpenG
-L: Ad-vanced Ren-der-ing \OT1/ptm/m/n/10 [web doc-u-ment] Sil-i-con Graph-
+Overfull \hbox (23.30013pt too wide) in paragraph at lines 679--681
+\OT1/ptm/m/n/10 2016] Avail-able from: http://graphicsrunner.blogspot.fi/2009/0
+1/volume-rendering-102-transfer-functions.html 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 686--688
+Underfull \hbox (badness 10000) in paragraph at lines 679--681
 
  []
 
-Missing character: There is no √ in font ptmr7t!
-Missing character: There is no ü in font ptmr7t!
 
-Underfull \hbox (badness 10000) in paragraph at lines 689--691
+Underfull \hbox (badness 10000) in paragraph at lines 682--684
 
  []
 
-[40]
-Overfull \hbox (19.69049pt too wide) in paragraph at lines 692--694
-[]\OT1/ptm/m/n/10 Microsoft De-vel-op-ment Cen-ter \OT1/ptm/m/it/10 In-tro-duc-
-tion to the C# Lan-guage and the .NET Frame-work \OT1/ptm/m/n/10 [web-page][acc
-essed
+
+Underfull \hbox (badness 10000) in paragraph at lines 685--687
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 688--691
+
  []
 
 
@@ -1335,14 +1338,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 692--694
 
  []
 
+Missing character: There is no ‚ in font ptmr7t!
+Missing character: There is no Ä in font ptmr7t!
+Missing character: There is no ò in font ptmr7t!
 
 Underfull \hbox (badness 10000) in paragraph at lines 695--697
 
  []
 
+[41]
+Missing character: There is no √ in font ptmr7t!
+Missing character: There is no ü in font ptmr7t!
 
 Underfull \hbox (badness 10000) in paragraph at lines 698--700
 
+ []
+
+
+Overfull \hbox (19.69049pt too wide) in paragraph at lines 701--703
+[]\OT1/ptm/m/n/10 Microsoft De-vel-op-ment Cen-ter \OT1/ptm/m/it/10 In-tro-duc-
+tion to the C# Lan-guage and the .NET Frame-work \OT1/ptm/m/n/10 [web-page][acc
+essed
  []
 
 
@@ -1386,34 +1402,64 @@ Underfull \hbox (badness 10000) in paragraph at lines 722--724
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 725--726
+Underfull \hbox (badness 10000) in paragraph at lines 725--727
 
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 728--730
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 731--733
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 734--736
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 737--739
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 740--741
+
+ []
+
+[42] [43]
+File: savonia.jpg Graphic file (type jpg)
+ <use savonia.jpg>
+Package pdftex.def Info: savonia.jpg used on input line 746.
+(pdftex.def)             Requested size: 139.72165pt x 37.58029pt.
+ 
 AED: lastpage setting LastPage
-[41]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 730.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 730.
+[44]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 749.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 749.
  (/Users/alexey/Documents/tex/thesis/out/thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 730.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 730.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 749.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 749.
 Package rerunfilecheck Info: File `thesis.out' has not changed.
 (rerunfilecheck)             Checksum: <no file>.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 730.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 749.
  ) 
 Here is how much of TeX's memory you used:
- 8546 strings out of 493117
- 130572 string characters out of 6135432
- 237019 words of memory out of 5000000
+ 8549 strings out of 493117
+ 130593 string characters out of 6135432
+ 237045 words of memory out of 5000000
  11744 multiletter control sequences out of 15000+600000
  29356 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,10n,43p,1176b,451s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,11n,43p,1176b,451s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
 xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texl
@@ -1422,11 +1468,11 @@ e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
 /2014/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texm
 f-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fon
 ts/type1/urw/times/utmri8a.pfb>
-Output written on /Users/alexey/Documents/tex/thesis/out/thesis.pdf (42 pages, 
-5127584 bytes).
+Output written on /Users/alexey/Documents/tex/thesis/out/thesis.pdf (45 pages, 
+5086784 bytes).
 PDF statistics:
- 543 PDF objects out of 1000 (max. 8388607)
- 433 compressed objects within 5 object streams
- 117 named destinations out of 1000 (max. 500000)
+ 556 PDF objects out of 1000 (max. 8388607)
+ 443 compressed objects within 5 object streams
+ 120 named destinations out of 1000 (max. 500000)
  410 words of extra memory for PDF output out of 10000 (max. 10000000)
 
